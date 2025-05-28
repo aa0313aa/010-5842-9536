@@ -1,0 +1,93 @@
+<!-- 블로그/게시판 글 템플릿 (title/description/OG 자동화) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <!-- 아래 JSON만 수정하면 모든 메타 자동 반영 -->
+  <script id="post-meta" type="application/json">
+    {
+      "title": "여기에_글제목 | 오렌지Pay 블로그",
+      "description": "여기에_글요약/설명",
+      "date": "2025-05-29",
+      "image": "/img/og-image.jpg",
+      "url": "https://pay24.store/blog/여기에-파일명.html"
+    }
+  </script>
+  <script>
+    (function() {
+      const meta = document.getElementById('post-meta');
+      if (meta) {
+        const data = JSON.parse(meta.textContent);
+        if (data.title) document.title = data.title;
+        if (data.description) {
+          let desc = document.querySelector('meta[name="description"]');
+          if (!desc) {
+            desc = document.createElement('meta');
+            desc.name = "description";
+            document.head.appendChild(desc);
+          }
+          desc.content = data.description;
+        }
+        // OG/Twitter 자동화
+        const setMeta = (name, content, property = false) => {
+          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
+          if (!tag) {
+            tag = document.createElement('meta');
+            if (property) tag.setAttribute('property', name);
+            else tag.setAttribute('name', name);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute('content', content);
+        };
+        if (data.title) {
+          setMeta('og:title', data.title, true);
+          setMeta('twitter:title', data.title);
+        }
+        if (data.description) {
+          setMeta('og:description', data.description, true);
+          setMeta('twitter:description', data.description);
+        }
+        if (data.image) {
+          setMeta('og:image', data.image, true);
+          setMeta('twitter:image', data.image);
+        }
+        if (data.url) {
+          setMeta('og:url', data.url, true);
+        }
+        setMeta('og:type', 'article', true);
+        setMeta('og:site_name', '오렌지Pay', true);
+        setMeta('og:locale', 'ko_KR', true);
+        setMeta('twitter:card', 'summary_large_image');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center">
+          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+          <a href="/" class="text-2xl font-bold text-white">오렌지Pay-신용카드현금화 90%</a>
+        </div>
+        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-orange-600 mb-2">여기에_글제목</h1>
+    <p class="text-sm text-gray-500 mb-6">2025-05-29</p>
+    <p class="mb-6 text-gray-700">여기에_글요약/소개</p>
+    <hr class="my-6">
+    <!-- 본문 내용 -->
+    <h2 class="text-2xl font-semibold mt-8 mb-2">여기에_소제목</h2>
+    <p class="mb-4">여기에_본문내용</p>
+    <!-- ... 필요시 추가 ... -->
+    <div class="mt-8">
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
+    </div>
+  </main>
+</body>
+</html>

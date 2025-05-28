@@ -1,0 +1,139 @@
+<!-- 블로그/게시판 글 템플릿 적용 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script id="post-meta" type="application/json">
+    {
+      "title": "신용카드 현금화란? 안전한 방법과 주의사항 | 오렌지Pay 블로그",
+      "description": "신용카드 현금화의 개념, 필요성, 방법, 장단점, 절차, 주의사항, 실제 후기, FAQ까지 한눈에! 안전하게 신용카드 한도를 현금으로 전환하는 모든 정보를 안내합니다.",
+      "date": "2025-05-29",
+      "image": "/img/og-image.jpg",
+      "url": "https://pay24.store/blog/2025-05-29-cardcash-guide.html"
+    }
+  </script>
+  <script>
+    (function() {
+      const meta = document.getElementById('post-meta');
+      if (meta) {
+        const data = JSON.parse(meta.textContent);
+        if (data.title) document.title = data.title;
+        if (data.description) {
+          let desc = document.querySelector('meta[name="description"]');
+          if (!desc) {
+            desc = document.createElement('meta');
+            desc.name = "description";
+            document.head.appendChild(desc);
+          }
+          desc.content = data.description;
+        }
+        const setMeta = (name, content, property = false) => {
+          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
+          if (!tag) {
+            tag = document.createElement('meta');
+            if (property) tag.setAttribute('property', name);
+            else tag.setAttribute('name', name);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute('content', content);
+        };
+        if (data.title) {
+          setMeta('og:title', data.title, true);
+          setMeta('twitter:title', data.title);
+        }
+        if (data.description) {
+          setMeta('og:description', data.description, true);
+          setMeta('twitter:description', data.description);
+        }
+        if (data.image) {
+          setMeta('og:image', data.image, true);
+          setMeta('twitter:image', data.image);
+        }
+        if (data.url) {
+          setMeta('og:url', data.url, true);
+        }
+        setMeta('og:type', 'article', true);
+        setMeta('og:site_name', '오렌지Pay', true);
+        setMeta('og:locale', 'ko_KR', true);
+        setMeta('twitter:card', 'summary_large_image');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center">
+          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+          <a href="/" class="text-2xl font-bold text-white">오렌지Pay-신용카드현금화 90%</a>
+        </div>
+        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-orange-600 mb-2">신용카드 현금화란? 안전한 방법과 주의사항</h1>
+    <p class="text-sm text-gray-500 mb-6">2025-05-29</p>
+    <p class="mb-6 text-gray-700">신용카드 현금화는 신용카드 한도를 활용해 현금을 마련하는 방법입니다. 급하게 현금이 필요할 때, 대출이 어렵거나 신용점수 하락이 걱정될 때 많이 이용됩니다. 하지만 합법/불법 여부, 수수료, 절차 등 반드시 알아야 할 점이 많으니 꼼꼼히 확인하세요.</p>
+    <hr class="my-6">
+    <h2 class="text-2xl font-semibold mt-8 mb-2">왜 신용카드 현금화를 이용하나요?</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>예상치 못한 급전이 필요할 때</li>
+      <li>신용점수 하락 없이 현금이 필요할 때</li>
+      <li>대출이 어렵거나 한도가 부족할 때</li>
+      <li>비상 상황(의료비, 생활비 등) 대응</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">주요 현금화 방법</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li><b>상품권 현금화</b>: 신용카드로 백화점/문화상품권 등 구매 후 즉시 판매</li>
+      <li><b>상테크</b>: 상품권 구매 후 포인트 전환, 실적 채우기 등 재테크 활용</li>
+      <li><b>중고거래</b>: 신용카드로 IT기기 등 구입 후 중고로 판매</li>
+      <li><b>카드론</b>: 카드사에서 제공하는 단기대출(현금서비스, 신용점수 영향 있음)</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">장점과 단점</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>✅ 신용카드만 있으면 누구나 가능</li>
+      <li>✅ 신속한 현금 확보, 무이자 할부 활용 가능</li>
+      <li>✅ 신용점수 하락 없음(카드론 제외)</li>
+      <li>❌ 수수료 발생(통상 5~10%)</li>
+      <li>❌ 불법/위법 소지(카드깡 등 허위매출 방식 주의)</li>
+      <li>❌ 카드 대금 연체 시 신용점수 하락</li>
+      <li>❌ 개인정보 유출, 사기 피해 주의</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">진행 절차</h2>
+    <ol class="list-decimal list-inside mb-4 text-gray-700">
+      <li>신용카드로 상품권/물품 구매</li>
+      <li>구매한 상품권/물품을 현금화 업체 또는 중고거래로 판매</li>
+      <li>수수료 안내 및 현금 입금</li>
+      <li>카드 대금은 결제일에 납부(무이자 할부 활용 가능)</li>
+    </ol>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">이용 시 주의사항</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>합법적인 업체 이용(정식 등록, 투명한 수수료 안내)</li>
+      <li>수수료 과도하게 낮은 곳, 개인정보 요구 과다 업체 주의</li>
+      <li>불법 카드깡(허위매출) 방식은 법적 처벌 위험</li>
+      <li>카드 대금 연체 절대 금지(신용점수 하락, 추가 피해)</li>
+      <li>본인 상환 능력 내에서만 이용</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">실제 이용 후기</h2>
+    <div class="bg-gray-50 border-l-4 border-orange-400 p-4 mb-4">
+      <p class="mb-2">"급하게 현금이 필요했는데, 오렌지Pay를 통해 신용카드 현금화를 안전하게 진행할 수 있었습니다. 상담이 친절하고, 수수료도 합리적이었어요. 10분 만에 입금 완료!" <span class="text-xs text-gray-400">- 30대 남성 김OO</span></p>
+      <p class="mb-2">"비대면으로 빠르게 입금받을 수 있어서 좋았습니다. 자금이 급할 때 정말 유용하네요." <span class="text-xs text-gray-400">- 20대 여성 한OO</span></p>
+      <p class="mb-2">"처음엔 걱정했지만, 정식 등록 업체라 안심하고 이용했습니다. 앞으로도 필요할 때 또 이용할 생각입니다!" <span class="text-xs text-gray-400">- 40대 남성 신OO</span></p>
+    </div>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">자주 묻는 질문</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li><b>Q. 수수료는 얼마인가요?</b><br>상품권 현금화 기준 5~10% 내외, 업체별로 상이</li>
+      <li><b>Q. 불법인가요?</b><br>허위매출(카드깡)은 불법, 상품권 현금화 등은 합법적 범위 내에서 가능</li>
+      <li><b>Q. 얼마나 빨리 입금되나요?</b><br>상담 후 5~10분 이내 입금(상황에 따라 다름)</li>
+      <li><b>Q. 신용점수에 영향 있나요?</b><br>카드론/현금서비스는 영향, 상품권 현금화는 영향 없음</li>
+    </ul>
+    <div class="mt-8">
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
+    </div>
+  </main>
+</body>
+</html>

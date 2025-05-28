@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Sitemap: https://pay24.store/sitemap.xml
+
+# SEO 최적화: 모든 검색엔진에 전체 페이지 크롤링 허용
+# 주요 검색엔진 크롤러 명시
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yeti
+Allow: /
+User-agent: Daumoa
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: NaverBot
+Allow: /
+User-agent: NaverBot-Mobile
+Allow: /
+User-agent: MJ12bot
+Allow: /

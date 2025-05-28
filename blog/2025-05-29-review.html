@@ -1,0 +1,103 @@
+<!-- 블로그/게시판 글 템플릿 적용 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script id="post-meta" type="application/json">
+    {
+      "title": "휴대폰소액결제 후기 | 오렌지Pay 블로그",
+      "description": "실제 이용자가 경험한 오렌지Pay 휴대폰 소액결제 현금화 서비스 후기입니다. 안전하고 신속한 서비스 경험을 확인해보세요.",
+      "date": "2025-05-29",
+      "image": "/img/og-image.jpg",
+      "url": "https://pay24.store/blog/2025-05-29-review.html"
+    }
+  </script>
+  <script>
+    (function() {
+      const meta = document.getElementById('post-meta');
+      if (meta) {
+        const data = JSON.parse(meta.textContent);
+        if (data.title) document.title = data.title;
+        if (data.description) {
+          let desc = document.querySelector('meta[name="description"]');
+          if (!desc) {
+            desc = document.createElement('meta');
+            desc.name = "description";
+            document.head.appendChild(desc);
+          }
+          desc.content = data.description;
+        }
+        const setMeta = (name, content, property = false) => {
+          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
+          if (!tag) {
+            tag = document.createElement('meta');
+            if (property) tag.setAttribute('property', name);
+            else tag.setAttribute('name', name);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute('content', content);
+        };
+        if (data.title) {
+          setMeta('og:title', data.title, true);
+          setMeta('twitter:title', data.title);
+        }
+        if (data.description) {
+          setMeta('og:description', data.description, true);
+          setMeta('twitter:description', data.description);
+        }
+        if (data.image) {
+          setMeta('og:image', data.image, true);
+          setMeta('twitter:image', data.image);
+        }
+        if (data.url) {
+          setMeta('og:url', data.url, true);
+        }
+        setMeta('og:type', 'article', true);
+        setMeta('og:site_name', '오렌지Pay', true);
+        setMeta('og:locale', 'ko_KR', true);
+        setMeta('twitter:card', 'summary_large_image');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center">
+          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+          <a href="/" class="text-2xl font-bold text-white">오렌지Pay-신용카드현금화 90%</a>
+        </div>
+        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-orange-600 mb-2">휴대폰소액결제 후기</h1>
+    <p class="text-sm text-gray-500 mb-6">2025-05-29</p>
+    <p class="mb-6 text-gray-700">최근 갑작스럽게 현금이 필요해 오렌지Pay의 <strong>휴대폰 소액결제 현금화</strong> 서비스를 이용해보았습니다. 처음에는 조금 망설였지만, 상담이 매우 친절하고 절차가 간단해서 안심하고 진행할 수 있었습니다.</p>
+    <hr class="my-6">
+    <h2 class="text-2xl font-semibold mt-8 mb-2">신청 과정</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>카카오톡으로 간단히 문의</li>
+      <li>필요한 정보와 절차 안내</li>
+      <li>신청 후 10분 이내 입금 완료</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">이용 소감</h2>
+    <p class="mb-4">생각보다 빠르고 안전하게 현금화를 할 수 있었고, 수수료도 합리적이었습니다. 무엇보다 개인정보 보호에 신경을 많이 쓰는 점이 인상적이었습니다. 24시간 상담이 가능해 언제든 문의할 수 있다는 점도 큰 장점입니다.</p>
+    <blockquote class="border-l-4 border-orange-400 pl-4 italic text-gray-600 mb-4">"처음 이용해보는 서비스라 걱정했지만, 오렌지Pay 덕분에 빠르게 해결할 수 있었습니다. 앞으로도 필요할 때 또 이용할 생각입니다!"</blockquote>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">추천 대상</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>급하게 현금이 필요하신 분</li>
+      <li>안전하고 신속한 현금화 서비스를 찾는 분</li>
+      <li>24시간 상담이 필요한 분</li>
+    </ul>
+    <p class="mb-6">저처럼 고민하시는 분들께 오렌지Pay의 휴대폰 소액결제 현금화 서비스를 추천드립니다!</p>
+    <div class="mt-8">
+      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
+    </div>
+  </main>
+</body>
+</html>
