@@ -67,6 +67,49 @@
             color: #3b82f6;
             font-weight: bold;
         }
+        /* 접근성 대비 개선 (색상 복원 및 가독성 보완) */
+        .bg-orange-500, .hover\:bg-orange-600:hover {
+            background-color: #f97316 !important; /* Tailwind 기본 오렌지 */
+        }
+        .text-orange-500, .text-orange-600 {
+            color: #ea580c !important; /* Tailwind 기본 오렌지 계열 */
+        }
+        .bg-yellow-400, .hover\:bg-yellow-500:hover {
+            background-color: #facc15 !important; /* Tailwind 기본 노랑 */
+            color: #222 !important;
+        }
+        .bg-yellow-500, .hover\:bg-yellow-600:hover {
+            background-color: #eab308 !important; /* Tailwind 진한 노랑 */
+            color: #222 !important;
+        }
+        .bg-red-500, .hover\:bg-red-600:hover {
+            background-color: #ef4444 !important; /* Tailwind 기본 빨강 */
+        }
+        .text-white {
+            color: #fff !important;
+        }
+        .bg-white {
+            background-color: #f9fafb !important; /* 약간 더 어두운 흰색 */
+        }
+        .shadow-lg {
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+        }
+        /* 버튼 터치 영역 개선 */
+        a, button {
+            min-height: 48px;
+            min-width: 48px;
+        }
+        .rounded-lg {
+            border-radius: 0.75rem;
+        }
+        /* 카카오톡 상담 버튼만 Tailwind 기본 색상 강제 적용 */
+        .kakao-btn {
+            background-color: #facc15 !important; /* Tailwind bg-yellow-400 */
+            color: #222 !important;
+        }
+        .kakao-btn:hover {
+            background-color: #eab308 !important; /* Tailwind bg-yellow-500 */
+        }
     </style>
 
     <script type="application/ld+json">
@@ -305,7 +348,7 @@
                     <a href="tel:010-5842-9536" class="bg-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-150 text-lg flex items-center">
                         <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i> 전화 상담하기
                     </a>
-                    <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-150 text-lg flex items-center">
+                    <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 kakao-btn text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-150 text-lg flex items-center">
                         <i class="fas fa-comment-dots mr-2" aria-hidden="true"></i> 카카오톡 상담
                     </a>
                 </div>
@@ -326,12 +369,15 @@
             </div>
         </section>
         <script>
-        // posts.json을 fetch하여 최신글 자동 반영
+        // posts.json을 fetch하여 최신글 자동 반영 (에러 핸들링 추가)
         fetch('posts.json')
-          .then(res => res.json())
+          .then(res => {
+            if (!res.ok) throw new Error('posts.json을 불러올 수 없습니다.');
+            return res.json();
+          })
           .then(posts => {
             const blogList = document.getElementById('blog-list');
-            if (blogList) {
+            if (blogList && posts.length > 0) {
               posts.forEach(post => {
                 const li = document.createElement('li');
                 li.className = 'py-4';
@@ -339,13 +385,21 @@
                   <a href="${post.url}" class="block hover:bg-orange-50 rounded-lg p-4 transition">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                       <span class="text-lg font-semibold text-orange-600">${post.title}</span>
-                      <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date}</span>
+                      <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date || ''}</span>
                     </div>
-                    <p class="text-gray-600 mt-2">${post.description}</p>
+                    <p class="text-gray-600 mt-2">${post.description || ''}</p>
                   </a>
                 `;
                 blogList.appendChild(li);
               });
+            } else if (blogList) {
+              blogList.innerHTML = '<li class="py-4 text-gray-400 text-center">등록된 글이 없습니다.</li>';
+            }
+          })
+          .catch(err => {
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+              blogList.innerHTML = `<li class="py-4 text-red-500 text-center">최신글을 불러올 수 없습니다.<br>${err.message}</li>`;
             }
           });
         </script>
