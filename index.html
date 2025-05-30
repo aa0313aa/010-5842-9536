@@ -202,9 +202,9 @@
                 </div>
                 <nav class="hidden md:flex space-x-6">
                     <a href="#services" class="text-gray-600 hover:text-orange-500 transition duration-150">서비스 안내</a>
-                    
                     <a href="#faq" class="text-gray-600 hover:text-orange-500 transition duration-150">자주묻는질문</a>
                     <a href="#contact" class="text-gray-600 hover:text-orange-500 transition duration-150">고객센터</a>
+                    <a href="#blog" class="text-gray-600 hover:text-orange-500 transition duration-150">블로그</a>
                 </nav>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" aria-label="메뉴 열기" class="text-gray-600 hover:text-orange-500 focus:outline-none">
@@ -218,6 +218,7 @@
             <a href="#realtime-status" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">실시간 현황</a>
             <a href="#faq" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">자주묻는질문</a>
             <a href="#contact" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">고객센터</a>
+            <a href="#blog" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">블로그</a>
         </div>
     </header>
 
@@ -325,53 +326,28 @@
             </div>
         </section>
         <script>
-        // blog 폴더 내 .md 파일 목록과 메타데이터를 자동으로 표시 (정적 환경에서는 수동 JSON 필요)
-        // 실제 서버/정적 빌드 환경에서는 fetch로 blog/posts.json 등 활용 권장
-        // 아래는 예시: posts 배열에 글 정보만 추가하면 자동 반영
-        const posts = [
-            {
-                title: "신용카드현금화-휴대폰소액결제 방법",
-                date: "2025-05-26",
-                description: "오렌지Pay 24시간 가능한 신용카드 현금화 및 휴대폰 소액결제 방법에 대한 정보입니다.",
-                url: "blog/cardcash-phonecash-howto.html"
-            },
-            {
-                title: "휴대폰소액결제 후기",
-                date: "2025-05-29",
-                description: "실제 이용자가 경험한 오렌지Pay 휴대폰 소액결제 현금화 서비스 후기입니다.",
-                url: "blog/phonecash-review.html"
-            },
-            {
-                title: "신용카드현금화 가이드",
-                date: "2025-05-29",
-                description: "신용카드 현금화의 개념, 필요성, 방법, 장단점, 절차, 주의사항, 실제 후기, FAQ까지 한눈에!",
-                url: "blog/cardcash-guide.html"
-            },
-            {
-                title: "신용카드현금화 방법",
-                date: "2025-05-30",
-                description: "신용카드현금화의 원리, 실제 진행 절차, 주의사항, 합법적 이용법까지 한눈에! 오렌지Pay가 알려드리는 안전하고 빠른 신용카드 현금화 방법.",
-                url: "blog/cardcash-howto.html"
-            }
-            // 새 글을 추가할 때 이 배열에 객체만 추가하면 됨
-        ];
-        const blogList = document.getElementById('blog-list');
-        if (blogList) {
-            posts.forEach(post => {
+        // posts.json을 fetch하여 최신글 자동 반영
+        fetch('posts.json')
+          .then(res => res.json())
+          .then(posts => {
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+              posts.forEach(post => {
                 const li = document.createElement('li');
                 li.className = 'py-4';
                 li.innerHTML = `
-                    <a href="${post.url}" class="block hover:bg-orange-50 rounded-lg p-4 transition">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <span class="text-lg font-semibold text-orange-600">${post.title}</span>
-                            <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date}</span>
-                        </div>
-                        <p class="text-gray-600 mt-2">${post.description}</p>
-                    </a>
+                  <a href="${post.url}" class="block hover:bg-orange-50 rounded-lg p-4 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                      <span class="text-lg font-semibold text-orange-600">${post.title}</span>
+                      <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date}</span>
+                    </div>
+                    <p class="text-gray-600 mt-2">${post.description}</p>
+                  </a>
                 `;
                 blogList.appendChild(li);
-            });
-        }
+              });
+            }
+          });
         </script>
     </main>
 
