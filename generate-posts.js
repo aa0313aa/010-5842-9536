@@ -6,13 +6,18 @@ const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.html'));
 const posts = files.map(filename => {
   const filePath = path.join(blogDir, filename);
   const html = fs.readFileSync(filePath, 'utf8');
-  const title = (html.match(/<title>(.*?)<\/title>/) || [,''])[1].trim();
-  const date = (html.match(/<meta\s+name="date"\s+content="([^"]+)"/) || [,''])[1].trim();
-  const description = (html.match(/<meta\s+name="description"\s+content="([^"]+)"/) || [,''])[1].trim();
+  // post-meta JSON 추출
+  const metaMatch = html.match(/<script[^>]*id=["']post-meta["'][^>]*>([\s\S]*?)<\/script>/i);
+  let meta = {};
+  if (metaMatch) {
+    try {
+      meta = JSON.parse(metaMatch[1]);
+    } catch (e) {}
+  }
   return {
-    title: title || filename.replace('.html',''),
-    date: date || '',
-    description: description || '',
+    title: meta.title || filename.replace('.html',''),
+    date: meta.date || '',
+    description: meta.description || '',
     url: `blog/${filename}`
   };
 }).sort((a, b) => b.date.localeCompare(a.date));
