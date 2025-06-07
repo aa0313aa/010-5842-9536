@@ -6,28 +6,42 @@
     <atom:link href="https://pay24.store/rss.xml" rel="self" type="application/rss+xml" />
     <description>오렌지Pay 공식 블로그 - 신용카드 현금화, 소액결제, 후기, 안전한 현금화 정보 제공</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 29 May 2025 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jun 2025 00:00:00 +0900</lastBuildDate>
     <generator>오렌지Pay RSS Generator</generator>
     <item>
-      <title>신용카드현금화&휴대폰소액결제 방법</title>
-      <link>https://pay24.store/blog/2025-05-26-sample.html</link>
-      <description><![CDATA[24시간 가능한 신용카드 현금화 서비스입니다.]]></description>
-      <pubDate>Mon, 26 May 2025 09:00:00 +0900</pubDate>
-      <guid isPermaLink="true">https://pay24.store/blog/2025-05-26-sample.html</guid>
+      <title>신용카드 현금화, 2025년 최신 방법과 수수료: 안전하고 합법적인 활용 가이드 | 오렌지Pay 블로그</title>
+      <link>https://pay24.store/blog/2025-06-08-cardcash-guide.html</link>
+      <description><![CDATA[2025년 신용카드 현금화의 최신 합법적 방법, 수수료, 안전하게 이용하는 팁까지 한눈에! 카드 한도 활용, 합법/불법 구분, 피해 예방법 등 실전 가이드.]]></description>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/2025-06-08-cardcash-guide.html</guid>
     </item>
     <item>
-      <title>휴대폰소액결제 후기</title>
-      <link>https://pay24.store/blog/2025-05-29-review.html</link>
-      <description><![CDATA[실제 이용자가 경험한 오렌지Pay 휴대폰 소액결제 현금화 서비스 후기입니다.]]></description>
-      <pubDate>Thu, 29 May 2025 09:00:00 +0900</pubDate>
-      <guid isPermaLink="true">https://pay24.store/blog/2025-05-29-review.html</guid>
+      <title>신용카드현금화-방법 | 오렌지Pay 블로그</title>
+      <link>https://pay24.store/blog/cardcash-howto.html</link>
+      <description><![CDATA[신용카드현금화의 원리, 실제 진행 절차, 주의사항, 합법적 이용법까지 한눈에! 오렌지Pay가 알려드리는 안전하고 빠른 신용카드 현금화 방법.]]></description>
+      <pubDate>Fri, 30 May 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/cardcash-howto.html</guid>
     </item>
     <item>
-      <title>신용카드 현금화란? 안전한 방법과 주의사항</title>
-      <link>https://pay24.store/blog/2025-05-29-cardcash-guide.html</link>
-      <description><![CDATA[신용카드 현금화의 개념, 필요성, 방법, 장단점, 절차, 주의사항, 실제 후기, FAQ까지 한눈에!]]></description>
-      <pubDate>Thu, 29 May 2025 09:00:00 +0900</pubDate>
-      <guid isPermaLink="true">https://pay24.store/blog/2025-05-29-cardcash-guide.html</guid>
+      <title>신용카드현금화-가이드 | 오렌지Pay 블로그</title>
+      <link>https://pay24.store/blog/cardcash-guide.html</link>
+      <description><![CDATA[신용카드 현금화의 개념, 필요성, 방법, 장단점, 절차, 주의사항, 실제 후기, FAQ까지 한눈에! 안전하게 신용카드 한도를 현금으로 전환하는 모든 정보를 안내합니다.]]></description>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/cardcash-guide.html</guid>
+    </item>
+    <item>
+      <title>휴대폰소액결제-후기 | 오렌지Pay 블로그</title>
+      <link>https://pay24.store/blog/phonecash-review.html</link>
+      <description><![CDATA[실제 이용자가 경험한 오렌지Pay 휴대폰 소액결제 현금화 서비스 후기입니다. 안전하고 신속한 서비스 경험을 확인해보세요.]]></description>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/phonecash-review.html</guid>
+    </item>
+    <item>
+      <title>신용카드현금화-휴대폰소액결제-방법 | 오렌지Pay 블로그</title>
+      <link>https://pay24.store/blog/cardcash-phonecash-howto.html</link>
+      <description><![CDATA[오렌지Pay 24시간 가능한 신용카드 현금화 및 휴대폰 소액결제 방법에 대한 정보입니다.]]></description>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/cardcash-phonecash-howto.html</guid>
     </item>
   </channel>
 </rss>
