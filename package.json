@@ -1,0 +1,24 @@
+{
+  "name": "pay24",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "generate-posts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./input.css -o ./css/tailwind.min.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aa0313aa/010-5842-9536.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aa0313aa/010-5842-9536/issues"
+  },
+  "homepage": "https://github.com/aa0313aa/010-5842-9536#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.8"
+  }
+}
