@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2025-06-08</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,6 +15,12 @@
     <loc>https://pay24.store/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-06-11-mobile-giftcard-cash-guide.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2025-06-08-cardcash-guide.html</loc>
@@ -45,17 +51,5 @@
     <lastmod>2025-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pay24.store/privacy.html</loc>
-    <lastmod>2025-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://pay24.store/terms.html</loc>
-    <lastmod>2025-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
