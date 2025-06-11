@@ -4,14 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="../css/tailwind.min.css">
+  <!-- FontAwesome CDN 유지 (필요시만) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preload" as="image" href="../img/og-image.jpg">
+  <link rel="preload" as="image" href="../img/twitter-image.jpg">
+  <!-- 구조화 데이터 자동화 템플릿 적용 -->
   <script id="post-meta" type="application/json">
     {
-      "title": "신용카드 현금화, 2025년 최신 방법과 수수료: 안전하고 합법적인 활용 가이드 | 오렌지Pay 블로그",
-      "description": "2025년 신용카드 현금화의 최신 합법적 방법, 수수료, 안전하게 이용하는 팁까지 한눈에! 카드 한도 활용, 합법/불법 구분, 피해 예방법 등 실전 가이드.",
+      "title": "카드캐시 현금화 가이드 | 오렌지Pay 블로그",
+      "description": "카드캐시 현금화 방법, 후기, 안전성, 신뢰성 안내.",
       "date": "2025-06-08",
       "image": "/img/og-image.jpg",
-      "url": "https://pay24.store/blog/2025-06-08-cardcash-guide.html"
+      "url": "https://pay24.store/blog/2025-06-08-cardcash-guide.html",
+      "author": "오렌지Pay"
     }
   </script>
   <script>
@@ -59,39 +65,26 @@
         setMeta('og:site_name', '오렌지Pay', true);
         setMeta('og:locale', 'ko_KR', true);
         setMeta('twitter:card', 'summary_large_image');
+        // 구조화 데이터 자동 생성
+        let ld = {
+          "@context": "https://schema.org",
+          "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
+          "headline": data.title,
+          "description": data.description,
+          "image": [location.origin + data.image],
+          "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
+          "datePublished": data.date,
+          "dateModified": data.date,
+          "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
+        };
+        if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
+        if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
+        let script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(ld);
+        document.head.appendChild(script);
       }
     })();
-  </script>
-  <!-- HowTo 구조화 데이터: 신용카드 현금화방법 (구글 SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "신용카드 현금화방법",
-    "description": "신용카드 현금화 안전하게 하는 방법을 단계별로 안내합니다.",
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "상담 신청",
-        "text": "오렌지Pay 공식 채널로 상담을 신청합니다."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "신분 확인 및 안내",
-        "text": "상담원이 신분 확인 후 현금화 절차와 수수료를 안내합니다."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "신용카드 결제 진행",
-        "text": "안내에 따라 신용카드 결제를 진행합니다."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "입금 확인",
-        "text": "결제 완료 후 현금이 입금되는지 확인합니다."
-      }
-    ]
-  }
   </script>
 </head>
 <body class="bg-gray-100 text-gray-800">

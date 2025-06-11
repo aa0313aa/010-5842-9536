@@ -4,14 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="../css/tailwind.min.css">
+  <!-- FontAwesome CDN 유지 (필요시만) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preload" as="image" href="../img/og-image.jpg">
+  <link rel="preload" as="image" href="../img/twitter-image.jpg">
+  <!-- 구조화 데이터 자동화 템플릿 적용 -->
   <script id="post-meta" type="application/json">
     {
-      "title": "휴대폰소액결제-후기 | 오렌지Pay 블로그",
-      "description": "실제 이용자가 경험한 오렌지Pay 휴대폰 소액결제 현금화 서비스 후기입니다. 안전하고 신속한 서비스 경험을 확인해보세요.",
-      "date": "2025-05-29",
+      "title": "카드캐시 현금화 후기 | 오렌지Pay 블로그",
+      "description": "카드캐시 현금화 실제 후기 및 신뢰성, 안전성, 후기 사례 안내.",
+      "date": "2025-06-08",
       "image": "/img/og-image.jpg",
-      "url": "https://pay24.store/blog/phonecash-review.html"
+      "url": "https://pay24.store/blog/phonecash-review.html",
+      "author": "오렌지Pay",
+      "reviewRating": 5
     }
   </script>
   <script>
@@ -58,6 +65,24 @@
         setMeta('og:site_name', '오렌지Pay', true);
         setMeta('og:locale', 'ko_KR', true);
         setMeta('twitter:card', 'summary_large_image');
+        // 구조화 데이터 자동 생성
+        let ld = {
+          "@context": "https://schema.org",
+          "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
+          "headline": data.title,
+          "description": data.description,
+          "image": [location.origin + data.image],
+          "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
+          "datePublished": data.date,
+          "dateModified": data.date,
+          "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
+        };
+        if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
+        if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
+        let script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(ld);
+        document.head.appendChild(script);
       }
     })();
   </script>

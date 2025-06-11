@@ -60,84 +60,45 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/tailwind.min.css">
+  <!-- FontAwesome CDN 유지 (필요시만) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="alternate" type="application/rss+xml" title="오렌지Pay 블로그 RSS" href="/rss.xml" />
-  <!-- Canonical 및 WebP 대표 이미지, alt 태그 추가 -->
-  <link rel="canonical" href="https://pay24.store/blog/index.html">
-  <!-- 대표 이미지 실제 사용 예시 (본문/썸네일 등) -->
-  <!-- <img src="/img/og-blog-image.webp" alt="오렌지Pay 공식 블로그 대표 이미지" loading="lazy" width="1200" height="630"> -->
-  <!-- 정보성/교육성 콘텐츠, 사용자 리뷰/사례, 신뢰성 강화 태그 추가 -->
-  <meta name="author" content="오렌지Pay 공식 블로그">
-  <meta name="review" content="실제 사용자 경험과 금융 전문가의 팁을 바탕으로 작성된 정보성 콘텐츠를 제공합니다.">
-  <!-- FAQPage 구조화 데이터(정보성/교육성/리뷰 포함) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "신용카드 포인트로 현금처럼 쓸 수 있나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "신용카드 포인트는 상품권 구매, 기프티콘, 항공 마일리지 등 다양한 합법적 방법으로 현금성 가치로 활용할 수 있습니다. 카드사별 정책을 확인하세요."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "상품권 매입 시 주의할 점은?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "공식 등록 업체를 이용하고, 거래 내역을 반드시 보관하세요. 불법 현금화(카드깡 등)는 엄격히 금지되며, 합법적 범위 내에서만 활용해야 합니다."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "실제 사용자 후기나 사례가 있나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "네, 오렌지Pay 블로그에는 실제 고객의 포인트 활용 경험, 상품권 매입 후기, 전문가의 금융 꿀팁 등 다양한 사례가 소개되어 있습니다."
-        }
+  <!-- 주요 이미지 preload/lazy/alt/aria-label 보강 -->
+  <link rel="preload" as="image" href="../img/og-image.jpg">
+  <link rel="preload" as="image" href="../img/twitter-image.jpg">
+  
+  <style>
+      body {
+          font-family: 'Inter', 'Noto Sans KR', sans-serif;
       }
-    ]
-  }
-  </script>
-  <meta name="robots" content="index,follow">
-  <meta name="copyright" content="Copyright ⓒ 오렌지Pay. All rights reserved.">
-  <meta name="referrer" content="origin-when-cross-origin">
-  <meta name="publisher" content="오렌지Pay">
-  <meta name="category" content="금융, 신용카드, 포인트, 상품권, 정보이용료, 후기, 전문가 Q&A, 합법적 현금화, 안전한 금융, 정보성, 교육성">
-  <meta name="google-site-verification" content="구글서치콘솔_인증값_여기에_입력">
-  <meta name="naver-site-verification" content="네이버_서치어드바이저_인증값_여기에_입력">
-  <!-- HowTo 구조화 데이터(대표 HowTo 예시) -->
+      .hero-section {
+          background: linear-gradient(to right, #f97316, #fb923c); 
+      }
+      /* ...existing code... */
+  </style>
+
+  <!-- Article 구조화 데이터 자동화 (템플릿 예시) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "신용카드 포인트 합법적 현금화 방법",
-    "description": "신용카드 포인트를 안전하게 현금처럼 활용하는 합법적 방법 안내.",
-    "image": "https://pay24.store/img/og-blog-image.webp",
-    "totalTime": "PT5M",
-    "supply": [
-      { "@type": "HowToSupply", "name": "신용카드" },
-      { "@type": "HowToSupply", "name": "포인트 적립" }
+    "@type": "Blog",
+    "name": "오렌지Pay 블로그",
+    "description": "최신 현금화 정보, 후기, 전문가 Q&A, 신뢰성 있는 정보 제공.",
+    "url": "https://pay24.store/blog/",
+    "image": [
+      "https://pay24.store/img/og-image.jpg"
     ],
-    "tool": [
-      { "@type": "HowToTool", "name": "공식 카드사 앱" }
-    ],
-    "step": [
-      { "@type": "HowToStep", "text": "카드사 앱 또는 홈페이지에 로그인합니다." },
-      { "@type": "HowToStep", "text": "포인트 사용 메뉴에서 상품권, 기프티콘, 마일리지 등 교환 가능한 항목을 확인합니다." },
-      { "@type": "HowToStep", "text": "원하는 상품권 또는 마일리지로 포인트를 교환합니다." },
-      { "@type": "HowToStep", "text": "교환한 상품권을 공식 등록 업체에서 매입 신청합니다." },
-      { "@type": "HowToStep", "text": "거래 내역을 보관하고, 합법적 범위 내에서만 활용합니다." }
-    ]
+    "publisher": {
+      "@type": "Organization",
+      "name": "오렌지Pay",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pay24.store/img/logo.png"
+      }
+    }
   }
   </script>
+  <!-- ...existing code... -->
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-white shadow-md sticky top-0 z-50 mb-8">
