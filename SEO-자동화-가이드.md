@@ -1,4 +1,3 @@
-<!--
 # 외부 신뢰도 백링크 자동화 가이드
 
 아래의 신뢰도 높은 사이트/SNS/포털/커뮤니티/블로그 등에 pay24.store 메인/주요 글 링크를 남기면 SEO와 신뢰도가 크게 향상됩니다.
@@ -22,6 +21,7 @@
 2. sitemap.xml 제출(자동화 스크립트로 최신화)
 3. GA4 추적ID 발급 후 index.html, blog/index.html, 주요 글 <head>에 아래 코드 삽입
 
+```html
 <!-- GA4 추적 코드 템플릿 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
@@ -30,10 +30,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XXXXXXXXXX');
 </script>
+```
 
 4. Search Console/네이버 인증 메타태그도 <head>에 삽입(예시)
+
+```html
 <meta name="naver-site-verification" content="네이버인증코드" />
 <meta name="google-site-verification" content="구글인증코드" />
+```
 
 ---
 
@@ -51,5 +55,3 @@ gtag('config', 'G-XXXXXXXXXX');
 # 후기/전문가 Q&A 자동화 템플릿 예시
 
 posts.json에 후기/faq/전문가Q&A 필드 추가 → generate-posts.js에서 각 글에 자동 반영
-
--->

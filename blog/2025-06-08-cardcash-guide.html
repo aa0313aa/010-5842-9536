@@ -31,6 +31,7 @@
       const meta = document.getElementById('post-meta');
       if (meta) {
         const data = JSON.parse(meta.textContent);
+        // 메타태그 자동화
         if (data.title) document.title = data.title;
         if (data.description) {
           let desc = document.querySelector('meta[name="description"]');
@@ -71,10 +72,14 @@
         setMeta('og:site_name', '오렌지Pay', true);
         setMeta('og:locale', 'ko_KR', true);
         setMeta('twitter:card', 'summary_large_image');
-        // 구조화 데이터 자동 생성
+        // keywords 자동화
+        if (data.keywords && Array.isArray(data.keywords)) {
+          setMeta('keywords', data.keywords.join(','));
+        }
+        // 구조화 데이터 자동 생성(Article/Review/FAQ)
         let ld = {
           "@context": "https://schema.org",
-          "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
+          "@type": data.reviewRating ? "Review" : "Article",
           "headline": data.title,
           "description": data.description,
           "image": [location.origin + data.image],
@@ -84,7 +89,15 @@
           "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
         };
         if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
-        if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
+        // FAQPage 구조화 데이터
+        if (data.faq && Array.isArray(data.faq) && data.faq.length > 0) {
+          ld.mainEntity = data.faq.map(f => ({
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {"@type": "Answer", "text": f.answer}
+          }));
+          ld['@type'] = [ld['@type'], "FAQPage"];
+        }
         let script = document.createElement('script');
         script.type = 'application/ld+json';
         script.textContent = JSON.stringify(ld);
@@ -92,13 +105,14 @@
       }
     })();
   </script>
-  <!-- GA4 추적 코드 템플릿 (실제 ID로 교체 필요) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- GA4/서치콘솔 인증 메타태그는 템플릿 유지 -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X23B68XXLC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-X23B68XXLC');
   </script>
   <!-- Search Console/네이버 인증 메타태그 예시 (실제 코드로 교체 필요) -->
   <meta name="naver-site-verification" content="네이버인증코드" />
@@ -106,14 +120,30 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-orange-500 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <div class="flex items-center">
-          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
-          <a href="/" class="text-2xl font-bold text-white">오렌지Pay-신용카드현금화 90%</a>
-        </div>
-        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+    <div class="w-full max-w-4xl mx-auto px-4 flex items-center justify-between h-20">
+      <div class="flex items-center min-w-0">
+        <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+        <a href="/" class="text-2xl font-bold text-white whitespace-nowrap truncate">오렌지Pay-신용카드현금화 90%</a>
       </div>
+      <nav class="hidden md:flex gap-4 items-center ml-4">
+        <a href="/" class="text-white hover:underline text-lg">홈</a>
+        <a href="/blog/index.html" class="text-white hover:underline text-lg">블로그</a>
+        <a href="/privacy.html" class="text-white hover:underline text-lg">개인정보처리방침</a>
+        <a href="/terms.html" class="text-white hover:underline text-lg">이용약관</a>
+      </nav>
+      <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg ml-2 whitespace-nowrap">24시간 상담하러가기</a>
+      <!-- 모바일 햄버거 메뉴 (필요시) -->
+      <button class="md:hidden ml-2 text-white focus:outline-none" aria-label="메뉴 열기" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-orange-500 px-4 pb-4">
+      <nav class="flex flex-col gap-2">
+        <a href="/" class="text-white hover:underline text-lg">홈</a>
+        <a href="/blog/index.html" class="text-white hover:underline text-lg">블로그</a>
+        <a href="/privacy.html" class="text-white hover:underline text-lg">개인정보처리방침</a>
+        <a href="/terms.html" class="text-white hover:underline text-lg">이용약관</a>
+      </nav>
     </div>
   </header>
   <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
