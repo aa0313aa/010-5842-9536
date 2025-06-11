@@ -44,140 +44,105 @@
 
     <!-- Tailwind 빌드 CSS 적용, CDN 제거 -->
     <link rel="stylesheet" href="css/tailwind.min.css">
-    <!-- FontAwesome CDN 유지 (필요시만) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- 주요 이미지 preload/lazy/alt/aria-label 보강 -->
-    <link rel="preload" as="image" href="img/og-image.jpg">
-    <link rel="preload" as="image" href="img/twitter-image.jpg">
+    <link rel="preload" as="image" href="img/og-image.webp">
+    <link rel="preload" as="image" href="img/twitter-image.webp">
     
     <style>
-        body {
-            font-family: 'Inter', 'Noto Sans KR', sans-serif;
-        }
-        .hero-section {
-            background: linear-gradient(to right, #f97316, #fb923c); 
-        }
-        /* 버튼/배경/텍스트 등 주요 UI 복원 (critical 스타일 인라인) */
-        .rounded-lg, .rounded-xl {border-radius: 0.75rem;}
-        .shadow-lg, .shadow-md, .shadow-xl {box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);}
-        .bg-orange-500, .hover\:bg-orange-600:hover {
-            background-color: #f97316 !important;
-        }
-        .text-orange-500, .text-orange-600 {
-            color: #ea580c !important;
-        }
-        .bg-yellow-400, .hover\:bg-yellow-500:hover {
-            background-color: #facc15 !important;
-            color: #222 !important;
-        }
-        .bg-yellow-500, .hover\:bg-yellow-600:hover {
-            background-color: #eab308 !important;
-            color: #222 !important;
-        }
-        .bg-red-500, .hover\:bg-red-600:hover {
-            background-color: #ef4444 !important;
-        }
-        .text-white {color: #fff !important;}
-        .bg-white {background-color: #f9fafb !important;}
-        a, button {min-height: 48px; min-width: 48px;}
-        /* 카카오 버튼 복원 */
-        .kakao-btn {
-            background-color: #facc15 !important;
-            color: #222 !important;
-        }
-        .kakao-btn:hover {
-            background-color: #eab308 !important;
-        }
-        /* 상단바/hero-section/버튼 등 폰트/배경/테두리/그림자 등 복원 */
-        .font-bold {font-weight: 700;}
-        .font-semibold {font-weight: 600;}
-        .text-lg {font-size: 1.125rem;}
-        .text-xl {font-size: 1.25rem;}
-        .text-2xl {font-size: 1.5rem;}
-        .text-3xl {font-size: 1.875rem;}
-        .text-4xl {font-size: 2.25rem;}
-        .text-5xl {font-size: 3rem;}
-        .py-3 {padding-top: 0.75rem; padding-bottom: 0.75rem;}
-        .py-4 {padding-top: 1rem; padding-bottom: 1rem;}
-        .py-8 {padding-top: 2rem; padding-bottom: 2rem;}
-        .py-10 {padding-top: 2.5rem; padding-bottom: 2.5rem;}
-        .py-12 {padding-top: 3rem; padding-bottom: 3rem;}
-        .py-16 {padding-top: 4rem; padding-bottom: 4rem;}
-        .px-4 {padding-left: 1rem; padding-right: 1rem;}
-        .px-5 {padding-left: 1.25rem; padding-right: 1.25rem;}
-        .px-8 {padding-left: 2rem; padding-right: 2rem;}
-        .mb-4 {margin-bottom: 1rem;}
-        .mb-8 {margin-bottom: 2rem;}
-        .mb-10 {margin-bottom: 2.5rem;}
-        .mb-16 {margin-bottom: 4rem;}
-        .mt-2 {margin-top: 0.5rem;}
-        .mt-6 {margin-top: 1.5rem;}
-        .mt-8 {margin-top: 2rem;}
-        .mr-2 {margin-right: 0.5rem;}
-        .mr-4 {margin-right: 1rem;}
-        .text-center {text-align: center;}
-        .text-gray-600 {color: #4b5563 !important;}
-        .text-gray-700 {color: #374151 !important;}
-        .text-gray-800 {color: #1f2937 !important;}
-        .text-gray-400 {color: #9ca3af !important;}
-        .text-gray-500 {color: #6b7280 !important;}
-        .bg-gray-100 {background-color: #f3f4f6 !important;}
-        .bg-gray-800 {background-color: #1f2937 !important;}
-        .hover\:bg-orange-50:hover {background-color: #fff7ed !important;}
-        .hover\:text-orange-500:hover {color: #f97316 !important;}
-        .hover\:bg-gray-100:hover {background-color: #f3f4f6 !important;}
-        .hover\:bg-yellow-600:hover {background-color: #eab308 !important;}
-        .hover\:bg-orange-600:hover {background-color: #ea580c !important;}
-        .hover\:bg-yellow-500:hover {background-color: #facc15 !important;}
-        .hover\:text-orange-500:hover {color: #ea580c !important;}
-        .transition {transition: all 0.15s;}
-        .duration-150 {transition-duration: 150ms;}
-        .duration-300 {transition-duration: 300ms;}
-        .shadow-md {box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);}
-        .shadow-xl {box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);}
-        .container {max-width: 1200px; margin-left: auto; margin-right: auto;}
-        .w-full {width: 100%;}
-        .max-w-5xl {max-width: 72rem;}
-        .mx-auto {margin-left: auto; margin-right: auto;}
-        .flex {display: flex;}
-        .items-center {align-items: center;}
-        .justify-between {justify-content: space-between;}
-        .justify-center {justify-content: center;}
-        .gap-6 {gap: 1.5rem;}
-        .gap-8 {gap: 2rem;}
-        .hidden {display: none;}
-        .block {display: block;}
-        .inline-block {display: inline-block;}
-        .truncate {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-        .whitespace-nowrap {white-space: nowrap;}
-        .scroll-mt-20 {scroll-margin-top: 5rem;}
-        .rounded-xl {border-radius: 1rem;}
-        .space-y-1 > :not([hidden]) ~ :not([hidden]) {margin-top: 0.25rem;}
-        .space-y-4 > :not([hidden]) ~ :not([hidden]) {margin-top: 1rem;}
-        .space-y-6 > :not([hidden]) ~ :not([hidden]) {margin-top: 1.5rem;}
-        .divide-y > :not([hidden]) ~ :not([hidden]) {border-top: 1px solid #e5e7eb;}
-        /* 반응형 임시 (필요시 Tailwind 빌드 정상화 후 제거) */
-        @media (min-width: 640px) {
-            .sm\:py-24 {padding-top: 6rem; padding-bottom: 6rem;}
-            .sm\:px-6 {padding-left: 1.5rem; padding-right: 1.5rem;}
-            .sm\:text-xl {font-size: 1.25rem;}
-            .sm\:text-5xl {font-size: 3rem;}
-            .sm\:flex-row {flex-direction: row;}
-            .sm\:items-center {align-items: center;}
-            .sm\:justify-between {justify-content: space-between;}
-            .sm\:mt-0 {margin-top: 0;}
-        }
-        @media (min-width: 1024px) {
-            .lg\:px-8 {padding-left: 2rem; padding-right: 2rem;}
-            .lg\:grid-cols-3 {grid-template-columns: repeat(3, minmax(0, 1fr));}
-        }
-        @media (min-width: 768px) {
-            .md\:flex {display: flex;}
-            .md\:grid-cols-2 {grid-template-columns: repeat(2, minmax(0, 1fr));}
-            .md\:hidden {display: none;}
-            .md\:col-span-2 {grid-column: span 2 / span 2;}
-            .md\:ml-4 {margin-left: 1rem;}
-        }
+      body {
+        font-family: 'Inter', 'Noto Sans KR', sans-serif;
+      }
+      .hero-section {
+        background: linear-gradient(to right, #f97316, #fb923c);
+      }
+      /* 임시 복구: 텍스트/배경/레이아웃/버튼 등 핵심 스타일 */
+      .text-white { color: #fff !important; }
+      .text-gray-800 { color: #1f2937 !important; }
+      .text-gray-700 { color: #374151 !important; }
+      .text-gray-600 { color: #4b5563 !important; }
+      .text-gray-400 { color: #9ca3af !important; }
+      .text-gray-500 { color: #6b7280 !important; }
+      .text-orange-500, .text-orange-600 { color: #ea580c !important; }
+      .text-yellow-500, .text-yellow-400 { color: #eab308 !important; }
+      .bg-white { background-color: #fff !important; }
+      .bg-gray-100 { background-color: #f3f4f6 !important; }
+      .bg-gray-800 { background-color: #1f2937 !important; }
+      .bg-orange-500 { background-color: #f97316 !important; }
+      .bg-yellow-400 { background-color: #facc15 !important; }
+      .bg-yellow-500 { background-color: #eab308 !important; }
+      .bg-red-500 { background-color: #ef4444 !important; }
+      .rounded-lg, .rounded-xl { border-radius: 0.75rem; }
+      .shadow-md, .shadow-lg, .shadow-xl { box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10); }
+      .font-bold { font-weight: 700; }
+      .font-semibold { font-weight: 600; }
+      .font-medium { font-weight: 500; }
+      .text-lg { font-size: 1.125rem; }
+      .text-xl { font-size: 1.25rem; }
+      .text-2xl { font-size: 1.5rem; }
+      .text-3xl { font-size: 1.875rem; }
+      .text-4xl { font-size: 2.25rem; }
+      .text-5xl { font-size: 3rem; }
+      .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+      .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+      .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+      .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+      .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+      .px-4 { padding-left: 1rem; padding-right: 1rem; }
+      .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .px-8 { padding-left: 2rem; padding-right: 2rem; }
+      .mb-4 { margin-bottom: 1rem; }
+      .mb-8 { margin-bottom: 2rem; }
+      .mb-10 { margin-bottom: 2.5rem; }
+      .mb-16 { margin-bottom: 4rem; }
+      .mt-2 { margin-top: 0.5rem; }
+      .mt-6 { margin-top: 1.5rem; }
+      .mt-8 { margin-top: 2rem; }
+      .mr-2 { margin-right: 0.5rem; }
+      .mr-4 { margin-right: 1rem; }
+      .text-center { text-align: center; }
+      .flex { display: flex; }
+      .items-center { align-items: center; }
+      .justify-between { justify-content: space-between; }
+      .justify-center { justify-content: center; }
+      .gap-6 { gap: 1.5rem; }
+      .gap-8 { gap: 2rem; }
+      .hidden { display: none; }
+      .block { display: block; }
+      .inline-block { display: inline-block; }
+      .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .whitespace-nowrap { white-space: nowrap; }
+      .container { max-width: 1200px; margin-left: auto; margin-right: auto; }
+      .w-full { width: 100%; }
+      .max-w-5xl { max-width: 72rem; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .transition { transition: all 0.15s; }
+      .duration-150 { transition-duration: 150ms; }
+      .duration-300 { transition-duration: 300ms; }
+      .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+      .divide-y > :not([hidden]) ~ :not([hidden]) { border-top: 1px solid #e5e7eb; }
+      @media (min-width: 640px) {
+        .sm\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+        .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .sm\:text-xl { font-size: 1.25rem; }
+        .sm\:text-5xl { font-size: 3rem; }
+        .sm\:flex-row { flex-direction: row; }
+        .sm\:items-center { align-items: center; }
+        .sm\:justify-between { justify-content: space-between; }
+        .sm\:mt-0 { margin-top: 0; }
+      }
+      @media (min-width: 1024px) {
+        .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+      @media (min-width: 768px) {
+        .md\:flex { display: flex !important; }
+        .md\:hidden { display: none !important; }
+        .md\:col-span-2 { grid-column: span 2 / span 2; }
+        .md\:ml-4 { margin-left: 1rem !important; }
+      }
     </style>
 
     <!-- Article 구조화 데이터 자동화 (템플릿 예시) -->
@@ -281,14 +246,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="320">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="apple-mobile-web-app-title" content="오렌지Pay">
-    <meta name="application-name" content="오렌지Pay">
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#FF7F50">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
     <!-- 네이버/카카오 등 국내 포털용 메타태그 -->
     <meta name="naver-site-verification" content="82483ce843343e1880631869c6191fda4d57d8fa" />
     <meta property="og:article:author" content="오렌지Pay">
@@ -399,7 +358,7 @@
                         <li>상품권: 88%~90% (상담 후 결정)</li>
                         <li>신용카드 현금화:85~90% (상담 후 결정)</li>
                     </ul>
-                    <a href="https://pf.kakao.com/_SBFexb/chat" class="mt-6 inline-block bg-yellow-400 text-gray-800 font-medium py-2 px-5 rounded-lg hover:bg-yellow-500 transition duration-150">카카오톡 상담</a>
+                    <a href="https://pf.kakao.com/_SBFexb/chat" class="mt-6 inline-block bg-yellow-400 text-gray-800 font-medium py-2 px-5 rounded-lg hover:bg-yellow-500 transition duration-150" target="_blank" rel="noopener noreferrer">카카오톡 상담</a>
                 </article>
 
                 <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
