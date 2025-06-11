@@ -170,9 +170,11 @@
   </footer>
   <script>
     // posts.json을 fetch하여 최신글 자동 반영
-    fetch('/posts.json')
+    fetch('../posts.json') // blog/index.html에서 상위 posts.json을 불러오도록 경로 수정
       .then(res => res.json())
       .then(posts => {
+        // 날짜 기준 내림차순 정렬 (최신글이 위로)
+        posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
         const blogList = document.getElementById('blog-list');
         if (blogList && posts.length > 0) {
           posts.forEach(post => {
