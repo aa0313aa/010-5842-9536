@@ -403,7 +403,7 @@
                     <a href="tel:010-5842-9536" class="bg-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-150 text-lg flex items-center">
                         <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i> 전화 상담하기
                     </a>
-                    <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-150 text-lg flex items-center">
+                    <a id="kakao-chat-btn" href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-150 text-lg flex items-center">
                         <i class="fas fa-comment-dots mr-2" aria-hidden="true"></i> 카카오톡 상담
                     </a>
                 </div>
@@ -503,6 +503,20 @@
         if (currentYearElement) {
             currentYearElement.textContent = new Date().getFullYear();
         }
+
+        // 카카오톡 상담 버튼에 referrer(유입 페이지) 파라미터 추가
+        (function() {
+          var kakaoBtn = document.getElementById('kakao-chat-btn');
+          if (kakaoBtn) {
+            kakaoBtn.addEventListener('click', function(e) {
+              var baseUrl = 'https://pf.kakao.com/_SBFexb/chat';
+              var ref = encodeURIComponent(window.location.href);
+              // 이미 referrer 파라미터가 있으면 중복 추가 방지
+              var url = baseUrl + (baseUrl.indexOf('?') === -1 ? '?' : '&') + 'referrer=' + ref;
+              kakaoBtn.setAttribute('href', url);
+            });
+          }
+        })();
     </script>
 
     <!-- Google Analytics 4(GA4) 예시 코드 (실제 추적ID로 교체 필요) -->
