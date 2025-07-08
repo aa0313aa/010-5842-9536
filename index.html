@@ -1,538 +1,500 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#FF7F50">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-TileColor" content="#FF7F50">
-    <title>오렌지Pay | 카드현금화 서비스 활용·상품권 매입 정보 전문</title>
-    <meta name="description" content="오렌지Pay는 신용카드 포인트, 상품권 매입 등 합법적 금융 활용법과 안전한 거래 정보를 제공합니다. 불법 현금화·카드깡은 엄격히 금지하며, 공식 등록 업체로서 신뢰와 투명성을 보장합니다.">
-    <meta name="keywords" content="신용카드 포인트 활용, 상품권 매입, 합법적 현금화, 금융 정보, 오렌지Pay, 안전한 거래, 카드 포인트 사용법, 공식업체, 24시간 상담, 개인정보 보호">
-    <meta name="author" content="오렌지Pay 공식 블로그">
-    <meta name="review" content="실제 사용자 경험과 금융 전문가의 팁을 바탕으로 작성된 정보성 콘텐츠를 제공합니다.">
+    
+    <!-- SEO and Metadata -->
+    <title>오렌지Pay | 신용카드 현금화, 소액결제 현금화 서비스</title>
+    <meta name="description" content="오렌지Pay는 신용카드 한도, 소액결제, 정보이용료를 24시간 안전하고 신속하게 현금화하는 서비스를 제공합니다. 정식 등록 업체에서 업계 최저 수수료로 만나보세요.">
+    <meta name="keywords" content="신용카드 현금화, 소액결제 현금화, 정보이용료 현금화, 상품권 매입, 오렌지Pay, 안전한 현금화, 24시간 상담, 최저 수수료, 블로그">
+    <meta name="author" content="오렌지Pay">
     <link rel="canonical" href="https://pay24.store/">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="alternate" href="https://pay24.store/" hreflang="ko-kr">
-    <link rel="alternate" type="application/rss+xml" title="오렌지Pay 블로그 RSS" href="/rss.xml" />
-
+    
+    <!-- Open Graph / Social Media Meta -->
     <meta property="og:title" content="오렌지Pay | 24시간 안전·신속 현금화 서비스">
-    <meta property="og:description" content="소액결제, 정보이용료, 신용카드 한도 및 포인트를 24시간 안전하게 현금으로! 오렌지Pay에서 빠르고 신뢰할 수 있게 해결하세요.">
+    <meta property="og:description" content="소액결제, 정보이용료, 신용카드 한도를 24시간 안전하게 현금으로! 오렌지Pay에서 빠르고 신뢰할 수 있게 해결하세요.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pay24.store/">
     <meta property="og:image" content="https://pay24.store/img/og-image.jpg">
     <meta property="og:image:alt" content="오렌지Pay 공식 현금화 서비스 대표 이미지">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="오렌지Pay">
     <meta property="og:locale" content="ko_KR">
 
+    <!-- Twitter Card Meta -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="오렌지Pay | 24시간 안전·신속 현금화 서비스">
-    <meta name="twitter:description" content="소액결제, 정보이용료, 신용카드 한도 및 포인트를 24시간 안전하게 현금으로! 오렌지Pay에서 빠르고 신뢰할 수 있게 해결하세요.">
+    <meta name="twitter:description" content="소액결제, 정보이용료, 신용카드 한도를 24시간 안전하게 현금으로! 오렌지Pay에서 빠르고 신뢰할 수 있게 해결하세요.">
     <meta name="twitter:image" content="https://pay24.store/img/twitter-image.jpg">
-    <meta name="twitter:image:alt" content="오렌지Pay 공식 현금화 서비스 대표 이미지">
-    <meta name="twitter:site" content="@orangepay_official">
-    <meta name="twitter:creator" content="@orangepay_official">
-   
-
-    <!-- Tailwind 빌드 CSS 적용, CDN 제거 -->
-    <link rel="stylesheet" href="css/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preload" as="image" href="img/og-image.webp">
-    <link rel="preload" as="image" href="img/twitter-image.webp">
     
-    <style>
-      body {
-        font-family: 'Inter', 'Noto Sans KR', sans-serif;
-      }
-      .hero-section {
-        background: linear-gradient(to right, #f97316, #fb923c);
-      }
-      /* 임시 복구: 텍스트/배경/레이아웃/버튼 등 핵심 스타일 */
-      .text-white { color: #fff !important; }
-      .text-gray-800 { color: #1f2937 !important; }
-      .text-gray-700 { color: #374151 !important; }
-      .text-gray-600 { color: #4b5563 !important; }
-      .text-gray-400 { color: #9ca3af !important; }
-      .text-gray-500 { color: #6b7280 !important; }
-      .text-orange-500, .text-orange-600 { color: #ea580c !important; }
-      .text-yellow-500, .text-yellow-400 { color: #eab308 !important; }
-      .bg-white { background-color: #fff !important; }
-      .bg-gray-100 { background-color: #f3f4f6 !important; }
-      .bg-gray-800 { background-color: #1f2937 !important; }
-      .bg-orange-500 { background-color: #f97316 !important; }
-      .bg-yellow-400 { background-color: #facc15 !important; }
-      .bg-yellow-500 { background-color: #eab308 !important; }
-      .bg-red-500 { background-color: #ef4444 !important; }
-      .rounded-lg, .rounded-xl { border-radius: 0.75rem; }
-      .shadow-md, .shadow-lg, .shadow-xl { box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10); }
-      .font-bold { font-weight: 700; }
-      .font-semibold { font-weight: 600; }
-      .font-medium { font-weight: 500; }
-      .text-lg { font-size: 1.125rem; }
-      .text-xl { font-size: 1.25rem; }
-      .text-2xl { font-size: 1.5rem; }
-      .text-3xl { font-size: 1.875rem; }
-      .text-4xl { font-size: 2.25rem; }
-      .text-5xl { font-size: 3rem; }
-      .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-      .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-      .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-      .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-      .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-      .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-      .px-4 { padding-left: 1rem; padding-right: 1rem; }
-      .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-      .px-8 { padding-left: 2rem; padding-right: 2rem; }
-      .mb-4 { margin-bottom: 1rem; }
-      .mb-8 { margin-bottom: 2rem; }
-      .mb-10 { margin-bottom: 2.5rem; }
-      .mb-16 { margin-bottom: 4rem; }
-      .mt-2 { margin-top: 0.5rem; }
-      .mt-6 { margin-top: 1.5rem; }
-      .mt-8 { margin-top: 2rem; }
-      .mr-2 { margin-right: 0.5rem; }
-      .mr-4 { margin-right: 1rem; }
-      .text-center { text-align: center; }
-      .flex { display: flex; }
-      .items-center { align-items: center; }
-      .justify-between { justify-content: space-between; }
-      .justify-center { justify-content: center; }
-      .gap-6 { gap: 1.5rem; }
-      .gap-8 { gap: 2rem; }
-      .hidden { display: none; }
-      .block { display: block; }
-      .inline-block { display: inline-block; }
-      .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-      .whitespace-nowrap { white-space: nowrap; }
-      .container { max-width: 1200px; margin-left: auto; margin-right: auto; }
-      .w-full { width: 100%; }
-      .max-w-5xl { max-width: 72rem; }
-      .mx-auto { margin-left: auto; margin-right: auto; }
-      .transition { transition: all 0.15s; }
-      .duration-150 { transition-duration: 150ms; }
-      .duration-300 { transition-duration: 300ms; }
-      .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
-      .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
-      .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
-      .divide-y > :not([hidden]) ~ :not([hidden]) { border-top: 1px solid #e5e7eb; }
-      @media (min-width: 640px) {
-        .sm\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
-        .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .sm\:text-xl { font-size: 1.25rem; }
-        .sm\:text-5xl { font-size: 3rem; }
-        .sm\:flex-row { flex-direction: row; }
-        .sm\:items-center { align-items: center; }
-        .sm\:justify-between { justify-content: space-between; }
-        .sm\:mt-0 { margin-top: 0; }
-      }
-      @media (min-width: 1024px) {
-        .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-        .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      }
-      @media (min-width: 768px) {
-        .md\:flex { display: flex !important; }
-        .md\:hidden { display: none !important; }
-        .md\:col-span-2 { grid-column: span 2 / span 2; }
-        .md\:ml-4 { margin-left: 1rem !important; }
-      }
-    </style>
+    <!-- Favicon and Theme -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#F97316">
 
-    <!-- Article 구조화 데이터 자동화 (템플릿 예시) -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles & Tailwind Config -->
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        }
+        /* Custom class for the hero gradient */
+        .hero-gradient {
+            background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
+        }
+        /* For accordion animation */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-header .fa-chevron-down {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-item.open .accordion-header .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            '50': '#fff7ed',
+                            '100': '#ffedd5',
+                            '200': '#fed7aa',
+                            '300': '#fdba74',
+                            '400': '#fb923c',
+                            '500': '#f97316',
+                            '600': '#ea580c',
+                            '700': '#c2410c',
+                            '800': '#9a3412',
+                            '900': '#7c2d12',
+                        },
+                        kakao: '#FEE500',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "오렌지Pay | 24시간 안전·신속 현금화 서비스",
-      "description": "소액결제, 정보이용료, 신용카드 한도 및 포인트를 24시간 안전하게 현금으로! 오렌지Pay에서 빠르고 신뢰할 수 있게 해결하세요.",
-      "image": [
-        "https://pay24.store/img/og-image.jpg"
-      ],
-      "author": {
+      "@type": "FinancialService",
+      "name": "오렌지Pay",
+      "description": "신용카드 현금화, 소액결제 현금화, 정보이용료 현금화 등 금융 서비스를 24시간 제공하는 정식 등록 업체입니다.",
+      "url": "https://pay24.store/",
+      "logo": "https://pay24.store/img/logo.png",
+      "provider": {
         "@type": "Organization",
         "name": "오렌지Pay"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "오렌지Pay",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://pay24.store/img/logo.png"
-        }
-      },
-      "datePublished": "2025-06-12",
-      "dateModified": "2025-06-12",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://pay24.store/"
-      }
+      "serviceType": [
+        "신용카드 현금화",
+        "소액결제 현금화",
+        "정보이용료 현금화"
+      ],
+      "areaServed": "KR",
+      "telephone": "+82-10-5842-9536",
+      "openingHours": "Mo-Su 00:00-24:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "현금화 진행 시 수수료는 어떻게 되나요?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "수수료는 상품의 종류 및 금액에 따라 다릅니다. 오렌지Pay는 업계 최저 수준의 합리적인 수수료를 제공하며, 정확한 내용은 상담 시 안내해 드립니다."
+            }
+        }, {
+            "@type": "Question",
+            "name": "거래 시간은 얼마나 걸리나요?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "평균적으로 신청 후 5분에서 10분 이내에 모든 처리가 완료됩니다. 통신사나 금융기관의 상황에 따라 약간의 지연이 발생할 수 있습니다."
+            }
+        }, {
+            "@type": "Question",
+            "name": "정말 안전한가요? 개인정보 유출 위험은 없나요?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "오렌지Pay는 정식 등록된 업체로, 고객님의 안전을 최우선으로 생각합니다. 모든 거래 정보는 암호화 처리되며 개인정보 보호 규정을 철저히 준수합니다."
+            }
+        }]
     }
     </script>
 
-    <!-- FAQ 구조화 데이터 추가 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "현금화 진행 시 수수료는 어떻게 되나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "수수료는 상품의 종류 및 금액에 따라 다를 수 있습니다. 정확한 수수료는 오렌지Pay 상담 시 안내해 드립니다. 업계 최저 수준의 합리적인 수수료를 제공합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "거래 시간은 얼마나 걸리나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "평균적으로 신청 후 5분에서 10분 이내에 처리가 완료됩니다. 통신사 또는 금융기관의 상황에 따라 약간의 지연이 발생할 수 있습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "정말 안전한가요? 개인정보 유출 위험은 없나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "오렌지Pay는 정식 등록된 업체로서 고객님의 안전을 최우선으로 생각합니다. 모든 거래 정보는 암호화되어 안전하게 처리되며, 개인정보 보호 규정을 철저히 준수합니다."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- HowTo 구조화 데이터: 신용카드 현금화방법 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "신용카드 현금화방법",
-      "description": "신용카드 현금화 안전하게 하는 방법을 단계별로 안내합니다.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "상담 신청",
-          "text": "오렌지Pay 공식 채널로 상담을 신청합니다."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "신분 확인 및 안내",
-          "text": "상담원이 신분 확인 후 현금화 절차와 수수료를 안내합니다."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "신용카드 결제 진행",
-          "text": "안내에 따라 신용카드 결제를 진행합니다."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "입금 확인",
-          "text": "결제 완료 후 현금이 입금되는지 확인합니다."
-        }
-      ]
-    }
-    </script>
-
-    <!-- 성능 및 접근성 최적화 추가 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <meta name="theme-color" content="#FF7F50">
-    <!-- 네이버/카카오 등 국내 포털용 메타태그 -->
-    <meta name="naver-site-verification" content="82483ce843343e1880631869c6191fda4d57d8fa" />
-    <meta property="og:article:author" content="오렌지Pay">
-    <meta property="og:article:publisher" content="오렌지Pay">
-    <!-- favicon 다양한 사이즈 지원 -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <!-- 브레드크럼 구조화 데이터 추가 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "홈",
-          "item": "https://pay24.store/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "서비스 안내",
-          "item": "https://pay24.store/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "자주묻는질문",
-          "item": "https://pay24.store/#faq"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "고객센터",
-          "item": "https://pay24.store/#contact"
-        }
-      ]
-    }
-    </script>
-    
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-slate-50 text-slate-700">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="w-full max-w-5xl mx-auto px-4 flex items-center justify-between h-20">
-            <div class="flex items-center min-w-0">
-                <a href="#" class="flex items-center">
-                    <svg class="text-3xl text-orange-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M461.2 128.3c-1.5-17.7-16.2-31.3-34-31.3H48C21.5 97 0 118.5 0 145v222c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-23.6-17.1-43.2-40.8-47.7zM464 367c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V145c0-8.8 7.2-16 16-16h379.2c8.8 0 16 7.2 16 16v222zm-80-95c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"/></svg>
-                    <span class="text-2xl font-bold text-orange-600 whitespace-nowrap truncate">오렌지Pay-신용카드현금화 90%</span>
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <i class="fa-solid fa-credit-card text-orange-500 text-3xl"></i>
+                    <span class="text-2xl font-extrabold text-slate-800 tracking-tight">오렌지Pay</span>
                 </a>
-            </div>
-            <nav class="hidden md:flex gap-6 items-center ml-4">
-                <a href="#services" class="text-gray-600 hover:text-orange-500 transition duration-150">서비스 안내</a>
-                <a href="#faq" class="text-gray-600 hover:text-orange-500 transition duration-150">자주묻는질문</a>
-                <a href="#contact" class="text-gray-600 hover:text-orange-500 transition duration-150">고객센터</a>
-                <a href="/blog/index.html" class="text-gray-600 hover:text-orange-500 transition duration-150">블로그</a>
-            </nav>
-            <div class="md:hidden ml-2">
-                <button id="mobile-menu-button" aria-label="메뉴 열기" class="text-gray-600 hover:text-orange-500 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#services" class="text-base font-medium text-slate-600 hover:text-orange-500 transition-colors">서비스 안내</a>
+                    <a href="#features" class="text-base font-medium text-slate-600 hover:text-orange-500 transition-colors">오렌지Pay 특징</a>
+                    <a href="blog/index.html" class="text-base font-medium text-slate-600 hover:text-orange-500 transition-colors">최신 소식</a>
+                    <a href="#faq" class="text-base font-medium text-slate-600 hover:text-orange-500 transition-colors">자주묻는질문</a>
+                    <a href="#contact" class="text-base font-medium text-slate-600 hover:text-orange-500 transition-colors">고객센터</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 rounded-md text-slate-600 hover:bg-slate-100 hover:text-orange-500" aria-label="메뉴 열기">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
-            <a href="#services" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">서비스 안내</a>
-            <a href="#faq" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">자주묻는질문</a>
-            <a href="#contact" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">고객센터</a>
-            <a href="/blog/index.html" class="block px-4 py-3 text-gray-600 hover:bg-orange-50 hover:text-orange-500 transition duration-150">블로그</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <nav class="flex flex-col p-4 gap-2">
+                <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-md font-medium text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition-colors">서비스 안내</a>
+                <a href="#features" class="mobile-nav-link block px-4 py-3 rounded-md font-medium text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition-colors">오렌지Pay 특징</a>
+                <a href="blog/index.html" class="mobile-nav-link block px-4 py-3 rounded-md font-medium text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition-colors">최신 소식</a>
+                <a href="#faq" class="mobile-nav-link block px-4 py-3 rounded-md font-medium text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition-colors">자주묻는질문</a>
+                <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-md font-medium text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition-colors">고객센터</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero-section text-white py-16 sm:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">오렌지Pay: 안전하고 빠른 현금화 서비스</h1> 
-            <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">휴대폰 소액결제, 정보이용료, 신용카드 한도 및 포인트를 신속하게 현금으로 전환하세요. 24시간 상담!</p>
-            <a href="#services" class="bg-white text-orange-500 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-150 text-lg">서비스 바로가기</a>
-        </div>
-    </section>
-
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-        <section id="services" aria-labelledby="services-heading" class="mb-16 scroll-mt-20"> 
-            <h2 id="services-heading" class="text-3xl font-bold text-center mb-10 text-gray-700">소액결제 신용카드 현금화</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"> 
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-mobile-alt text-3xl text-orange-500 mr-4" aria-hidden="true"></i>
-                        <h3 class="text-2xl font-semibold text-gray-700">소액결제 현금화</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">휴대폰 소액결제 한도를 이용하여 필요한 현금을 신속하게 마련하세요. 오렌지Pay는 안전하고 빠른 처리를 약속드립니다.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>업계 최저 수수료 (상담 문의)</li>
-                        <li>24시간 연중무휴 상담</li>
-                        <li>평균 5분 이내 신속 처리</li>
-                    </ul>
-                    <a href="#contact" class="mt-6 inline-block bg-orange-500 text-white font-medium py-2 px-5 rounded-lg hover:bg-orange-600 transition duration-150">소액결제 문의하기</a>
-                </article>
-
-                <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-receipt text-3xl text-yellow-500 mr-4" aria-hidden="true"></i>
-                        <h3 class="text-2xl font-semibold text-gray-700">업계 최저 수수료</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">소액결제, 정보이용료, 신용카드 현금화 서비스에 대한 수수료를 확인하세요. 오렌지Pay는 항상 고객님을 최우선으로 생각합니다.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>소액결제: 75~90% (상담 후 결정)</li>
-                        <li>상품권: 88%~90% (상담 후 결정)</li>
-                        <li>신용카드 현금화:85~90% (상담 후 결정)</li>
-                    </ul>
-                    <a href="https://pf.kakao.com/_SBFexb/chat" class="mt-6 inline-block bg-yellow-400 text-gray-800 font-medium py-2 px-5 rounded-lg hover:bg-yellow-500 transition duration-150" target="_blank" rel="noopener noreferrer">카카오톡 상담</a>
-                </article>
-
-                <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="far fa-credit-card text-3xl text-red-500 mr-4" aria-hidden="true"></i>
-                        <h3 class="text-2xl font-semibold text-gray-700">신용카드 현금화</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">사용하지 않는 신용카드 포인트나 잔여 한도를 활용하여 현금을 마련할 수 있습니다. 오렌지Pay는 정식 등록 업체로 안전하게 진행합니다.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>모든 국내 카드사 가능</li>
-                        <li>고객 정보 비밀 보장</li>
-                        <li>상담 후 즉시 입금</li>
-                    </ul>
-                    <a href="#contact" class="mt-6 inline-block bg-red-500 text-white font-medium py-2 px-5 rounded-lg hover:bg-red-600 transition duration-150">신용카드 문의</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="faq" aria-labelledby="faq-heading" class="mb-16 scroll-mt-20">
-            <h2 id="faq-heading" class="text-3xl font-bold text-center mb-10 text-gray-700">자주 묻는 질문 (FAQ)</h2>
-            <div class="bg-white p-8 rounded-xl shadow-lg space-y-6">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Q. 현금화 진행 시 수수료는 어떻게 되나요?</h3>
-                    <p class="text-gray-600">A. 수수료는 상품의 종류 및 금액에 따라 다를 수 있습니다. 정확한 수수료는 오렌지Pay 상담 시 안내해 드립니다. 저희는 항상 업계 최저 수준의 합리적인 수수료를 제공하기 위해 노력하고 있습니다.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Q. 거래 시간은 얼마나 걸리나요?</h3>
-                    <p class="text-gray-600">A. 평균적으로 신청 후 5분에서 10분 이내에 처리가 완료됩니다. 다만, 통신사 또는 금융기관의 상황에 따라 약간의 지연이 발생할 수 있습니다.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Q. 정말 안전한가요? 개인정보 유출 위험은 없나요?</h3>
-                    <p class="text-gray-600">A. 네, 오렌지Pay는 정식 등록된 업체로서 고객님의 안전을 최우선으로 생각합니다. 모든 거래 정보는 암호화되어 안전하게 처리되며, 개인정보 보호 규정을 철저히 준수합니다.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" aria-labelledby="contact-heading" class="mb-16 scroll-mt-20">
-            <h2 id="contact-heading" class="text-3xl font-bold text-center mb-10 text-gray-700">오렌지Pay 고객센터 안내</h2>
-            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                <p class="text-lg text-gray-600 mb-6">궁금한 점이 있으시거나 서비스 신청을 원하시면 언제든지 문의해주세요.<br>오렌지Pay는 24시간 친절하게 상담해 드립니다.</p>
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="tel:010-5842-9536" class="bg-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-150 text-lg flex items-center">
-                        <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i> 전화 상담하기
-                    </a>
-                    <a id="kakao-chat-btn" href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-150 text-lg flex items-center">
-                        <i class="fas fa-comment-dots mr-2" aria-hidden="true"></i> 카카오톡 상담
-                    </a>
-                </div>
-                <p class="mt-8 text-sm text-gray-500">
-                    상담 가능 시간: 24시간 연중무휴<br>
-                    (단, 특정 시간에는 응답이 다소 늦어질 수 있습니다.)
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                    24시간 빠르고 안전한 현금화 서비스
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-orange-100 mb-8">
+                    휴대폰 소액결제, 정보이용료, 신용카드 한도를 업계 최저 수수료로 신속하게 해결하세요.
                 </p>
+                <a href="#contact" class="inline-block bg-white text-orange-600 font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-orange-50 transition-transform hover:scale-105">
+                    <i class="fa-solid fa-bolt mr-2"></i> 지금 바로 상담하기
+                </a>
             </div>
         </section>
 
-        <section id="blog" aria-labelledby="blog-heading" class="mb-16 scroll-mt-20">
-            <h2 id="blog-heading" class="text-3xl font-bold text-center mb-10 text-gray-700">최신 글</h2>
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-                <ul id="blog-list" class="divide-y divide-gray-200">
-                    <!-- JS로 자동 생성 -->
-                </ul>
-        
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">주요 서비스 안내</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">오렌지Pay는 고객님의 필요에 맞는 다양한 현금화 서비스를 제공합니다.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center bg-orange-100 text-orange-600 w-16 h-16 rounded-full mb-6">
+                            <i class="fa-solid fa-mobile-screen-button text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">소액결제 현금화</h3>
+                        <p class="text-slate-600 mb-4">휴대폰 소액결제 한도를 이용해 필요한 현금을 5분 내로 신속하게 마련하세요.</p>
+                        <a href="blog/12.html" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">문의하기 <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center bg-orange-100 text-orange-600 w-16 h-16 rounded-full mb-6">
+                            <i class="fa-solid fa-receipt text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">정보이용료 현금화</h3>
+                        <p class="text-slate-600 mb-4">콘텐츠 정보이용료(구글 플레이, 원스토어 등) 한도를 안전하게 현금으로 전환합니다.</p>
+                        <a href="blog/12.html" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">문의하기 <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center bg-orange-100 text-orange-600 w-16 h-16 rounded-full mb-6">
+                            <i class="fa-regular fa-credit-card text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">신용카드 현금화</h3>
+                        <p class="text-slate-600 mb-4">사용하지 않는 카드 포인트나 잔여 한도를 활용해 급한 자금을 합법적으로 마련하세요.</p>
+                        <a href="blog/12.html" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">문의하기 <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
-        <script>
-        // posts.json을 fetch하여 최신글 자동 반영 (에러 핸들링 추가)
-        fetch('posts.json')
-          .then(res => {
-            if (!res.ok) throw new Error('posts.json을 불러올 수 없습니다.');
-            return res.json();
-          })
-          .then(posts => {
-            const blogList = document.getElementById('blog-list');
-            if (blogList && posts.length > 0) {
-              posts.forEach(post => {
-                const li = document.createElement('li');
-                li.className = 'py-4';
-                li.innerHTML = `
-                  <a href="${post.url}" class="block hover:bg-orange-50 rounded-lg p-4 transition">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                      <span class="text-lg font-semibold text-orange-600">${post.title}</span>
-                      <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date || ''}</span>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">왜 오렌지Pay를 선택해야 할까요?</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">고객님의 안전과 만족을 최우선으로 생각합니다.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <i class="fa-solid fa-shield-halved text-4xl text-orange-500 mb-4"></i>
+                        <h4 class="text-xl font-bold text-slate-800">정식 등록 업체</h4>
+                        <p class="text-slate-600 mt-1">안심하고 거래할 수 있는<br>믿을 수 있는 업체</p>
                     </div>
-                    <p class="text-gray-600 mt-2">${post.description || ''}</p>
-                  </a>
-                `;
-                blogList.appendChild(li);
-              });
-            } else if (blogList) {
-              blogList.innerHTML = '<li class="py-4 text-gray-400 text-center">등록된 글이 없습니다.</li>';
-            }
-          })
-          .catch(err => {
-            const blogList = document.getElementById('blog-list');
-            if (blogList) {
-              blogList.innerHTML = `<li class="py-4 text-red-500 text-center">최신글을 불러올 수 없습니다.<br>${err.message}</li>`;
-            }
-          });
-        </script>
+                    <div class="p-4">
+                        <i class="fa-solid fa-percent text-4xl text-orange-500 mb-4"></i>
+                        <h4 class="text-xl font-bold text-slate-800">최저 수수료</h4>
+                        <p class="text-slate-600 mt-1">업계 최저 수준의<br>합리적인 수수료</p>
+                    </div>
+                    <div class="p-4">
+                        <i class="fa-solid fa-headset text-4xl text-orange-500 mb-4"></i>
+                        <h4 class="text-xl font-bold text-slate-800">24/7 상담 지원</h4>
+                        <p class="text-slate-600 mt-1">시간에 구애받지 않는<br>연중무휴 고객센터</p>
+                    </div>
+                    <div class="p-4">
+                        <i class="fa-solid fa-jet-fighter-up text-4xl text-orange-500 mb-4"></i>
+                        <h4 class="text-xl font-bold text-slate-800">5분 이내 입금</h4>
+                        <p class="text-slate-600 mt-1">신청부터 입금까지<br>신속한 처리 속도</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">오렌지Pay 최신 소식</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">유용한 금융 정보와 새로운 소식을 확인하세요.</p>
+                </div>
+                <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg border border-slate-200">
+                    <ul id="blog-list" class="divide-y divide-slate-200">
+                        <!-- Blog posts will be loaded here by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">자주 묻는 질문 (FAQ)</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">고객님들이 가장 궁금해하시는 질문들을 모았습니다.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item bg-white rounded-lg border border-slate-200">
+                        <button class="accordion-header flex justify-between items-center w-full p-5 text-left font-semibold text-slate-800 text-lg">
+                            <span>현금화 진행 시 수수료는 어떻게 되나요?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-slate-600">
+                                수수료는 상품의 종류 및 금액에 따라 다릅니다. 오렌지Pay는 업계 최저 수준의 합리적인 수수료를 제공하며, 정확한 내용은 상담 시 친절하게 안내해 드립니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item bg-white rounded-lg border border-slate-200">
+                        <button class="accordion-header flex justify-between items-center w-full p-5 text-left font-semibold text-slate-800 text-lg">
+                            <span>거래 시간은 얼마나 걸리나요?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-slate-600">
+                                평균적으로 신청 후 5분에서 10분 이내에 모든 처리가 완료됩니다. 다만, 통신사나 금융기관의 서버 점검 등 불가피한 상황에서는 약간의 지연이 발생할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item bg-white rounded-lg border border-slate-200">
+                        <button class="accordion-header flex justify-between items-center w-full p-5 text-left font-semibold text-slate-800 text-lg">
+                            <span>정말 안전한가요? 개인정보 유출 위험은 없나요?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-slate-600">
+                                네, 그럼요. 오렌지Pay는 정식 등록된 업체로서 고객님의 안전을 최우선으로 생각합니다. 모든 거래 정보는 최신 보안 기술로 암호화되어 안전하게 처리되며, 개인정보 보호 규정을 철저히 준수하여 어떠한 정보도 유출될 걱정이 없습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-slate-800 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">도움이 필요하신가요?</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+                    24시간 언제든지, 전문가가 친절하게 상담해 드립니다.<br>망설이지 말고 지금 바로 연락주세요!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:010-5842-9536" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg transition-transform hover:scale-105">
+                        <i class="fa-solid fa-phone-volume mr-3"></i> 전화 상담하기
+                    </a>
+                    <a id="kakao-chat-btn" href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-kakao hover:opacity-90 text-slate-800 font-bold text-lg px-8 py-4 rounded-lg shadow-lg transition-transform hover:scale-105">
+                        <i class="fa-solid fa-comment mr-3"></i> 카카오톡 1:1 상담
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-800 text-gray-300 py-10">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
             <div class="mb-4">
-                <a href="/terms.html" class="text-gray-400 hover:text-white mx-2">이용약관</a> | 
-                <a href="/privacy.html" class="text-gray-400 hover:text-white mx-2">개인정보처리방침</a>
+                <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
+                <span class="text-slate-600">|</span>
+                <a href="/privacy.html" class="text-sm hover:text-white mx-2 transition-colors">개인정보처리방침</a>
             </div>
-            <p class="text-sm">&copy; <span id="current-year"></span> 오렌지Pay. 모든 권리 보유.</p>
-            <p class="text-xs mt-1">본 사이트는 정보 제공을 목적으로 하며, 불법적인 용도로 사용될 수 없습니다. 모든 서비스는 정식 절차에 따라 안전하게 진행됩니다.</p>
+            <p class="text-sm">&copy; <span id="current-year"></span> 오렌지Pay. All Rights Reserved.</p>
+            <p class="text-xs mt-2 text-slate-500">
+                본 사이트는 합법적인 금융 정보 제공을 목적으로 하며, 불법적인 '카드깡' 등 여신전문금융업법 위반 행위를 중개하거나 권유하지 않습니다. 모든 서비스는 관련 법령 및 약관을 준수하여 안전하게 진행됩니다.
+            </p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Accordion (FAQ)
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            header.addEventListener('click', () => {
+                // Close other open items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('open')) {
+                        otherItem.classList.remove('open');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = '0px';
                     }
+                });
+
+                // Toggle current item
+                item.classList.toggle('open');
+                if (item.classList.contains('open')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0px';
                 }
             });
         });
 
-        // Set current year in footer
-        const currentYearElement = document.getElementById('current-year');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
+        // Add referrer to KakaoTalk chat link
+        const kakaoBtn = document.getElementById('kakao-chat-btn');
+        if (kakaoBtn) {
+            const baseUrl = 'https://pf.kakao.com/_SBFexb/chat';
+            const ref = encodeURIComponent(window.location.href);
+            const url = `${baseUrl}?referrer=${ref}`;
+            kakaoBtn.setAttribute('href', url);
         }
 
-        // 카카오톡 상담 버튼에 referrer(유입 페이지) 파라미터 추가
-        (function() {
-          var kakaoBtn = document.getElementById('kakao-chat-btn');
-          if (kakaoBtn) {
-            kakaoBtn.addEventListener('click', function(e) {
-              var baseUrl = 'https://pf.kakao.com/_SBFexb/chat';
-              var ref = encodeURIComponent(window.location.href);
-              // 이미 referrer 파라미터가 있으면 중복 추가 방지
-              var url = baseUrl + (baseUrl.indexOf('?') === -1 ? '?' : '&') + 'referrer=' + ref;
-              kakaoBtn.setAttribute('href', url);
-            });
-          }
-        })();
+        // Blog Posts Data (Replaces fetch('posts.json'))
+        // posts.json에서 블로그 글 목록을 동적으로 불러오기
+        fetch('posts.json')
+          .then(response => response.json())
+          .then(postsData => {
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+              if (postsData && postsData.length > 0) {
+                // 최신 3개 글만 표시
+                postsData.slice(0, 3).forEach(post => {
+                  const li = document.createElement('li');
+                  li.innerHTML = `
+                    <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                            <h4 class="text-lg font-bold text-slate-800 group-hover:text-orange-600">${post.title}</h4>
+                            <span class="text-sm text-slate-500 whitespace-nowrap mt-1 sm:mt-0 sm:ml-4">${post.date || ''}</span>
+                        </div>
+                        <p class="mt-2 text-slate-600">${post.description || ''}</p>
+                    </a>
+                  `;
+                  blogList.appendChild(li);
+                });
+              } else {
+                blogList.innerHTML = `<li class="p-6 text-center text-slate-500">등록된 글이 없습니다.</li>`;
+              }
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching blog posts:', error);
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+              blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
+            }
+          });
+
+        // Display Blog Posts
+        try {
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+                if (postsData && postsData.length > 0) {
+                    // Show latest 3 posts
+                    postsData.slice(0, 3).forEach(post => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
+                                <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-orange-600">${post.title}</h4>
+                                    <span class="text-sm text-slate-500 whitespace-nowrap mt-1 sm:mt-0 sm:ml-4">${post.date || ''}</span>
+                                </div>
+                                <p class="mt-2 text-slate-600">${post.description || ''}</p>
+                            </a>
+                        `;
+                        blogList.appendChild(li);
+                    });
+                } else {
+                    blogList.innerHTML = `<li class="p-6 text-center text-slate-500">등록된 글이 없습니다.</li>`;
+                }
+            }
+        } catch (error) {
+            console.error('Error displaying blog posts:', error);
+            const blogList = document.getElementById('blog-list');
+            if (blogList) {
+                blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
+            }
+        }
     </script>
 
-    <!-- Google Analytics 4(GA4) 예시 코드 (실제 추적ID로 교체 필요) -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X23B68XXLC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-X23B68XXLC');
-    </script>
-    <!-- 법적 리스크 안내 추가 -->
-    <meta name="legal-disclaimer" content="본 서비스는 합법적인 상품권 거래 및 포인트 활용 정보만을 제공하며, 불법적인 현금화 행위(카드깡 등)는 엄격히 금지합니다. 모든 거래는 관련 법령 및 카드사 약관을 준수합니다.">
-    <!-- 이미지 lazy loading 및 alt 속성 보강 예시 (본문 내 img 태그에 적용 필요) -->
-    <!-- <img src="img/og-image.webp" alt="오렌지Pay 공식 로고" loading="lazy" width="600" height="315"> -->
 </body>
 </html>
-
