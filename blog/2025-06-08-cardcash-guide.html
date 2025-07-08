@@ -4,9 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/tailwind.min.css">
-  <!-- FontAwesome CDN 유지 (필요시만) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Favicon and Theme -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#F97316">
+  <style>
+    body { font-family: 'Noto Sans KR', 'Inter', sans-serif; }
+  </style>
   <link rel="preload" as="image" href="../img/og-image.jpg">
   <link rel="preload" as="image" href="../img/twitter-image.jpg">
   <!-- 구조화 데이터 자동화 템플릿 적용 -->
@@ -118,38 +128,25 @@
   <meta name="naver-site-verification" content="네이버인증코드" />
   <meta name="google-site-verification" content="구글인증코드" />
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
-    <div class="w-full max-w-4xl mx-auto px-4 flex items-center justify-between h-20">
-      <div class="flex items-center min-w-0">
-        <i class="fas fa-wallet text-3xl text-white mr-2"></i>
-        <a href="/" class="text-2xl font-bold text-white whitespace-nowrap truncate">오렌지Pay-신용카드현금화 90%</a>
+<body class="bg-slate-50 text-slate-700">
+  <!-- Header (통일 레이아웃) -->
+  <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-2">
+          <i class="fa-solid fa-credit-card text-orange-500 text-3xl"></i>
+          <span class="text-2xl font-extrabold text-slate-800 tracking-tight">오렌지Pay 블로그</span>
+        </a>
       </div>
-      <nav class="hidden md:flex gap-4 items-center ml-4">
-        <a href="/" class="text-white hover:underline text-lg">홈</a>
-        <a href="/blog/index.html" class="text-white hover:underline text-lg">블로그</a>
-        <a href="/privacy.html" class="text-white hover:underline text-lg">개인정보처리방침</a>
-        <a href="/terms.html" class="text-white hover:underline text-lg">이용약관</a>
-      </nav>
-      <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg ml-2 whitespace-nowrap">24시간 상담하러가기</a>
-      <!-- 모바일 햄버거 메뉴 (필요시) -->
-      <button class="md:hidden ml-2 text-white focus:outline-none" aria-label="메뉴 열기" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden bg-orange-500 px-4 pb-4">
-      <nav class="flex flex-col gap-2">
-        <a href="/" class="text-white hover:underline text-lg">홈</a>
-        <a href="/blog/index.html" class="text-white hover:underline text-lg">블로그</a>
-        <a href="/privacy.html" class="text-white hover:underline text-lg">개인정보처리방침</a>
-        <a href="/terms.html" class="text-white hover:underline text-lg">이용약관</a>
-      </nav>
     </div>
   </header>
   <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-    <h1 class="text-3xl font-bold text-orange-600 mb-2">신용카드 현금화, 2025년 최신 방법과 수수료: 안전하고 합법적인 활용 가이드</h1>
-    <p class="text-sm text-gray-500 mb-6">2025-06-08</p>
-    <p class="mb-6 text-gray-700">신용카드 현금화의 최신 합법적 방법, 수수료, 안전하게 이용하는 팁까지 한눈에! 카드 한도 활용, 합법/불법 구분, 피해 예방법 등 실전 가이드.</p>
+    <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
+    <div class="text-center mb-8">
+      <span class="text-6xl block mb-2">🍊</span>
+      <h1 class="text-3xl font-extrabold text-orange-600 mb-2">신용카드 현금화, 2025년 최신 방법과 수수료: 안전하고 합법적인 활용 가이드</h1>
+      <p class="text-slate-600">2025-06-08 | 신용카드 현금화의 최신 합법적 방법, 수수료, 안전하게 이용하는 팁까지 한눈에! 카드 한도 활용, 합법/불법 구분, 피해 예방법 등 실전 가이드.</p>
+    </div>
     <hr class="my-6">
     <!-- 본문 내용 -->
     <h2 class="text-2xl font-semibold mt-8 mb-2">신용카드 현금화란?</h2>
@@ -207,23 +204,9 @@
       <li>상담 시 본인 명의 카드/계좌만 허용하는지 확인</li>
       <li>과도한 개인정보 요구, 비정상적 수수료 조건 제시 여부 점검</li>
     </ul>
-    <div class="mt-8">
-      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500" aria-label="블로그 목록으로 돌아가기" role="link" tabindex="0">← 블로그 목록으로 돌아가기</a>
-    </div>
+    <!-- 목록으로 돌아가기 버튼은 상단에 통합 -->
     <!-- 외부 신뢰도 백링크/공유 안내 -->
-    <section class="mt-12 border-t pt-6">
-      <h2 class="text-lg font-bold mb-2">외부 신뢰도 백링크 & 공유</h2>
-      <p class="text-sm text-gray-600 mb-2">아래 버튼으로 주요 포털/블로그/SNS/카페 등에 이 글을 공유해 신뢰도와 검색 노출을 높이세요.</p>
-      <div class="flex flex-wrap gap-2 mb-2">
-        <button onclick="navigator.clipboard.writeText(location.href)" class="px-3 py-1 bg-orange-100 text-orange-700 rounded hover:bg-orange-200" aria-label="URL 복사" tabindex="0">URL 복사</button>
-        <a href="https://share.naver.com/web/shareView.nhn?url=https://pay24.store/blog/2025-06-08-cardcash-guide.html" target="_blank" rel="noopener" class="px-3 py-1 bg-green-100 text-green-700 rounded hover:bg-green-200" aria-label="네이버 공유" tabindex="0">네이버</a>
-        <a href="https://twitter.com/intent/tweet?url=https://pay24.store/blog/2025-06-08-cardcash-guide.html" target="_blank" rel="noopener" class="px-3 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200" aria-label="X(트위터) 공유" tabindex="0">X</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://pay24.store/blog/2025-06-08-cardcash-guide.html" target="_blank" rel="noopener" class="px-3 py-1 bg-blue-50 text-blue-900 rounded hover:bg-blue-200" aria-label="페이스북 공유" tabindex="0">페이스북</a>
-        <a href="https://story.kakao.com/share?url=https://pay24.store/blog/2025-06-08-cardcash-guide.html" target="_blank" rel="noopener" class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200" aria-label="카카오스토리 공유" tabindex="0">카카오</a>
-      </div>
-      <p class="text-xs text-gray-400">네이버 블로그, 티스토리, 브런치, 인스타, X, 유튜브, 구글 사이트 등에도 링크를 남기면 신뢰도와 SEO가 크게 향상됩니다.</p>
-    </section>
-    <!-- 후기/전문가 Q&A 샘플 -->
+   
     <section class="mt-12 border-t pt-6">
       <h2 class="text-lg font-bold mb-2">실제 후기 & 전문가 Q&A</h2>
       <div class="mb-2 p-3 bg-gray-50 rounded">
@@ -240,5 +223,26 @@
       <div class="text-xs text-gray-400">더 많은 후기/전문가 Q&A는 블로그에서 계속 업데이트됩니다.</div>
     </section>
   </main>
+  <!-- Footer (통일 레이아웃) -->
+  <footer class="bg-slate-900 text-slate-400 mt-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <div class="mb-4">
+        <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
+        <span class="text-slate-600">|</span>
+        <a href="/privacy.html" class="text-sm hover:text-white mx-2 transition-colors">개인정보처리방침</a>
+      </div>
+      <p class="text-sm">&copy; <span id="current-year"></span> 오렌지Pay. All Rights Reserved.</p>
+      <p class="text-xs mt-2 text-slate-500">
+        본 사이트는 합법적인 금융 정보 제공을 목적으로 하며, 불법적인 '카드깡' 등 여신전문금융업법 위반 행위를 중개하거나 권유하지 않습니다. 모든 서비스는 관련 법령 및 약관을 준수하여 안전하게 진행됩니다.
+      </p>
+    </div>
+  </footer>
+  <script>
+    // Set current year in footer
+    document.addEventListener('DOMContentLoaded', function() {
+      var yearSpan = document.getElementById('current-year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
