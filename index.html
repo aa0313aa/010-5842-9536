@@ -429,13 +429,13 @@
             kakaoBtn.setAttribute('href', url);
         }
 
-        // Blog Posts Data (Replaces fetch('posts.json'))
         // posts.json에서 블로그 글 목록을 동적으로 불러오기
         fetch('posts.json')
           .then(response => response.json())
           .then(postsData => {
             const blogList = document.getElementById('blog-list');
             if (blogList) {
+              blogList.innerHTML = '';
               if (postsData && postsData.length > 0) {
                 // 최신 3개 글만 표시
                 postsData.slice(0, 3).forEach(post => {
@@ -463,37 +463,6 @@
               blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
             }
           });
-
-        // Display Blog Posts
-        try {
-            const blogList = document.getElementById('blog-list');
-            if (blogList) {
-                if (postsData && postsData.length > 0) {
-                    // Show latest 3 posts
-                    postsData.slice(0, 3).forEach(post => {
-                        const li = document.createElement('li');
-                        li.innerHTML = `
-                            <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-                                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-orange-600">${post.title}</h4>
-                                    <span class="text-sm text-slate-500 whitespace-nowrap mt-1 sm:mt-0 sm:ml-4">${post.date || ''}</span>
-                                </div>
-                                <p class="mt-2 text-slate-600">${post.description || ''}</p>
-                            </a>
-                        `;
-                        blogList.appendChild(li);
-                    });
-                } else {
-                    blogList.innerHTML = `<li class="p-6 text-center text-slate-500">등록된 글이 없습니다.</li>`;
-                }
-            }
-        } catch (error) {
-            console.error('Error displaying blog posts:', error);
-            const blogList = document.getElementById('blog-list');
-            if (blogList) {
-                blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
-            }
-        }
     </script>
 
 </body>
