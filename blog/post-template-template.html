@@ -69,6 +69,34 @@
         setMeta('og:site_name', '오렌지Pay', true);
         setMeta('og:locale', 'ko_KR', true);
         setMeta('twitter:card', 'summary_large_image');
+        // SEO 보강 메타
+        // canonical
+        if (data.url) {
+          let link = document.querySelector("link[rel='canonical']");
+          if (!link) {
+            link = document.createElement('link');
+            link.setAttribute('rel', 'canonical');
+            document.head.appendChild(link);
+          }
+          link.setAttribute('href', data.url);
+        }
+        // robots
+        let robots = document.querySelector("meta[name='robots']");
+        if (!robots) {
+          robots = document.createElement('meta');
+          robots.setAttribute('name','robots');
+          document.head.appendChild(robots);
+        }
+        robots.setAttribute('content', 'index,follow');
+        // article times
+        if (data.date) {
+          setMeta('article:published_time', data.date, true);
+          setMeta('article:modified_time', data.date, true);
+        }
+        // twitter additional tags (assumption: no official twitter handle, placeholder can be replaced)
+        setMeta('twitter:site', data.twitterSite || '');
+        setMeta('twitter:creator', data.twitterCreator || '');
+        setMeta('twitter:image:alt', data.title || '');
 
         // 구조화 데이터 자동 생성
         let ld = {
@@ -84,6 +112,12 @@
         };
         if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
         if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
+        // publisher 정보 추가 (브랜드 신뢰성 향상)
+        ld.publisher = {
+          "@type": "Organization",
+          "name": data.author || "오렌지Pay",
+          "logo": {"@type": "ImageObject", "url": location.origin + "/img/logo.png"}
+        };
         let script = document.createElement('script');
         script.type = 'application/ld+json';
         script.textContent = JSON.stringify(ld);
