@@ -104,12 +104,23 @@
           "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
           "headline": data.title,
           "description": data.description,
-          "image": [location.origin + data.image],
           "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
           "datePublished": data.date,
           "dateModified": data.date,
           "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
         };
+        // 이미지가 있으면 URL 및 가능하면 크기 정보를 포함
+        if (data.image) {
+          const imgUrl = location.origin + data.image;
+          if (data.imageWidth && data.imageHeight) {
+            ld.image = {"@type": "ImageObject", "url": imgUrl, "width": data.imageWidth, "height": data.imageHeight};
+            // OG 이미지 크기 메타 추가
+            setMeta('og:image:width', String(data.imageWidth), true);
+            setMeta('og:image:height', String(data.imageHeight), true);
+          } else {
+            ld.image = [imgUrl];
+          }
+        }
         if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
         if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
         // publisher 정보 추가 (브랜드 신뢰성 향상)
