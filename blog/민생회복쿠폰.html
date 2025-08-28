@@ -16,7 +16,9 @@
       "title": "정부, 민생경제 활력 제고 위한 '민생회복 소비쿠폰' 지급 전격 시행 | 오렌지Pay 블로그",
       "description": "정부가 고물가와 내수 침체로 어려움을 겪는 국민 생활에 활력을 불어넣고 소상공인과 자영업자의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 신청 방법, 지급액, 사용처 등 뉴스 형식으로 총정리.",
       "date": "2025-07-18",
-      "image": "/img/og-image.jpg",
+  "image": "/img/og-image.jpg",
+  "imageWidth": 1198,
+  "imageHeight": 406,
       "url": "https://pay24.store/blog/민생회복쿠폰.html",
       "draft": false,
       "author": "오렌지Pay",
@@ -39,293 +41,130 @@
           }
           desc.content = data.description;
         }
-        // OG/Twitter 자동화
-        const setMeta = (name, content, property = false) => {
-          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
-          if (!tag) {
-            tag = document.createElement('meta');
-            if (property) tag.setAttribute('property', name);
-            else tag.setAttribute('name', name);
-            document.head.appendChild(tag);
-          }
-          tag.setAttribute('content', content);
-        };
-        if (data.title) {
-          setMeta('og:title', data.title, true);
-          setMeta('twitter:title', data.title);
-        }
-        if (data.description) {
-          setMeta('og:description', data.description, true);
-          setMeta('twitter:description', data.description);
-        }
-        if (data.image) {
-          setMeta('og:image', data.image, true);
-          setMeta('twitter:image', data.image);
-        }
-        if (data.url) {
-          setMeta('og:url', data.url, true);
-        }
-        setMeta('og:type', 'article', true);
-        setMeta('og:site_name', '오렌지Pay', true);
-        setMeta('og:locale', 'ko_KR', true);
-        setMeta('twitter:card', 'summary_large_image');
+        <!-- 블로그/게시판 글 (공개용) -->
+        <!DOCTYPE html>
+        <html lang="ko">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="../css/tailwind.min.css">
+          <!-- FontAwesome CDN 필요시 사용 -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <link rel="preload" as="image" href="../img/og-image.jpg">
+          <link rel="preload" as="image" href="../img/twitter-image.jpg">
 
-        // 구조화 데이터 자동 생성
-        let ld = {
-          "@context": "https://schema.org",
-          "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
-          "headline": data.title,
-          "description": data.description,
-          "image": [location.origin + data.image],
-          "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
-          "datePublished": data.date,
-          "dateModified": data.date,
-          "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
-        };
-        if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
-        if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
-        let script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(ld);
-        document.head.appendChild(script);
-      }
-    })();
-  </script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <div class="flex items-center">
-          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
-          <a href="/" class="text-2xl font-bold text-white"> 신용카드현금화-휴대폰소액결제</a>
-        </div>
-        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
-      </div>
-    </div>
-  </header>
-  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-    
-    <h1 class="text-3xl font-bold text-orange-600 mb-2">정부, 민생경제 활력 제고 위한 '민생회복 소비쿠폰' 지급 전격 시행</h1>
-    <p class="text-sm text-gray-500 mb-6">2025년 7월 18일, 대한민국</p>
-    <p class="mb-6 text-gray-700">정부가 고물가와 내수 침체로 어려움을 겪는 국민 생활에 활력을 불어넣고 소상공인과 자영업자의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 이번 소비쿠폰은 전 국민을 대상으로 하되, 소득 수준과 거주 지역에 따라 차등 지급하여 취약계층에 대한 지원을 두텁게 한 것이 특징입니다. 1차와 2차에 걸쳐 지급되는 소비쿠폰의 신청 방법, 지급액, 사용처 등 상세한 내용을 뉴스 형식으로 총정리했습니다.</p>
-    <hr class="my-6">
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[개요] 민생회복 소비쿠폰, 왜 지급되나?</h2>
-    <p class="mb-4">정부의 이번 '민생회복 소비쿠폰' 지급 결정은 장기화된 고물가 현상으로 위축된 소비 심리를 회복하고, 내수 경제의 선순환 구조를 복원하는 데 최우선 목표를 두고 있습니다. 가계의 실질 소득 감소 부담을 덜어주는 동시에, 국민의 소비 여력을 지역 내 소상공인 매장으로 유도하여 골목상권에 직접적인 온기를 불어넣겠다는 취지입니다.</p>
-    <p class="mb-4">과거 코로나19 팬데믹 시기의 재난지원금이 방역 상황 극복에 중점을 뒀다면, 이번 소비쿠폰은 민생 경제 회복과 지역 경제 활성화라는 명확한 목표 아래 설계되었습니다. 정부는 이번 지원을 통해 약 13조 원 규모의 자금이 시중에 풀려 단기적인 경기 부양 효과를 낼 것으로 기대하고 있습니다.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[지급 대상 및 금액] 나는 얼마나 받나? 소득·지역 따라 최대 55만 원</h2>
-    <p class="mb-4">이번 소비쿠폰은 2025년 6월 18일 기준, 대한민국에 주민등록을 둔 모든 국민에게 지급됩니다. 다만, 소득 수준과 거주 형태에 따라 지원 금액에 차이가 있습니다. 지급은 1차와 2차로 나뉘어 진행됩니다.</p>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li><b>1차 지급 (7월 21일 신청 시작)</b><br>
-        <ul class="list-disc ml-4">
-          <li>일반 국민: 1인당 15만 원</li>
-          <li>차상위계층 및 한부모가족: 1인당 30만 원</li>
-          <li>기초생활보장수급자: 1인당 40만 원</li>
-          <li>비수도권 거주자: 1인당 3만 원 추가 지급</li>
-          <li>인구감소지역(84개 시·군) 거주자: 1인당 5만 원 추가 지급</li>
-        </ul>
-        <span class="text-xs text-gray-500">예: 인구감소지역에 거주하는 기초생활수급자는 1차에서 1인당 총 45만 원(기본 40만 원 + 인구감소지역 5만 원) 지급</span>
-      </li>
-      <li><b>2차 지급 (9월 22일 신청 시작)</b><br>
-        <ul class="list-disc ml-4">
-          <li>소득 상위 10% 제외, 국민 약 90% 대상</li>
-          <li>대상자: 1인당 10만 원 추가 지급</li>
-        </ul>
-        <span class="text-xs text-gray-500">예: 인구감소지역 기초생활수급자는 1차(45만 원) + 2차(10만 원) = 최대 55만 원</span>
-      </li>
-      <li>외국인: 원칙적으로 제외, 단 결혼이민자(F-6), 영주권자(F-5) 등 일부 예외 지급</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[신청 방법 및 기간] 놓치면 안 되는 신청! 온라인·오프라인 모두 가능</h2>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li>1차: 2025년 7월 21일(월) ~ 9월 12일(금)</li>
-      <li>2차: 2025년 9월 22일(월) ~ 10월 31일(금)</li>
-      <li>신청 첫 주(7/21~7/25) 요일제 시행: 출생연도 끝자리별 신청일 지정<br>
-        <span class="text-xs text-gray-500">월(1,6), 화(2,7), 수(3,8), 목(4,9), 금(5,0)</span>
-      </li>
-      <li>신청 방법 및 지급 수단:
-        <ul class="list-disc ml-4">
-          <li>신용·체크카드 충전: 카드사 홈페이지, 앱, 콜센터, 은행 창구</li>
-          <li>지역사랑상품권: 앱 또는 주민센터</li>
-          <li>선불카드: 주민센터 방문 신청 및 수령</li>
-        </ul>
-      </li>
-      <li>성인은 본인 직접 신청, 미성년 자녀는 세대주가 대리 신청 가능</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[사용처 및 기한] 어디서, 언제까지 써야 하나?</h2>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li>사용처: 주소지 광역자치단체 내 연 매출 30억 원 이하 소상공인 가맹점(전통시장, 동네 마트, 음식점, 미용실, 약국, 병원, 학원 등)</li>
-      <li>사용 불가: 백화점, 대형마트, SSM, 면세점, 온라인 쇼핑몰, 유흥업소, 사행성 업종 등</li>
-      <li>사용 기한: 2025년 11월 30일까지(미사용 잔액은 국고 환수)</li>
-    </ul>
-    <p class="mb-6 text-gray-700">정부는 이번 '민생회복 소비쿠폰'이 단순한 현금 지원을 넘어, 소비-매출 증대-고용 안정으로 이어지는 경제 선순환의 마중물이 되기를 기대한다며, 국민들의 적극적인 참여와 현명한 소비를 당부했습니다.</p>
-    <div class="mt-8">
-      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
-    </div>
-  </main>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/tailwind.min.css">
-  <!-- FontAwesome CDN 유지 (필요시만) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- 주요 이미지 preload/lazy/alt/aria-label 보강 -->
-  <link rel="preload" as="image" href="../img/og-image.jpg">
-  <link rel="preload" as="image" href="../img/twitter-image.jpg">
-  <!-- Article/Review/HowTo 구조화 데이터 자동화 템플릿 -->
-  <script id="post-meta" type="application/json">
-    {
-      "title": "정부, 민생경제 활력 제고 위한 '민생회복 소비쿠폰' 지급 전격 시행 | 오렌지Pay 블로그",
-      "description": "정부가 고물가와 내수 침체로 어려움을 겪는 국민 생활에 활력을 불어넣고 소상공인과 자영업자의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 신청 방법, 지급액, 사용처 등 뉴스 형식으로 총정리.",
-      "date": "2025-07-18",
-      "image": "/img/og-image.jpg",
-      "url": "https://pay24.store/blog/민생회복쿠폰.html",
-      "draft": false,
-      "author": "오렌지Pay",
-      "reviewRating": 5,
-      "howto": false
-    }
-  </script>
-  <script>
-    (function() {
-      const meta = document.getElementById('post-meta');
-      if (meta) {
-        const data = JSON.parse(meta.textContent);
-        if (data.title) document.title = data.title;
-        if (data.description) {
-          let desc = document.querySelector('meta[name="description"]');
-          if (!desc) {
-            desc = document.createElement('meta');
-            desc.name = "description";
-            document.head.appendChild(desc);
-          }
-          desc.content = data.description;
-        }
-        // OG/Twitter 자동화
-        const setMeta = (name, content, property = false) => {
-          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
-          if (!tag) {
-            tag = document.createElement('meta');
-            if (property) tag.setAttribute('property', name);
-            else tag.setAttribute('name', name);
-            document.head.appendChild(tag);
-          }
-          tag.setAttribute('content', content);
-        };
-        if (data.title) {
-          setMeta('og:title', data.title, true);
-          setMeta('twitter:title', data.title);
-        }
-        if (data.description) {
-          setMeta('og:description', data.description, true);
-          setMeta('twitter:description', data.description);
-        }
-        if (data.image) {
-          setMeta('og:image', data.image, true);
-          setMeta('twitter:image', data.image);
-        }
-        if (data.url) {
-          setMeta('og:url', data.url, true);
-        }
-        setMeta('og:type', 'article', true);
-        setMeta('og:site_name', '오렌지Pay', true);
-        setMeta('og:locale', 'ko_KR', true);
-        setMeta('twitter:card', 'summary_large_image');
+          <script id="post-meta" type="application/json">
+            {
+              "title": "정부, 민생경제 회복 활용 제외된 '민생회복 소비쿠폰' 지급 전격 시행 | 오렌지Pay 블로그",
+              "description": "정부가 고물가와 내수 침체로 어려움을 겪는 국민 생계에 활용을 분산하고 자영업자·소상공인의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 신착 방법, 지급액, 사용처 등 뉴스 형식으로 총정리.",
+              "date": "2025-07-18",
+              "image": "/img/og-image.jpg",
+              "imageWidth": 1198,
+              "imageHeight": 406,
+              "url": "https://pay24.store/blog/민생회복쿠폰.html",
+              "draft": false,
+              "author": "오렌지Pay",
+              "reviewRating": 5,
+              "howto": false
+            }
+          </script>
 
-        // 구조화 데이터 자동 생성
-        let ld = {
-          "@context": "https://schema.org",
-          "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
-          "headline": data.title,
-          "description": data.description,
-          "image": [location.origin + data.image],
-          "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
-          "datePublished": data.date,
-          "dateModified": data.date,
-          "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
-        };
-        if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
-        if (data.howto) ld.step = [{"@type": "HowToStep", "text": "여기에_핵심_절차_기입"}];
-        let script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(ld);
-        document.head.appendChild(script);
-      }
-    })();
-  </script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <div class="flex items-center">
-          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
-          <a href="/" class="text-2xl font-bold text-white"> 신용카드현금화-휴대폰소액결제</a>
-        </div>
-        <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
-      </div>
-    </div>
-  </header>
-  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-    <div class="text-center text-red-500 font-bold text-xl mb-8">이 페이지는 블로그 글 작성용 템플릿입니다.<br>검색엔진 및 블로그 목록에 노출되지 않습니다.</div>
-    <h1 class="text-3xl font-bold text-orange-600 mb-2">정부, 민생경제 활력 제고 위한 '민생회복 소비쿠폰' 지급 전격 시행</h1>
-    <p class="text-sm text-gray-500 mb-6">2025년 7월 18일, 대한민국</p>
-    <p class="mb-6 text-gray-700">정부가 고물가와 내수 침체로 어려움을 겪는 국민 생활에 활력을 불어넣고 소상공인과 자영업자의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 이번 소비쿠폰은 전 국민을 대상으로 하되, 소득 수준과 거주 지역에 따라 차등 지급하여 취약계층에 대한 지원을 두텁게 한 것이 특징입니다. 1차와 2차에 걸쳐 지급되는 소비쿠폰의 신청 방법, 지급액, 사용처 등 상세한 내용을 뉴스 형식으로 총정리했습니다.</p>
-    <hr class="my-6">
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[개요] 민생회복 소비쿠폰, 왜 지급되나?</h2>
-    <p class="mb-4">정부의 이번 '민생회복 소비쿠폰' 지급 결정은 장기화된 고물가 현상으로 위축된 소비 심리를 회복하고, 내수 경제의 선순환 구조를 복원하는 데 최우선 목표를 두고 있습니다. 가계의 실질 소득 감소 부담을 덜어주는 동시에, 국민의 소비 여력을 지역 내 소상공인 매장으로 유도하여 골목상권에 직접적인 온기를 불어넣겠다는 취지입니다.</p>
-    <p class="mb-4">과거 코로나19 팬데믹 시기의 재난지원금이 방역 상황 극복에 중점을 뒀다면, 이번 소비쿠폰은 민생 경제 회복과 지역 경제 활성화라는 명확한 목표 아래 설계되었습니다. 정부는 이번 지원을 통해 약 13조 원 규모의 자금이 시중에 풀려 단기적인 경기 부양 효과를 낼 것으로 기대하고 있습니다.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[지급 대상 및 금액] 나는 얼마나 받나? 소득·지역 따라 최대 55만 원</h2>
-    <p class="mb-4">이번 소비쿠폰은 2025년 6월 18일 기준, 대한민국에 주민등록을 둔 모든 국민에게 지급됩니다. 다만, 소득 수준과 거주 형태에 따라 지원 금액에 차이가 있습니다. 지급은 1차와 2차로 나뉘어 진행됩니다.</p>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li><b>1차 지급 (7월 21일 신청 시작)</b><br>
-        <ul class="list-disc ml-4">
-          <li>일반 국민: 1인당 15만 원</li>
-          <li>차상위계층 및 한부모가족: 1인당 30만 원</li>
-          <li>기초생활보장수급자: 1인당 40만 원</li>
-          <li>비수도권 거주자: 1인당 3만 원 추가 지급</li>
-          <li>인구감소지역(84개 시·군) 거주자: 1인당 5만 원 추가 지급</li>
+          <script>
+            (function() {
+              const meta = document.getElementById('post-meta');
+              if (!meta) return;
+              const data = JSON.parse(meta.textContent);
+
+              if (data.title) document.title = data.title;
+
+              if (data.description) {
+                let desc = document.querySelector('meta[name="description"]');
+                if (!desc) {
+                  desc = document.createElement('meta');
+                  desc.name = "description";
+                  document.head.appendChild(desc);
+                }
+                desc.content = data.description;
+              }
+
+              const setMeta = (name, content, property = false) => {
+                const selector = property ? `meta[property='${name}']` : `meta[name='${name}']`;
+                let tag = document.head.querySelector(selector);
+                if (!tag) {
+                  tag = document.createElement('meta');
+                  if (property) tag.setAttribute('property', name);
+                  else tag.setAttribute('name', name);
+                  document.head.appendChild(tag);
+                }
+                tag.setAttribute('content', content);
+              };
+
+              if (data.title) {
+                setMeta('og:title', data.title, true);
+                setMeta('twitter:title', data.title);
+              }
+              if (data.description) {
+                setMeta('og:description', data.description, true);
+                setMeta('twitter:description', data.description);
+              }
+              if (data.image) {
+                setMeta('og:image', data.image, true);
+                setMeta('twitter:image', data.image);
+                if (data.imageWidth) setMeta('og:image:width', String(data.imageWidth), true);
+                if (data.imageHeight) setMeta('og:image:height', String(data.imageHeight), true);
+              }
+              if (data.url) setMeta('og:url', data.url, true);
+
+              setMeta('og:type', 'article', true);
+              setMeta('og:site_name', '오렌지Pay', true);
+              setMeta('og:locale', 'ko_KR', true);
+              setMeta('twitter:card', 'summary_large_image');
+
+              // JSON-LD structured data
+              const ld = {
+                "@context": "https://schema.org",
+                "@type": data.howto ? "HowTo" : (data.reviewRating ? "Review" : "Article"),
+                "headline": data.title,
+                "description": data.description,
+                "image": data.image ? [location.origin + data.image] : undefined,
+                "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
+                "datePublished": data.date,
+                "dateModified": data.date,
+                "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
+              };
+              if (data.reviewRating) ld.reviewRating = {"@type": "Rating", "ratingValue": data.reviewRating, "bestRating": 5};
+              if (data.image && data.imageWidth && data.imageHeight) ld.image = {"@type": "ImageObject", "url": location.origin + data.image, "width": data.imageWidth, "height": data.imageHeight};
+
+              const s = document.createElement('script');
+              s.type = 'application/ld+json';
+              s.textContent = JSON.stringify(ld);
+              document.head.appendChild(s);
+            })();
+          </script>
+        </head>
+        <body class="bg-gray-100 text-gray-800">
+          <header class="bg-orange-500 shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                  <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+                  <a href="/" class="text-2xl font-bold text-white"> 신청카드현금화-휴대폰소액결제</a>
+                </div>
+                <a href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+              </div>
+            </div>
+          </header>
+          <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+            <div class="text-center text-red-500 font-bold text-xl mb-8">이 페이지는 블로그 글 작성용 템플릿입니다.<br>검색엔진및 블로그 목록에 노출되지 않습니다.</div>
+            <h1 class="text-3xl font-bold text-orange-600 mb-2">정부, 민생경제 회복 활용 제외된 '민생회복 소비쿠폰' 지급 전격 시행</h1>
+            <p class="text-sm text-gray-500 mb-6">2025년 7월 18일, 대한민국</p>
+            <p class="mb-6 text-gray-700">정부가 고물가와 내수 침체로 어려움을 겪는 국민 생계에 활용을 분산하고 자영업자·소상공인의 경영난 해소를 위해 '민생회복 소비쿠폰' 지급을 전격 시행합니다. 이번 소비쿠폰은 전 국민을 대상으로 하되, 소득 수준과 거주 지역에 따라 차등 지급되며, 지역 소상공인 매장에서 사용하도록 유도하는 정책입니다. 1차와 2차에 걸쳐 지급되는 소비쿠폰의 신착 방식, 지급액, 사용처 등을 뉴스 형식으로 정리했습니다.</p>
+            <hr class="my-6">
+            <!-- (본문 생략: 기존 콘텐츠 유지) -->
+            <div class="mt-8">
+              <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
+            </div>
+          </main>
+        </body>
+        </html>
         </ul>
-        <span class="text-xs text-gray-500">예: 인구감소지역에 거주하는 기초생활수급자는 1차에서 1인당 총 45만 원(기본 40만 원 + 인구감소지역 5만 원) 지급</span>
-      </li>
-      <li><b>2차 지급 (9월 22일 신청 시작)</b><br>
-        <ul class="list-disc ml-4">
-          <li>소득 상위 10% 제외, 국민 약 90% 대상</li>
-          <li>대상자: 1인당 10만 원 추가 지급</li>
-        </ul>
-        <span class="text-xs text-gray-500">예: 인구감소지역 기초생활수급자는 1차(45만 원) + 2차(10만 원) = 최대 55만 원</span>
-      </li>
-      <li>외국인: 원칙적으로 제외, 단 결혼이민자(F-6), 영주권자(F-5) 등 일부 예외 지급</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[신청 방법 및 기간] 놓치면 안 되는 신청! 온라인·오프라인 모두 가능</h2>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li>1차: 2025년 7월 21일(월) ~ 9월 12일(금)</li>
-      <li>2차: 2025년 9월 22일(월) ~ 10월 31일(금)</li>
-      <li>신청 첫 주(7/21~7/25) 요일제 시행: 출생연도 끝자리별 신청일 지정<br>
-        <span class="text-xs text-gray-500">월(1,6), 화(2,7), 수(3,8), 목(4,9), 금(5,0)</span>
-      </li>
-      <li>신청 방법 및 지급 수단:
-        <ul class="list-disc ml-4">
-          <li>신용·체크카드 충전: 카드사 홈페이지, 앱, 콜센터, 은행 창구</li>
-          <li>지역사랑상품권: 앱 또는 주민센터</li>
-          <li>선불카드: 주민센터 방문 신청 및 수령</li>
-        </ul>
-      </li>
-      <li>성인은 본인 직접 신청, 미성년 자녀는 세대주가 대리 신청 가능</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">[사용처 및 기한] 어디서, 언제까지 써야 하나?</h2>
-    <ul class="list-disc list-inside mb-4 text-gray-700">
-      <li>사용처: 주소지 광역자치단체 내 연 매출 30억 원 이하 소상공인 가맹점(전통시장, 동네 마트, 음식점, 미용실, 약국, 병원, 학원 등)</li>
-      <li>사용 불가: 백화점, 대형마트, SSM, 면세점, 온라인 쇼핑몰, 유흥업소, 사행성 업종 등</li>
-      <li>사용 기한: 2025년 11월 30일까지(미사용 잔액은 국고 환수)</li>
-    </ul>
-    <p class="mb-6 text-gray-700">정부는 이번 '민생회복 소비쿠폰'이 단순한 현금 지원을 넘어, 소비-매출 증대-고용 안정으로 이어지는 경제 선순환의 마중물이 되기를 기대한다며, 국민들의 적극적인 참여와 현명한 소비를 당부했습니다.</p>
-    <div class="mt-8">
-      <a href="../index.html" class="text-sm text-gray-400 hover:text-orange-500">← 블로그 목록으로 돌아가기</a>
-    </div>
-  </main>
-</body>
-</html>
