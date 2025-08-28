@@ -1,0 +1,42 @@
+name: Auto optimize images & generate sitemap
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Optimize images
+        run: npm run optimize:images
+
+      - name: Generate sitemap
+        run: npm run generate:sitemap
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/*.webp sitemap.xml || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(ci): auto-generate images and sitemap" || echo "no changes to commit"
+            git push
+          else
+            echo "No generated changes to commit"
+          fi
