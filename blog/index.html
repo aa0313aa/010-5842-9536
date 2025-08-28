@@ -171,16 +171,20 @@
           const row = document.createElement('div');
           row.className = 'flex gap-4 items-start';
 
-          // create <picture> with optional webp source, fallback to original image
+          // create <picture> with responsive webp sources (400w, 800w) and fallback to original image
           const pic = document.createElement('picture');
           pic.className = 'w-24 h-16 block rounded-md overflow-hidden flex-shrink-0';
 
           const imgPath = post.image || defaultThumb;
-          // try adding a .webp source alongside original image
+          // if image is jpg/png, offer generated webp sizes (assumes -400.webp and -800.webp exist)
           if (/\.(jpe?g|png)$/i.test(imgPath)){
+            const base = imgPath.replace(/\.(jpe?g|png)$/i, '');
+            const webp400 = base + '-400.webp';
+            const webp800 = base + '-800.webp';
             const srcWebp = document.createElement('source');
             srcWebp.type = 'image/webp';
-            srcWebp.srcset = imgPath.replace(/\.(jpe?g|png)$/i, '.webp');
+            srcWebp.srcset = `${webp400} 400w, ${webp800} 800w`;
+            srcWebp.sizes = '(max-width: 640px) 400px, 800px';
             pic.appendChild(srcWebp);
           }
 
