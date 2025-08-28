@@ -5,21 +5,100 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="../css/tailwind.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preload" as="image" href="../img/og-image.jpg">
+  <link rel="preload" as="image" href="../img/twitter-image.jpg">
   <title>카드 현금화, 이제는 안전하고 빠르게! | 오렌지Pay</title>
-  <meta name="description" content="카드 현금화, 안전하고 빠르게 오렌지페이와 함께하세요. 서비스 안내, 장점, 진행 절차, 상담번호(010-5842-9536) 및 카톡 상담 링크 포함.">
-  <meta name="author" content="오렌지Pay">
-  <meta property="og:title" content="카드 현금화, 이제는 안전하고 빠르게! | 오렌지Pay">
-  <meta property="og:description" content="카드 현금화, 안전하고 빠르게 오렌지페이와 함께하세요. 서비스 안내, 장점, 진행 절차, 상담번호(010-5842-9536) 및 카톡 상담 링크 포함.">
-  <meta property="og:image" content="/img/og-image.jpg">
+  <script id="post-meta" type="application/json">
+    {
+      "title": "카드 현금화, 이제는 안전하고 빠르게! | 오렌지Pay 블로그",
+      "description": "오렌지페이의 신속하고 안전한 카드 현금화 서비스 안내, 상담번호(010-5842-9536) 및 카톡 상담 링크 포함.",
+      "date": "2025-08-29",
+      "image": "/img/og-image.jpg",
+      "url": "https://pay24.store/blog/2025-08-29-cardcash-orangepay.html",
+      "author": "오렌지Pay",
+      "howto": false
+    }
+  </script>
+  <script>
+    (function() {
+      const meta = document.getElementById('post-meta');
+      if (meta) {
+        const data = JSON.parse(meta.textContent);
+        if (data.title) document.title = data.title;
+        if (data.description) {
+          let desc = document.querySelector('meta[name="description"]');
+          if (!desc) {
+            desc = document.createElement('meta');
+            desc.name = "description";
+            document.head.appendChild(desc);
+          }
+          desc.content = data.description;
+        }
+        const setMeta = (name, content, property = false) => {
+          let tag = document.querySelector((property ? `meta[property='${name}']` : `meta[name='${name}']`));
+          if (!tag) {
+            tag = document.createElement('meta');
+            if (property) tag.setAttribute('property', name);
+            else tag.setAttribute('name', name);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute('content', content);
+        };
+        if (data.title) {
+          setMeta('og:title', data.title, true);
+          setMeta('twitter:title', data.title);
+        }
+        if (data.description) {
+          setMeta('og:description', data.description, true);
+          setMeta('twitter:description', data.description);
+        }
+        if (data.image) {
+          setMeta('og:image', data.image, true);
+          setMeta('twitter:image', data.image);
+        }
+        if (data.url) {
+          setMeta('og:url', data.url, true);
+        }
+        setMeta('og:type', 'article', true);
+        setMeta('og:site_name', '오렌지Pay', true);
+        setMeta('og:locale', 'ko_KR', true);
+        setMeta('twitter:card', 'summary_large_image');
+
+        let ld = {
+          "@context": "https://schema.org",
+          "@type": data.howto ? "HowTo" : "Article",
+          "headline": data.title,
+          "description": data.description,
+          "image": [location.origin + data.image],
+          "author": {"@type": "Organization", "name": data.author || "오렌지Pay"},
+          "datePublished": data.date,
+          "dateModified": data.date,
+          "mainEntityOfPage": {"@type": "WebPage", "@id": data.url}
+        };
+        let script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(ld);
+        document.head.appendChild(script);
+      }
+    })();
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <header class="bg-orange-500 text-white py-4 shadow">
-    <div class="container mx-auto px-4">
-      <h1 class="text-2xl font-bold">오렌지Pay 공식 블로그</h1>
+  <header class="bg-orange-500 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center">
+          <i class="fas fa-wallet text-3xl text-white mr-2"></i>
+          <a href="/" class="text-2xl font-bold text-white">오렌지Pay-신용카드현금화 90%</a>
+        </div>
+        <a id="kakao-chat-btn" href="https://pf.kakao.com/_SBFexb/chat" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-500 font-semibold py-2 px-6 rounded-lg shadow hover:bg-orange-100 transition text-lg">24시간 상담하러가기</a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto bg-white p-8 mt-8 rounded-lg shadow">
+  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
     <h2 class="text-3xl font-extrabold text-orange-600 mb-4">카드 현금화, 이제는 안전하고 빠르게!</h2>
     <p class="text-sm text-gray-500 mb-6">2025-08-29 | 업체명: 오렌지Pay | 상담: 010-5842-9536</p>
 
