@@ -116,7 +116,7 @@
       </div>
     </div>
   </header>
-  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+  <main id="main-content" role="main" class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
     <section class="mb-12 text-center">
       <h1 class="text-4xl font-bold mb-2">오렌지Pay 공식 블로그</h1>
       <p class="text-lg text-gray-600">소액결제, 신용카드 현금화, 정보이용료, 업계 소식, 꿀팁 등 다양한 정보를 제공합니다.</p>
@@ -143,37 +143,80 @@
     </div>
   </footer>
   <script>
-    // posts.json을 fetch하여 최신글 자동 반영
-    fetch('../posts.json')
-      .then(res => res.json())
-      .then(posts => {
-        posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-        const blogList = document.getElementById('blog-list');
-        if (blogList && posts.length > 0) {
-          posts.forEach(post => {
-            const li = document.createElement('li');
-            li.className = 'py-6 px-6';
-            li.innerHTML = `
-              <a href="/${post.url}" class="block hover:bg-orange-50 rounded-lg transition p-2">
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                  <span class="text-xl font-semibold text-orange-600">${post.title}</span>
-                  <span class="text-sm text-gray-500 mt-2 sm:mt-0">${post.date || ''}</span>
-                </div>
-                <p class="text-gray-600 mt-2">${post.description || ''}</p>
-              </a>
-            `;
-            blogList.appendChild(li);
-          });
-        } else if (blogList) {
+    // posts.json을 fetch하여 최신글 자동 반영 (안전한 DOM 생성, 이미지 lazy, 날짜 포맷)
+    (async function renderPosts(){
+      const blogList = document.getElementById('blog-list');
+      if (!blogList) return;
+      try {
+        const res = await fetch('../posts.json', {cache: 'no-store'});
+        if (!res.ok) throw new Error('posts.json fetch failed');
+        const posts = await res.json();
+        if (!Array.isArray(posts) || posts.length === 0) {
           blogList.innerHTML = '<li class="py-6 text-gray-400 text-center">등록된 글이 없습니다.</li>';
+          return;
         }
-      })
-      .catch(() => {
-        const blogList = document.getElementById('blog-list');
-        if (blogList) {
-          blogList.innerHTML = '<li class="py-6 text-red-500 text-center">최신글을 불러올 수 없습니다.</li>';
-        }
-      });
+        // 정렬 및 렌더
+        posts.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
+        blogList.innerHTML = '';
+        const defaultThumb = '/img/og-image.jpg';
+        posts.forEach(post => {
+          const li = document.createElement('li');
+          li.className = 'py-6 px-6';
+
+          const a = document.createElement('a');
+          a.href = '/' + (post.url || 'blog');
+          a.className = 'block hover:bg-orange-50 rounded-lg transition p-2';
+          a.setAttribute('aria-label', (post.title || '블로그 글 보기'));
+
+          const row = document.createElement('div');
+          row.className = 'flex gap-4 items-start';
+
+          const thumb = document.createElement('img');
+          thumb.src = post.image || defaultThumb;
+          thumb.alt = (post.title || '블로그 이미지') + ' 썸네일';
+          thumb.className = 'w-24 h-16 object-cover rounded-md flex-shrink-0';
+          thumb.loading = 'lazy';
+
+          const content = document.createElement('div');
+          content.className = 'flex-1';
+
+          const h = document.createElement('div');
+          h.className = 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2';
+
+          const title = document.createElement('h3');
+          title.className = 'text-xl font-semibold text-orange-600';
+          title.textContent = post.title || '제목 없음';
+
+          const dateSpan = document.createElement('time');
+          dateSpan.className = 'text-sm text-gray-500';
+          try {
+            dateSpan.textContent = post.date ? new Date(post.date).toLocaleDateString('ko-KR') : '';
+            if (post.date) dateSpan.setAttribute('datetime', post.date);
+          } catch(e) { dateSpan.textContent = post.date || ''; }
+
+          h.appendChild(title);
+          h.appendChild(dateSpan);
+
+          const desc = document.createElement('p');
+          desc.className = 'text-gray-600 mt-2';
+          const raw = post.description || '';
+          desc.textContent = raw.length > 160 ? raw.slice(0,157) + '...' : raw;
+
+          content.appendChild(h);
+          content.appendChild(desc);
+
+          row.appendChild(thumb);
+          row.appendChild(content);
+          a.appendChild(row);
+          li.appendChild(a);
+          blogList.appendChild(li);
+        });
+      } catch (err) {
+        console.error('Error loading posts:', err);
+        blogList.innerHTML = '<li class="py-6 text-red-500 text-center">최신글을 불러올 수 없습니다.</li>';
+      }
+    })();
+
     // 연도 자동
     document.addEventListener('DOMContentLoaded', function() {
       var yearSpan = document.getElementById('current-year');
