@@ -6,7 +6,9 @@
   "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "build:css": "npx tailwindcss -i ./input.css -o ./css/tailwind.min.css --minify",
-  "generate:sitemap": "node generate-sitemap.js"
+  "generate:sitemap": "node generate-sitemap.js",
+  "optimize:images": "node scripts/optimize-images.js",
+  "image-metadata": "node scripts/generate-image-metadata.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/aa0313aa/010-5842-9536#readme",
   "devDependencies": {
-    "tailwindcss": "^4.1.9"
+    "tailwindcss": "^4.1.9",
+    "sharp": "^0.32.4"
   }
 }
