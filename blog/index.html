@@ -171,11 +171,26 @@
           const row = document.createElement('div');
           row.className = 'flex gap-4 items-start';
 
+          // create <picture> with optional webp source, fallback to original image
+          const pic = document.createElement('picture');
+          pic.className = 'w-24 h-16 block rounded-md overflow-hidden flex-shrink-0';
+
+          const imgPath = post.image || defaultThumb;
+          // try adding a .webp source alongside original image
+          if (/\.(jpe?g|png)$/i.test(imgPath)){
+            const srcWebp = document.createElement('source');
+            srcWebp.type = 'image/webp';
+            srcWebp.srcset = imgPath.replace(/\.(jpe?g|png)$/i, '.webp');
+            pic.appendChild(srcWebp);
+          }
+
           const thumb = document.createElement('img');
-          thumb.src = post.image || defaultThumb;
+          thumb.src = imgPath;
           thumb.alt = (post.title || '블로그 이미지') + ' 썸네일';
-          thumb.className = 'w-24 h-16 object-cover rounded-md flex-shrink-0';
+          thumb.className = 'w-24 h-16 object-cover rounded-md';
           thumb.loading = 'lazy';
+          thumb.decoding = 'async';
+          pic.appendChild(thumb);
 
           const content = document.createElement('div');
           content.className = 'flex-1';
@@ -205,7 +220,7 @@
           content.appendChild(h);
           content.appendChild(desc);
 
-          row.appendChild(thumb);
+          row.appendChild(pic);
           row.appendChild(content);
           a.appendChild(row);
           li.appendChild(a);

@@ -4,8 +4,9 @@
   "description": "---",
   "main": "generate-posts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i ./input.css -o ./css/tailwind.min.css --minify"
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build:css": "npx tailwindcss -i ./input.css -o ./css/tailwind.min.css --minify",
+  "generate:sitemap": "node generate-sitemap.js"
   },
   "repository": {
     "type": "git",

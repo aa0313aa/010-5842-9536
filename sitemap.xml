@@ -2,15 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2025-06-11</lastmod>
+    <lastmod>2025-06-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-08-29-cardcash-orangepay.html</loc>
-    <lastmod>2025-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pay24.store/terms</loc>
@@ -21,6 +15,18 @@
     <loc>https://pay24.store/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-06-20-cash-trend-tips.html</loc>
+    <lastmod>2025-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-08-29-cardcash-orangepay.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2025-06-11-mobile-giftcard-cash-guide.html</loc>
@@ -36,7 +42,7 @@
   </url>
   <url>
     <loc>https://pay24.store/blog/cardcash-howto.html</loc>
-    <lastmod>2025-05-30</lastmod>
+    <lastmod>2025-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -59,8 +65,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pay24.store/blog/2025-06-20-cash-trend-tips.html</loc>
-    <lastmod>2025-06-20</lastmod>
+    <loc>https://pay24.store/blog/민생회복쿠폰.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
