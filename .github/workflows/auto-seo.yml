@@ -19,6 +19,8 @@ jobs:
           node-version: '18'
       - name: Install deps
         run: npm ci || true
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq || true
       - name: Run SEO scripts
         run: |
           node generate-sitemap.js
