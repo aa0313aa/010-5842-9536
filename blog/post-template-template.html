@@ -10,6 +10,8 @@
   <!-- 주요 이미지 preload/lazy/alt/aria-label 보강 -->
   <link rel="preload" as="image" href="../img/og-image.jpg">
   <link rel="preload" as="image" href="../img/twitter-image.jpg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="google-site-verification" content="" />
   <!-- Article/Review/HowTo 구조화 데이터 자동화 템플릿 -->
   <script id="post-meta" type="application/json">
     {
@@ -60,6 +62,9 @@
         }
         if (data.image) {
           setMeta('og:image', data.image, true);
+          setMeta('og:image:type', 'image/webp', true);
+          if (data.imageWidth) setMeta('og:image:width', String(data.imageWidth), true);
+          if (data.imageHeight) setMeta('og:image:height', String(data.imageHeight), true);
           setMeta('twitter:image', data.image);
         }
         if (data.url) {

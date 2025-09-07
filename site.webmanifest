@@ -1,0 +1,12 @@
+{
+  "name": "오렌지Pay",
+  "short_name": "오렌지Pay",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F97316",
+  "icons": [
+    { "src": "/img/logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
