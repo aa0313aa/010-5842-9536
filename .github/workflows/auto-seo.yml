@@ -29,12 +29,13 @@ jobs:
           node scripts/seo-check.js
       - name: Commit changes
         run: |
+          set -x
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml rss.xml posts.json seo-report.json || true
           if ! git diff --staged --quiet; then
             git commit -m "chore(seo): regenerate sitemap/rss and run seo-check" || true
-            git push
+            git push || (echo "git push failed, attempting explicit upstream push" && git push --set-upstream origin main) || true
           else
             echo "No changes to commit"
           fi
