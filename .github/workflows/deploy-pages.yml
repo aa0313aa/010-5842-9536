@@ -31,3 +31,37 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq || true
+
+      - name: Refresh social debuggers
+        env:
+          SITE_DOMAIN: "https://pay24.store"
+          FB_TOKEN: ${{ secrets.FB_APP_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "Collecting post URLs from posts.json"
+          urls="$SITE_DOMAIN"
+          if [ -f posts.json ]; then
+            post_urls=$(jq -r '.[]?.url' posts.json || echo "")
+            while read -r p; do
+              [ -z "$p" ] && continue
+              # normalize: ensure leading slash
+              if [[ "$p" != /* ]]; then p="/$p"; fi
+              urls="$urls $SITE_DOMAIN$p"
+            done <<< "$post_urls"
+          fi
+          echo "Will refresh:" $urls
+          for u in $urls; do
+            echo "Processing $u"
+            if [ -n "$FB_TOKEN" ]; then
+              echo "Triggering Facebook scrape for $u"
+              curl -s -X POST "https://graph.facebook.com" -d "id=$u" -d "scrape=true" -d "access_token=$FB_TOKEN" || true
+            else
+              echo "No FB token provided; skipping Facebook scrape"
+            fi
+            # Make a simple GET to encourage crawlers
+            curl -s -I "$u" -o /dev/null || true
+            sleep 1
+          done
