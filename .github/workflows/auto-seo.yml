@@ -35,3 +35,30 @@ jobs:
           else
             echo "No changes to commit"
           fi
+      - name: Wait for GitHub Pages deployment
+        env:
+          REPO: ${{ github.repository }}
+          TIMEOUT_MIN: 10
+        run: |
+          echo "Checking Pages build status for $REPO..."
+          START=$(date +%s)
+          TIMEOUT=$((TIMEOUT_MIN * 60))
+          while true; do
+            STATUS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/pages/builds" | jq -r '.[0].status // "none"')
+            if [ "$STATUS" = "built" ]; then
+              echo "Pages built successfully"
+              break
+            fi
+            if [ "$STATUS" = "errored" ]; then
+              echo "Pages build errored" >&2
+              exit 1
+            fi
+            NOW=$(date +%s)
+            ELAPSED=$((NOW - START))
+            if [ $ELAPSED -gt $TIMEOUT ]; then
+              echo "Pages build did not finish within ${TIMEOUT_MIN} minutes" >&2
+              exit 1
+            fi
+            echo "Current Pages status: $STATUS — waiting..."
+            sleep 10
+          done
