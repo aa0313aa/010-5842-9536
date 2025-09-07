@@ -6,7 +6,8 @@
     "url": "blog/2025-06-20-cash-trend-tips.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "카드 현금화, 이제는 안전하고 빠르게! | 오렌지Pay 블로그",
@@ -15,7 +16,8 @@
     "url": "blog/2025-08-29-cardcash-orangepay.html",
     "image": "/img/KakaoTalk_20250318_163831180.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/KakaoTalk_20250318_163831180-og.webp"
   },
   {
     "title": "휴대폰결제로 상품권 구매부터 현금화까지, 완벽 가이드 | 오렌지Pay 블로그",
@@ -24,7 +26,8 @@
     "url": "blog/2025-06-11-mobile-giftcard-cash-guide.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "신용카드 현금화, 2025년 최신 방법과 수수료: 안전하고 합법적인 사용 가이드 | 오렌지Pay 블로그",
@@ -33,7 +36,8 @@
     "url": "blog/2025-06-08-cardcash-guide.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "신용카드현금화 방법 | 오렌지Pay 블로그",
@@ -42,7 +46,8 @@
     "url": "blog/cardcash-howto.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "신용카드현금화-가이드 | 오렌지Pay 블로그",
@@ -51,7 +56,8 @@
     "url": "blog/cardcash-guide.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "휴대폰소액결제-후기 | 오렌지Pay 블로그",
@@ -60,7 +66,8 @@
     "url": "blog/phonecash-review.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   },
   {
     "title": "신용카드현금화-휴대폰소액결제-방법 | 오렌지Pay 블로그",
@@ -69,6 +76,7 @@
     "url": "blog/cardcash-phonecash-howto.html",
     "image": "/img/og-image.jpg",
     "imageWidth": 1198,
-    "imageHeight": 406
+    "imageHeight": 406,
+    "ogImage": "/img/og-image-og.webp"
   }
 ]
