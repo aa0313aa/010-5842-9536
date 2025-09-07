@@ -51,6 +51,9 @@ jobs:
             fi
             if [ "$STATUS" = "errored" ]; then
               echo "Pages build errored" >&2
+              # Create an issue to notify maintainers
+              echo '{"title":"Pages build failed for '${REPO}'","body":"The automatic SEO workflow detected a Pages build failure. Please check GitHub Pages and workflow logs. This issue was created by the Auto SEO workflow.","labels":["ci","pages","seo"]}' > /tmp/pages_issue.json
+              curl -s -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/issues" -d @/tmp/pages_issue.json || true
               exit 1
             fi
             NOW=$(date +%s)
