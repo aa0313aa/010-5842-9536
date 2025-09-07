@@ -1,0 +1,37 @@
+name: Auto SEO maintenance
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * *' # daily at 02:00 UTC
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install deps
+        run: npm ci || true
+      - name: Run SEO scripts
+        run: |
+          node generate-sitemap.js
+          node generate-rss.js
+          node scripts/seo-check.js
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml rss.xml posts.json seo-report.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(seo): regenerate sitemap/rss and run seo-check" || true
+            git push
+          else
+            echo "No changes to commit"
+          fi

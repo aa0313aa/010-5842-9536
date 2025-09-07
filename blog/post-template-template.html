@@ -94,14 +94,15 @@
           }
           link.setAttribute('href', data.url);
         }
-        // robots
+        // robots: allow index by default, but respect draft flag
         let robots = document.querySelector("meta[name='robots']");
         if (!robots) {
           robots = document.createElement('meta');
           robots.setAttribute('name','robots');
           document.head.appendChild(robots);
         }
-        robots.setAttribute('content', 'index,follow');
+        const robotsContent = data.draft ? 'noindex,follow' : 'index,follow';
+        robots.setAttribute('content', robotsContent);
         // article times
         if (data.date) {
           setMeta('article:published_time', data.date, true);
