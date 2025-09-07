@@ -68,8 +68,11 @@
           setMeta('twitter:description', data.description);
         }
         if (data.image) {
-          setMeta('og:image', data.image, true);
-          setMeta('twitter:image', data.image);
+          const imgUrl = /^https?:\/\//i.test(data.image) ? data.image : (location.origin.replace(/\/$/, '') + (data.image.startsWith('/') ? data.image : '/' + data.image));
+          setMeta('og:image', imgUrl, true);
+          if (data.imageWidth) setMeta('og:image:width', String(data.imageWidth), true);
+          if (data.imageHeight) setMeta('og:image:height', String(data.imageHeight), true);
+          setMeta('twitter:image', imgUrl);
         }
         if (data.url) {
           setMeta('og:url', data.url, true);
