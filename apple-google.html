@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="0; url=/" />
     <title>오렌지Pay | 메인페이지로 이동 중...</title>
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://pay24.store/">
     <script>
-      // JS 리디렉션 (혹시 meta refresh가 동작하지 않을 때)
-      window.location.replace('/');
+      // 301 리디렉트와 유사한 효과를 위해 즉시 리디렉트
+      if (typeof window !== 'undefined') {
+        window.location.replace('/');
+      }
     </script>
     <style>
-      body { display: flex; align-items: center; justify-content: center; height: 100vh; background: #fff7ed; color: #ea580c; font-family: 'Noto Sans KR', sans-serif; }
-      .msg { text-align: center; font-size: 1.25rem; }
+      body { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh; 
+        background: #fff7ed; 
+        color: #ea580c; 
+        font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 0;
+      }
+      .msg { 
+        text-align: center; 
+        font-size: 1.25rem; 
+        max-width: 400px;
+        padding: 2rem;
+      }
+      .loading {
+        margin: 1rem 0;
+        font-size: 2rem;
+      }
+      a {
+        color: #ea580c;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      a:hover {
+        color: #c2410c;
+      }
     </style>
 </head>
 <body>
   <div class="msg">
+    <div class="loading">🍊</div>
     메인페이지로 이동 중입니다.<br>
-    잠시만 기다려주세요...<br>
-    <a href="/" style="color:#ea580c;text-decoration:underline;">직접 이동</a>
+    잠시만 기다려주세요...<br><br>
+    <a href="/">즉시 이동하기</a>
   </div>
 </body>
 </html>
