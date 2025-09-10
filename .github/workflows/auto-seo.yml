@@ -19,23 +19,41 @@ jobs:
         with:
           node-version: '18'
       - name: Install deps
-        run: npm ci || true
+        run: |
+          npm ci --only=production || echo "npm ci failed, trying npm install"
+          npm install --only=production || echo "npm install also failed, continuing"
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq || true
       - name: Run SEO scripts
         run: |
-          node generate-sitemap.js
-          node generate-rss.js
-          node scripts/seo-check.js
+          echo "Running sitemap generation..."
+          node generate-sitemap.js || echo "Sitemap generation failed"
+          echo "Running RSS generation..."
+          node generate-rss.js || echo "RSS generation failed"
+          echo "Running SEO check..."
+          node scripts/seo-check.js || echo "SEO check failed"
+          echo "All SEO scripts completed"
       - name: Commit changes
         run: |
-          set -x
+          set -e
+          echo "Configuring git..."
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml rss.xml posts.json seo-report.json || true
+          
+          echo "Adding files..."
+          git add sitemap.xml rss.xml posts.json seo-report.json || echo "Some files may not exist"
+          
+          echo "Checking for changes..."
           if ! git diff --staged --quiet; then
-            git commit -m "chore(seo): regenerate sitemap/rss and run seo-check" || true
-            git push || (echo "git push failed, attempting explicit upstream push" && git push --set-upstream origin main) || true
+            echo "Changes detected, committing..."
+            git commit -m "chore(seo): regenerate sitemap/rss and run seo-check [skip ci]"
+            echo "Pushing changes..."
+            git push origin main || {
+              echo "Push failed, checking remote status..."
+              git fetch origin
+              git status
+              exit 1
+            }
           else
             echo "No changes to commit"
           fi

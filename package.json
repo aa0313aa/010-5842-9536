@@ -21,6 +21,10 @@
     "url": "https://github.com/aa0313aa/010-5842-9536/issues"
   },
   "homepage": "https://github.com/aa0313aa/010-5842-9536#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "jsdom": "^22.1.0"
+  },
   "devDependencies": {
     "tailwindcss": "^4.1.9",
     "sharp": "^0.32.4"
