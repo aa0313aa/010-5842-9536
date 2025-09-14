@@ -49,7 +49,8 @@ for (const p of posts) {
 const staticPages = [
   { loc: normalizeLoc('/'), lastmod: entries[0]?.lastmod || formatDate(null), changefreq: 'daily', priority: '1.0' },
   { loc: normalizeLoc('/terms'), changefreq: 'yearly', priority: '0.3' },
-  { loc: normalizeLoc('/privacy'), changefreq: 'yearly', priority: '0.3' }
+  { loc: normalizeLoc('/privacy'), changefreq: 'yearly', priority: '0.3' },
+  { loc: normalizeLoc('/visamastercard/virtualvisa-prepaid'), lastmod: formatDate('2025-09-10'), changefreq: 'monthly', priority: '0.9' }
 ];
 
 // build xml

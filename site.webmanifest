@@ -1,12 +1,43 @@
 {
-  "name": "오렌지Pay",
+  "name": "오렌지Pay - 상품권 현금화 전문 플랫폼",
   "short_name": "오렌지Pay",
+  "description": "컬쳐랜드, 해피머니, 모바일 상품권을 안전하고 빠르게 현금화하는 전문 플랫폼",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#F97316",
+  "scope": "/",
+  "lang": "ko-KR",
+  "categories": ["finance", "business", "utilities"],
   "icons": [
-    { "src": "/img/logo.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/img/logo.png", "sizes": "512x512", "type": "image/png" }
+    { 
+      "src": "/img/logo.png", 
+      "sizes": "192x192", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    { 
+      "src": "/img/logo.png", 
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "상품권 현금화",
+      "short_name": "현금화",
+      "description": "상품권을 현금으로 바로 교환",
+      "url": "/#cash-conversion",
+      "icons": [{ "src": "/img/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "최신 블로그",
+      "short_name": "블로그",
+      "description": "상품권 현금화 가이드 및 팁",
+      "url": "/blog/",
+      "icons": [{ "src": "/img/logo.png", "sizes": "192x192" }]
+    }
   ]
 }

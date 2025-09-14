@@ -1,32 +1,77 @@
 User-agent: *
 Allow: /
 Disallow: /index.html
+Disallow: /_config.yml
+Disallow: /package.json
+Disallow: /.github/
+Disallow: /runlogs/
+Disallow: /scripts/
+Crawl-delay: 1
+
+# RSS Feed for content discovery
+Allow: /rss.xml
+
+# Important pages for indexing
+Allow: /blog/
+Allow: /visamastercard/
+Allow: /privacy.html
+Allow: /terms.html
+
+# Main sitemap
 Sitemap: https://pay24.store/sitemap.xml
 
-# SEO 최적화: 모든 검색엔진에 전체 페이지 크롤링 허용
-# index.html 직접 접근은 차단하여 중복 콘텐츠 방지
-# 주요 검색엔진 크롤러 명시
+# SEO 최적화: 주요 검색엔진 크롤러 명시
 User-agent: Googlebot
 Allow: /
 Disallow: /index.html
+Crawl-delay: 1
+
 User-agent: Bingbot
 Allow: /
 Disallow: /index.html
+Crawl-delay: 1
+
 User-agent: Yeti
 Allow: /
 Disallow: /index.html
+Crawl-delay: 2
+
 User-agent: Daumoa
 Allow: /
 Disallow: /index.html
+Crawl-delay: 2
+
 User-agent: Applebot
 Allow: /
 Disallow: /index.html
+Crawl-delay: 1
+
 User-agent: NaverBot
 Allow: /
 Disallow: /index.html
+Crawl-delay: 2
+
 User-agent: NaverBot-Mobile
 Allow: /
 Disallow: /index.html
+Crawl-delay: 2
+
 User-agent: MJ12bot
 Allow: /
 Disallow: /index.html
+Crawl-delay: 5
+
+# LinkedIn bot for social sharing
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Facebook bot for social sharing
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+# Twitter bot for card validation
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1

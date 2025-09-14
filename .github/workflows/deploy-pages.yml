@@ -35,14 +35,18 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq || true
 
-      - name: Refresh social debuggers
+      - name: Refresh social debuggers and SEO crawlers
         env:
           SITE_DOMAIN: "https://pay24.store"
           FB_TOKEN: ${{ secrets.FB_APP_ACCESS_TOKEN }}
         run: |
           set -euo pipefail
-          echo "Collecting post URLs from posts.json"
+          echo "🔍 Collecting post URLs from posts.json"
           urls="$SITE_DOMAIN"
+          
+          # Add new visamastercard page
+          urls="$urls $SITE_DOMAIN/visamastercard/virtualvisa-prepaid"
+          
           if [ -f posts.json ]; then
             post_urls=$(jq -r '.[]?.url' posts.json || echo "")
             while read -r p; do
@@ -52,16 +56,42 @@ jobs:
               urls="$urls $SITE_DOMAIN$p"
             done <<< "$post_urls"
           fi
-          echo "Will refresh:" $urls
+          
+          echo "🚀 Will refresh these URLs:"
+          for u in $urls; do echo "   - $u"; done
+          
           for u in $urls; do
-            echo "Processing $u"
-            if [ -n "$FB_TOKEN" ]; then
-              echo "Triggering Facebook scrape for $u"
-              curl -s -X POST "https://graph.facebook.com" -d "id=$u" -d "scrape=true" -d "access_token=$FB_TOKEN" || true
+            echo "📄 Processing $u"
+            
+            # Facebook Open Graph scraping
+            if [ -n "${FB_TOKEN:-}" ]; then
+              echo "   📘 Facebook: Triggering OG scrape"
+              curl -s -X POST "https://graph.facebook.com" \
+                -d "id=$u" \
+                -d "scrape=true" \
+                -d "access_token=$FB_TOKEN" || echo "   ❌ Facebook scrape failed"
             else
-              echo "No FB token provided; skipping Facebook scrape"
+              echo "   ⏭️  Facebook: No token provided, skipping"
             fi
-            # Make a simple GET to encourage crawlers
-            curl -s -I "$u" -o /dev/null || true
-            sleep 1
+            
+            # LinkedIn post inspector refresh (no auth needed)
+            echo "   💼 LinkedIn: Triggering cache refresh"
+            curl -s -X POST "https://www.linkedin.com/post-inspector/inspect/" \
+              -d "url=$u" || echo "   ❌ LinkedIn refresh failed"
+            
+            # Twitter/X card validator refresh
+            echo "   🐦 Twitter: Triggering card refresh"
+            curl -s -I "https://cards-dev.twitter.com/validator" \
+              -H "Referer: $u" || echo "   ❌ Twitter refresh failed"
+            
+            # Encourage search engine crawling
+            echo "   🤖 Search Engines: Encouraging crawl"
+            curl -s -I "$u" \
+              -H "User-Agent: Mozilla/5.0 (compatible; SEO-Bot/1.0)" \
+              -o /dev/null || echo "   ❌ Crawl encouragement failed"
+            
+            # Rate limiting to be respectful
+            sleep 2
           done
+          
+          echo "✅ Social debugger refresh completed"
