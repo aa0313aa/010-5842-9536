@@ -1,11 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (DISABLED)
 
+# Temporarily disabled - using pages-simple.yml instead
 on:
-  push:
-    branches: [ main ]
-  workflow_run:
-    workflows: ["Auto optimize images & generate sitemap"]
-    types: [completed]
+  workflow_dispatch:
 
 jobs:
   deploy:
