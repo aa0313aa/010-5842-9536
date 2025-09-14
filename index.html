@@ -180,6 +180,14 @@
     }
     </script>
 
+    <!-- Canonical URL enforcement for index.html -->
+    <script>
+    // Redirect index.html to root domain to avoid duplicate content
+    if (window.location.pathname === '/index.html') {
+        window.history.replaceState(null, null, '/');
+    }
+    </script>
+
 </head>
 <body class="bg-slate-50 text-slate-700">
 

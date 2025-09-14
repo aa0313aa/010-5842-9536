@@ -1,0 +1,34 @@
+# GitHub Pages configuration
+# This helps with canonical URL handling
+
+# Site settings
+url: "https://pay24.store"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - node_modules/
+  - .github/
+  - package.json
+  - package-lock.json
+  - generate-*.js
+  - scripts/
+  - README.md
+  - runlogs/
+
+# SEO settings
+title: "오렌지Pay | 신용카드 현금화, 소액결제 현금화 서비스"
+description: "오렌지Pay는 신용카드 한도, 소액결제, 정보이용료를 24시간 안전하고 신속하게 현금화하는 서비스를 제공합니다."
+
+# Canonical URL settings
+collections_dir: .
+permalink: pretty
