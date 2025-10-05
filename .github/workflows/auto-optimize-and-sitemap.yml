@@ -3,8 +3,9 @@ name: Auto optimize images & generate sitemap
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+    # 매일 오전 9시 (UTC) 실행
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -18,25 +19,34 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Optimize images
-        run: npm run optimize:images
+        run: npm ci
 
       - name: Generate sitemap
         run: npm run generate:sitemap
+        continue-on-error: true
+
+      - name: Optimize images
+        run: npm run optimize:images
+        continue-on-error: true
+
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit generated assets
+        if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add img/*.webp sitemap.xml || true
-          if ! git diff --staged --quiet; then
-            git commit -m "chore(ci): auto-generate images and sitemap" || echo "no changes to commit"
-            git push
-          else
-            echo "No generated changes to commit"
-          fi
+          git add -A
+          git commit -m "chore(ci): auto-generate sitemap and optimize images [skip ci]" || echo "No changes to commit"
+          git push || echo "Push failed, but continuing"
