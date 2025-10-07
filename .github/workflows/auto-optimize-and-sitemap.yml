@@ -10,21 +10,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: Install dependencies
         run: |
+          echo "Installing dependencies..."
           npm ci --prefer-offline --no-audit
           echo "Dependencies installed successfully"
 
@@ -33,14 +35,18 @@ jobs:
           echo "Starting sitemap generation..."
           npm run generate:sitemap
           echo "Sitemap generation completed"
-        continue-on-error: true
+
+      - name: Generate RSS
+        run: |
+          echo "Starting RSS generation..."
+          npm run generate:rss
+          echo "RSS generation completed"
 
       - name: Optimize images
         run: |
           echo "Starting image optimization..."
           npm run optimize:images
           echo "Image optimization completed"
-        continue-on-error: true
 
       - name: Check for changes
         id: verify-changed-files
@@ -65,7 +71,7 @@ jobs:
             echo "No staged changes to commit"
             exit 0
           fi
-          git commit -m "chore(ci): auto-generate sitemap and optimize images [skip ci]"
+          git commit -m "chore(ci): auto-generate sitemap, RSS and optimize images [skip ci]"
           echo "Attempting to push changes..."
           if git push; then
             echo "Push successful"
