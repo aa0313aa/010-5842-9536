@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,30 +24,51 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci --prefer-offline --no-audit
+          echo "Dependencies installed successfully"
 
       - name: Generate sitemap
-        run: npm run generate:sitemap
+        run: |
+          echo "Starting sitemap generation..."
+          npm run generate:sitemap
+          echo "Sitemap generation completed"
         continue-on-error: true
 
       - name: Optimize images
-        run: npm run optimize:images
+        run: |
+          echo "Starting image optimization..."
+          npm run optimize:images
+          echo "Image optimization completed"
         continue-on-error: true
 
       - name: Check for changes
         id: verify-changed-files
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
+          echo "Checking for file changes..."
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes detected"
             echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit generated assets
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Committing changes..."
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore(ci): auto-generate sitemap and optimize images [skip ci]" || echo "No changes to commit"
-          git push || echo "Push failed, but continuing"
+          if git diff --staged --quiet; then
+            echo "No staged changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(ci): auto-generate sitemap and optimize images [skip ci]"
+          echo "Attempting to push changes..."
+          if git push; then
+            echo "Push successful"
+          else
+            echo "Push failed, but workflow continues"
+          fi
