@@ -201,7 +201,15 @@
             "name": "오렌지Pay",
             "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://pay24.store/?s={search_term_string}",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://pay24.store/search.html?s={search_term_string}",
+                    "inLanguage": "ko-KR",
+                    "actionPlatform": [
+                        "http://schema.org/DesktopWebPlatform",
+                        "http://schema.org/MobileWebPlatform"
+                    ]
+                },
                 "query-input": "required name=search_term_string"
             }
         }

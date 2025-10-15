@@ -47,10 +47,11 @@ for (const p of posts) {
 
 // static pages
 const staticPages = [
-  { loc: normalizeLoc('/'), lastmod: entries[0]?.lastmod || formatDate(null), changefreq: 'daily', priority: '1.0' },
-  { loc: normalizeLoc('/terms'), changefreq: 'yearly', priority: '0.3' },
-  { loc: normalizeLoc('/privacy'), changefreq: 'yearly', priority: '0.3' },
-  { loc: normalizeLoc('/visamastercard/virtualvisa-prepaid'), lastmod: formatDate('2025-09-10'), changefreq: 'monthly', priority: '0.9' }
+  { loc: normalizeLoc('/'), lastmod: entries[0]?.lastmod || formatDate(new Date().toISOString().slice(0,10)), changefreq: 'daily', priority: '1.0' },
+  { loc: normalizeLoc('/blog/'), changefreq: 'weekly', priority: '0.7' },
+  { loc: normalizeLoc('/terms.html'), changefreq: 'yearly', priority: '0.3' },
+  { loc: normalizeLoc('/privacy.html'), changefreq: 'yearly', priority: '0.3' },
+  { loc: normalizeLoc('/visamastercard/virtualvisa-prepaid.html'), lastmod: formatDate('2025-09-10'), changefreq: 'monthly', priority: '0.9' }
 ];
 
 // build xml

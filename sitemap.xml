@@ -7,17 +7,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pay24.store/terms</loc>
+    <loc>https://pay24.store/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pay24.store/privacy</loc>
+    <loc>https://pay24.store/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pay24.store/visamastercard/virtualvisa-prepaid</loc>
+    <loc>https://pay24.store/visamastercard/virtualvisa-prepaid.html</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
