@@ -12,6 +12,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pay24.store/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://pay24.store/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
