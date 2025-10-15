@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사이트 내 검색 | 오렌지Pay</title>
+  <meta name="description" content="오렌지Pay 블로그와 페이지에서 원하는 내용을 검색하세요.">
+  <link rel="canonical" href="https://pay24.store/search.html">
+  <meta name="robots" content="noindex,follow">
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">사이트 내 검색</h1>
+    <form id="search-form" class="mb-6 flex gap-2">
+      <input id="q" type="search" class="flex-1 border rounded px-3 py-2" placeholder="검색어를 입력하세요" />
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">검색</button>
+    </form>
+    <ul id="results" class="divide-y bg-white rounded shadow"></ul>
+  </main>
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('s') || '';
+      document.getElementById('q').value = q;
+      const results = document.getElementById('results');
+      async function runSearch(term){
+        results.innerHTML = '<li class="p-4 text-slate-500">검색 중…</li>';
+        try{
+          const res = await fetch('/posts.json', {cache: 'no-store'});
+          const posts = await res.json();
+          const termLower = (term||'').toLowerCase();
+          const filtered = posts.filter(p =>
+            (p.title||'').toLowerCase().includes(termLower) ||
+            (p.description||'').toLowerCase().includes(termLower)
+          );
+          if(filtered.length === 0){
+            results.innerHTML = '<li class="p-4 text-slate-500">검색 결과가 없습니다.</li>';
+            return;
+          }
+          results.innerHTML = '';
+          filtered.forEach(p => {
+            const li = document.createElement('li');
+            li.className = 'p-4';
+            li.innerHTML = `
+              <a class="block hover:bg-orange-50 rounded p-2" href="/${p.url}">
+                <div class="flex justify-between items-start">
+                  <h3 class="text-lg font-semibold">${p.title}</h3>
+                  <span class="text-sm text-slate-500">${p.date||''}</span>
+                </div>
+                <p class="text-slate-600 mt-1">${p.description||''}</p>
+              </a>`;
+            results.appendChild(li);
+          });
+        } catch(e){
+          results.innerHTML = '<li class="p-4 text-red-600">검색에 실패했습니다.</li>';
+        }
+      }
+      document.getElementById('search-form').addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const term = document.getElementById('q').value.trim();
+        const url = new URL(window.location.href);
+        url.searchParams.set('s', term);
+        history.replaceState({}, '', url);
+        runSearch(term);
+      });
+      if(q) runSearch(q);
+    })();
+  </script>
+</body>
+</html>
