@@ -11,6 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Installing dependencies..."
-          npm ci --prefer-offline --no-audit
+          npm ci --prefer-offline --no-audit || npm install --prefer-offline --no-audit
           echo "Dependencies installed successfully"
 
       - name: Generate sitemap
@@ -78,3 +80,7 @@ jobs:
           else
             echo "Push failed, but workflow continues"
           fi
+
+      - name: Summary
+        run: |
+          echo "Workflow completed. If there were no changes, this is expected and not a failure."
