@@ -9,6 +9,8 @@ on:
 jobs:
   regen:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,39 +36,52 @@ jobs:
           node scripts/seo-check.js || echo "SEO check failed"
           echo "All SEO scripts completed"
       - name: Commit changes
+        id: commit_push
         run: |
           set -e
           echo "Configuring git..."
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
+
           echo "Adding files..."
           git add sitemap.xml rss.xml posts.json seo-report.json || echo "Some files may not exist"
-          
+
           echo "Checking for changes..."
           if ! git diff --staged --quiet; then
             echo "Changes detected, committing..."
             git commit -m "chore(seo): regenerate sitemap/rss and run seo-check [skip ci]"
             echo "Pushing changes..."
-            git push origin main || {
+            if git push origin main; then
+              echo "pushed=true" >> $GITHUB_OUTPUT
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
               echo "Push failed, checking remote status..."
               git fetch origin
               git status
+              echo "pushed=false" >> $GITHUB_OUTPUT
+              echo "changed=true" >> $GITHUB_OUTPUT
               exit 1
-            }
+            fi
           else
             echo "No changes to commit"
+            echo "pushed=false" >> $GITHUB_OUTPUT
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
       - name: Wait for GitHub Pages deployment
+        if: steps.commit_push.outputs.pushed == 'true'
         env:
           REPO: ${{ github.repository }}
           TIMEOUT_MIN: 10
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Checking Pages build status for $REPO..."
           START=$(date +%s)
           TIMEOUT=$((TIMEOUT_MIN * 60))
           while true; do
-            STATUS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/pages/builds" | jq -r '.[0].status // "none"')
+            STATUS=$(curl -s \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+              "https://api.github.com/repos/${REPO}/pages/builds" | jq -r '.[0].status // "none"')
             if [ "$STATUS" = "built" ]; then
               echo "Pages built successfully"
               break
@@ -75,7 +90,7 @@ jobs:
               echo "Pages build errored" >&2
               # Create an issue to notify maintainers
               echo '{"title":"Pages build failed for '${REPO}'","body":"The automatic SEO workflow detected a Pages build failure. Please check GitHub Pages and workflow logs. This issue was created by the Auto SEO workflow.","labels":["ci","pages","seo"]}' > /tmp/pages_issue.json
-              curl -s -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/issues" -d @/tmp/pages_issue.json || true
+              curl -s -X POST -H "Authorization: Bearer ${GITHUB_TOKEN}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/issues" -d @/tmp/pages_issue.json || true
               exit 1
             fi
             NOW=$(date +%s)
