@@ -4,11 +4,11 @@
   "description": "---",
   "main": "generate-posts.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "build:css": "npx tailwindcss -i ./input.css -o ./css/tailwind.min.css --minify",
-  "generate:sitemap": "node generate-sitemap.js",
-  "generate:rss": "node generate-rss.js",
-  "optimize:images": "node scripts/optimize-images.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx @tailwindcss/cli -i ./input.css -o ./css/tailwind.min.css --minify",
+    "generate:sitemap": "node generate-sitemap.js",
+    "generate:rss": "node generate-rss.js",
+    "optimize:images": "node scripts/optimize-images.js",
     "image-metadata": "node scripts/generate-image-metadata.js",
     "publish:next": "node scripts/publish-next-draft.js",
     "publish:topic": "node scripts/publish-next-topic.js",
@@ -30,7 +30,8 @@
     "jsdom": "^22.1.0"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.9",
-    "sharp": "^0.32.4"
+    "@tailwindcss/cli": "4.1.14",
+    "sharp": "^0.32.4",
+    "tailwindcss": "4.1.9"
   }
 }
