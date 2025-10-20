@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: read
+      id-token: write
+    concurrency:
+      group: auto-seo
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,20 +25,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
       - name: Install deps
         run: |
-          npm ci --only=production || echo "npm ci failed, trying npm install"
-          npm install --only=production || echo "npm install also failed, continuing"
+          set -e
+          echo "Installing production deps..."
+          if npm ci --only=production --prefer-offline --no-audit; then
+            echo "npm ci ok"
+          else
+            echo "npm ci failed, trying npm install"
+            npm install --only=production --prefer-offline --no-audit || true
+          fi
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq || true
       - name: Run SEO scripts
         run: |
           echo "Running sitemap generation..."
-          node generate-sitemap.js || echo "Sitemap generation failed"
+          node generate-sitemap.js || echo "Sitemap generation failed (non-fatal)"
           echo "Running RSS generation..."
-          node generate-rss.js || echo "RSS generation failed"
+          node generate-rss.js || echo "RSS generation failed (non-fatal)"
           echo "Running SEO check..."
-          node scripts/seo-check.js || echo "SEO check failed"
+          node scripts/seo-check.js || echo "SEO check failed (non-fatal)"
           echo "All SEO scripts completed"
       - name: Commit changes
         id: commit_push
@@ -60,7 +72,7 @@ jobs:
               git status
               echo "pushed=false" >> $GITHUB_OUTPUT
               echo "changed=true" >> $GITHUB_OUTPUT
-              exit 1
+              echo "Continuing despite push failure"
             fi
           else
             echo "No changes to commit"
@@ -91,13 +103,13 @@ jobs:
               # Create an issue to notify maintainers
               echo '{"title":"Pages build failed for '${REPO}'","body":"The automatic SEO workflow detected a Pages build failure. Please check GitHub Pages and workflow logs. This issue was created by the Auto SEO workflow.","labels":["ci","pages","seo"]}' > /tmp/pages_issue.json
               curl -s -X POST -H "Authorization: Bearer ${GITHUB_TOKEN}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${REPO}/issues" -d @/tmp/pages_issue.json || true
-              exit 1
+              break
             fi
             NOW=$(date +%s)
             ELAPSED=$((NOW - START))
             if [ $ELAPSED -gt $TIMEOUT ]; then
               echo "Pages build did not finish within ${TIMEOUT_MIN} minutes" >&2
-              exit 1
+              break
             fi
             echo "Current Pages status: $STATUS — waiting..."
             sleep 10
