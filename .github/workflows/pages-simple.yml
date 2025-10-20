@@ -24,6 +24,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          npm ci --prefer-offline --no-audit || npm install --prefer-offline --no-audit
+          echo "Dependencies installed"
+
+      - name: Build CSS (Tailwind)
+        run: |
+          echo "Building CSS..."
+          npm run build:css || echo "CSS build skipped/failed"
+          echo "CSS build step finished"
+
+      - name: Generate sitemap
+        run: |
+          echo "Generating sitemap.xml..."
+          npm run generate:sitemap || echo "sitemap generation failed (continuing)"
+          echo "sitemap step finished"
+
+      - name: Generate RSS
+        run: |
+          echo "Generating rss.xml..."
+          npm run generate:rss || echo "rss generation failed (continuing)"
+          echo "rss step finished"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
