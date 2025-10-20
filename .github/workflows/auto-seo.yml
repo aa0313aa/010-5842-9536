@@ -51,7 +51,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           echo "Adding files..."
-          git add sitemap.xml rss.xml posts.json seo-report.json || echo "Some files may not exist"
+          git add sitemap.xml rss.xml posts.json || echo "Some files may not exist"
 
           echo "Checking for changes..."
           if ! git diff --staged --quiet; then
