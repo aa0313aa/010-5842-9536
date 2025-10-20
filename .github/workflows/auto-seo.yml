@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 2 * * *' # daily at 02:00 UTC
+  workflow_dispatch: {}
 
 jobs:
   regen:
@@ -114,3 +115,12 @@ jobs:
             echo "Current Pages status: $STATUS — waiting..."
             sleep 10
           done
+      - name: Workflow summary
+        run: |
+          echo "--- SEO Maintenance Summary ---"
+          if [ -f seo-report.json ]; then
+            echo "seo-report.json exists. Showing brief summary:"
+            cat seo-report.json | head -n 100 || true
+          else
+            echo "seo-report.json not found (maybe no issues or script skipped)."
+          fi
