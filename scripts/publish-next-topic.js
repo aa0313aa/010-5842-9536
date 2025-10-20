@@ -14,6 +14,12 @@ const BLOG = path.join(ROOT, 'blog');
 const POSTS = path.join(ROOT, 'posts.json');
 const TOPICS = path.join(ROOT, 'topics.json');
 const SITE_URL = 'https://pay24.store/';
+const BUSINESS = {
+  name: '오렌지Pay',
+  phoneDisplay: '010-5842-9536',
+  phoneIntl: '+82-10-5842-9536',
+  kakaoLink: '/contact.html#kakao'
+};
 
 function ymd(date = new Date()) {
   const y = date.getFullYear();
@@ -55,6 +61,18 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
         ${(s.list && s.list.length)? `<ul class="list-disc pl-6">${s.list.map(li=>`<li>${li}</li>`).join('')}</ul>`:''}
       </section>`).join('\n');
 
+  const contactHtml = `
+      <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
+        <h2 class="text-2xl font-bold text-orange-700 mb-3">빠르게 상담 받기</h2>
+        <p class="text-gray-800 mb-3"><strong>${htmlEscape(BUSINESS.name)}</strong> · 전화: <a class="underline" href="tel:${htmlEscape(BUSINESS.phoneDisplay)}">${htmlEscape(BUSINESS.phoneDisplay)}</a></p>
+        <p class="text-gray-700 mb-4">카카오톡 상담 및 기타 연락처는 고객센터 페이지에서 확인하세요.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:${htmlEscape(BUSINESS.phoneDisplay)}" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">전화하기</a>
+          <a href="${htmlEscape(BUSINESS.kakaoLink)}" class="inline-flex items-center px-4 py-2 rounded-md bg-yellow-500 text-white hover:bg-yellow-600">카카오톡 상담</a>
+          <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-md bg-gray-800 text-white hover:bg-gray-900">고객센터</a>
+        </div>
+      </section>`;
+
   const html = `<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -94,6 +112,21 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
   <script type="application/ld+json">
   ${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":breadcrumb})}
   </script>
+  <script type="application/ld+json">
+  ${JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name": BUSINESS.name,
+    "url": SITE_URL,
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "telephone": BUSINESS.phoneIntl,
+      "contactType":"customer service",
+      "areaServed":"KR",
+      "availableLanguage":["ko"]
+    }]
+  })}
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <header class="bg-orange-500 text-white py-4">
@@ -113,6 +146,7 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-8"><i class="fas fa-calendar-alt mr-2"></i>${today} <span class="mx-4">|</span><i class="fas fa-user mr-2"></i>오렌지Pay</div>
       ${sectionHtml}
+      ${contactHtml}
       <section id="related" class="mb-4">
         <h2 class="text-xl font-semibold mb-2">함께 보면 좋아요</h2>
         <ul class="list-disc pl-5 text-orange-700">
