@@ -12,7 +12,8 @@
     "image-metadata": "node scripts/generate-image-metadata.js",
     "publish:next": "node scripts/publish-next-draft.js",
     "publish:topic": "node scripts/publish-next-topic.js",
-    "daily:post": "node scripts/publish-next-topic.js && node generate-sitemap.js && node generate-rss.js"
+    "daily:post": "node scripts/publish-next-topic.js && node generate-sitemap.js && node generate-rss.js",
+    "backfill:contact": "node scripts/add-contact-block.js && node generate-sitemap.js && node generate-rss.js"
   },
   "repository": {
     "type": "git",
