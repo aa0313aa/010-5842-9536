@@ -1,0 +1,44 @@
+name: Auto daily post from topics
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 매일 10:00 KST (01:00 UTC)
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install deps
+        run: |
+          npm ci --prefer-offline --no-audit || npm install --prefer-offline --no-audit
+
+      - name: Publish next topic and regenerate indices
+        run: |
+          npm run daily:post
+
+      - name: Commit & Push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(auto): daily post from topics + sitemap/rss [skip ci]"
+          git push origin main || true

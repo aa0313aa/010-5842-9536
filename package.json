@@ -9,7 +9,10 @@
   "generate:sitemap": "node generate-sitemap.js",
   "generate:rss": "node generate-rss.js",
   "optimize:images": "node scripts/optimize-images.js",
-  "image-metadata": "node scripts/generate-image-metadata.js"
+    "image-metadata": "node scripts/generate-image-metadata.js",
+    "publish:next": "node scripts/publish-next-draft.js",
+    "publish:topic": "node scripts/publish-next-topic.js",
+    "daily:post": "node scripts/publish-next-topic.js && node generate-sitemap.js && node generate-rss.js"
   },
   "repository": {
     "type": "git",
