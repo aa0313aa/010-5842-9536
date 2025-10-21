@@ -1,0 +1,44 @@
+name: Auto news post (card & micropayment)
+
+on:
+  schedule:
+    - cron: '30 0 * * *' # 매일 09:30 KST (00:30 UTC)
+  workflow_dispatch: {}
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install deps
+        run: |
+          npm ci --prefer-offline --no-audit || npm install --prefer-offline --no-audit
+
+      - name: Publish one news and regenerate indices
+        run: |
+          npm run daily:news || true
+
+      - name: Commit & Push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(auto): news post + sitemap/rss [skip ci]"
+          git push origin main || true

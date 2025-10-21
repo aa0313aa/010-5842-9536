@@ -1,0 +1,18 @@
+[
+  {
+    "name": "금융감독원 보도자료",
+    "feed": "https://www.fss.or.kr/fss/bbs/B0000117/rssList.do?menuNo=200091"
+  },
+  {
+    "name": "금융위원회 보도자료",
+    "feed": "https://www.fsc.go.kr/no010101/rss?menuNo=200238"
+  },
+  {
+    "name": "네이버 금융뉴스 - 카드",
+    "feed": "https://rss.naver.com/economy/finance/card.xml"
+  },
+  {
+    "name": "한국은행 보도자료",
+    "feed": "https://www.bok.or.kr/portal/bbs/B0000233/rss.do?menuNo=201010"
+  }
+]

@@ -13,7 +13,9 @@
     "publish:next": "node scripts/publish-next-draft.js",
     "publish:topic": "node scripts/publish-next-topic.js",
     "daily:post": "node scripts/publish-next-topic.js && node generate-sitemap.js && node generate-rss.js",
-    "backfill:contact": "node scripts/add-contact-block.js && node generate-sitemap.js && node generate-rss.js"
+    "backfill:contact": "node scripts/add-contact-block.js && node generate-sitemap.js && node generate-rss.js",
+    "publish:news": "node scripts/publish-news.js",
+    "daily:news": "node scripts/publish-news.js && node generate-sitemap.js && node generate-rss.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/aa0313aa/010-5842-9536#readme",
   "dependencies": {
+    "rss-parser": "^3.13.0",
     "cheerio": "^1.0.0-rc.12",
     "jsdom": "^22.1.0"
   },

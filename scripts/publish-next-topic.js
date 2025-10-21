@@ -18,7 +18,7 @@ const BUSINESS = {
   name: '오렌지Pay',
   phoneDisplay: '010-5842-9536',
   phoneIntl: '+82-10-5842-9536',
-  kakaoLink: '/contact.html#kakao'
+  kakaoLink: 'https://pf.kakao.com/_SBFexb/chat'
 };
 
 function ymd(date = new Date()) {
@@ -61,14 +61,48 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
         ${(s.list && s.list.length)? `<ul class="list-disc pl-6">${s.list.map(li=>`<li>${li}</li>`).join('')}</ul>`:''}
       </section>`).join('\n');
 
+  // 자동 확장 섹션 (길이·실용성 보강)
+  const keypoints = (keywords && keywords.length) ? keywords.slice(0,3).map(k=>`<li>${htmlEscape(k)} 핵심 포인트 정리</li>`).join('') : '<li>수수료·시간·안전 체크</li><li>정책·약관 준수</li><li>증빙/기록 유지</li>';
+  const extendedHtml = `
+      <section id="summary" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">요약 핵심 포인트</h2>
+        <p>본문의 주요 내용을 1분 만에 훑어볼 수 있도록 핵심만 정리했습니다.</p>
+        <ul class="list-disc pl-6">${keypoints}</ul>
+      </section>
+      <section id="scenario" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">사례 시나리오</h2>
+        <p>예: 30만원 규모로 진행하려는 사용자가 수수료·시간·안전을 균형 있게 고려하는 방법.</p>
+        <ol class="list-decimal pl-6">
+          <li>사전 준비: 본인확인 수단, 결제 가능 한도, 고객센터/약관 확인</li>
+          <li>조건 확인: 총비용(수수료+부대비용), 정산 시간, 환불/민원 절차</li>
+          <li>진행/정산: 증빙 확보(견적/영수증/대화 캡처), 기록 정리</li>
+        </ol>
+        <p class="text-gray-600">과장·불법 유도 문구, 원격제어/과다 개인정보 요구 등 위험 신호는 즉시 중단하세요.</p>
+      </section>
+      <section id="checklist" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">실전 체크리스트</h2>
+        <ul class="list-disc pl-6">
+          <li>견적 전 총 정산액/추가비용 유무 확인</li>
+          <li>환불/민원 절차 및 기한 명시</li>
+          <li>개인정보 최소 제공, 비정상 요구 거절</li>
+          <li>증빙(영수증/내역) 보관 및 기록 관리</li>
+        </ul>
+      </section>`;
+
   const contactHtml = `
       <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
         <h2 class="text-2xl font-bold text-orange-700 mb-3">빠르게 상담 받기</h2>
-        <p class="text-gray-800 mb-3"><strong>${htmlEscape(BUSINESS.name)}</strong> · 전화: <a class="underline" href="tel:${htmlEscape(BUSINESS.phoneDisplay)}">${htmlEscape(BUSINESS.phoneDisplay)}</a></p>
-        <p class="text-gray-700 mb-4">카카오톡 상담 및 기타 연락처는 고객센터 페이지에서 확인하세요.</p>
+        <p class="text-gray-800 mb-2"><strong>${htmlEscape(BUSINESS.name)}</strong> · 전화: <a class="underline" href="tel:${htmlEscape(BUSINESS.phoneDisplay)}">${htmlEscape(BUSINESS.phoneDisplay)}</a></p>
+        <p class="text-gray-800 mb-4">카카오톡 1:1 상담: <a class="underline text-orange-700" href="${htmlEscape(BUSINESS.kakaoLink)}" target="_blank" rel="noopener nofollow">채팅 열기</a></p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4">
+          <li>안전한 업체 · 24시간 친절 상담</li>
+          <li>비상금 카드 할부 상담 가능</li>
+          <li>휴대폰 비상금(소액결제) 상담 가능</li>
+          <li>합법·약관 준수, 개인정보 최소 수집</li>
+        </ul>
         <div class="flex flex-wrap gap-3">
           <a href="tel:${htmlEscape(BUSINESS.phoneDisplay)}" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">전화하기</a>
-          <a href="${htmlEscape(BUSINESS.kakaoLink)}" class="inline-flex items-center px-4 py-2 rounded-md bg-yellow-500 text-white hover:bg-yellow-600">카카오톡 상담</a>
+          <a href="${htmlEscape(BUSINESS.kakaoLink)}" class="inline-flex items-center px-4 py-2 rounded-md bg-yellow-500 text-white hover:bg-yellow-600" target="_blank" rel="noopener nofollow">카카오톡 상담</a>
           <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-md bg-gray-800 text-white hover:bg-gray-900">고객센터</a>
         </div>
       </section>`;
@@ -145,7 +179,8 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
     <article class="bg-white rounded-lg shadow-lg p-8">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-8"><i class="fas fa-calendar-alt mr-2"></i>${today} <span class="mx-4">|</span><i class="fas fa-user mr-2"></i>오렌지Pay</div>
-      ${sectionHtml}
+  ${sectionHtml}
+  ${extendedHtml}
       ${contactHtml}
       <section id="related" class="mb-4">
         <h2 class="text-xl font-semibold mb-2">함께 보면 좋아요</h2>
