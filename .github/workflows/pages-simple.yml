@@ -54,6 +54,12 @@ jobs:
           npm run generate:rss || echo "rss generation failed (continuing)"
           echo "rss step finished"
       
+      - name: Prerender blog index
+        run: |
+          echo "Prerendering blog/index.html..."
+          node scripts/prerender-blog-index.js || echo "prerender skipped"
+          echo "prerender step finished"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
