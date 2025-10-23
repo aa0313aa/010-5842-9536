@@ -407,16 +407,22 @@
         }
         // 정규화 + 정렬
         const all = rawPosts.map(normalizePost).sort((a,b) => (b.date || '').localeCompare(a.date || ''));
+        // URL 쿼리로 기본 필터 설정 (?category=민생 & q=키워드)
+        const params = new URLSearchParams(location.search);
+        const cateParam = params.get('category') || params.get('cat') || '';
+        const qParam = params.get('q') || '';
+        const categorySel = document.getElementById('category-filter');
+        const tagInput = document.getElementById('tag-filter');
+        if (cateParam && categorySel) categorySel.value = cateParam;
+        if (qParam && tagInput) tagInput.value = qParam;
         renderList(all);
 
         // 필터 이벤트
-        const categorySel = document.getElementById('category-filter');
-        const tagInput = document.getElementById('tag-filter');
-        const resetBtn = document.getElementById('reset-filters');
-        function onChange(){ renderList(all); }
-        if (categorySel) categorySel.addEventListener('change', onChange);
-        if (tagInput) tagInput.addEventListener('input', onChange);
-        if (resetBtn) resetBtn.addEventListener('click', () => { if(categorySel) categorySel.value=''; if(tagInput) tagInput.value=''; renderList(all); });
+  const resetBtn = document.getElementById('reset-filters');
+  function onChange(){ renderList(all); }
+  if (categorySel) categorySel.addEventListener('change', onChange);
+  if (tagInput) tagInput.addEventListener('input', onChange);
+  if (resetBtn) resetBtn.addEventListener('click', () => { if(categorySel) categorySel.value=''; if(tagInput) tagInput.value=''; renderList(all); });
       } catch (err) {
         console.error('Error loading posts:', err);
         blogList.innerHTML = '<li class="py-6 text-red-500 text-center">최신글을 불러올 수 없습니다.</li>';

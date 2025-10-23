@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2025-10-21</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/</loc>
-    <lastmod>2025-10-21</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -37,6 +37,18 @@
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-10-23-news-김광규-전세사기보이스피싱까지직전까지-당해-경찰전화도-피싱범-라스핫피플-네이트.html</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-10-23-news-빅테크칼럼-암호화폐-거래소-제미니-솔라나-신용카드-출시제로-수수료최대-677-자동-스테이킹-보상-뉴스스페이스.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2025-10-23-news-카드사-가맹점수수료-수익-5년-만에-감소비중도-20대-붕괴-위기-ceoscoredaily.html</loc>

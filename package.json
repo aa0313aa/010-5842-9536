@@ -15,7 +15,9 @@
     "daily:post": "node scripts/publish-next-topic.js && node generate-sitemap.js && node generate-rss.js",
     "backfill:contact": "node scripts/add-contact-block.js && node generate-sitemap.js && node generate-rss.js",
     "publish:news": "node scripts/publish-news.js",
-    "daily:news": "node scripts/publish-news.js && node generate-sitemap.js && node generate-rss.js"
+    "publish:news:batch": "node scripts/publish-daily-news-batch.js",
+    "daily:news": "node scripts/publish-news.js && node generate-sitemap.js && node generate-rss.js",
+    "daily:news:batch": "node scripts/publish-daily-news-batch.js && node scripts/generate-og-images.js && node generate-sitemap.js && node generate-rss.js"
   },
   "repository": {
     "type": "git",

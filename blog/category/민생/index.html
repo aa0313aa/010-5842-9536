@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오렌지Pay 블로그 | 민생 카테고리</title>
+  <meta name="description" content="민생 관련 최신 뉴스와 가이드를 한곳에서 확인하세요.">
+  <link rel="canonical" href="https://pay24.store/blog/category/%EB%AF%BC%EC%83%9D/">
+  <meta property="og:title" content="오렌지Pay 블로그 | 민생 카테고리">
+  <meta property="og:description" content="민생 관련 최신 뉴스와 가이드를 한곳에서 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pay24.store/blog/category/%EB%AF%BC%EC%83%9D/">
+  <meta property="og:image" content="https://pay24.store/img/og-image.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../../../css/tailwind.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"민생 카테고리","url":"https://pay24.store/blog/category/%EB%AF%BC%EC%83%9D/"}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-700">
+  <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-2xl font-extrabold text-slate-800 tracking-tight">오렌지Pay 블로그</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-slate-700">
+          <a href="/blog/" class="hover:text-orange-600 transition-colors">전체</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+    <section class="mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-2">민생</h1>
+      <p class="text-lg text-gray-600">민생 관련 뉴스와 가이드</p>
+    </section>
+    <ul id="list" class="divide-y divide-gray-200 bg-white rounded-xl shadow-lg"></ul>
+  </main>
+  <footer class="bg-slate-900 text-slate-400 mt-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <div class="mb-4">
+        <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
+        <span class="text-slate-600">|</span>
+        <a href="/privacy.html" class="text-sm hover:text-white mx-2 transition-colors">개인정보처리방침</a>
+      </div>
+      <p class="text-sm">&copy; <span id="current-year"></span> 오렌지Pay. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const CATEGORY = '민생';
+    function inferCategory(text){
+      const t = String(text||'').toLowerCase();
+      const has = (kw) => t.includes(kw);
+      if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
+      if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
+      if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
+      if (has('신용카드') || has('카드사') || has('가맹점') || has('수수료') || has('카드 ')) return '신용카드';
+      return '블로그';
+    }
+    function normalize(post){
+      const text = `${post.title||''} ${post.description||''}`;
+      return { ...post, category: post.category || inferCategory(text), tags: Array.isArray(post.tags)?post.tags:[] };
+    }
+    function render(posts){
+      const wrap = document.getElementById('list');
+      if (!wrap) return;
+      wrap.innerHTML = '';
+      const defaultThumb = '/img/og-image.jpg';
+      posts.forEach(post => {
+        const li = document.createElement('li');
+        li.className = 'py-6 px-6';
+        const a = document.createElement('a');
+        a.href = '/' + (post.url || 'blog');
+        a.className = 'block hover:bg-orange-50 rounded-lg transition p-2';
+        a.setAttribute('aria-label', post.title || '글 보기');
+        const row = document.createElement('div');
+        row.className = 'flex gap-4 items-start';
+        const pic = document.createElement('picture');
+        pic.className = 'w-24 h-16 block rounded-md overflow-hidden flex-shrink-0';
+        const imgPath = post.image || defaultThumb;
+        if (/\.(jpe?g|png)$/i.test(imgPath)){
+          const base = imgPath.replace(/\.(jpe?g|png)$/i, '');
+          const webp400 = base + '-400.webp';
+          const webp800 = base + '-800.webp';
+          const srcWebp = document.createElement('source');
+          srcWebp.type = 'image/webp';
+          srcWebp.srcset = `${webp400} 400w, ${webp800} 800w`;
+          srcWebp.sizes = '(max-width: 640px) 400px, 800px';
+          pic.appendChild(srcWebp);
+        }
+        const img = document.createElement('img');
+        img.src = imgPath;
+        img.alt = (post.title || '썸네일');
+        img.className = 'w-24 h-16 object-cover rounded-md';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        pic.appendChild(img);
+        const content = document.createElement('div');
+        content.className = 'flex-1';
+        const h = document.createElement('div');
+        h.className = 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2';
+        const title = document.createElement('h3');
+        title.className = 'text-xl font-semibold text-orange-600';
+        title.textContent = post.title || '제목 없음';
+        const dateSpan = document.createElement('time');
+        dateSpan.className = 'text-sm text-gray-500';
+        try{ dateSpan.textContent = post.date ? new Date(post.date).toLocaleDateString('ko-KR') : ''; if (post.date) dateSpan.setAttribute('datetime', post.date);}catch(e){ dateSpan.textContent = post.date || ''; }
+        h.appendChild(title); h.appendChild(dateSpan);
+        const desc = document.createElement('p');
+        desc.className = 'text-gray-600 mt-2';
+        const raw = post.description || '';
+        desc.textContent = raw.length > 160 ? raw.slice(0,157) + '...' : raw;
+        content.appendChild(h); content.appendChild(desc);
+        const metaRow = document.createElement('div');
+        metaRow.className = 'mt-2 flex flex-wrap gap-2 items-center';
+        if (post.category){ const cat = document.createElement('span'); cat.className = 'inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700'; cat.textContent = post.category; metaRow.appendChild(cat); }
+        (post.tags||[]).slice(0,2).forEach(t => { const tg = document.createElement('span'); tg.className = 'inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-700'; tg.textContent = t; metaRow.appendChild(tg); });
+        content.appendChild(metaRow);
+        row.appendChild(pic); row.appendChild(content); a.appendChild(row); li.appendChild(a); wrap.appendChild(li);
+      });
+    }
+    (async function(){
+      const res = await fetch('../../../posts.json', {cache:'no-store'});
+      const posts = await res.json();
+      const list = posts.map(normalize).filter(p => p.category === CATEGORY).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      render(list);
+      var y = document.getElementById('current-year'); if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
