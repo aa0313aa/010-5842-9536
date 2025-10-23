@@ -212,22 +212,25 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
     }]
   })}
   </script>
-</head>
-<body class="bg-gray-50 text-gray-900">
-  <header class="bg-orange-500 text-white py-4">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold">오렌지Pay</a>
-        <nav class="hidden md:flex space-x-6">
-          <a href="/" class="hover:text-orange-200">홈</a>
-          <a href="/blog/" class="hover:text-orange-200">블로그</a>
-          <a href="/contact.html" class="hover:text-orange-200">고객센터</a>
-        </nav>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/" class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold text-slate-800 tracking-tight">오렌지Pay</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-slate-700">
+            <a href="/" class="hover:text-orange-600 transition-colors">홈</a>
+            <a href="/blog/" class="hover:text-orange-600 transition-colors">블로그</a>
+            <a href="/contact.html" class="hover:text-orange-600 transition-colors">고객센터</a>
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
-  <main class="container mx-auto px-4 py-8 max-w-4xl">
-    <article class="bg-white rounded-lg shadow-lg p-8">
+    </header>
+    <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+      <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
+      <article class="">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-6">${ymd(new Date(pubIso))} · 출처: <a class="underline text-orange-700" href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank">${htmlEscape(sourceName)}</a></div>
       <section class="prose prose-lg max-w-none mb-8">
@@ -245,11 +248,27 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
       ${contactHtml}
     </article>
   </main>
-  <footer class="text-center text-slate-500 text-sm my-8">
-    <a class="hover:text-orange-500" href="/blog/">← 블로그로 돌아가기</a>
+  <footer class="bg-slate-900 text-slate-400 mt-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <div class="mb-4">
+        <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
+        <span class="text-slate-600">|</span>
+        <a href="/privacy.html" class="text-sm hover:text-white mx-2 transition-colors">개인정보처리방침</a>
+      </div>
+      <p class="text-sm">&copy; <span id="current-year"></span> 오렌지Pay. All Rights Reserved.</p>
+      <p class="text-xs mt-2 text-slate-500">
+        본 사이트는 합법적인 금융 정보 제공을 목적으로 하며, 불법적인 '카드깡' 등 여신전문금융업법 위반 행위를 중개하거나 권유하지 않습니다. 모든 서비스는 관련 법령 및 약관을 준수하여 안전하게 진행됩니다.
+      </p>
+    </div>
   </footer>
-</body>
-</html>`;
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var yearSpan = document.getElementById('current-year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+  </body>
+  </html>`;
 
   return { fileName, relUrl, absUrl, html };
 }
