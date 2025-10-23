@@ -1,0 +1,53 @@
+name: Daily News Batch
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Runs daily at 00:05 KST (15:05 UTC)
+    - cron: '5 15 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news-batch
+  cancel-in-progress: false
+
+jobs:
+  run-batch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install --prefer-offline --no-audit --no-fund
+
+      - name: Run daily news batch (4 categories) and regenerate indices
+        run: |
+          node scripts/publish-daily-news-batch.js
+          node generate-sitemap.js
+          node generate-rss.js
+
+      - name: Commit and push changes (if any)
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git config --global user.name "$GIT_AUTHOR_NAME"
+          git config --global user.email "$GIT_AUTHOR_EMAIL"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(ci): daily news batch (4 categories) + sitemap/rss refresh"
+            git push
+          fi
