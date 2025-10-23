@@ -65,7 +65,7 @@ async function fetchCandidates(){
   const log = loadJson(LOG_FILE, []);
   const seen = new Set(log.map(e => e.id || e.link));
   const now = Date.now();
-  const twoDays = 1000*60*60*48;
+  const sevenDays = 1000*60*60*24*7; // 7일
   const items = [];
   for (const src of sources){
     const { name, feed } = src;
@@ -77,7 +77,8 @@ async function fetchCandidates(){
         if (!id || seen.has(id)) continue;
         const iso = it.isoDate || it.pubDate || it.published || null;
         const ts = iso ? Date.parse(iso) : NaN;
-        if (!isNaN(ts) && (now - ts) > twoDays) continue; // 최근 48h 이내
+  // 최근 7일 이내만 우선 수집 (너무 오래된 것은 제외)
+  if (!isNaN(ts) && (now - ts) > sevenDays) continue;
         const rawText = it.contentSnippet || it.content || it['content:encoded'] || '';
         const text = stripHtml(rawText);
         items.push({
@@ -117,6 +118,46 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
           <a href="${htmlEscape(BUSINESS.kakaoLink)}" class="inline-flex items-center px-4 py-2 rounded-md bg-yellow-500 text-white hover:bg-yellow-600" target="_blank" rel="noopener nofollow">카카오톡 상담</a>
           <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-md bg-gray-800 text-white hover:bg-gray-900">고객센터</a>
         </div>
+      </section>`;
+
+  // 확장 섹션: 키포인트/영향/체크리스트/도움 제공
+  const keypoints = `
+      <section id="summary" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">요약 핵심 포인트</h2>
+        <ul class="list-disc pl-6">
+          <li>${htmlEscape(description.slice(0, 80))}…</li>
+          <li>관련 정책·수수료·보안 이슈 확인 권장</li>
+          <li>영향 범위: 카드/소액결제 이용자, 정산 일정, 환불 정책</li>
+        </ul>
+      </section>`;
+
+  const impact = `
+      <section id="impact" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">이 소식이 주는 영향</h2>
+        <p>해당 뉴스는 카드 결제·소액결제 환경에 직간접적 영향을 줄 수 있습니다. 진행 전 <strong>총비용(수수료+부대비용)</strong>, <strong>정산 시간</strong>, <strong>환불/민원 절차</strong>를 재확인하고, 약관과 정책 변경 사항을 체크하세요.</p>
+      </section>`;
+
+  const checklist = `
+      <section id="checklist" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">실전 체크리스트</h2>
+        <ul class="list-disc pl-6">
+          <li>견적 전 총 정산액/추가비용 유무 확인</li>
+          <li>환불/민원 절차 및 기한 명시</li>
+          <li>개인정보 최소 제공, 비정상 요구 거절</li>
+          <li>증빙(영수증/내역) 보관 및 기록 관리</li>
+        </ul>
+      </section>`;
+
+  const assistance = `
+      <section id="assistance" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">오렌지Pay가 도와드리는 부분</h2>
+        <ul class="list-disc pl-6">
+          <li>안전한 업체 · 24시간 친절 상담</li>
+          <li>비상금 카드 할부·휴대폰 비상금(소액결제) 상담 가능</li>
+          <li>합법·약관 준수 진행, 개인정보 최소 수집</li>
+          <li>수수료·정산 시간·증빙 관리까지 실전 가이드</li>
+        </ul>
+        <p class="mt-3">궁금한 점은 아래 연락처로 1:1 상담하세요.</p>
       </section>`;
 
   const html = `<!DOCTYPE html>
@@ -196,6 +237,10 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
           <a href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">원문 기사 보기</a>
         </div>
       </section>
+      ${keypoints}
+      ${impact}
+      ${checklist}
+      ${assistance}
       ${contactHtml}
     </article>
   </main>
@@ -212,9 +257,32 @@ async function main(){
   ensureDir(BLOG);
   const posts = loadJson(POSTS, []);
   const log = loadJson(LOG_FILE, []);
-  const candidates = await fetchCandidates();
+  let candidates = await fetchCandidates();
   if (!candidates.length){
-    console.log('No new news to publish.');
+    console.log('No new news within 7 days. Trying older items as fallback...');
+    // fallback: 가장 최신 1건을 가져오기 위해 seen 무시하고 각 피드에서 1개씩 시도
+    try {
+      const parser = new Parser({ timeout: 15000 });
+      const sources = loadJson(SOURCES_FILE, []);
+      for (const src of sources){
+        const res = await parser.parseURL(src.feed);
+        if (res.items && res.items.length){
+          const it = res.items[0];
+          candidates = [{
+            source: src.name || (res.title || 'RSS'),
+            id: it.guid || it.id || it.link,
+            link: it.link,
+            title: it.title || '(제목 없음)',
+            isoDate: it.isoDate || it.pubDate || new Date().toISOString(),
+            summary: cut(stripHtml(it.contentSnippet || it.content || it['content:encoded'] || ''), 500)
+          }];
+          break;
+        }
+      }
+    } catch(e){ /* ignore */ }
+  }
+  if (!candidates.length){
+    console.log('No news available from sources.');
     return;
   }
   const picked = candidates[0];
