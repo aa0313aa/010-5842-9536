@@ -161,6 +161,61 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         <p class="mt-3">궁금한 점은 아래 연락처로 1:1 상담하세요.</p>
       </section>`;
 
+  // 본문 확장: 사건 개요/쟁점/타임라인/데이터/전문가 코멘트/독자 안내 등 추가
+  const details = `
+      <section id="overview" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">사건 개요</h2>
+        <p>${htmlEscape(cut(description, 500))}</p>
+        <p class="text-gray-600 mt-2">본 요약은 원문 기사를 바탕으로 핵심만 정리했으며, 세부 내용과 맥락은 아래 원문 링크를 참고하세요.</p>
+      </section>
+      <section id="issues" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">핵심 쟁점</h2>
+        <ul class="list-disc pl-6">
+          <li>정책/규제 변화에 따른 이용자·업계 영향</li>
+          <li>수수료·정산·환불 등 비용/절차 측면 이슈</li>
+          <li>보안/사기 리스크와 예방 수칙</li>
+        </ul>
+      </section>
+      <section id="timeline" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">타임라인</h2>
+        <ol class="list-decimal pl-6">
+          <li>${ymd(new Date(pubIso))}: 보도/공지</li>
+          <li>향후: 후속 점검·제도 보완·유관기관 안내 예정</li>
+        </ol>
+      </section>
+      <section id="data" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">데이터/지표</h2>
+        <ul class="list-disc pl-6">
+          <li>이용자 범주: 카드/소액결제/취약계층/소상공인 등</li>
+          <li>영향 항목: 총비용(수수료+부대비용), 정산 시간, 환불/민원 절차</li>
+          <li>주의 신호: 과도한 개인정보 요구·비정상 원격 제어·허위 과장 광고</li>
+        </ul>
+      </section>
+      <section id="expert" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">전문가 코멘트(요약)</h2>
+        <p>민생 관점에서 불확실성 구간에서는 <strong>조건 재확인</strong>과 <strong>증빙 관리</strong>가 중요합니다. 가이드라인이 제시될 때까지는 
+        무리한 진행보다 <strong>사전 상담</strong>과 <strong>정책 준수</strong>를 권장합니다.</p>
+      </section>
+      <section id="reader" class="prose prose-lg max-w-none mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">독자 안내</h2>
+        <p>아래 원문에서 상세 근거와 수치를 확인하세요. 본 페이지는 핵심 요약과 이용자 관점의 체크리스트를 제공합니다.</p>
+        <div class="mt-3">
+          <a href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">원문 기사 보기</a>
+        </div>
+      </section>`;
+
+  const heroFigure = `
+      <figure class="mb-8">
+        <img src="/img/og-image-800.webp" alt="금융/민생 관련 참고 이미지" class="w-full h-auto rounded-lg shadow" loading="lazy">
+        <figcaption class="text-sm text-gray-500 mt-2">이미지는 기사 이해를 돕기 위한 참고용 일러스트입니다.</figcaption>
+      </figure>`;
+
+  const extraFigure = `
+      <figure class="mb-8">
+        <img src="/img/KakaoTalk_20250318_163831180-800.webp" alt="상담/안내 일러스트" class="w-full h-auto rounded-lg shadow" loading="lazy">
+        <figcaption class="text-sm text-gray-500 mt-2">상담·안내를 상징하는 일러스트(참고 이미지).</figcaption>
+      </figure>`;
+
   const html = `<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -212,8 +267,8 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
     }]
   })}
   </script>
-  </head>
-  <body class="bg-gray-50 text-gray-900">
+    </head>
+    <body class="bg-gray-50 text-gray-900">
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
@@ -228,22 +283,25 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         </div>
       </div>
     </header>
-    <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-      <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
-      <article class="">
+      <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
+        <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
+        <article class="">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-6">${ymd(new Date(pubIso))} · 출처: <a class="underline text-orange-700" href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank">${htmlEscape(sourceName)}</a></div>
-      <section class="prose prose-lg max-w-none mb-8">
+          ${heroFigure}
+          <section class="prose prose-lg max-w-none mb-8">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">핵심 요약</h2>
         <p>${htmlEscape(description)}</p>
         <p class="mt-4 text-sm text-gray-500">본 페이지는 기사의 일부 요약과 링크만 제공합니다. 전체 내용은 원문을 참고하세요.</p>
         <div class="mt-5">
           <a href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">원문 기사 보기</a>
         </div>
-      </section>
+          </section>
       ${keypoints}
       ${impact}
       ${checklist}
+        ${details}
+        ${extraFigure}
       ${assistance}
       ${contactHtml}
     </article>
@@ -278,6 +336,15 @@ async function main(){
   const posts = loadJson(POSTS, []);
   const log = loadJson(LOG_FILE, []);
   let candidates = await fetchCandidates();
+  // Optional filter by CLI arg or env
+  const argv = process.argv.slice(2);
+  let filter = process.env.NEWS_FILTER || '';
+  const idx = argv.indexOf('--filter');
+  if (idx !== -1 && argv[idx+1]) filter = argv[idx+1];
+  if (filter) {
+    const lower = filter.toLowerCase();
+    candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
+  }
   if (!candidates.length){
     console.log('No new news within 7 days. Trying older items as fallback...');
     // fallback: 가장 최신 1건을 가져오기 위해 seen 무시하고 각 피드에서 1개씩 시도

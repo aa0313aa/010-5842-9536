@@ -1,34 +1,18 @@
 [
   {
-    "name": "금융감독원 보도자료",
-    "feed": "https://www.fss.or.kr/fss/bbs/B0000117/rssList.do?menuNo=200091"
+    "name": "Google 뉴스 - 신용카드(수수료/규제/카드사)",
+    "feed": "https://news.google.com/rss/search?q=%28%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C%29+%28%EC%88%98%EC%88%98%EB%A3%8C+OR+%EA%B7%9C%EC%A0%9C+OR+%EC%B9%B4%EB%93%9C%EC%82%AC%29&hl=ko&gl=KR&ceid=KR:ko"
   },
   {
-    "name": "금융위원회 보도자료",
-    "feed": "https://www.fsc.go.kr/no010101/rss?menuNo=200238"
+    "name": "Google 뉴스 - 휴대폰 소액결제/콘텐츠이용료",
+    "feed": "https://news.google.com/rss/search?q=%28%ED%9C%B4%EB%8C%80%ED%8F%B0+%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C%29+OR+%28%EC%BD%98%ED%85%90%EC%B8%A0+%EC%9D%B4%EC%9A%A9%EB%A3%8C%29&hl=ko&gl=KR&ceid=KR:ko"
   },
   {
-    "name": "네이버 금융뉴스 - 카드",
-    "feed": "https://rss.naver.com/economy/finance/card.xml"
+    "name": "Google 뉴스 - 사기/피싱/카드깡",
+    "feed": "https://news.google.com/rss/search?q=%28%ED%94%BC%EC%8B%B1+OR+%EC%8A%A4%EB%AF%B8%EC%8B%B1+OR+%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1%29+OR+%28%EA%B2%B0%EC%A0%9C+%EC%82%AC%EA%B8%B0%29+OR+%28%EC%B9%B4%EB%93%9C%EA%B9%A1%29&hl=ko&gl=KR&ceid=KR:ko"
   },
   {
-    "name": "한국은행 보도자료",
-    "feed": "https://www.bok.or.kr/portal/bbs/B0000233/rss.do?menuNo=201010"
-  },
-  {
-    "name": "Google 뉴스 - 신용카드 수수료",
-    "feed": "https://news.google.com/rss/search?q=%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C+%EC%88%98%EC%88%98%EB%A3%8C&hl=ko&gl=KR&ceid=KR:ko"
-  },
-  {
-    "name": "Google 뉴스 - 소액결제",
-    "feed": "https://news.google.com/rss/search?q=%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C&hl=ko&gl=KR&ceid=KR:ko"
-  },
-  {
-    "name": "Google 뉴스 - 카드 현금화",
-    "feed": "https://news.google.com/rss/search?q=%EC%B9%B4%EB%93%9C+%ED%98%84%EA%B8%88%ED%99%94&hl=ko&gl=KR&ceid=KR:ko"
-  },
-  {
-    "name": "Google 뉴스 - 금융위원회 보도자료",
-    "feed": "https://news.google.com/rss/search?q=%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%ED%9A%8C+%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C&hl=ko&gl=KR&ceid=KR:ko"
+    "name": "Google 뉴스 - 민생(물가/서민금융/지원)",
+    "feed": "https://news.google.com/rss/search?q=%28%EB%AF%BC%EC%83%9D+%EB%8C%80%EC%B1%85+OR+%EB%AC%BC%EA%B0%80+%EC%95%88%EC%A0%95+OR+%EC%84%9C%EB%AF%BC+%EA%B8%88%EC%9C%B5+OR+%EC%B2%AD%EB%85%84+%EC%A7%80%EC%9B%90+OR+%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5%29&hl=ko&gl=KR&ceid=KR:ko"
   }
 ]
