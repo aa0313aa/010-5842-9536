@@ -61,14 +61,14 @@ function slugify(title){
 }
 
 async function fetchCandidates(opts={}){
-  const { filter='' } = opts;
+  const { filter='', windowDaysOverride=null } = opts;
   const parser = new Parser({ timeout: 15000 });
   const sources = loadJson(SOURCES_FILE, []);
   const log = loadJson(LOG_FILE, []);
   const seen = new Set(log.map(e => e.id || e.link));
   const now = Date.now();
   // 기본 7일, 필터 지정 시 30일로 확대해서 하루 1건 보장을 높임
-  const windowDays = filter ? 30 : 7;
+  const windowDays = windowDaysOverride || (filter ? 30 : 7);
   const windowMs = 1000*60*60*24*windowDays;
   const items = [];
   for (const src of sources){
@@ -326,6 +326,14 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   return { fileName, relUrl, absUrl, html };
 }
 
+function normalizeTitle(s){
+  return String(s||'')
+    .toLowerCase()
+    .replace(/[^0-9a-z가-힣\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 async function main(){
   ensureDir(BLOG);
   const posts = loadJson(POSTS, []);
@@ -333,9 +341,19 @@ async function main(){
   // Optional filter by CLI arg or env
   const argv = process.argv.slice(2);
   let filter = process.env.NEWS_FILTER || '';
+  let dryRun = false;
+  let maxAgeDays = null;
   const idx = argv.indexOf('--filter');
   if (idx !== -1 && argv[idx+1]) filter = argv[idx+1];
-  let candidates = await fetchCandidates({ filter });
+  const dryIdx = argv.indexOf('--dry-run');
+  if (dryIdx !== -1) dryRun = true;
+  const madIdx = argv.indexOf('--max-age-days');
+  if (madIdx !== -1 && argv[madIdx+1]) {
+    const n = parseInt(argv[madIdx+1], 10);
+    if (!isNaN(n) && n > 0) maxAgeDays = n;
+  }
+
+  let candidates = await fetchCandidates({ filter, windowDaysOverride: maxAgeDays });
   if (filter) {
     const lower = filter.toLowerCase();
     candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
@@ -372,7 +390,24 @@ async function main(){
     console.log('No news available from sources.');
     return;
   }
-  const picked = candidates[0];
+  // 중복 방지: 최근 14일 내 게시물과 제목 유사(정규화 후 동일) 항목은 제외하고 선택
+  const RECENT_DAYS = 14;
+  const cutoff = Date.now() - RECENT_DAYS*24*60*60*1000;
+  const recentTitleSet = new Set(posts
+    .filter(p => {
+      const ts = Date.parse(p.date);
+      return !isNaN(ts) ? (ts >= cutoff) : true;
+    })
+    .map(p => normalizeTitle(p.title))
+  );
+  let picked = null;
+  for (const c of candidates){
+    if (!recentTitleSet.has(normalizeTitle(c.title))){
+      picked = c;
+      break;
+    }
+  }
+  if (!picked) picked = candidates[0];
   const slug = slugify(picked.title);
   // derive category/tags for meta and posts.json
   function categorizeFromText(text){
@@ -401,6 +436,13 @@ async function main(){
     category: cat,
     tags
   });
+  if (dryRun){
+    console.log('[DRY RUN] Would publish:', built.relUrl);
+    console.log('[DRY RUN] Title:', picked.title);
+    console.log('[DRY RUN] Category:', cat, 'Tags:', tags.join(', '));
+    return;
+  }
+
   const outPath = path.join(BLOG, built.fileName);
   fs.writeFileSync(outPath, built.html, 'utf8');
 
