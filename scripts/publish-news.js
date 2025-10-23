@@ -59,13 +59,16 @@ function slugify(title){
   return base || 'news';
 }
 
-async function fetchCandidates(){
+async function fetchCandidates(opts={}){
+  const { filter='' } = opts;
   const parser = new Parser({ timeout: 15000 });
   const sources = loadJson(SOURCES_FILE, []);
   const log = loadJson(LOG_FILE, []);
   const seen = new Set(log.map(e => e.id || e.link));
   const now = Date.now();
-  const sevenDays = 1000*60*60*24*7; // 7일
+  // 기본 7일, 필터 지정 시 30일로 확대해서 하루 1건 보장을 높임
+  const windowDays = filter ? 30 : 7;
+  const windowMs = 1000*60*60*24*windowDays;
   const items = [];
   for (const src of sources){
     const { name, feed } = src;
@@ -77,8 +80,8 @@ async function fetchCandidates(){
         if (!id || seen.has(id)) continue;
         const iso = it.isoDate || it.pubDate || it.published || null;
         const ts = iso ? Date.parse(iso) : NaN;
-  // 최근 7일 이내만 우선 수집 (너무 오래된 것은 제외)
-  if (!isNaN(ts) && (now - ts) > sevenDays) continue;
+        // 최근 windowDays 이내만 우선 수집 (너무 오래된 것은 제외)
+        if (!isNaN(ts) && (now - ts) > windowMs) continue;
         const rawText = it.contentSnippet || it.content || it['content:encoded'] || '';
         const text = stripHtml(rawText);
         items.push({
@@ -326,12 +329,12 @@ async function main(){
   ensureDir(BLOG);
   const posts = loadJson(POSTS, []);
   const log = loadJson(LOG_FILE, []);
-  let candidates = await fetchCandidates();
   // Optional filter by CLI arg or env
   const argv = process.argv.slice(2);
   let filter = process.env.NEWS_FILTER || '';
   const idx = argv.indexOf('--filter');
   if (idx !== -1 && argv[idx+1]) filter = argv[idx+1];
+  let candidates = await fetchCandidates({ filter });
   if (filter) {
     const lower = filter.toLowerCase();
     candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
