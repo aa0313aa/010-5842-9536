@@ -93,6 +93,7 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
       <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
         <h2 class="text-2xl font-bold text-orange-700 mb-3">빠르게 상담 받기</h2>
         <p class="text-gray-800 mb-2"><strong>${htmlEscape(BUSINESS.name)}</strong> · 전화: <a class="underline" href="tel:${htmlEscape(BUSINESS.phoneDisplay)}">${htmlEscape(BUSINESS.phoneDisplay)}</a></p>
+        <p class="text-gray-800 mb-3">오렌지Pay가 도와드리는 부분은 <strong>비상금 소액결제</strong>, <strong>비상금 카드현금화</strong> 입니다.</p>
         <p class="text-gray-800 mb-4">카카오톡 1:1 상담: <a class="underline text-orange-700" href="${htmlEscape(BUSINESS.kakaoLink)}" target="_blank" rel="noopener nofollow">채팅 열기</a></p>
         <ul class="list-disc pl-6 text-gray-700 mb-4">
           <li>안전한 업체 · 24시간 친절 상담</li>

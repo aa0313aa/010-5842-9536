@@ -151,6 +151,7 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   const assistance = `
       <section id="assistance" class="prose prose-lg max-w-none mb-8">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">오렌지Pay가 도와드리는 부분</h2>
+        <p class="mb-3">오렌지Pay가 도와드리는 부분은 <strong>비상금 소액결제</strong>, <strong>비상금 카드현금화</strong> 입니다.</p>
         <ul class="list-disc pl-6">
           <li>안전한 업체 · 24시간 친절 상담</li>
           <li>비상금 카드 할부·휴대폰 비상금(소액결제) 상담 가능</li>
