@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const Parser = require('rss-parser');
 const cheerio = require('cheerio');
+let sharp = null; // lazy load for optional OG generation
 
 const ROOT = path.join(__dirname, '..');
 const BLOG = path.join(ROOT, 'blog');
@@ -421,6 +422,26 @@ async function main(){
   saveJson(LOG_FILE, log);
 
   console.log('Published news:', built.relUrl);
+
+  // Ensure OG image exists for default site image to avoid social preview delay
+  try {
+    if (!sharp) sharp = require('sharp');
+    const ogSrcRel = DEFAULT_OG.replace(/^\//,'');
+    const ogSrcAbs = path.join(ROOT, ogSrcRel);
+    const outBase = path.join(path.dirname(ogSrcAbs), path.basename(ogSrcAbs, path.extname(ogSrcAbs)));
+    const outWebp = outBase + '-og.webp';
+    const outJpg = outBase + '-og.jpg';
+    const needWebp = !fs.existsSync(outWebp);
+    const needJpg = !fs.existsSync(outJpg);
+    if (fs.existsSync(ogSrcAbs) && (needWebp || needJpg)){
+      await sharp(ogSrcAbs).resize(1200,630,{fit:'cover'}).webp({quality:88}).toFile(outWebp);
+      await sharp(ogSrcAbs).resize(1200,630,{fit:'cover'}).jpeg({quality:86}).toFile(outJpg);
+      console.log('OG 기본 이미지 생성 완료:', outWebp, outJpg);
+    }
+  } catch(e){
+    // sharp 미설치 등 환경 이슈 시 게시 흐름은 계속
+    console.warn('OG 생성 스킵:', e && e.message ? e.message : e);
+  }
 }
 
 main().catch(err=>{ console.error('publish-news failed:', err); process.exit(1); });

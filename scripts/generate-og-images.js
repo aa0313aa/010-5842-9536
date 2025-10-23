@@ -14,6 +14,15 @@ function ensureDir(p) {
 
 async function generateOg(srcPath, outBase) {
   try {
+    // Skip if outputs exist and are up-to-date
+    const outWebp = outBase + '-og.webp';
+    const outJpg = outBase + '-og.jpg';
+    const srcStat = fs.statSync(srcPath);
+    const webpFresh = fs.existsSync(outWebp) && fs.statSync(outWebp).mtimeMs >= srcStat.mtimeMs;
+    const jpgFresh = fs.existsSync(outJpg) && fs.statSync(outJpg).mtimeMs >= srcStat.mtimeMs;
+    if (webpFresh && jpgFresh) {
+      return false; // no change
+    }
     await sharp(srcPath).resize(1200, 630, { fit: 'cover' }).webp({ quality: 88 }).toFile(outBase + '-og.webp');
     await sharp(srcPath).resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 86 }).toFile(outBase + '-og.jpg');
     console.log('OG 생성:', outBase + '-og.webp', outBase + '-og.jpg');
@@ -50,6 +59,13 @@ async function main() {
       // set ogImage relative path
       const ogRel = '/' + path.join(path.relative(workspace, dir), base + '-og.webp').replace(/\\/g,'/');
       if (p.ogImage !== ogRel) {
+        p.ogImage = ogRel;
+        changed = true;
+      }
+    } else {
+      // ensure ogImage field is present even if not regenerated
+      const ogRel = '/' + path.join(path.relative(workspace, dir), base + '-og.webp').replace(/\\/g,'/');
+      if (!p.ogImage) {
         p.ogImage = ogRel;
         changed = true;
       }
