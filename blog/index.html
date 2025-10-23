@@ -143,6 +143,30 @@
       <h1 class="text-4xl font-bold mb-2">오렌지Pay 공식 블로그</h1>
       <p class="text-lg text-gray-600">소액결제, 신용카드 현금화, 정보이용료, 업계 소식, 꿀팁 등 다양한 정보를 제공합니다.</p>
     </section>
+    <!-- Filters: 카테고리/태그 -->
+    <section class="mb-6">
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-end">
+        <div class="flex-1">
+          <label for="category-filter" class="block text-sm font-medium text-gray-700 mb-1">카테고리</label>
+          <select id="category-filter" class="w-full border border-gray-300 rounded-md p-2">
+            <option value="">전체</option>
+            <option>민생</option>
+            <option>사기</option>
+            <option>신용카드</option>
+            <option>소액결제</option>
+            <option>블로그</option>
+            <option>뉴스</option>
+          </select>
+        </div>
+        <div class="flex-[2]">
+          <label for="tag-filter" class="block text-sm font-medium text-gray-700 mb-1">태그/검색</label>
+          <input id="tag-filter" type="search" placeholder="태그, 제목, 요약으로 검색" class="w-full border border-gray-300 rounded-md p-2" />
+        </div>
+        <div>
+          <button id="reset-filters" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md border border-gray-300 hover:bg-gray-200">초기화</button>
+        </div>
+      </div>
+    </section>
     <section>
       <h2 class="text-2xl font-bold mb-6 text-orange-600">블로그</h2>
       <ul id="blog-list" class="divide-y divide-gray-200 bg-white rounded-xl shadow-lg">
@@ -241,93 +265,158 @@
     </div>
   </footer>
   <script>
-    // posts.json을 fetch하여 최신글 자동 반영 (안전한 DOM 생성, 이미지 lazy, 날짜 포맷)
-    (async function renderPosts(){
+    // 간단 분류기: 포스트에 category/tags가 없을 때 제목/설명에서 유추
+    function inferCategory(text){
+      const t = String(text||'').toLowerCase();
+      const has = (kw) => t.includes(kw);
+      if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
+      if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
+      if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
+      if (has('신용카드') || has('카드사') || has('가맹점') || has('수수료') || has('카드 ')) return '신용카드';
+      return '블로그';
+    }
+
+    function normalizePost(post){
+      const text = `${post.title||''} ${post.description||''}`;
+      const category = post.category || inferCategory(text);
+      const tags = Array.isArray(post.tags) ? post.tags : [];
+      return { ...post, category, tags };
+    }
+
+    function matchesFilters(post, category, query){
+      const q = (query||'').trim().toLowerCase();
+      const okCategory = !category || post.category === category;
+      if (!q) return okCategory;
+      const hay = `${post.title||''} ${post.description||''} ${(post.tags||[]).join(' ')}`.toLowerCase();
+      return okCategory && hay.includes(q);
+    }
+
+    function renderList(posts){
+      const blogList = document.getElementById('blog-list');
+      if (!blogList) return;
+      const categorySel = document.getElementById('category-filter');
+      const tagInput = document.getElementById('tag-filter');
+      const selectedCategory = categorySel ? categorySel.value : '';
+      const query = tagInput ? tagInput.value : '';
+      blogList.innerHTML = '';
+      const defaultThumb = '/img/og-image.jpg';
+      const filtered = posts.filter(p => matchesFilters(p, selectedCategory, query));
+      if (!filtered.length){
+        blogList.innerHTML = '<li class="py-6 text-gray-400 text-center">조건에 맞는 글이 없습니다.</li>';
+        return;
+      }
+      filtered.forEach(post => {
+        const li = document.createElement('li');
+        li.className = 'py-6 px-6';
+
+        const a = document.createElement('a');
+        a.href = '/' + (post.url || 'blog');
+        a.className = 'block hover:bg-orange-50 rounded-lg transition p-2';
+        a.setAttribute('aria-label', (post.title || '블로그 글 보기'));
+
+        const row = document.createElement('div');
+        row.className = 'flex gap-4 items-start';
+
+        const pic = document.createElement('picture');
+        pic.className = 'w-24 h-16 block rounded-md overflow-hidden flex-shrink-0';
+
+        const imgPath = post.image || defaultThumb;
+        if (/\.(jpe?g|png)$/i.test(imgPath)){
+          const base = imgPath.replace(/\.(jpe?g|png)$/i, '');
+          const webp400 = base + '-400.webp';
+          const webp800 = base + '-800.webp';
+          const srcWebp = document.createElement('source');
+          srcWebp.type = 'image/webp';
+          srcWebp.srcset = `${webp400} 400w, ${webp800} 800w`;
+          srcWebp.sizes = '(max-width: 640px) 400px, 800px';
+          pic.appendChild(srcWebp);
+        }
+
+        const thumb = document.createElement('img');
+        thumb.src = imgPath;
+        thumb.alt = (post.title || '블로그 이미지') + ' 썸네일';
+        thumb.className = 'w-24 h-16 object-cover rounded-md';
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
+        pic.appendChild(thumb);
+
+        const content = document.createElement('div');
+        content.className = 'flex-1';
+
+        const h = document.createElement('div');
+        h.className = 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2';
+
+        const title = document.createElement('h3');
+        title.className = 'text-xl font-semibold text-orange-600';
+        title.textContent = post.title || '제목 없음';
+
+        const dateSpan = document.createElement('time');
+        dateSpan.className = 'text-sm text-gray-500';
+        try {
+          dateSpan.textContent = post.date ? new Date(post.date).toLocaleDateString('ko-KR') : '';
+          if (post.date) dateSpan.setAttribute('datetime', post.date);
+        } catch(e) { dateSpan.textContent = post.date || ''; }
+
+        h.appendChild(title);
+        h.appendChild(dateSpan);
+
+        const desc = document.createElement('p');
+        desc.className = 'text-gray-600 mt-2';
+        const raw = post.description || '';
+        desc.textContent = raw.length > 160 ? raw.slice(0,157) + '...' : raw;
+
+        // Badge row: category + up to 2 tags
+        const metaRow = document.createElement('div');
+        metaRow.className = 'mt-2 flex flex-wrap gap-2 items-center';
+        if (post.category){
+          const cat = document.createElement('span');
+          cat.className = 'inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700';
+          cat.textContent = post.category;
+          metaRow.appendChild(cat);
+        }
+        (post.tags||[]).slice(0,2).forEach(t => {
+          const tg = document.createElement('span');
+          tg.className = 'inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-700';
+          tg.textContent = t;
+          metaRow.appendChild(tg);
+        });
+
+        content.appendChild(h);
+        content.appendChild(desc);
+        content.appendChild(metaRow);
+
+        row.appendChild(pic);
+        row.appendChild(content);
+        a.appendChild(row);
+        li.appendChild(a);
+        blogList.appendChild(li);
+      });
+    }
+
+    // posts.json을 fetch하여 최신글 자동 반영 + 필터 지원
+    (async function initBlog(){
       const blogList = document.getElementById('blog-list');
       if (!blogList) return;
       try {
         const res = await fetch('../posts.json', {cache: 'no-store'});
         if (!res.ok) throw new Error('posts.json fetch failed');
-        const posts = await res.json();
-        if (!Array.isArray(posts) || posts.length === 0) {
+        const rawPosts = await res.json();
+        if (!Array.isArray(rawPosts) || rawPosts.length === 0) {
           blogList.innerHTML = '<li class="py-6 text-gray-400 text-center">등록된 글이 없습니다.</li>';
           return;
         }
-        // 정렬 및 렌더
-        posts.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
-        blogList.innerHTML = '';
-        const defaultThumb = '/img/og-image.jpg';
-        posts.forEach(post => {
-          const li = document.createElement('li');
-          li.className = 'py-6 px-6';
+        // 정규화 + 정렬
+        const all = rawPosts.map(normalizePost).sort((a,b) => (b.date || '').localeCompare(a.date || ''));
+        renderList(all);
 
-          const a = document.createElement('a');
-          a.href = '/' + (post.url || 'blog');
-          a.className = 'block hover:bg-orange-50 rounded-lg transition p-2';
-          a.setAttribute('aria-label', (post.title || '블로그 글 보기'));
-
-          const row = document.createElement('div');
-          row.className = 'flex gap-4 items-start';
-
-          // create <picture> with responsive webp sources (400w, 800w) and fallback to original image
-          const pic = document.createElement('picture');
-          pic.className = 'w-24 h-16 block rounded-md overflow-hidden flex-shrink-0';
-
-          const imgPath = post.image || defaultThumb;
-          // if image is jpg/png, offer generated webp sizes (assumes -400.webp and -800.webp exist)
-          if (/\.(jpe?g|png)$/i.test(imgPath)){
-            const base = imgPath.replace(/\.(jpe?g|png)$/i, '');
-            const webp400 = base + '-400.webp';
-            const webp800 = base + '-800.webp';
-            const srcWebp = document.createElement('source');
-            srcWebp.type = 'image/webp';
-            srcWebp.srcset = `${webp400} 400w, ${webp800} 800w`;
-            srcWebp.sizes = '(max-width: 640px) 400px, 800px';
-            pic.appendChild(srcWebp);
-          }
-
-          const thumb = document.createElement('img');
-          thumb.src = imgPath;
-          thumb.alt = (post.title || '블로그 이미지') + ' 썸네일';
-          thumb.className = 'w-24 h-16 object-cover rounded-md';
-          thumb.loading = 'lazy';
-          thumb.decoding = 'async';
-          pic.appendChild(thumb);
-
-          const content = document.createElement('div');
-          content.className = 'flex-1';
-
-          const h = document.createElement('div');
-          h.className = 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2';
-
-          const title = document.createElement('h3');
-          title.className = 'text-xl font-semibold text-orange-600';
-          title.textContent = post.title || '제목 없음';
-
-          const dateSpan = document.createElement('time');
-          dateSpan.className = 'text-sm text-gray-500';
-          try {
-            dateSpan.textContent = post.date ? new Date(post.date).toLocaleDateString('ko-KR') : '';
-            if (post.date) dateSpan.setAttribute('datetime', post.date);
-          } catch(e) { dateSpan.textContent = post.date || ''; }
-
-          h.appendChild(title);
-          h.appendChild(dateSpan);
-
-          const desc = document.createElement('p');
-          desc.className = 'text-gray-600 mt-2';
-          const raw = post.description || '';
-          desc.textContent = raw.length > 160 ? raw.slice(0,157) + '...' : raw;
-
-          content.appendChild(h);
-          content.appendChild(desc);
-
-          row.appendChild(pic);
-          row.appendChild(content);
-          a.appendChild(row);
-          li.appendChild(a);
-          blogList.appendChild(li);
-        });
+        // 필터 이벤트
+        const categorySel = document.getElementById('category-filter');
+        const tagInput = document.getElementById('tag-filter');
+        const resetBtn = document.getElementById('reset-filters');
+        function onChange(){ renderList(all); }
+        if (categorySel) categorySel.addEventListener('change', onChange);
+        if (tagInput) tagInput.addEventListener('input', onChange);
+        if (resetBtn) resetBtn.addEventListener('click', () => { if(categorySel) categorySel.value=''; if(tagInput) tagInput.value=''; renderList(all); });
       } catch (err) {
         console.error('Error loading posts:', err);
         blogList.innerHTML = '<li class="py-6 text-red-500 text-center">최신글을 불러올 수 없습니다.</li>';

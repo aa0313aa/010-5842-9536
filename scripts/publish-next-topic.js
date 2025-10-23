@@ -116,6 +116,7 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${htmlEscape(description)}">
   ${keywords?`<meta name="keywords" content="${htmlEscape(keywords.join(', '))}">`:''}
+  <meta name="article:section" content="블로그">
   <link rel="canonical" href="${absUrl}">
   <meta property="og:title" content="${htmlEscape(title)}">
   <meta property="og:description" content="${htmlEscape(description)}">
@@ -248,7 +249,9 @@ function main(){
     image: image || '/img/og-image.jpg',
     imageWidth: 1198,
     imageHeight: 406,
-    ogImage: '/img/og-image-og.webp'
+    ogImage: '/img/og-image-og.webp',
+    category: '블로그',
+    tags: Array.isArray(keywords) ? keywords : []
   });
   saveJson(POSTS, posts);
 

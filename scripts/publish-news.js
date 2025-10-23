@@ -95,7 +95,7 @@ async function fetchCandidates(){
   return items;
 }
 
-function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, image=DEFAULT_OG}){
+function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, image=DEFAULT_OG, category='뉴스', tags=[]}){
   const today = ymd();
   const fileName = `${today}-news-${slug}.html`;
   const relUrl = `blog/${fileName}`;
@@ -204,17 +204,7 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         </div>
       </section>`;
 
-  const heroFigure = `
-      <figure class="mb-8">
-        <img src="/img/og-image-800.webp" alt="금융/민생 관련 참고 이미지" class="w-full h-auto rounded-lg shadow" loading="lazy">
-        <figcaption class="text-sm text-gray-500 mt-2">이미지는 기사 이해를 돕기 위한 참고용 일러스트입니다.</figcaption>
-      </figure>`;
-
-  const extraFigure = `
-      <figure class="mb-8">
-        <img src="/img/KakaoTalk_20250318_163831180-800.webp" alt="상담/안내 일러스트" class="w-full h-auto rounded-lg shadow" loading="lazy">
-        <figcaption class="text-sm text-gray-500 mt-2">상담·안내를 상징하는 일러스트(참고 이미지).</figcaption>
-      </figure>`;
+  // 본문 내 일러스트는 사용자 요청으로 비표시 처리 (OG 이미지만 유지)
 
   const html = `<!DOCTYPE html>
 <html lang="ko">
@@ -224,6 +214,8 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${htmlEscape(cut(description, 160))}">
   <link rel="canonical" href="${absUrl}">
+  <meta name="article:section" content="${htmlEscape(category)}">
+  ${tags && tags.length ? `<meta name="keywords" content="${htmlEscape(tags.join(', '))}">` : ''}
   <meta property="og:title" content="${htmlEscape(title)}">
   <meta property="og:description" content="${htmlEscape(cut(description, 200))}">
   <meta property="og:type" content="article">
@@ -249,7 +241,8 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
     "publisher": {"@type":"Organization","name":"오렌지Pay","logo":{"@type":"ImageObject","url": toAbs('img/logo.png')}} ,
     "mainEntityOfPage": {"@type":"WebPage","@id": absUrl},
     "isBasedOn": sourceUrl,
-    "citation": sourceUrl
+    "citation": sourceUrl,
+    "keywords": tags
   })}
   </script>
   <script type="application/ld+json">
@@ -288,7 +281,6 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         <article class="">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-6">${ymd(new Date(pubIso))} · 출처: <a class="underline text-orange-700" href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank">${htmlEscape(sourceName)}</a></div>
-          ${heroFigure}
           <section class="prose prose-lg max-w-none mb-8">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">핵심 요약</h2>
         <p>${htmlEscape(description)}</p>
@@ -300,8 +292,7 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
       ${keypoints}
       ${impact}
       ${checklist}
-        ${details}
-        ${extraFigure}
+  ${details}
       ${assistance}
       ${contactHtml}
     </article>
@@ -368,12 +359,33 @@ async function main(){
       }
     } catch(e){ /* ignore */ }
   }
+  // re-apply filter after fallback selection
+  if (filter && candidates.length) {
+    const lower = filter.toLowerCase();
+    candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
+  }
   if (!candidates.length){
     console.log('No news available from sources.');
     return;
   }
   const picked = candidates[0];
   const slug = slugify(picked.title);
+  // derive category/tags for meta and posts.json
+  function categorizeFromText(text){
+    const t = String(text||'').toLowerCase();
+    const has = (kw)=> t.includes(kw);
+    if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
+    if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
+    if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
+    if (has('신용카드') || has('카드사') || has('가맹점') || has('수수료') || has('카드 ')) return '신용카드';
+    return '뉴스';
+  }
+  const cat = filter ? filter : categorizeFromText(`${picked.title} ${picked.summary}`);
+  const tags = Array.from(new Set([
+    cat,
+    (picked.source||'').replace(/\s+/g,' ').trim(),
+    ...((picked.title||'').split(/\s+/).filter(w=>w.length>=2).slice(0,5))
+  ].filter(Boolean)));
   const built = buildHtml({
     title: picked.title,
     description: picked.summary || picked.title,
@@ -381,7 +393,9 @@ async function main(){
     pubIso: picked.isoDate,
     sourceName: picked.source,
     sourceUrl: picked.link,
-    image: DEFAULT_OG
+    image: DEFAULT_OG,
+    category: cat,
+    tags
   });
   const outPath = path.join(BLOG, built.fileName);
   fs.writeFileSync(outPath, built.html, 'utf8');
@@ -394,7 +408,9 @@ async function main(){
     image: DEFAULT_OG,
     imageWidth: 1198,
     imageHeight: 406,
-    ogImage: '/img/og-image-og.webp'
+    ogImage: '/img/og-image-og.webp',
+    category: cat,
+    tags
   });
   saveJson(POSTS, posts);
 
