@@ -18,6 +18,7 @@ const SOURCES_FILE = path.join(ROOT, 'news-sources.json');
 const LOG_FILE = path.join(ROOT, 'news-log.json');
 const SITE_URL = 'https://pay24.store/';
 const DEFAULT_OG = '/img/og-image.jpg';
+const OG_OUT_DIR = path.join(ROOT, 'img', 'og');
 const BUSINESS = {
   name: '오렌지Pay',
   phoneDisplay: '010-5842-9536',
@@ -60,11 +61,67 @@ function slugify(title){
   return base || 'news';
 }
 
+function svgEscape(s){
+  return String(s||'')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+async function generateOgForPost({ baseName, title, category }){
+  // Create branded OG image from title/category as SVG → WEBP/JPG
+  try {
+    if (!sharp) sharp = require('sharp');
+    ensureDir(OG_OUT_DIR);
+    const outBase = path.join(OG_OUT_DIR, baseName);
+    const outWebp = outBase + '-og.webp';
+    const outJpg = outBase + '-og.jpg';
+    // Skip if already exists
+    if (fs.existsSync(outWebp) && fs.existsSync(outJpg)) {
+      return { webp: '/img/og/' + baseName + '-og.webp', jpg: '/img/og/' + baseName + '-og.jpg' };
+    }
+    const bgGrad = `linear-gradient(135deg, #ffedd5, #fde68a)`;
+    // SVG template
+    const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="white" opacity="0.82"/>
+  <text x="60" y="120" fill="#f97316" font-size="36" font-weight="700">${svgEscape(category||'뉴스')}</text>
+  <text x="60" y="180" fill="#0f172a" font-size="56" font-weight="800">
+    <tspan>${svgEscape(String(title||'').slice(0,30))}</tspan>
+  </text>
+  <text x="60" y="250" fill="#0f172a" font-size="42" font-weight="700">
+    <tspan>${svgEscape(String(title||'').slice(30,70))}</tspan>
+  </text>
+  <text x="60" y="310" fill="#334155" font-size="32" font-weight="600">
+    <tspan>${svgEscape(String(title||'').slice(70,120))}</tspan>
+  </text>
+  <text x="60" y="520" fill="#475569" font-size="28" font-weight="600">오렌지Pay</text>
+  <text x="60" y="560" fill="#64748b" font-size="22">pay24.store</text>
+</svg>`;
+    const svgBuf = Buffer.from(svg);
+    await sharp(svgBuf).resize(1200,630).webp({ quality: 92 }).toFile(outWebp);
+    await sharp(svgBuf).resize(1200,630).jpeg({ quality: 88 }).toFile(outJpg);
+    return { webp: '/img/og/' + baseName + '-og.webp', jpg: '/img/og/' + baseName + '-og.jpg' };
+  } catch (e) {
+    console.warn('Per-post OG 생성 스킵:', e && e.message ? e.message : e);
+    return { webp: '/img/og-image-og.webp', jpg: '/img/og-image-og.jpg' };
+  }
+}
+
 async function fetchCandidates(opts={}){
   const { filter='', windowDaysOverride=null } = opts;
   const parser = new Parser({ timeout: 15000 });
   const sources = loadJson(SOURCES_FILE, []);
-  const log = loadJson(LOG_FILE, []);
+  const firstOutPath = path.join(BLOG, built.fileName);
   const seen = new Set(log.map(e => e.id || e.link));
   const now = Date.now();
   // 기본 7일, 필터 지정 시 30일로 확대해서 하루 1건 보장을 높임
@@ -82,7 +139,7 @@ async function fetchCandidates(opts={}){
         const iso = it.isoDate || it.pubDate || it.published || null;
         const ts = iso ? Date.parse(iso) : NaN;
         // 최근 windowDays 이내만 우선 수집 (너무 오래된 것은 제외)
-        if (!isNaN(ts) && (now - ts) > windowMs) continue;
+  const finalOutPath = path.join(BLOG, builtWithOg.fileName);
         const rawText = it.contentSnippet || it.content || it['content:encoded'] || '';
         const text = stripHtml(rawText);
         items.push({
@@ -99,12 +156,12 @@ async function fetchCandidates(opts={}){
   return items;
 }
 
-function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, image=DEFAULT_OG, category='뉴스', tags=[]}){
+function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, image=DEFAULT_OG, category='뉴스', tags=[], perPostOgRel=null}){
   const today = ymd();
   const fileName = `${today}-news-${slug}.html`;
   const relUrl = `blog/${fileName}`;
   const absUrl = toAbs(relUrl);
-  const ogImg = image || DEFAULT_OG;
+  const ogImg = perPostOgRel || image || DEFAULT_OG;
 
   const contactHtml = `
       <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
@@ -280,9 +337,17 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         </div>
       </div>
     </header>
-      <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-        <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
-        <article class="">
+      <!-- 3열 셸: 좌/우 광고 + 가운데 본문 -->
+      <div class="mx-auto max-w-[1400px] px-2 sm:px-4 lg:px-6 py-6">
+        <div class="grid grid-cols-1 xl:grid-cols-[220px_minmax(0,1fr)_220px] gap-4">
+          <aside class="hidden xl:block">
+            <div class="sticky top-24">
+              <div class="h-[600px] rounded-lg border bg-slate-50 text-slate-400 flex items-center justify-center text-sm">광고 영역</div>
+            </div>
+          </aside>
+          <main class="mx-auto w-full max-w-[820px] bg-white p-6 md:p-8 mt-4 rounded-xl shadow-lg">
+            <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
+            <article class="">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
       <div class="text-gray-600 mb-6">${ymd(new Date(pubIso))} · 출처: <a class="underline text-orange-700" href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank">${htmlEscape(sourceName)}</a></div>
           <section class="prose prose-lg max-w-none mb-8">
@@ -299,10 +364,17 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   ${details}
       ${assistance}
       ${contactHtml}
-    </article>
-  </main>
+            </article>
+          </main>
+          <aside class="hidden xl:block">
+            <div class="sticky top-24">
+              <div class="h-[600px] rounded-lg border bg-slate-50 text-slate-400 flex items-center justify-center text-sm">광고 영역</div>
+            </div>
+          </aside>
+        </div>
+      </div>
   <footer class="bg-slate-900 text-slate-400 mt-16">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+    <div class="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8 py-10 text-center">
       <div class="mb-4">
         <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
         <span class="text-slate-600">|</span>
@@ -434,7 +506,8 @@ async function main(){
     sourceUrl: picked.link,
     image: DEFAULT_OG,
     category: cat,
-    tags
+    tags,
+    perPostOgRel: null // will be set after OG generation below
   });
   if (dryRun){
     console.log('[DRY RUN] Would publish:', built.relUrl);
@@ -443,18 +516,36 @@ async function main(){
     return;
   }
 
-  const outPath = path.join(BLOG, built.fileName);
-  fs.writeFileSync(outPath, built.html, 'utf8');
+  // (skip initial write; we will write final HTML after OG generation)
+  // First, generate per-post OG image (based on filename base)
+  const baseName = path.basename(built.fileName, path.extname(built.fileName));
+  const ogRes = await generateOgForPost({ baseName, title: picked.title, category: cat });
+
+  // Rebuild HTML with per-post OG path
+  const builtWithOg = buildHtml({
+    title: picked.title,
+    description: picked.summary || picked.title,
+    slug,
+    pubIso: picked.isoDate,
+    sourceName: picked.source,
+    sourceUrl: picked.link,
+    image: DEFAULT_OG,
+    category: cat,
+    tags,
+    perPostOgRel: ogRes.webp
+  });
+  const outPathFinal = path.join(BLOG, builtWithOg.fileName);
+  fs.writeFileSync(outPathFinal, builtWithOg.html, 'utf8');
 
   posts.unshift({
     title: picked.title,
     date: ymd(new Date(picked.isoDate)),
     description: picked.summary || picked.title,
-    url: built.relUrl,
+    url: builtWithOg.relUrl,
     image: DEFAULT_OG,
     imageWidth: 1198,
     imageHeight: 406,
-    ogImage: '/img/og-image-og.webp',
+    ogImage: ogRes.webp,
     category: cat,
     tags
   });

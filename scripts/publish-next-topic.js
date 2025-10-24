@@ -10,6 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
+const sharp = require('sharp');
 const BLOG = path.join(ROOT, 'blog');
 const POSTS = path.join(ROOT, 'posts.json');
 const TOPICS = path.join(ROOT, 'topics.json');
@@ -20,6 +21,8 @@ const BUSINESS = {
   phoneIntl: '+82-10-5842-9536',
   kakaoLink: 'https://pf.kakao.com/_SBFexb/chat'
 };
+
+const OG_OUT_DIR = path.join(ROOT, 'img', 'og');
 
 function ymd(date = new Date()) {
   const y = date.getFullYear();
@@ -40,12 +43,12 @@ function htmlEscape(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function buildHtml({title, description, slug, keywords, sections=[], faqs=[], image='/img/og-image.jpg'}){
+function buildHtml({title, description, slug, keywords, sections=[], faqs=[], image='/img/og-image.jpg', perPostOgRel=null}){
   const today = ymd();
   const fileName = `${today}-${slug}.html`;
   const relUrl = `blog/${fileName}`;
   const absUrl = toAbs(relUrl);
-  const ogImg = image || '/img/og-image.jpg';
+  const ogImg = perPostOgRel || image || '/img/og-image.jpg';
 
   const faqJson = faqs.map(f => ({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}));
   const breadcrumb = [
@@ -179,31 +182,45 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
         </div>
       </div>
     </header>
-    <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
-      <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">${htmlEscape(title)}</h1>
-      <div class="flex items-center gap-3 text-gray-600 mb-2">
-        <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 text-slate-700 border border-slate-200">블로그 가이드</span>
-        <span>${today}</span>
-        <span class="text-slate-400">|</span>
-        <span>오렌지Pay</span>
-      </div>
-      <p class="text-sm text-slate-500 mb-6">이 글은 <strong>뉴스 요약</strong>이 아닌, 이용자 안내를 위한 <strong>블로그 가이드</strong>입니다.</p>
+    <!-- 3열 셸: 좌/우 광고 + 가운데 본문 -->
+    <div class="mx-auto max-w-[1400px] px-2 sm:px-4 lg:px-6 py-6">
+      <div class="grid grid-cols-1 xl:grid-cols-[220px_minmax(0,1fr)_220px] gap-4">
+        <aside class="hidden xl:block">
+          <div class="sticky top-24">
+            <div class="h-[600px] rounded-lg border bg-slate-50 text-slate-400 flex items-center justify-center text-sm">광고 영역</div>
+          </div>
+        </aside>
+        <main class="mx-auto w-full max-w-[820px] bg-white p-6 md:p-8 mt-4 rounded-xl shadow-lg">
+          <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">${htmlEscape(title)}</h1>
+          <div class="flex items-center gap-3 text-gray-600 mb-2">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 text-slate-700 border border-slate-200">블로그 가이드</span>
+            <span>${today}</span>
+            <span class="text-slate-400">|</span>
+            <span>오렌지Pay</span>
+          </div>
+          <p class="text-sm text-slate-500 mb-6">이 글은 <strong>뉴스 요약</strong>이 아닌, 이용자 안내를 위한 <strong>블로그 가이드</strong>입니다.</p>
   ${sectionHtml}
   ${extendedHtml}
-      ${contactHtml}
-      <section id="related" class="mb-4">
-        <h2 class="text-xl font-semibold mb-2">함께 보면 좋아요</h2>
-        <ul class="list-disc pl-5 text-orange-700">
-          <li><a class="underline" href="/blog/2025-10-15-emergency-card-cash-guide.html">비상금 카드현금화 2025 가이드</a></li>
-          <li><a class="underline" href="/blog/2025-10-17-creditcard-installment-cash-guide.html">신용카드 무이자 할부로 현금 마련 2025</a></li>
-          <li><a class="underline" href="/blog/2025-10-06-creditcard-cash-guide.html">신용카드 현금화 종합 가이드</a></li>
-        </ul>
-      </section>
-    </article>
-  </main>
+          ${contactHtml}
+          <section id="related" class="mb-4">
+            <h2 class="text-xl font-semibold mb-2">함께 보면 좋아요</h2>
+            <ul class="list-disc pl-5 text-orange-700">
+              <li><a class="underline" href="/blog/2025-10-15-emergency-card-cash-guide.html">비상금 카드현금화 2025 가이드</a></li>
+              <li><a class="underline" href="/blog/2025-10-17-creditcard-installment-cash-guide.html">신용카드 무이자 할부로 현금 마련 2025</a></li>
+              <li><a class="underline" href="/blog/2025-10-06-creditcard-cash-guide.html">신용카드 현금화 종합 가이드</a></li>
+            </ul>
+          </section>
+        </main>
+        <aside class="hidden xl:block">
+          <div class="sticky top-24">
+            <div class="h-[600px] rounded-lg border bg-slate-50 text-slate-400 flex items-center justify-center text-sm">광고 영역</div>
+          </div>
+        </aside>
+      </div>
+    </div>
   <footer class="bg-slate-900 text-slate-400 mt-16">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+    <div class="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8 py-10 text-center">
       <div class="mb-4">
         <a href="/terms.html" class="text-sm hover:text-white mx-2 transition-colors">이용약관</a>
         <span class="text-slate-600">|</span>
@@ -227,7 +244,58 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
   return { fileName, relUrl, absUrl, html };
 }
 
-function main(){
+function svgEscape(s){
+  return String(s||'')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+async function generateOgForPost({ baseName, title, category='블로그' }){
+  try {
+    if (!fs.existsSync(OG_OUT_DIR)) fs.mkdirSync(OG_OUT_DIR, { recursive: true });
+    const outBase = path.join(OG_OUT_DIR, baseName);
+    const outWebp = outBase + '-og.webp';
+    const outJpg = outBase + '-og.jpg';
+    if (fs.existsSync(outWebp) && fs.existsSync(outJpg)) {
+      return { webp: '/img/og/' + baseName + '-og.webp', jpg: '/img/og/' + baseName + '-og.jpg' };
+    }
+    const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dbf4ff"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="white" opacity="0.86"/>
+  <text x="60" y="120" fill="#0ea5e9" font-size="36" font-weight="700">${svgEscape(category)}</text>
+  <text x="60" y="180" fill="#0f172a" font-size="54" font-weight="800">
+    <tspan>${svgEscape(String(title||'').slice(0,30))}</tspan>
+  </text>
+  <text x="60" y="245" fill="#0f172a" font-size="40" font-weight="700">
+    <tspan>${svgEscape(String(title||'').slice(30,70))}</tspan>
+  </text>
+  <text x="60" y="305" fill="#334155" font-size="30" font-weight="600">
+    <tspan>${svgEscape(String(title||'').slice(70,120))}</tspan>
+  </text>
+  <text x="60" y="520" fill="#475569" font-size="28" font-weight="600">오렌지Pay</text>
+  <text x="60" y="560" fill="#64748b" font-size="22">pay24.store</text>
+</svg>`;
+    const svgBuf = Buffer.from(svg);
+    await sharp(svgBuf).resize(1200,630).webp({ quality: 92 }).toFile(outWebp);
+    await sharp(svgBuf).resize(1200,630).jpeg({ quality: 88 }).toFile(outJpg);
+    return { webp: '/img/og/' + baseName + '-og.webp', jpg: '/img/og/' + baseName + '-og.jpg' };
+  } catch (e) {
+    console.warn('Per-post OG 생성 스킵(topic):', e && e.message ? e.message : e);
+    return { webp: '/img/og-image-og.webp', jpg: '/img/og-image-og.jpg' };
+  }
+}
+
+async function main(){
   ensureDir(BLOG);
   const topics = loadJson(TOPICS, []);
   if (!Array.isArray(topics) || topics.length === 0) {
@@ -241,9 +309,13 @@ function main(){
     process.exit(0);
   }
 
-  const built = buildHtml({title, description, slug, keywords, sections, faqs, image});
-  const outPath = path.join(BLOG, built.fileName);
-  fs.writeFileSync(outPath, built.html, 'utf8');
+  const built = buildHtml({title, description, slug, keywords, sections, faqs, image, perPostOgRel: null});
+  // Generate OG for topic post
+  const baseName = path.basename(built.fileName, path.extname(built.fileName));
+  const ogRes = await generateOgForPost({ baseName, title, category: '블로그' });
+  const builtWithOg = buildHtml({title, description, slug, keywords, sections, faqs, image, perPostOgRel: ogRes.webp});
+  const outPath = path.join(BLOG, builtWithOg.fileName);
+  fs.writeFileSync(outPath, builtWithOg.html, 'utf8');
 
   // update posts.json
   const posts = loadJson(POSTS, []);
@@ -251,11 +323,11 @@ function main(){
     title,
     date: ymd(),
     description: description || title,
-    url: built.relUrl,
+    url: builtWithOg.relUrl,
     image: image || '/img/og-image.jpg',
     imageWidth: 1198,
     imageHeight: 406,
-    ogImage: '/img/og-image-og.webp',
+    ogImage: ogRes.webp,
     category: '블로그',
     tags: Array.isArray(keywords) ? keywords : []
   });
@@ -264,7 +336,6 @@ function main(){
   // save trimmed topics
   saveJson(TOPICS, topics);
 
-  console.log('Published from topic:', built.relUrl);
+  console.log('Published from topic:', builtWithOg.relUrl);
 }
-
-main();
+main().catch(err=>{ console.error('publish-next-topic failed:', err); process.exit(1); });
