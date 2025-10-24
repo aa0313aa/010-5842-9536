@@ -49,6 +49,7 @@ for (const p of posts) {
 const latest = entries[0]?.lastmod || formatDate(new Date().toISOString().slice(0,10));
 const staticPages = [
   { loc: normalizeLoc('/'), lastmod: latest, changefreq: 'daily', priority: '1.0' },
+  { loc: normalizeLoc('/news/'), lastmod: latest, changefreq: 'hourly', priority: '0.8' },
   { loc: normalizeLoc('/blog/'), lastmod: latest, changefreq: 'weekly', priority: '0.7' },
   { loc: normalizeLoc('/about.html'), changefreq: 'yearly', priority: '0.3' },
   { loc: normalizeLoc('/contact.html'), changefreq: 'yearly', priority: '0.4' },
