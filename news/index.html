@@ -118,7 +118,7 @@
   const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded bg-slate-100 text-slate-700 border">${cat||'뉴스'}</span>`;
   const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
     const getThumb = (p) => p.aiImage || p.ogImage || p.image || '';
-    let imagesEnabled = false;
+  let imagesEnabled = false;
 
     async function loadPosts(){
       const res = await fetch('/posts.json', { cache: 'no-store' });
@@ -204,7 +204,8 @@
       // 이미지 표시 토글 상태
       const key = 'newsImagesEnabled';
       const saved = localStorage.getItem(key);
-      imagesEnabled = saved === '1';
+      // 기본값: ON (이미지 표시). 사용자가 끈 경우에만 '0'으로 저장됨.
+      imagesEnabled = (saved === null) ? true : (saved === '1');
       const toggle = document.getElementById('img-toggle');
       if (toggle) {
         toggle.checked = imagesEnabled;
