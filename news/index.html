@@ -61,7 +61,7 @@
         <button data-cat="사기" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">사기</button>
         <button data-cat="민생" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">민생</button>
       </div>
-      <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </section>
   </main>
 
@@ -78,13 +78,16 @@
 
   <style>
     @keyframes scroll { from { transform: translateX(100%);} to { transform: translateX(-100%);} }
+    .line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
   </style>
   <script>
     // 헬퍼
     const fmtDate = d => {
       try { return (new Date(d + 'T09:00:00+09:00')).toISOString().slice(0,10); } catch { return d; }
     };
-    const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 text-slate-700 border">${cat||'뉴스'}</span>`;
+  const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded bg-slate-100 text-slate-700 border">${cat||'뉴스'}</span>`;
+  const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
 
     async function loadPosts(){
       const res = await fetch('/posts.json', { cache: 'no-store' });
@@ -95,13 +98,12 @@
 
     function renderHero(post){
       if (!post) return;
-      const img = post.ogImage || post.image || '/img/og-image.jpg';
+      const source = getSource(post);
       const html = `
-        <a href="/${post.url}" class="block overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg transition">
-          <div class="aspect-[16/9] bg-cover bg-center" style="background-image:url('${img}')"></div>
-          <div class="p-5">
-            <div class="flex items-center gap-3 mb-2">${badge(post.category)}<time class="text-xs text-slate-500">${fmtDate(post.date)}</time></div>
-            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-2">${post.title}</h1>
+        <a href="/${post.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition">
+          <div class="p-6 md:p-7">
+            <div class="flex items-center gap-3 mb-2">${badge(post.category)}<time class="text-xs text-slate-500">${fmtDate(post.date)}</time>${source?`<span class=\"text-xs text-slate-500\">· ${source}</span>`:''}</div>
+            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug mb-2">${post.title}</h1>
             <p class="text-slate-600 line-clamp-3">${post.description||''}</p>
           </div>
         </a>`;
@@ -110,26 +112,23 @@
 
     function renderTrending(posts){
       const ul = document.getElementById('trending');
-      ul.innerHTML = posts.slice(0,5).map(p=>`
+      ul.innerHTML = posts.slice(0,6).map((p,i)=>{ const src=getSource(p); return `
         <li>
           <a class="group block" href="/${p.url}">
-            <div class="text-sm text-slate-500 flex items-center gap-2">${badge(p.category)}<time>${fmtDate(p.date)}</time></div>
-            <div class="font-semibold group-hover:text-orange-600">${p.title}</div>
+            <div class="flex items-center gap-2 text-xs text-slate-500"><span class="w-5 text-center font-bold text-slate-400">${i+1}</span>${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
+            <div class="font-semibold group-hover:text-orange-600 line-clamp-2">${p.title}</div>
           </a>
-        </li>`).join('');
+        </li>`; }).join('');
     }
 
     function renderGrid(posts){
       const grid = document.getElementById('grid');
       grid.innerHTML = posts.map(p=>{
-        const img = p.ogImage || p.image || '/img/og-image.jpg';
-        return `<a href="/${p.url}" class="block rounded-xl overflow-hidden border bg-white shadow hover:shadow-lg transition">
-          <img src="${img}" alt="" class="w-full h-40 object-cover" loading="lazy" decoding="async"/>
-          <div class="p-4">
-            <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time></div>
-            <h3 class="font-bold text-slate-800 line-clamp-2">${p.title}</h3>
-            <p class="text-sm text-slate-600 line-clamp-2 mt-1">${p.description||''}</p>
-          </div>
+        const src = getSource(p);
+        return `<a href="/${p.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition p-4">
+          <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
+          <h3 class="font-bold text-slate-900 line-clamp-2">${p.title}</h3>
+          <p class="text-sm text-slate-600 line-clamp-2 mt-1">${p.description||''}</p>
         </a>`;
       }).join('');
     }
@@ -140,15 +139,19 @@
       const apply = () => {
         const list = active ? all.filter(p=>p.category===active) : all;
         renderGrid(list.slice(0,12));
-        tabs.forEach(b=> b.classList.toggle('bg-orange-600', b.dataset.cat===active));
-        tabs.forEach(b=> b.classList.toggle('text-white', b.dataset.cat===active));
+        tabs.forEach(b=> {
+          const on = b.dataset.cat===active;
+          b.classList.toggle('bg-orange-600', on);
+          b.classList.toggle('text-white', on);
+          b.classList.toggle('border-orange-600', on);
+        });
       };
       tabs.forEach(b=> b.addEventListener('click', ()=>{ active = b.dataset.cat; apply(); }));
       apply();
     }
 
     function initTicker(all){
-      const top5 = all.slice(0,5);
+      const top5 = all.slice(0,8);
       const inner = document.getElementById('ticker-inner');
       inner.innerHTML = top5.map(p=>`<a class=\"mx-6 hover:underline\" href=\"/${p.url}\">${p.title}</a>`).join('');
     }
@@ -156,7 +159,7 @@
     (async function(){
       const news = await loadPosts();
       renderHero(news[0]);
-      renderTrending(news.slice(1,8));
+  renderTrending(news.slice(1,10));
       initTabs(news);
       initTicker(news);
       const yearSpan = document.getElementById('current-year'); if (yearSpan) yearSpan.textContent = new Date().getFullYear();
