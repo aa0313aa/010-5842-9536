@@ -63,8 +63,17 @@
           </aside>
         </div>
 
-        <!-- 카테고리 탭 -->
+        <!-- 보기 옵션 + 카테고리 탭 -->
         <section class="mt-10">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-sm text-slate-600">이미지 표시</div>
+            <label class="inline-flex items-center cursor-pointer select-none">
+              <input id="img-toggle" type="checkbox" class="sr-only">
+              <span class="w-10 h-6 bg-slate-300 rounded-full relative transition">
+                <span class="dot absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition"></span>
+              </span>
+            </label>
+          </div>
           <div class="flex flex-wrap gap-2 mb-6" id="tabs">
             <button data-cat="" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">전체</button>
             <button data-cat="신용카드" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">신용카드</button>
@@ -108,6 +117,8 @@
     };
   const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded bg-slate-100 text-slate-700 border">${cat||'뉴스'}</span>`;
   const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
+    const getThumb = (p) => p.aiImage || p.ogImage || p.image || '';
+    let imagesEnabled = false;
 
     async function loadPosts(){
       const res = await fetch('/posts.json', { cache: 'no-store' });
@@ -119,8 +130,10 @@
     function renderHero(post){
       if (!post) return;
       const source = getSource(post);
+      const thumb = getThumb(post);
       const html = `
-        <a href="/${post.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition">
+        <a href="/${post.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition overflow-hidden">
+          ${imagesEnabled && thumb ? `<div class=\"aspect-[16/9] bg-cover bg-center\" style=\"background-image:url('${thumb}')\"></div>`:''}
           <div class="p-6 md:p-7">
             <div class="flex items-center gap-3 mb-2">${badge(post.category)}<time class="text-xs text-slate-500">${fmtDate(post.date)}</time>${source?`<span class=\"text-xs text-slate-500\">· ${source}</span>`:''}</div>
             <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug mb-2">${post.title}</h1>
@@ -145,10 +158,14 @@
       const grid = document.getElementById('grid');
       grid.innerHTML = posts.map(p=>{
         const src = getSource(p);
-        return `<a href="/${p.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition p-4">
-          <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
-          <h3 class="font-bold text-slate-900 line-clamp-2">${p.title}</h3>
-          <p class="text-sm text-slate-600 line-clamp-2 mt-1">${p.description||''}</p>
+        const thumb = getThumb(p);
+        return `<a href="/${p.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition overflow-hidden">
+          ${imagesEnabled && thumb ? `<img src="${thumb}" alt="" class="w-full h-40 object-cover" loading="lazy" decoding="async"/>`:''}
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
+            <h3 class="font-bold text-slate-900 line-clamp-2">${p.title}</h3>
+            <p class="text-sm text-slate-600 line-clamp-2 mt-1">${p.description||''}</p>
+          </div>
         </a>`;
       }).join('');
     }
@@ -183,6 +200,36 @@
       initTabs(news);
       initTicker(news);
       const yearSpan = document.getElementById('current-year'); if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+      // 이미지 표시 토글 상태
+      const key = 'newsImagesEnabled';
+      const saved = localStorage.getItem(key);
+      imagesEnabled = saved === '1';
+      const toggle = document.getElementById('img-toggle');
+      if (toggle) {
+        toggle.checked = imagesEnabled;
+        const knob = toggle.nextElementSibling?.querySelector('.dot');
+        const applyKnob = () => {
+          const track = toggle.nextElementSibling;
+          if (!track || !knob) return;
+          track.classList.toggle('bg-orange-500', imagesEnabled);
+          track.classList.toggle('bg-slate-300', !imagesEnabled);
+          knob.style.transform = imagesEnabled ? 'translateX(1rem)' : 'translateX(0)';
+        };
+        applyKnob();
+        toggle.addEventListener('change', ()=>{
+          imagesEnabled = toggle.checked;
+          localStorage.setItem(key, imagesEnabled ? '1' : '0');
+          // re-render hero + tabs grid with current category filter
+          renderHero(news[0]);
+          // reapply current tab filter
+          const activeBtn = document.querySelector('#tabs button.bg-orange-600');
+          const activeCat = activeBtn ? activeBtn.dataset.cat : '';
+          const list = activeCat ? news.filter(p=>p.category===activeCat) : news;
+          renderGrid(list.slice(0,12));
+          applyKnob();
+        });
+      }
     })();
   </script>
 </body>

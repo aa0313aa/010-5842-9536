@@ -19,6 +19,7 @@ const LOG_FILE = path.join(ROOT, 'news-log.json');
 const SITE_URL = 'https://pay24.store/';
 const DEFAULT_OG = '/img/og-image.jpg';
 const OG_OUT_DIR = path.join(ROOT, 'img', 'og');
+const AI_OUT_DIR = path.join(ROOT, 'img', 'ai');
 const BUSINESS = {
   name: '오렌지Pay',
   phoneDisplay: '010-5842-9536',
@@ -114,6 +115,37 @@ async function generateOgForPost({ baseName, title, category }){
   } catch (e) {
     console.warn('Per-post OG 생성 스킵:', e && e.message ? e.message : e);
     return { webp: '/img/og-image-og.webp', jpg: '/img/og-image-og.jpg' };
+  }
+}
+
+async function tryGenerateAIImage({ title, summary, category, baseName }){
+  // Optionally generate an AI thumbnail using OpenAI if OPENAI_API_KEY is present.
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) return null;
+    ensureDir(AI_OUT_DIR);
+    const outWebp = path.join(AI_OUT_DIR, baseName + '.webp');
+    if (fs.existsSync(outWebp)) return '/img/ai/' + baseName + '.webp';
+    const prompt = `한국어: 다음 뉴스의 주제에 맞는 상징적이고 안전한 썸네일 이미지를 생성해주세요. 선정성, 얼굴 클로즈업, 로고/브랜드는 피하고, 간결한 일러스트/사진 스타일로.\n카테고리: ${category}\n제목: ${title}\n요약: ${summary || ''}`;
+    const resp = await fetch('https://api.openai.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({ model: 'gpt-image-1', prompt, size: '1024x576', response_format: 'b64_json' })
+    });
+    if (!resp.ok) { console.warn('AI image gen failed:', resp.status); return null; }
+    const data = await resp.json();
+    const b64 = data && data.data && data.data[0] && data.data[0].b64_json;
+    if (!b64) return null;
+    const buf = Buffer.from(b64, 'base64');
+    if (!sharp) sharp = require('sharp');
+    await sharp(buf).resize(1200, 675, { fit: 'cover' }).webp({ quality: 86 }).toFile(outWebp);
+    return '/img/ai/' + baseName + '.webp';
+  } catch (e) {
+    console.warn('AI 이미지 생성 스킵:', e && e.message ? e.message : e);
+    return null;
   }
 }
 
@@ -536,6 +568,8 @@ async function main(){
   });
   const outPathFinal = path.join(BLOG, builtWithOg.fileName);
   fs.writeFileSync(outPathFinal, builtWithOg.html, 'utf8');
+  // Optional AI thumbnail
+  const aiThumbRel = await tryGenerateAIImage({ title: picked.title, summary: picked.summary, category: cat, baseName });
 
   posts.unshift({
     title: picked.title,
@@ -546,6 +580,7 @@ async function main(){
     imageWidth: 1198,
     imageHeight: 406,
     ogImage: ogRes.webp,
+    aiImage: aiThumbRel || undefined,
     category: cat,
     tags
   });
