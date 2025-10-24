@@ -181,8 +181,14 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
     </header>
     <main class="max-w-2xl mx-auto bg-white p-8 mt-10 rounded-xl shadow-lg">
       <a href="../index.html#blog" class="inline-block mb-6 px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow hover:bg-orange-600 transition">← 블로그 목록으로 돌아가기</a>
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">${htmlEscape(title)}</h1>
-      <div class="text-gray-600 mb-8"><i class="fas fa-calendar-alt mr-2"></i>${today} <span class="mx-4">|</span><i class="fas fa-user mr-2"></i>오렌지Pay</div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">${htmlEscape(title)}</h1>
+      <div class="flex items-center gap-3 text-gray-600 mb-2">
+        <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 text-slate-700 border border-slate-200">블로그 가이드</span>
+        <span>${today}</span>
+        <span class="text-slate-400">|</span>
+        <span>오렌지Pay</span>
+      </div>
+      <p class="text-sm text-slate-500 mb-6">이 글은 <strong>뉴스 요약</strong>이 아닌, 이용자 안내를 위한 <strong>블로그 가이드</strong>입니다.</p>
   ${sectionHtml}
   ${extendedHtml}
       ${contactHtml}
