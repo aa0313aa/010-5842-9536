@@ -1,5 +1,22 @@
 [
   {
+    "title": "한도·신용 영향 관리: 안전한 빈도·규모 설계",
+    "date": "2025-10-25",
+    "description": "한도 변동·정책 영향·신용도에 대한 보수적 운용 가이드.",
+    "url": "blog/2025-10-25-limit-credit-impact-2025.html",
+    "image": "/img/og-image.jpg",
+    "imageWidth": 1198,
+    "imageHeight": 406,
+    "ogImage": "/img/og/2025-10-25-limit-credit-impact-2025-og.webp",
+    "category": "블로그",
+    "tags": [
+      "한도 관리",
+      "신용 영향",
+      "빈도 설계",
+      "리스크 관리"
+    ]
+  },
+  {
     "title": "주말·심야 진행 가능 여부: 운영 시간과 대기 전략",
     "date": "2025-10-24",
     "description": "운영 시간 정책, 심야/주말의 대기시간·비용 변수, 대안 제시.",
