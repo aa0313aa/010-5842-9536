@@ -1,5 +1,21 @@
 [
   {
+    "title": "초보자 10분 가이드: 개념→안전→진행 순서",
+    "date": "2025-10-26",
+    "description": "최초 이용자를 위한 핵심 개념, 안전 수칙, 표준 진행 흐름 요약.",
+    "url": "blog/2025-10-26-beginner-10min-guide-2025.html",
+    "image": "/img/og-image.jpg",
+    "imageWidth": 1198,
+    "imageHeight": 406,
+    "ogImage": "/img/og/2025-10-26-beginner-10min-guide-2025-og.webp",
+    "category": "블로그",
+    "tags": [
+      "초보자 가이드",
+      "현금화 기초",
+      "진행 순서"
+    ]
+  },
+  {
     "title": "한도·신용 영향 관리: 안전한 빈도·규모 설계",
     "date": "2025-10-25",
     "description": "한도 변동·정책 영향·신용도에 대한 보수적 운용 가이드.",
