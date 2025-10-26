@@ -72,7 +72,7 @@
           </aside>
         </div>
 
-        <!-- 보기 옵션 + 카테고리 탭 -->
+        <!-- 보기 옵션 + 카테고리 탭 + 검색 -->
         <section class="mt-10 border-t border-slate-200 pt-6">
           <div class="flex items-center justify-between mb-4">
             <div class="text-sm text-slate-600">이미지 표시</div>
@@ -82,6 +82,14 @@
                 <span class="dot absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition"></span>
               </span>
             </label>
+          </div>
+          <!-- 검색 바 & 결과 요약 -->
+          <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div id="result-info" class="text-sm text-slate-600"></div>
+            <div class="w-full sm:w-80 relative">
+              <input id="search-input" type="search" inputmode="search" aria-label="뉴스 검색" placeholder="키워드로 검색 (예: 수수료, KT, 사기)" class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 pr-9 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" />
+              <button id="search-clear" class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden" aria-label="검색어 지우기">✕</button>
+            </div>
           </div>
           <div class="border-b border-gray-200 mb-6">
             <div class="flex flex-wrap gap-1" id="tabs">
@@ -134,6 +142,7 @@
     const fmtDate = d => {
       try { return (new Date(d + 'T09:00:00+09:00')).toISOString().slice(0,10); } catch { return d; }
     };
+  const debounce = (fn, ms=200) => { let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; };
   const badge = (cat) => {
     const colors = {
       '신용카드': 'bg-blue-100 text-blue-700 border-blue-200',
@@ -147,6 +156,7 @@
   const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
     const getThumb = (p) => p.aiImage || p.ogImage || p.image || '';
   let imagesEnabled = false;
+  const state = { cat: '', q: '' };
 
     async function loadPosts(){
       const res = await fetch('/posts.json', { cache: 'no-store' });
@@ -220,19 +230,63 @@
 
     function initTabs(all){
       const tabs = document.querySelectorAll('#tabs [data-cat]');
-      let active = '';
-      const apply = () => {
-        const list = active ? all.filter(p=>p.category===active) : all;
-        renderGrid(list.slice(0,12));
-        tabs.forEach(b=> {
-          const on = b.dataset.cat===active;
+      const updateTabsActive = () => {
+        tabs.forEach(b=>{
+          const on = b.dataset.cat === state.cat;
           b.classList.toggle('border-orange-600', on);
           b.classList.toggle('text-orange-600', on);
           b.classList.toggle('font-semibold', on);
         });
       };
-      tabs.forEach(b=> b.addEventListener('click', ()=>{ active = b.dataset.cat; apply(); }));
-      apply();
+      const applyFilters = () => {
+        // 카테고리 + 검색어 동시 적용
+        const q = state.q.trim().toLowerCase();
+        let list = state.cat ? all.filter(p=>p.category===state.cat) : all;
+        if (q) {
+          list = list.filter(p=>{
+            const src = (p.title||'') + ' ' + (p.description||'') + ' ' + (getSource(p)||'') + ' ' + (p.category||'');
+            return src.toLowerCase().includes(q);
+          });
+        }
+        // 결과 수 표시
+        const info = document.getElementById('result-info');
+        if (info) {
+          const parts = [];
+          if (state.cat) parts.push(`카테고리: ${state.cat}`);
+          if (state.q) parts.push(`검색어: "${state.q}"`);
+          info.textContent = `검색 결과 ${list.length}건` + (parts.length? ` · ${parts.join(' · ')}` : '');
+        }
+        renderGrid(list.slice(0,12));
+        // 트렌딩은 카테고리만 동기화 (검색어는 제외)
+        const trendingBase = state.cat ? all.filter(p=>p.category===state.cat) : all;
+        renderTrending(trendingBase.slice(1,10));
+        updateTabsActive();
+        // URL 파라미터 업데이트
+        const params = new URLSearchParams(location.search);
+        state.cat ? params.set('cat', state.cat) : params.delete('cat');
+        state.q ? params.set('q', state.q) : params.delete('q');
+        const qs = params.toString();
+        history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+      };
+
+      tabs.forEach(b=> b.addEventListener('click', ()=>{ state.cat = b.dataset.cat || ''; applyFilters(); }));
+
+      // 초기 URL 파라미터 반영
+      const params = new URLSearchParams(location.search);
+      state.cat = params.get('cat') || '';
+      state.q = params.get('q') || '';
+      const si = document.getElementById('search-input');
+      const sc = document.getElementById('search-clear');
+      if (si) {
+        si.value = state.q;
+        si.addEventListener('input', debounce(()=>{ state.q = si.value; if (sc) sc.classList.toggle('hidden', !state.q); applyFilters(); }, 200));
+      }
+      if (sc) {
+        sc.classList.toggle('hidden', !state.q);
+        sc.addEventListener('click', ()=>{ state.q=''; if (si){ si.value=''; } sc.classList.add('hidden'); applyFilters(); });
+      }
+
+      applyFilters();
     }
 
     function initTicker(all){
@@ -241,7 +295,7 @@
       inner.innerHTML = top5.map(p=>`<a class=\"mx-6 hover:underline\" href=\"/${p.url}\">${p.title}</a>`).join('');
     }
 
-    // 간단한 스켈레톤 표시
+      // 이미지 표시 토글 상태
     function showSkeleton(){
       const hero = document.getElementById('hero');
       if (hero){
@@ -263,11 +317,30 @@
       const trending = document.getElementById('trending');
       if (trending){
         trending.innerHTML = Array.from({length:6}).map(()=>`
-          <div class="animate-pulse h-6 bg-gray-200 rounded"></div>
-        `).join('');
-      }
-    }
-
+          // 필터 재적용은 탭/검색 상태 기반으로 처리
+          const tabsInit = initTabs; // no-op to silence linter
+          // 간단히 그리드만 다시 그리기 위해 현재 쿼리스트링으로 상태 읽어 재적용
+          const params = new URLSearchParams(location.search);
+          state.cat = params.get('cat') || '';
+          state.q = params.get('q') || '';
+          // 필터 함수 재사용을 위해 탭 초기화 영역에서 호출되므로 여기서는 탭 클릭 없이 재호출
+          const tabs = document.querySelectorAll('#tabs [data-cat]');
+          tabs.forEach(b=>{
+            const on = b.dataset.cat === state.cat;
+            b.classList.toggle('border-orange-600', on);
+            b.classList.toggle('text-orange-600', on);
+            b.classList.toggle('font-semibold', on);
+          });
+          // 간단 필터 적용 로직 재사용
+          const q = state.q.trim().toLowerCase();
+          let list = state.cat ? news.filter(p=>p.category===state.cat) : news;
+          if (q) {
+            list = list.filter(p=>{
+              const src = (p.title||'') + ' ' + (p.description||'') + ' ' + (getSource(p)||'') + ' ' + (p.category||'');
+              return src.toLowerCase().includes(q);
+            });
+          }
+          renderGrid(list.slice(0,12));
     (async function(){
       showSkeleton();
       const news = await loadPosts();
