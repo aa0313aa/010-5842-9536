@@ -92,6 +92,12 @@
               <ul id="search-suggest" class="absolute left-0 right-0 top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg p-1 text-sm max-h-60 overflow-auto hidden z-10"></ul>
             </div>
           </div>
+          <!-- 빠른 상담 키워드 -->
+          <div id="quick-keywords" class="mb-5 flex flex-wrap gap-2">
+            <button type="button" data-q="비상금 · 수수료 비교" class="px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200 hover:bg-orange-100 text-sm">비상금 · 수수료 비교</button>
+            <button type="button" data-q="휴대폰 소액결제 · 정보이용료" class="px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200 hover:bg-orange-100 text-sm">휴대폰 소액결제 · 정보이용료</button>
+            <button type="button" data-q="신용카드 현금화 · 정산 시간" class="px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200 hover:bg-orange-100 text-sm">신용카드 현금화 · 정산 시간</button>
+          </div>
           <div class="border-b border-gray-200 mb-6">
             <div class="flex flex-wrap gap-1" id="tabs">
               <button data-cat="" class="px-6 py-3 font-medium text-gray-600 hover:text-gray-900 border-b-2 border-transparent">전체</button>
@@ -422,6 +428,23 @@
           renderHero(news[0]);
           if (typeof window._applyFilters === 'function') window._applyFilters();
           applyKnob();
+        });
+      }
+
+      // 빠른 키워드 클릭 시: 검색어 적용 후 연락처로 이동
+      const quick = document.getElementById('quick-keywords');
+      if (quick){
+        quick.addEventListener('click', (e)=>{
+          const btn = e.target.closest('button[data-q]');
+          if (!btn) return;
+          const val = btn.getAttribute('data-q') || '';
+          const si = document.getElementById('search-input');
+          if (si) si.value = val;
+          state.q = val;
+          try { if (typeof saveRecent === 'function') saveRecent(val); } catch {}
+          if (typeof window._applyFilters === 'function') window._applyFilters();
+          // 연락처 섹션으로 이동
+          window.location.href = 'https://pay24.store/#contact';
         });
       }
     })();
