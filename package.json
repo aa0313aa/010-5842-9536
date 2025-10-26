@@ -8,6 +8,8 @@
     "build:css": "npx @tailwindcss/cli -i ./input.css -o ./css/tailwind.min.css --minify",
     "generate:sitemap": "node generate-sitemap.js",
     "generate:rss": "node generate-rss.js",
+    "generate:posts": "node generate-posts.js",
+    "rebuild:posts": "node scripts/rebuild-posts-from-blog.js",
     "optimize:images": "node scripts/optimize-images.js",
     "image-metadata": "node scripts/generate-image-metadata.js",
     "publish:next": "node scripts/publish-next-draft.js",
