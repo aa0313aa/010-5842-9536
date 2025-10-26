@@ -20,14 +20,14 @@
   </script>
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+  <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-lg">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="/" class="flex items-center gap-2">
-          <span class="text-2xl font-extrabold text-slate-800 tracking-tight">오렌지Pay</span>
+          <span class="text-3xl font-extrabold text-orange-600 tracking-tight">오렌지Pay</span>
         </a>
-        <nav class="hidden md:flex items-center gap-6 text-slate-700">
-          <a href="/news/" class="text-orange-600 font-semibold">뉴스</a>
+        <nav class="hidden md:flex items-center gap-6 text-slate-700 font-semibold">
+          <a href="/news/" class="text-orange-600">뉴스</a>
           <a href="/blog/" class="hover:text-orange-600 transition-colors">블로그</a>
           <a href="/contact.html" class="hover:text-orange-600 transition-colors">고객센터</a>
         </nav>
@@ -37,8 +37,8 @@
 
   <!-- 속보 티커 (가운데 정렬) -->
   <div id="ticker" class="bg-orange-600 text-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 text-sm overflow-hidden">
-      <div id="ticker-inner" class="whitespace-nowrap animate-[scroll_30s_linear_infinite]"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 text-sm overflow-hidden ticker-mask">
+      <div id="ticker-inner" class="whitespace-nowrap animate-[scroll_20s_linear_infinite] font-semibold"></div>
     </div>
   </div>
 
@@ -58,13 +58,13 @@
         <div class="grid lg:grid-cols-3 gap-8">
           <section class="lg:col-span-2" id="hero"></section>
           <aside class="lg:col-span-1">
-            <h2 class="text-lg font-bold mb-3">지금 많이 보는 소식</h2>
+            <h2 class="text-xl font-extrabold mb-3 pl-3 border-l-4 border-orange-600">지금 많이 보는 소식</h2>
             <ul id="trending" class="space-y-3"></ul>
           </aside>
         </div>
 
         <!-- 보기 옵션 + 카테고리 탭 -->
-        <section class="mt-10">
+        <section class="mt-10 border-t border-slate-200 pt-6">
           <div class="flex items-center justify-between mb-4">
             <div class="text-sm text-slate-600">이미지 표시</div>
             <label class="inline-flex items-center cursor-pointer select-none">
@@ -75,11 +75,11 @@
             </label>
           </div>
           <div class="flex flex-wrap gap-2 mb-6" id="tabs">
-            <button data-cat="" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">전체</button>
-            <button data-cat="신용카드" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">신용카드</button>
-            <button data-cat="소액결제" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">소액결제</button>
-            <button data-cat="사기" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">사기</button>
-            <button data-cat="민생" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50">민생</button>
+            <button data-cat="" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50 shadow-sm">전체</button>
+            <button data-cat="신용카드" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50 shadow-sm">신용카드</button>
+            <button data-cat="소액결제" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50 shadow-sm">소액결제</button>
+            <button data-cat="사기" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50 shadow-sm">사기</button>
+            <button data-cat="민생" class="px-3 py-1.5 rounded-full border text-sm bg-white hover:bg-orange-50 shadow-sm">민생</button>
           </div>
           <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
         </section>
@@ -109,13 +109,18 @@
     @keyframes scroll { from { transform: translateX(100%);} to { transform: translateX(-100%);} }
     .line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
     .line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    /* 티커 가장자리 그라데이션 마스크 */
+    .ticker-mask { 
+      -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0), #000 8%, #000 92%, rgba(0,0,0,0));
+              mask-image: linear-gradient(90deg, rgba(0,0,0,0), #000 8%, #000 92%, rgba(0,0,0,0));
+    }
   </style>
   <script>
     // 헬퍼
     const fmtDate = d => {
       try { return (new Date(d + 'T09:00:00+09:00')).toISOString().slice(0,10); } catch { return d; }
     };
-  const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded bg-slate-100 text-slate-700 border">${cat||'뉴스'}</span>`;
+  const badge = (cat) => `<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded bg-orange-100 text-orange-700 border border-orange-200">${cat||'뉴스'}</span>`;
   const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
     const getThumb = (p) => p.aiImage || p.ogImage || p.image || '';
   let imagesEnabled = false;
@@ -132,11 +137,11 @@
       const source = getSource(post);
       const thumb = getThumb(post);
       const html = `
-        <a href="/${post.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition overflow-hidden">
+        <a href="/${post.url}" class="block rounded-xl border bg-white shadow-xl hover:shadow-2xl transition overflow-hidden">
           ${imagesEnabled && thumb ? `<div class=\"aspect-[16/9] bg-cover bg-center\" style=\"background-image:url('${thumb}')\"></div>`:''}
           <div class="p-6 md:p-7">
             <div class="flex items-center gap-3 mb-2">${badge(post.category)}<time class="text-xs text-slate-500">${fmtDate(post.date)}</time>${source?`<span class=\"text-xs text-slate-500\">· ${source}</span>`:''}</div>
-            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug mb-2">${post.title}</h1>
+            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight line-clamp-2 mb-2">${post.title}</h1>
             <p class="text-slate-600 line-clamp-3">${post.description||''}</p>
           </div>
         </a>`;
@@ -146,9 +151,9 @@
     function renderTrending(posts){
       const ul = document.getElementById('trending');
       ul.innerHTML = posts.slice(0,6).map((p,i)=>{ const src=getSource(p); return `
-        <li>
+        <li class="py-2 border-b border-slate-200">
           <a class="group block" href="/${p.url}">
-            <div class="flex items-center gap-2 text-xs text-slate-500"><span class="w-5 text-center font-bold text-slate-400">${i+1}</span>${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
+            <div class="flex items-center gap-2 text-xs text-slate-500"><span class="inline-flex w-5 h-5 items-center justify-center text-[11px] font-bold rounded bg-orange-50 text-orange-600">${i+1}</span>${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
             <div class="font-semibold group-hover:text-orange-600 line-clamp-2">${p.title}</div>
           </a>
         </li>`; }).join('');
@@ -161,7 +166,7 @@
         const thumb = getThumb(p);
         return `<a href="/${p.url}" class="block rounded-xl border bg-white shadow hover:shadow-lg transition overflow-hidden">
           ${imagesEnabled && thumb ? `<img src="${thumb}" alt="" class="w-full h-40 object-cover" loading="lazy" decoding="async"/>`:''}
-          <div class="p-4">
+          <div class="p-5">
             <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
             <h3 class="font-bold text-slate-900 line-clamp-2">${p.title}</h3>
             <p class="text-sm text-slate-600 line-clamp-2 mt-1">${p.description||''}</p>
@@ -181,6 +186,7 @@
           b.classList.toggle('bg-orange-600', on);
           b.classList.toggle('text-white', on);
           b.classList.toggle('border-orange-600', on);
+          b.classList.toggle('font-semibold', on);
         });
       };
       tabs.forEach(b=> b.addEventListener('click', ()=>{ active = b.dataset.cat; apply(); }));
