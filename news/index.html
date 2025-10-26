@@ -89,6 +89,7 @@
             <div class="w-full sm:w-80 relative">
               <input id="search-input" type="search" inputmode="search" aria-label="뉴스 검색" placeholder="키워드로 검색 (예: 수수료, KT, 사기)" class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 pr-9 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" />
               <button id="search-clear" class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 hidden" aria-label="검색어 지우기">✕</button>
+              <ul id="search-suggest" class="absolute left-0 right-0 top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg p-1 text-sm max-h-60 overflow-auto hidden z-10"></ul>
             </div>
           </div>
           <div class="border-b border-gray-200 mb-6">
@@ -101,6 +102,9 @@
             </div>
           </div>
           <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+          <div class="mt-6 text-center">
+            <button id="load-more" class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:border-orange-300 hover:text-orange-700 transition hidden">더보기</button>
+          </div>
         </section>
       </main>
 
@@ -136,6 +140,19 @@
     /* 카드 호버 효과 */
     .news-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     .news-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    /* 검색 하이라이트 */
+    .hl { background: #fde68a; color: inherit; padding: 0 2px; border-radius: 2px; }
+    @media (prefers-color-scheme: dark) {
+      /* 다크모드 대비 최적화 */
+      #search-input { background:#0f172a; color:#e2e8f0; border-color:#334155; }
+      #search-input::placeholder { color:#94a3b8; }
+      #search-suggest { background:#0f172a; color:#e2e8f0; border-color:#334155; }
+      .hl { background: rgba(234,179,8,0.35); }
+      /* 탭 하단 보더, 텍스트 대비 */
+      .border-gray-200 { border-color:#334155 !important; }
+      #tabs button { color:#cbd5e1; }
+      #tabs button:hover { color:#f1f5f9; }
+    }
   </style>
   <script>
     // 헬퍼
@@ -143,6 +160,13 @@
       try { return (new Date(d + 'T09:00:00+09:00')).toISOString().slice(0,10); } catch { return d; }
     };
   const debounce = (fn, ms=200) => { let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; };
+  const escapeRegExp = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const highlight = (text, q) => {
+    if (!q) return text || '';
+    const safe = escapeRegExp(q.trim());
+    if (!safe) return text || '';
+    try { return (text||'').replace(new RegExp(safe, 'ig'), m=>`<mark class="hl">${m}</mark>`); } catch { return text||''; }
+  };
   const badge = (cat) => {
     const colors = {
       '신용카드': 'bg-blue-100 text-blue-700 border-blue-200',
@@ -156,7 +180,16 @@
   const getSource = (p) => (Array.isArray(p.tags) && p.tags.length>1) ? String(p.tags[1]).trim() : '';
     const getThumb = (p) => p.aiImage || p.ogImage || p.image || '';
   let imagesEnabled = false;
-  const state = { cat: '', q: '' };
+  const state = { cat: '', q: '', limit: 12 };
+  let ALL_POSTS = [];
+  const RECENT_KEY = 'newsRecentSearches';
+  const loadRecents = () => { try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch { return []; } };
+  const saveRecent = (q) => {
+    const v = (q||'').trim(); if (!v) return;
+    const arr = loadRecents().filter(x=>x.toLowerCase()!==v.toLowerCase());
+    arr.unshift(v); if (arr.length>10) arr.length = 10;
+    localStorage.setItem(RECENT_KEY, JSON.stringify(arr));
+  };
 
     async function loadPosts(){
       const res = await fetch('/posts.json', { cache: 'no-store' });
@@ -178,8 +211,8 @@
           </div>
           <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 text-white">
             <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-xs md:text-sm mb-3">주요뉴스</span>
-            <h1 class="text-2xl md:text-3xl font-extrabold mb-2 group-hover:underline">${post.title}</h1>
-            <p class="hidden md:block text-lg opacity-90 line-clamp-2">${post.description||''}</p>
+            <h1 class="text-2xl md:text-3xl font-extrabold mb-2 group-hover:underline">${highlight(post.title, state.q)}</h1>
+            <p class="hidden md:block text-lg opacity-90 line-clamp-2">${highlight(post.description||'', state.q)}</p>
             <div class="flex items-center gap-4 mt-4 text-xs md:text-sm opacity-90">
               <time>${fmtDate(post.date)}</time>
               ${source?`<span>${source}</span>`:''}
@@ -189,8 +222,8 @@
         <a href="/${post.url}" class="block rounded-2xl border bg-white shadow-xl hover:shadow-2xl transition overflow-hidden">
           <div class="p-6 md:p-7">
             <div class="flex items-center gap-3 mb-2">${badge(post.category)}<time class="text-xs text-slate-500">${fmtDate(post.date)}</time>${source?`<span class=\"text-xs text-slate-500\">· ${source}</span>`:''}</div>
-            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight line-clamp-2 mb-2">${post.title}</h1>
-            <p class="text-slate-600 line-clamp-3">${post.description||''}</p>
+            <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight line-clamp-2 mb-2">${highlight(post.title, state.q)}</h1>
+            <p class="text-slate-600 line-clamp-3">${highlight(post.description||'', state.q)}</p>
           </div>
         </a>`;
       document.getElementById('hero').innerHTML = html;
@@ -221,8 +254,8 @@
             </div>`:''}
           <div class="p-5">
             <div class="flex items-center gap-2 mb-1 text-xs text-slate-500">${badge(p.category)}<time>${fmtDate(p.date)}</time>${src?`<span>· ${src}</span>`:''}</div>
-            <h3 class="font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2 ${isLarge ? 'text-lg' : ''}">${p.title}</h3>
-            ${isLarge ? `<p class="text-sm text-slate-600 line-clamp-2 mt-2">${p.description||''}</p>` : ''}
+            <h3 class="font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2 ${isLarge ? 'text-lg' : ''}">${highlight(p.title, state.q)}</h3>
+            ${isLarge ? `<p class="text-sm text-slate-600 line-clamp-2 mt-2">${highlight(p.description||'', state.q)}</p>` : ''}
           </div>
         </a>`;
       }).join('');
@@ -248,6 +281,7 @@
             return src.toLowerCase().includes(q);
           });
         }
+        ALL_POSTS = all;
         // 결과 수 표시
         const info = document.getElementById('result-info');
         if (info) {
@@ -256,7 +290,15 @@
           if (state.q) parts.push(`검색어: "${state.q}"`);
           info.textContent = `검색 결과 ${list.length}건` + (parts.length? ` · ${parts.join(' · ')}` : '');
         }
-        renderGrid(list.slice(0,12));
+        // 페이지네이션 처리
+        const moreBtn = document.getElementById('load-more');
+        const page = list.slice(0, state.limit);
+        renderGrid(page);
+        if (moreBtn){
+          const hasMore = list.length > state.limit;
+          moreBtn.classList.toggle('hidden', !hasMore);
+          moreBtn.disabled = !hasMore;
+        }
         // 트렌딩은 카테고리만 동기화 (검색어는 제외)
         const trendingBase = state.cat ? all.filter(p=>p.category===state.cat) : all;
         renderTrending(trendingBase.slice(1,10));
@@ -271,6 +313,12 @@
 
       tabs.forEach(b=> b.addEventListener('click', ()=>{ state.cat = b.dataset.cat || ''; applyFilters(); }));
 
+      // 더보기 버튼
+      const moreBtn = document.getElementById('load-more');
+      if (moreBtn){
+        moreBtn.addEventListener('click', ()=>{ state.limit += 12; applyFilters(); });
+      }
+
       // 초기 URL 파라미터 반영
       const params = new URLSearchParams(location.search);
       state.cat = params.get('cat') || '';
@@ -279,13 +327,33 @@
       const sc = document.getElementById('search-clear');
       if (si) {
         si.value = state.q;
-        si.addEventListener('input', debounce(()=>{ state.q = si.value; if (sc) sc.classList.toggle('hidden', !state.q); applyFilters(); }, 200));
+        si.addEventListener('input', debounce(()=>{ state.q = si.value; if (sc) sc.classList.toggle('hidden', !state.q); renderSuggestions(); applyFilters(); }, 200));
+        si.addEventListener('keydown', (e)=>{ if (e.key==='Enter'){ saveRecent(si.value); renderSuggestions(true); }});
+        si.addEventListener('focus', ()=>{ renderSuggestions(); });
+        si.addEventListener('blur', ()=>{ setTimeout(()=>{ const ul=document.getElementById('search-suggest'); if(ul) ul.classList.add('hidden'); }, 150); });
       }
       if (sc) {
         sc.classList.toggle('hidden', !state.q);
-        sc.addEventListener('click', ()=>{ state.q=''; if (si){ si.value=''; } sc.classList.add('hidden'); applyFilters(); });
+        sc.addEventListener('click', ()=>{ state.q=''; if (si){ si.value=''; } sc.classList.add('hidden'); renderSuggestions(true); applyFilters(); });
       }
 
+      function renderSuggestions(hide){
+        const ul = document.getElementById('search-suggest');
+        const si = document.getElementById('search-input');
+        if (!ul || !si) return;
+        if (hide){ ul.classList.add('hidden'); return; }
+        const q = (si.value||'').trim().toLowerCase();
+        const items = loadRecents().filter(v=>!q || v.toLowerCase().includes(q)).slice(0,5);
+        if (!items.length){ ul.classList.add('hidden'); return; }
+        ul.innerHTML = items.map(v=>`<li><button type="button" class="w-full text-left px-3 py-2 rounded hover:bg-orange-50" data-q="${v}">${v}</button></li>`).join('');
+        ul.classList.remove('hidden');
+        ul.querySelectorAll('button[data-q]').forEach(btn=>{
+          btn.addEventListener('click', ()=>{ const val = btn.getAttribute('data-q')||''; if (si){ si.value = val; } state.q = val; saveRecent(val); renderSuggestions(true); applyFilters(); });
+        });
+      }
+
+      // 외부 재호출용 노출
+      window._applyFilters = applyFilters;
       applyFilters();
     }
 
@@ -295,7 +363,6 @@
       inner.innerHTML = top5.map(p=>`<a class=\"mx-6 hover:underline\" href=\"/${p.url}\">${p.title}</a>`).join('');
     }
 
-      // 이미지 표시 토글 상태
     function showSkeleton(){
       const hero = document.getElementById('hero');
       if (hero){
@@ -317,30 +384,11 @@
       const trending = document.getElementById('trending');
       if (trending){
         trending.innerHTML = Array.from({length:6}).map(()=>`
-          // 필터 재적용은 탭/검색 상태 기반으로 처리
-          const tabsInit = initTabs; // no-op to silence linter
-          // 간단히 그리드만 다시 그리기 위해 현재 쿼리스트링으로 상태 읽어 재적용
-          const params = new URLSearchParams(location.search);
-          state.cat = params.get('cat') || '';
-          state.q = params.get('q') || '';
-          // 필터 함수 재사용을 위해 탭 초기화 영역에서 호출되므로 여기서는 탭 클릭 없이 재호출
-          const tabs = document.querySelectorAll('#tabs [data-cat]');
-          tabs.forEach(b=>{
-            const on = b.dataset.cat === state.cat;
-            b.classList.toggle('border-orange-600', on);
-            b.classList.toggle('text-orange-600', on);
-            b.classList.toggle('font-semibold', on);
-          });
-          // 간단 필터 적용 로직 재사용
-          const q = state.q.trim().toLowerCase();
-          let list = state.cat ? news.filter(p=>p.category===state.cat) : news;
-          if (q) {
-            list = list.filter(p=>{
-              const src = (p.title||'') + ' ' + (p.description||'') + ' ' + (getSource(p)||'') + ' ' + (p.category||'');
-              return src.toLowerCase().includes(q);
-            });
-          }
-          renderGrid(list.slice(0,12));
+          <div class=\"animate-pulse h-6 bg-gray-200 rounded\"></div>
+        `).join('');
+      }
+    }
+
     (async function(){
       showSkeleton();
       const news = await loadPosts();
@@ -370,13 +418,9 @@
         toggle.addEventListener('change', ()=>{
           imagesEnabled = toggle.checked;
           localStorage.setItem(key, imagesEnabled ? '1' : '0');
-          // re-render hero + tabs grid with current category filter
+          // 히어로 및 현재 필터 기반으로 재렌더
           renderHero(news[0]);
-          // reapply current tab filter
-          const activeBtn = document.querySelector('#tabs button.bg-orange-600');
-          const activeCat = activeBtn ? activeBtn.dataset.cat : '';
-          const list = activeCat ? news.filter(p=>p.category===activeCat) : news;
-          renderGrid(list.slice(0,12));
+          if (typeof window._applyFilters === 'function') window._applyFilters();
           applyKnob();
         });
       }
