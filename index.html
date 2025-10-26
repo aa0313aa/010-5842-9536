@@ -547,33 +547,54 @@
             kakaoBtn.setAttribute('href', url);
         }
 
-        // posts.json에서 블로그 글 목록을 동적으로 불러오기
-        fetch('posts.json')
-          .then(response => response.json())
-          .then(postsData => {
-            const blogList = document.getElementById('blog-list');
-            if (blogList) {
-              blogList.innerHTML = '';
-              if (postsData && postsData.length > 0) {
-                // 최신 3개 글만 표시
-                postsData.slice(0, 3).forEach(post => {
-                  const li = document.createElement('li');
-                  li.innerHTML = `
-                    <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-                            <h4 class="text-lg font-bold text-slate-800 group-hover:text-orange-600">${post.title}</h4>
-                            <span class="text-sm text-slate-500 whitespace-nowrap mt-1 sm:mt-0 sm:ml-4">${post.date || ''}</span>
-                        </div>
-                        <p class="mt-2 text-slate-600">${post.description || ''}</p>
-                    </a>
-                  `;
-                  blogList.appendChild(li);
-                });
-              } else {
-                blogList.innerHTML = `<li class="p-6 text-center text-slate-500">등록된 글이 없습니다.</li>`;
-              }
-            }
-          })
+                // posts.json에서 블로그 글 목록을 동적으로 불러오기
+                fetch('posts.json')
+                    .then(response => response.json())
+                    .then(postsData => {
+                        const blogList = document.getElementById('blog-list');
+                        if (!blogList) return;
+                        blogList.innerHTML = '';
+                        if (!Array.isArray(postsData) || postsData.length === 0){
+                            blogList.innerHTML = `<li class="p-6 text-center text-slate-500">등록된 글이 없습니다.</li>`;
+                            return;
+                        }
+
+                        // URL에서 YYYY-MM-DD 추출 (blog/2025-10-26-...)
+                        function pickDateFromUrl(url){
+                            try{
+                                const m = /blog\/(\d{4}-\d{2}-\d{2})-/.exec(url || '');
+                                return m ? m[1] : null;
+                            }catch(e){ return null; }
+                        }
+                        function toNum(d){ return d ? Number(d.replace(/-/g,'')) : 0; }
+
+                        // 정렬 우선순위: URL 날짜(desc) > post.date(desc)
+                        const sorted = postsData.slice().sort((a,b)=>{
+                            const au = pickDateFromUrl(a.url);
+                            const bu = pickDateFromUrl(b.url);
+                            const cmpU = toNum(bu) - toNum(au);
+                            if (cmpU !== 0) return cmpU;
+                            const ad = toNum(a.date || '');
+                            const bd = toNum(b.date || '');
+                            return bd - ad;
+                        });
+
+                        // 최신 3개 글만 표시
+                        sorted.slice(0,3).forEach(post => {
+                            const displayDate = pickDateFromUrl(post.url) || (post.date || '');
+                            const li = document.createElement('li');
+                            li.innerHTML = `
+                                <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
+                                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                                                <h4 class="text-lg font-bold text-slate-800 group-hover:text-orange-600">${post.title}</h4>
+                                                <span class="text-sm text-slate-500 whitespace-nowrap mt-1 sm:mt-0 sm:ml-4">${displayDate}</span>
+                                        </div>
+                                        <p class="mt-2 text-slate-600">${post.description || ''}</p>
+                                </a>
+                            `;
+                            blogList.appendChild(li);
+                        });
+                    })
           .catch(error => {
             console.error('Error fetching blog posts:', error);
             const blogList = document.getElementById('blog-list');

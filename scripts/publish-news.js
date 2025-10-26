@@ -12,6 +12,7 @@ const cheerio = require('cheerio');
 let sharp = null; // lazy load for optional OG generation
 
 const ROOT = path.join(__dirname, '..');
+const { renderKeywordCTA, chooseCtaVariant } = require('./components');
 const BLOG = path.join(ROOT, 'blog');
 const POSTS = path.join(ROOT, 'posts.json');
 const SOURCES_FILE = path.join(ROOT, 'news-sources.json');
@@ -69,6 +70,17 @@ function svgEscape(s){
     .replace(/>/g,'&gt;')
     .replace(/"/g,'&quot;')
     .replace(/'/g,'&#39;');
+}
+
+// 텍스트 기반 카테고리 추출 (뉴스 분류 보조)
+function categorizeFromText(text){
+  const t = String(text||'').toLowerCase();
+  const has = (kw)=> t.includes(kw);
+  if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
+  if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
+  if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
+  if (has('신용카드') || has('카드사') || has('가맹점') || has('수수료') || has('카드 ')) return '신용카드';
+  return '뉴스';
 }
 
 async function generateOgForPost({ baseName, title, category }){
@@ -150,41 +162,42 @@ async function tryGenerateAIImage({ title, summary, category, baseName }){
 }
 
 async function fetchCandidates(opts={}){
-  const { filter='', windowDaysOverride=null } = opts;
+  const { filter = '', windowDaysOverride = null, seenIds = new Set() } = opts;
   const parser = new Parser({ timeout: 15000 });
   const sources = loadJson(SOURCES_FILE, []);
-  const firstOutPath = path.join(BLOG, built.fileName);
-  const seen = new Set(log.map(e => e.id || e.link));
   const now = Date.now();
   // 기본 7일, 필터 지정 시 30일로 확대해서 하루 1건 보장을 높임
   const windowDays = windowDaysOverride || (filter ? 30 : 7);
-  const windowMs = 1000*60*60*24*windowDays;
+  const windowMs = 1000 * 60 * 60 * 24 * windowDays;
   const items = [];
-  for (const src of sources){
+  for (const src of sources) {
     const { name, feed } = src;
     if (!feed) continue;
     try {
       const res = await parser.parseURL(feed);
-      for (const it of res.items || []){
+      for (const it of res.items || []) {
         const id = it.guid || it.id || it.link;
-        if (!id || seen.has(id)) continue;
+        if (!id || seenIds.has(id)) continue;
         const iso = it.isoDate || it.pubDate || it.published || null;
         const ts = iso ? Date.parse(iso) : NaN;
         // 최근 windowDays 이내만 우선 수집 (너무 오래된 것은 제외)
-  const finalOutPath = path.join(BLOG, builtWithOg.fileName);
+        if (!isNaN(ts) && now - ts > windowMs) continue;
         const rawText = it.contentSnippet || it.content || it['content:encoded'] || '';
         const text = stripHtml(rawText);
         items.push({
           source: name || (res.title || 'RSS'),
-          id, link: it.link, title: it.title || '(제목 없음)', isoDate: iso || new Date().toISOString(),
+          id,
+          link: it.link,
+          title: it.title || '(제목 없음)',
+          isoDate: iso || new Date().toISOString(),
           summary: cut(text, 500)
         });
       }
     } catch (e) {
-      console.warn('RSS fetch failed:', name || feed, String(e.message||e));
+      console.warn('RSS fetch failed:', name || feed, String(e.message || e));
     }
   }
-  items.sort((a,b)=> Date.parse(b.isoDate) - Date.parse(a.isoDate));
+  items.sort((a, b) => Date.parse(b.isoDate) - Date.parse(a.isoDate));
   return items;
 }
 
@@ -194,6 +207,8 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   const relUrl = `blog/${fileName}`;
   const absUrl = toAbs(relUrl);
   const ogImg = perPostOgRel || image || DEFAULT_OG;
+  const ctaVariant = chooseCtaVariant(slug || title || today);
+  const keywordHtml = renderKeywordCTA({ category, phone: BUSINESS.phoneDisplay });
 
   const contactHtml = `
       <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
@@ -389,12 +404,15 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         <div class="mt-5">
           <a href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">원문 기사 보기</a>
         </div>
-          </section>
+      </section>
+      ${ctaVariant==='top' ? keywordHtml : ''}
       ${keypoints}
       ${impact}
       ${checklist}
+    ${ctaVariant==='middle' ? keywordHtml : ''}
   ${details}
       ${assistance}
+    ${ctaVariant==='bottom' ? keywordHtml : ''}
       ${contactHtml}
             </article>
           </main>
@@ -438,10 +456,32 @@ function normalizeTitle(s){
     .trim();
 }
 
+function tokenize(text){
+  const stop = new Set([
+    '기사','보도','속보','단독','전문','영상','사진','네이트','연합뉴스','news','뉴스','com','co','kr','www',
+    'http','https','관련','최신','정리','해설','분석','인터뷰','공식','발표','업데이트','추가','전체','요약'
+  ]);
+  return normalizeTitle(text)
+    .split(' ')
+    .map(t => t.trim())
+    .filter(t => t && t.length >= 2 && !stop.has(t));
+}
+
+function jaccardSimilarity(a, b){
+  const A = new Set(tokenize(a));
+  const B = new Set(tokenize(b));
+  if (A.size === 0 || B.size === 0) return 0;
+  let inter = 0;
+  for (const t of A) if (B.has(t)) inter++;
+  const union = A.size + B.size - inter;
+  return inter / union;
+}
+
 async function main(){
   ensureDir(BLOG);
   const posts = loadJson(POSTS, []);
   const log = loadJson(LOG_FILE, []);
+  const seen = new Set(log.map(e => e.id || e.link));
   // Optional filter by CLI arg or env
   const argv = process.argv.slice(2);
   let filter = process.env.NEWS_FILTER || '';
@@ -457,7 +497,7 @@ async function main(){
     if (!isNaN(n) && n > 0) maxAgeDays = n;
   }
 
-  let candidates = await fetchCandidates({ filter, windowDaysOverride: maxAgeDays });
+  let candidates = await fetchCandidates({ filter, windowDaysOverride: maxAgeDays, seenIds: seen });
   if (filter) {
     const lower = filter.toLowerCase();
     candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
@@ -496,7 +536,16 @@ async function main(){
   }
   // 중복 방지: 최근 14일 내 게시물과 제목 유사(정규화 후 동일) 항목은 제외하고 선택
   const RECENT_DAYS = 14;
+  const SIM_CUTOFF_DAYS = 2; // 최근 2일간은 유사 제목도 강하게 제외
+  const SIM_THRESHOLD = 0.6; // 제목 유사도 임계치
+  const DIVERSITY_WINDOW = 10; // 최근 N개 내 카테고리 비율 상한 적용 창
+  const MAX_CATEGORY_RATIO = 0.5; // 예: 최근 10개 중 동일 카테고리는 최대 5개
+  const SOURCE_COOLDOWN_DAYS = 2; // 최근 2일 내 동일 매체 제외
+  const KEYWORD_WINDOW = 15; // 키워드 편중 측정 창 크기(최근 N개 제목)
+  const KEYWORD_REPEAT_THRESHOLD = 3; // 특정 키워드가 최근 창에서 N회 이상이면 패널티
+  const KEYWORD_EXCLUDE = new Set(['휴대폰소액결제','소액결제','신용카드현금화','비상금','현금화','소액급전']);
   const cutoff = Date.now() - RECENT_DAYS*24*60*60*1000;
+  const simCutoff = Date.now() - SIM_CUTOFF_DAYS*24*60*60*1000;
   const recentTitleSet = new Set(posts
     .filter(p => {
       const ts = Date.parse(p.date);
@@ -504,8 +553,62 @@ async function main(){
     })
     .map(p => normalizeTitle(p.title))
   );
+  const recentForSim = posts.filter(p => {
+    const ts = Date.parse(p.date);
+    return !isNaN(ts) ? (ts >= simCutoff) : false;
+  });
+  // 최근 소스(매체) 쿨다운 대상 수집: 최근 SOURCE_COOLDOWN_DAYS 내 게시의 태그에서 매체 유추
+  const recentSources = new Set(posts.filter(p=>{
+    const ts = Date.parse(p.date);
+    return !isNaN(ts) ? (ts >= simCutoff) : false;
+  }).flatMap(p => Array.isArray(p.tags) ? p.tags : []));
+  // 카테고리 다양성 측정용: 최근 DIVERSITY_WINDOW 포스트 카테고리 카운트
+  const recentWindow = posts.slice(0, DIVERSITY_WINDOW); // posts는 선두에 최신이 unshift됨
+  const catCount = recentWindow.reduce((acc,p)=>{
+    const c = p.category || '기타';
+    acc[c] = (acc[c]||0)+1;
+    return acc;
+  },{});
+  const maxPerCat = Math.floor(DIVERSITY_WINDOW * MAX_CATEGORY_RATIO);
+  // 키워드 편중 측정: 최근 KEYWORD_WINDOW 제목 토큰 빈도
+  const recentKw = posts.slice(0, KEYWORD_WINDOW).reduce((acc,p)=>{
+    const toks = tokenize(p.title);
+    for (const t of toks){
+      if (KEYWORD_EXCLUDE.has(t)) continue;
+      acc[t] = (acc[t]||0)+1;
+    }
+    return acc;
+  },{});
   let picked = null;
-  for (const c of candidates){
+  // 1) 동일 제목(정규화) 제외 + 2) 최근 2일 내 유사 제목 제외
+  // 후보에 카테고리 사전 주입
+  const enriched = candidates.map(c => ({
+    ...c,
+    _cat: (filter ? filter : categorizeFromText(`${c.title} ${c.summary||''}`))
+  }));
+
+  const filtered = enriched.filter(c => {
+    const norm = normalizeTitle(c.title);
+    if (recentTitleSet.has(norm)) return false;
+    for (const rp of recentForSim){
+      if (jaccardSimilarity(rp.title, c.title) >= SIM_THRESHOLD) return false;
+    }
+    return true;
+  });
+  // 동일 매체 쿨다운: 최근 SOURCE_COOLDOWN_DAYS 내에 같은 source가 태그에 존재하면 제외
+  const afterSource = (filtered.length ? filtered : enriched).filter(c => !recentSources.has(c.source));
+  // 카테고리 다양성: 허용치 초과 카테고리는 제외(단, 모든 후보가 제외되면 완화)
+  const nonOverrep = afterSource.filter(c => (catCount[c._cat]||0) < maxPerCat);
+  const diversityStage = nonOverrep.length ? nonOverrep : afterSource;
+  // 키워드 편중: 최근 창에서 고빈도 키워드를 과다 포함한 제목은 제외(단, 모두 제외되면 완화)
+  const kwFiltered = diversityStage.filter(c => {
+    const toks = tokenize(c.title).filter(t=>!KEYWORD_EXCLUDE.has(t));
+    // 고빈도 토큰이 하나라도 임계 이상이면 제외
+    return !toks.some(t => (recentKw[t]||0) >= KEYWORD_REPEAT_THRESHOLD);
+  });
+  const finalStage = kwFiltered.length ? kwFiltered : diversityStage;
+
+  for (const c of (finalStage.length ? finalStage : enriched)){
     if (!recentTitleSet.has(normalizeTitle(c.title))){
       picked = c;
       break;

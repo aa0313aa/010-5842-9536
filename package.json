@@ -17,7 +17,10 @@
     "publish:news": "node scripts/publish-news.js",
     "publish:news:batch": "node scripts/publish-daily-news-batch.js",
     "daily:news": "node scripts/publish-news.js && node generate-sitemap.js && node generate-rss.js",
-    "daily:news:batch": "node scripts/publish-daily-news-batch.js && node scripts/generate-og-images.js && node generate-sitemap.js && node generate-rss.js"
+    "daily:news:batch": "node scripts/publish-daily-news-batch.js && node scripts/generate-og-images.js && node generate-sitemap.js && node generate-rss.js",
+    "daily:news:multi": "node scripts/publish-news-multi.js --count 4 && node generate-sitemap.js && node generate-rss.js",
+    "retrofit:cta:dry": "node scripts/insert-keyword-cta.js --dry-run --ab",
+    "retrofit:cta": "node scripts/insert-keyword-cta.js --ab && node generate-sitemap.js && node generate-rss.js"
   },
   "repository": {
     "type": "git",
