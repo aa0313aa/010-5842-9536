@@ -92,6 +92,22 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
         </ul>
       </section>`;
 
+  // 중간 CTA 배너(수수료 안내 및 바로가기 버튼)
+  const ctaHtml = `
+      <section id="cta" class="mb-8 p-6 rounded-xl border border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-extrabold text-orange-700 mb-1">오렌지Pay 비상금 카드현금화 상담</h2>
+            <p class="text-slate-700">수수료는 <strong>5%~15%</strong> 범위에서 <strong>상황에 따라 변동</strong>될 수 있습니다. 상담 시 <strong>총비용(수수료+부대비용)</strong>과 <strong>정산 시간</strong>, <strong>환불/민원 절차</strong>를 투명하게 안내드립니다.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:${htmlEscape(BUSINESS.phoneDisplay)}" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 font-semibold shadow">전화로 바로 상담</a>
+            <a href="${htmlEscape(BUSINESS.kakaoLink)}" class="inline-flex items-center px-4 py-2 rounded-md bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-semibold shadow" target="_blank" rel="noopener nofollow">카카오톡 1:1 상담</a>
+            <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-md bg-white text-orange-700 border border-orange-300 hover:bg-orange-50 font-semibold shadow-sm">자세히 보기</a>
+          </div>
+        </div>
+      </section>`;
+
   const contactHtml = `
       <section id="contact" class="mb-8 p-6 rounded-lg border border-orange-200 bg-orange-50">
         <h2 class="text-2xl font-bold text-orange-700 mb-3">빠르게 상담 받기</h2>
@@ -202,13 +218,10 @@ function buildHtml({title, description, slug, keywords, sections=[], faqs=[], im
           <p class="text-sm text-slate-500 mb-6">이 글은 <strong>뉴스 요약</strong>이 아닌, 이용자 안내를 위한 <strong>블로그 가이드</strong>입니다.</p>
   ${sectionHtml}
   ${extendedHtml}
+          ${ctaHtml}
           ${contactHtml}
           <section id="related" class="mb-4">
             <h2 class="text-xl font-semibold mb-2">함께 보면 좋아요</h2>
-            <ul class="list-disc pl-5 text-orange-700">
-              <li><a class="underline" href="/blog/2025-10-15-emergency-card-cash-guide.html">비상금 카드현금화 2025 가이드</a></li>
-              <li><a class="underline" href="/blog/2025-10-17-creditcard-installment-cash-guide.html">신용카드 무이자 할부로 현금 마련 2025</a></li>
-              <li><a class="underline" href="/blog/2025-10-06-creditcard-cash-guide.html">신용카드 현금화 종합 가이드</a></li>
             </ul>
           </section>
         </main>
@@ -309,6 +322,19 @@ async function main(){
     process.exit(0);
   }
   const [topic] = topics.splice(idx, 1);
+  // 오렌지Pay 사이트 적합성 검증: 핵심 키워드 포함 여부 체크
+  const allow = [
+    '오렌지pay','오렌지 pay','오렌지페이','비상금','카드현금화','신용카드','소액결제','정보이용료','수수료','정산','안전','환불','민원'
+  ];
+  const hay = ((topic.title||'') + ' ' + (topic.description||'') + ' ' + (Array.isArray(topic.keywords)? topic.keywords.join(' ') : '')).toLowerCase();
+  const relevant = allow.some(k => hay.includes(k));
+  if (!relevant) {
+    console.log('Topic skipped: not relevant to 오렌지Pay site policy. (missing required keywords)');
+    // 되돌리기: 다시 맨 앞에 넣어두되 publish 플래그는 유지
+    topics.unshift(topic);
+    saveJson(TOPICS, topics);
+    process.exit(0);
+  }
   const {title, description, slug, keywords, sections, faqs, image} = topic;
   if (!slug || !title) {
     console.error('Topic missing slug/title');
