@@ -6,8 +6,15 @@
     <atom:link href="https://pay24.store/rss.xml" rel="self" type="application/rss+xml" />
     <description>오렌지Pay 공식 블로그 - 신용카드 현금화, 소액결제, 후기, 안전한 현금화 정보 제공</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0900</lastBuildDate>
     <generator>오렌지Pay RSS Generator</generator>
+    <item>
+      <title>사업자 선택 기준(E-E-A-T): 신뢰·전문성·정책 투명성</title>
+      <link>https://pay24.store/blog/2025-10-27-provider-selection-eaat-2025.html</link>
+      <description><![CDATA[경험·전문성·신뢰 신호와 정책 투명성을 점검하는 선택 기준.]]></description>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://pay24.store/blog/2025-10-27-provider-selection-eaat-2025.html</guid>
+    </item>
     <item>
       <title>초보자 10분 가이드: 개념→안전→진행 순서</title>
       <link>https://pay24.store/blog/2025-10-26-beginner-10min-guide-2025.html</link>
