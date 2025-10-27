@@ -302,7 +302,13 @@ async function main(){
     console.log('No topics to publish.');
     process.exit(0);
   }
-  const topic = topics.shift(); // dequeue
+  // 게시 승인된 토픽만 게시: publish === true 인 첫 항목만 dequeue
+  const idx = Array.isArray(topics) ? topics.findIndex(t => t && t.publish === true) : -1;
+  if (idx === -1) {
+    console.log('No approved topics to publish. (require publish=true)');
+    process.exit(0);
+  }
+  const [topic] = topics.splice(idx, 1);
   const {title, description, slug, keywords, sections, faqs, image} = topic;
   if (!slug || !title) {
     console.error('Topic missing slug/title');

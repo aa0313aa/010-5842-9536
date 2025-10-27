@@ -1,8 +1,7 @@
-name: Auto daily post from topics
+name: Auto daily post from topics (manual only)
 
 on:
-  schedule:
-    - cron: '0 1 * * *' # 매일 10:00 KST (01:00 UTC)
+  # 스케줄 비활성화: 수동 실행만 허용
   workflow_dispatch: {}
 
 jobs:

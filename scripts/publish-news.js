@@ -676,7 +676,7 @@ async function main(){
 
   posts.unshift({
     title: picked.title,
-    date: ymd(new Date(picked.isoDate)),
+    date: ymd(), // 사이트 게시 날짜를 사용해 /news 에 오늘 날짜가 노출되도록
     description: picked.summary || picked.title,
     url: builtWithOg.relUrl,
     image: DEFAULT_OG,
