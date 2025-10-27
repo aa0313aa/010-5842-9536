@@ -568,8 +568,9 @@
                         }
                         function toNum(d){ return d ? Number(d.replace(/-/g,'')) : 0; }
 
-                        // 정렬 우선순위: URL 날짜(desc) > post.date(desc)
-                        const sorted = postsData.slice().sort((a,b)=>{
+                        // 블로그 가이드는 제외하고(뉴스/콘텐츠 중심 노출), 정렬 우선순위: URL 날짜(desc) > post.date(desc)
+                        const source = postsData.filter(p => (p.category||'') !== '블로그');
+                        const sorted = source.slice().sort((a,b)=>{
                             const au = pickDateFromUrl(a.url);
                             const bu = pickDateFromUrl(b.url);
                             const cmpU = toNum(bu) - toNum(au);
