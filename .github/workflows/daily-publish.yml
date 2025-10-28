@@ -27,18 +27,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Publish daily news
+      - name: "Publish daily news (batch: 4)"
         run: |
-          node scripts/publish-news.js || true
+          node scripts/publish-news-multi.js --count 4 || true
 
-      - name: Publish next approved topic (if any)
+      - name: "Publish next approved topics (x2 if available)"
         run: |
           node scripts/publish-next-topic.js || true
+          node scripts/publish-next-topic.js || true
 
-      - name: Rebuild sitemap & RSS
+      - name: Rebuild sitemap, RSS & News sitemap
         run: |
           node generate-sitemap.js
           node generate-rss.js
+          node generate-news-sitemap.js
 
       - name: Commit & push changes (if any)
         run: |
@@ -46,7 +48,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "chore(cron): daily news/blog publish + sitemap/rss"
+            git commit -m "chore(cron): daily news(4)/blog(2) + sitemap/rss/news.xml"
             git push origin ${{ github.ref_name }}
           else
             echo "No content changes to commit."
