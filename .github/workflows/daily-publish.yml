@@ -1,0 +1,53 @@
+name: Daily publish (news + blog)
+
+on:
+  schedule:
+    # 매일 06:30 KST (21:30 UTC)
+    - cron: '30 21 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish daily news
+        run: |
+          node scripts/publish-news.js || true
+
+      - name: Publish next approved topic (if any)
+        run: |
+          node scripts/publish-next-topic.js || true
+
+      - name: Rebuild sitemap & RSS
+        run: |
+          node generate-sitemap.js
+          node generate-rss.js
+
+      - name: Commit & push changes (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(cron): daily news/blog publish + sitemap/rss"
+            git push origin ${{ github.ref_name }}
+          else
+            echo "No content changes to commit."
+          fi
