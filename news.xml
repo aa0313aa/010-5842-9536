@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2025-10-31-news-법조-인사이드-페이퍼-컴퍼니의-진화-보이스피싱리딩방-사기에도-동원-조선비즈-chosun-biz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-31</news:publication_date>
+      <news:title>[법조 인사이드] ‘페이퍼 컴퍼니’의 진화… 보이스피싱·리딩방 사기에도 동원 - 조선비즈 - Chosun Biz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-10-31-news-검찰-kt-소액결제-사기-중국-국적-남성-2명-구속기소-mbc-뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-31</news:publication_date>
+      <news:title>검찰, 'KT 소액결제 사기' 중국 국적 남성 2명 구속기소 - MBC 뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-10-31-news-영세자영업자를-위한-국세-신용카드납부-수수료-대폭-인하-대한민국-정책브리핑.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-31</news:publication_date>
+      <news:title>영세자영업자를 위한 국세 신용카드납부 수수료 대폭 인하 - 대한민국 정책브리핑</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-10-30-news-이숙캠-잡도리-아내-신용불량자-남편-빚-갚아줬더니-대출-사기비자금결정적장면-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2025-10-30</news:publication_date>
       <news:title>영세자영업자를 위한 국세 신용카드납부 수수료 대폭 인하 - 대한민국 정책브리핑</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-29-news-ai-피싱사기-문자-폭증3개월-새-데이터-침해-82-급증-지티티코리아.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-29</news:publication_date>
-      <news:title>AI 피싱·사기 문자 폭증...3개월 새 데이터 침해 82% 급증 - 지티티코리아</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-29-news-kt-소액결제-피해-고객에-100gb-15만원-보상-동아일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-29</news:publication_date>
-      <news:title>KT, 소액결제 피해 고객에 100GB-15만원 보상 - 동아일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-29-news-오늘-신청-안하면-손해-본다신용카드-혜택-절벽-시대-성큼-newstfcokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-29</news:publication_date>
-      <news:title>"오늘 신청 안하면 손해 본다"…신용카드 혜택 절벽 시대 '성큼' - news.tf.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-29-news-캄보디아-피싱-조직-스스로-가담한-청년-45명-구속-송치-한겨레.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-29</news:publication_date>
-      <news:title>캄보디아 피싱 조직 스스로 가담한 청년 45명 구속 송치 - 한겨레</news:title>
     </news:news>
   </url>
 </urlset>
