@@ -1,0 +1,5 @@
+source_path,current_canonical,suggested_redirect,reason
+/apple-google.html,https://pay24.store/,/,Canonical points to site root — prefer host-level 301 to /
+/blog/2025-05-29-cardcash-guide.html,https://pay24.store/blog/cardcash-guide.html,/blog/cardcash-guide.html,Dated URL but canonical is undated short path — suggest 301 from dated -> short
+/visamastercard/virtualvisa-prepaid.html,https://pay24.store/visamastercard/virtualvisa-prepaid,/visamastercard/virtualvisa-prepaid,Canonical uses pretty path without .html — suggest 301 to canonical
+/blog/post-template-template.html,https://pay24.store/blog/post-template.html,/blog/post-template.html,Template copy with different filename -> canonical

@@ -1,0 +1,11 @@
+source_path,current_canonical,suggested_redirect,reason,confidence
+/apple-google.html,https://pay24.store/,/,canonical points to root — consider host-level 301,high
+/blog/2025-05-29-cardcash-guide.html,https://pay24.store/blog/cardcash-guide.html,/blog/cardcash-guide.html,dated filename vs short canonical — 301 from dated -> canonical,high
+/blog/post-template-template.html,https://pay24.store/blog/post-template.html,/blog/post-template.html,template duplicate filename -> canonical,medium
+/visamastercard/virtualvisa-prepaid.html,https://pay24.store/visamastercard/virtualvisa-prepaid,/visamastercard/virtualvisa-prepaid,canonical uses extensionless path — redirect to canonical,medium
+/blog/2025-11-01-news-우리카드-국내-카드사-최초로-인니서-qr결제출금-서비스-선보여-더페어.html,https://pay24.store/blog/2025-11-01-news-우리카드-국내-카드사-최초로-인니서-qr결제출금-서비스-선보여-더페어.html,,file and canonical match — no redirect needed,low
+/blog/2025-10-29-news-캄보디아-피싱-조직-스스로-가담한-청년-45명-구속-송치-한겨레.html,https://pay24.store/blog/2025-10-29-news-캄보디아-피싱-조직-스스로-가담한-청년-45명-구속-송치-한겨레.html,,file and canonical match — no redirect needed,low
+/blog/2025-10-26-beginner-10min-guide-2025.html,https://pay24.store/blog/2025-10-26-beginner-10min-guide-2025.html,,file and canonical match — no redirect needed,low
+/index.html,https://pay24.store/,/,index canonical matches site root — no action,low
+/news/index.html,https://pay24.store/news/,/news/,index canonical matches — no action,low
+/blog/index.html,https://pay24.store/blog/,/blog/,index canonical matches — no action,low

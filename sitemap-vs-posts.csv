@@ -1,0 +1,71 @@
+url,in_posts_json,in_sitemap,recommendation,note
+https://pay24.store/,no,yes,none,homepage
+https://pay24.store/news/,no,yes,none,news listing page
+https://pay24.store/blog/,no,yes,none,blog listing page
+https://pay24.store/about.html,no,yes,none,static page
+https://pay24.store/contact.html,no,yes,none,static page
+https://pay24.store/terms.html,no,yes,none,static page
+https://pay24.store/privacy.html,no,yes,none,static page
+https://pay24.store/visamastercard/virtualvisa-prepaid.html,no,yes,review,canonical uses extensionless path - ensure host 301 normalization
+https://pay24.store/blog/2025-11-01-news-우리카드-국내-카드사-최초로-인니서-qr결제출금-서비스-선보여-더페어.html,yes,yes,none,latest post
+https://pay24.store/blog/2025-10-31-news-법조-인사이드-페이퍼-컴퍼니의-진화-보이스피싱리딩방-사기에도-동원-조선비즈-chosun-biz.html,yes,yes,none,
+https://pay24.store/blog/2025-10-31-news-검찰-kt-소액결제-사기-중국-국적-남성-2명-구속기소-mbc-뉴스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-31-news-영세자영업자를-위한-국세-신용카드납부-수수료-대폭-인하-대한민국-정책브리핑.html,yes,yes,none,
+https://pay24.store/blog/2025-10-30-news-이숙캠-잡도리-아내-신용불량자-남편-빚-갚아줬더니-대출-사기비자금결정적장면-네이트.html,yes,yes,none,
+https://pay24.store/blog/2025-10-30-news-kt-무단-소액결제-피해-고객에-5개월간-100gb15만원-보상안-발표-industrynewscokr.html,yes,yes,none,
+https://pay24.store/blog/2025-10-29-news-ai-피싱사기-문자-폭증3개월-새-데이터-침해-82-급증-지티티코리아.html,yes,yes,none,
+https://pay24.store/blog/2025-10-29-news-kt-소액결제-피해-고객에-100gb-15만원-보상-동아일보.html,yes,yes,none,
+https://pay24.store/blog/2025-10-29-news-오늘-신청-안하면-손해-본다신용카드-혜택-절벽-시대-성큼-newstfcokr.html,yes,yes,none,
+https://pay24.store/blog/2025-10-28-news-허종식-의원-kea의-관리-부실-태양광-대출-사기-300억-원-유출-브릿지경제.html,yes,yes,none,
+https://pay24.store/blog/2025-10-28-news-kt-고객-10명-8명-kt-무단소액결제-피해-책임지고-전고객-위약금-면제해야-녹색경제신문.html,yes,yes,none,
+https://pay24.store/blog/2025-10-29-news-캄보디아-피싱-조직-스스로-가담한-청년-45명-구속-송치-한겨레.html,yes,yes,none,
+https://pay24.store/blog/2025-10-29-faq-extended-2025.html,yes,yes,none,faq
+https://pay24.store/blog/2025-10-27-emergency-card-cash-orangepay-2025.html,yes,yes,none,orangepay guide
+https://pay24.store/blog/2025-10-27-news-광양시-대학생-생활비-지원사업-또-의회-문턱-못-넘었다-남도일보.html,yes,yes,none,
+https://pay24.store/blog/2025-10-27-provider-selection-eaat-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-26-beginner-10min-guide-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-26-news-100만원-벌어-생활비-내면-끝-국민연금-포기한-청년자영업자-늘어-매일경제.html,yes,yes,none,
+https://pay24.store/blog/2025-10-26-news-coingecko-ai-소액-결제가-활성화됨에-따라-178m-x402-토큰-카테고리-추가-bitcoincom.html,yes,yes,none,
+https://pay24.store/blog/2025-10-26-news-몸캠피싱-사기-확산-아크링크-가해자-유포-협박-대응법-공개-이로운넷.html,yes,yes,none,
+https://pay24.store/blog/2025-10-26-news-제주도-추석-연휴-종합대책-가동-민생회복안전명절-총력-미디어투데이.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-limit-credit-impact-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-news-kt-무단-소액결제-범행-장비-대부분-중국산-부품-네이트.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-news-대출사기-기소된-뉴욕주-법무장관-법정서-무죄-주장-연합뉴스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-news-디지털-전환-시대생존한-신용카드-모집인-비결은-newstfcokr.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-news-오히려-좋아보이스피싱-당했는데-1억-벌게-된-사연-네이트.html,yes,yes,none,
+https://pay24.store/blog/2025-10-25-news-제주도-추석-연휴-종합대책-가동-민생회복안전명절-총력-프레스뉴스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-24-news-미중-갈등사기대출에도인텔gm-등-호실적에-월가-안도-네이트.html,yes,yes,none,
+https://pay24.store/blog/2025-10-24-offhours-processing-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-fraud-safety-checklist-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-giftcard-cash-legal-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-lower-fees-tips-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-kt-불법-기지국-20개로-늘고-피해자-2만2천명-돌파-뉴스후플러스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-김광규-전세사기보이스피싱까지직전까지-당해-경찰전화도-피싱범-라스핫피플-네이트.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-내수-부진에-신용카드-연체율-11년-만에-최고-연합뉴스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-빅테크칼럼-암호화폐-거래소-제미니-솔라나-신용카드-출시제로-수수료최대-677-자동-스테이킹-보상-뉴스스페이스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-사퇴-포함한-책임져야-kt-김영섭-대표-무단-소액결제-및-해킹-피해자-위약금-면제-엠투데이.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-소상공인-부담경감-크레딧-게임-소액결제도-가능악용-막아야-뉴스1.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-웨스턴얼라이언스-ceo-대출-사기-매우-실망스럽지만-고립적-사건-연합인포맥스.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-정부-kt-무단-소액-결제-사건에-대한-민관-합동조사단의-조사가-중간-단계를-넘어선-상태-뉴스21일간.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-참여연대-고물가고유가-등-민생안정-119-대책-촉구-시사경제신문.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-news-카드사-가맹점수수료-수익-5년-만에-감소비중도-20대-붕괴-위기-ceoscoredaily.html,yes,yes,none,
+https://pay24.store/blog/2025-10-23-virtual-visa-cash-howto.html,yes,yes,none,
+https://pay24.store/blog/2025-10-22-cardcash-fee-compare-2025.html,yes,yes,none,
+https://pay24.store/blog/2025-10-21-content-fee-cash-quick-tips.html,yes,yes,none,
+https://pay24.store/blog/2025-10-20-cardcash-fee-calculator-legal-checklist.html,yes,yes,none,
+https://pay24.store/blog/2025-10-20-phone-micro-payment-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-10-17-creditcard-installment-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-10-15-emergency-card-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-10-15-virtual-visa-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-10-06-creditcard-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-09-10-card-product-cash-service.html,yes,yes,none,
+https://pay24.store/blog/2025-08-29-cardcash-orangepay.html,yes,yes,none,
+https://pay24.store/blog/2025-06-20-cash-trend-tips.html,yes,yes,none,
+https://pay24.store/blog/2025-06-11-mobile-giftcard-cash-guide.html,yes,yes,none,
+https://pay24.store/blog/2025-06-08-cardcash-guide.html,yes,yes,none,dated cardcash guide
+https://pay24.store/blog/cardcash-guide.html,yes,yes,redirect,short canonical preferred — consider 301 from dated to short
+https://pay24.store/blog/cardcash-howto.html,yes,yes,none,
+https://pay24.store/blog/cardcash-phonecash-howto.html,yes,yes,none,
+https://pay24.store/blog/phonecash-review.html,yes,yes,none,
+https://pay24.store/blog/2025-05-29-cardcash-guide.html,yes,yes,consider-redirect,dated file exists and canonical points to short path
+https://pay24.store/blog/2025-05-26-sample.html,yes,yes,none,sample post
