@@ -547,7 +547,8 @@
             kakaoBtn.setAttribute('href', url);
         }
 
-                // posts.json에서 블로그 글 목록을 동적으로 불러오기
+                // posts.json에서 소식(뉴스/콘텐츠)을 동적으로 불러오기
+                // 우선순위: 오늘(로컬) 날짜의 뉴스 항목을 최상단에 노출, 없으면 최신 항목으로 채움. 최대 3개 표시.
                 fetch('posts.json')
                     .then(response => response.json())
                     .then(postsData => {
@@ -559,18 +560,30 @@
                             return;
                         }
 
-                        // URL에서 YYYY-MM-DD 추출 (blog/2025-10-26-...)
                         function pickDateFromUrl(url){
                             try{
                                 const m = /blog\/(\d{4}-\d{2}-\d{2})-/.exec(url || '');
                                 return m ? m[1] : null;
                             }catch(e){ return null; }
                         }
-                        function toNum(d){ return d ? Number(d.replace(/-/g,'')) : 0; }
+                        function toNum(d){ return d ? Number(String(d).replace(/-/g,'')) : 0; }
 
-                        // 블로그 가이드는 제외하고(뉴스/콘텐츠 중심 노출), 정렬 우선순위: URL 날짜(desc) > post.date(desc)
-                        const source = postsData.filter(p => (p.category||'') !== '블로그');
-                        const sorted = source.slice().sort((a,b)=>{
+                        // 블로그(카테고리 '블로그')는 제외하고 뉴스/콘텐츠 중심으로 선택
+                        const source = postsData.filter(p => (p.category||'').toLowerCase() !== '블로그' && (p.url||'').startsWith('blog/'));
+
+                        // 오늘 날짜(로컬) 계산
+                        const today = new Date();
+                        const pad = n => String(n).padStart(2,'0');
+                        const todayStr = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+
+                        // 날짜 추출 우선순위: URL에 있는 날짜 > post.date
+                        function getDateStr(post){
+                            return pickDateFromUrl(post.url) || (post.date || '');
+                        }
+
+                        // 오늘자 항목과 나머지로 분리
+                        const todays = source.filter(p => getDateStr(p) === todayStr);
+                        const others = source.filter(p => getDateStr(p) !== todayStr).slice().sort((a,b)=>{
                             const au = pickDateFromUrl(a.url);
                             const bu = pickDateFromUrl(b.url);
                             const cmpU = toNum(bu) - toNum(au);
@@ -580,9 +593,31 @@
                             return bd - ad;
                         });
 
-                        // 최신 3개 글만 표시
-                        sorted.slice(0,3).forEach(post => {
-                            const displayDate = pickDateFromUrl(post.url) || (post.date || '');
+                        let finalList = [];
+                        if (todays.length > 0) {
+                            // 오늘자 항목을 먼저, 그 다음 최신 순서로 채운다.
+                            finalList = todays.concat(others).slice(0,3);
+                        } else {
+                            finalList = others.slice(0,3);
+                        }
+
+                        // 섹션 타이틀 변경(오늘 뉴스가 있으면 강조)
+                        const sectionTitle = document.querySelector('#blog .text-3xl');
+                        if (sectionTitle) {
+                            if (todays.length > 0) {
+                                sectionTitle.textContent = '오늘의 뉴스';
+                            } else {
+                                sectionTitle.textContent = '오렌지Pay 최신 소식';
+                            }
+                        }
+
+                        if (finalList.length === 0) {
+                            blogList.innerHTML = `<li class="p-6 text-center text-slate-500">표시할 소식이 없습니다.</li>`;
+                            return;
+                        }
+
+                        finalList.forEach(post => {
+                            const displayDate = getDateStr(post) || '';
                             const li = document.createElement('li');
                             li.innerHTML = `
                                 <a href="${post.url}" class="block p-6 hover:bg-slate-50 transition-colors duration-200">
@@ -596,13 +631,13 @@
                             blogList.appendChild(li);
                         });
                     })
-          .catch(error => {
-            console.error('Error fetching blog posts:', error);
-            const blogList = document.getElementById('blog-list');
-            if (blogList) {
-              blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
-            }
-          });
+                    .catch(error => {
+                        console.error('Error fetching blog posts:', error);
+                        const blogList = document.getElementById('blog-list');
+                        if (blogList) {
+                            blogList.innerHTML = `<li class="p-6 text-center text-red-500">최신 글을 표시하는 데 실패했습니다.</li>`;
+                        }
+                    });
     </script>
 
 </body>
