@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2025-11-02-news-전기통신금융사기-이렇게-예방하자-경남매일.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-02</news:publication_date>
+      <news:title>전기통신금융사기 이렇게 예방하자 - 경남매일</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-11-02-news-제2의-skt해킹kt소액결제-막는다-lte-네트워크-보안-구멍-발견-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-02</news:publication_date>
+      <news:title>제2의 SKT해킹·KT소액결제 막는다… LTE 네트워크 보안 구멍 발견 - 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-11-02-news-영세자영업자를-위한-국세-신용카드납부-수수료-대폭-인하-카드한컷-멀티미디어-대한민국-정책브리핑.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-02</news:publication_date>
+      <news:title>영세자영업자를 위한 국세 신용카드납부 수수료 대폭 인하 - 카드/한컷 | 멀티미디어 - 대한민국 정책브리핑</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-11-01-news-한중-보이스피싱-온라인-사기범죄-대응-공조-양해각서-체결-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -64,39 +97,6 @@
       </news:publication>
       <news:publication_date>2025-11-01</news:publication_date>
       <news:title>우리카드, 국내 카드사 최초로 인니서 QR결제·출금 서비스 선보여 - 더페어</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-31-news-법조-인사이드-페이퍼-컴퍼니의-진화-보이스피싱리딩방-사기에도-동원-조선비즈-chosun-biz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-31</news:publication_date>
-      <news:title>[법조 인사이드] ‘페이퍼 컴퍼니’의 진화… 보이스피싱·리딩방 사기에도 동원 - 조선비즈 - Chosun Biz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-31-news-검찰-kt-소액결제-사기-중국-국적-남성-2명-구속기소-mbc-뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-31</news:publication_date>
-      <news:title>검찰, 'KT 소액결제 사기' 중국 국적 남성 2명 구속기소 - MBC 뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-10-31-news-영세자영업자를-위한-국세-신용카드납부-수수료-대폭-인하-대한민국-정책브리핑.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-31</news:publication_date>
-      <news:title>영세자영업자를 위한 국세 신용카드납부 수수료 대폭 인하 - 대한민국 정책브리핑</news:title>
     </news:news>
   </url>
 </urlset>
