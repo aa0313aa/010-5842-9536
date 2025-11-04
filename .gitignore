@@ -1,3 +1,15 @@
+# Editor/OS swap & backup files
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+~$*
+*$~
+*.DS_Store?
+Icon?
 seo-report.json
 node_modules/
 /.pnp/
