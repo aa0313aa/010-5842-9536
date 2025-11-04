@@ -55,6 +55,7 @@ const staticPages = [
   { loc: normalizeLoc('/contact.html'), changefreq: 'yearly', priority: '0.4' },
   { loc: normalizeLoc('/terms.html'), changefreq: 'yearly', priority: '0.3' },
   { loc: normalizeLoc('/privacy.html'), changefreq: 'yearly', priority: '0.3' },
+  { loc: normalizeLoc('/신용카드-현금화-업체-가이드-2025.html'), lastmod: latest, changefreq: 'monthly', priority: '0.9' },
   { loc: normalizeLoc('/visamastercard/virtualvisa-prepaid.html'), lastmod: formatDate('2025-09-10'), changefreq: 'monthly', priority: '0.9' }
 ];
 
