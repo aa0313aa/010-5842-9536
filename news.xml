@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2025-12-01-news-보이스피싱-사기당했는데흉기-들고-누나집-찾아간-50대-hankyungcom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-01</news:publication_date>
+      <news:title>보이스피싱 사기당했는데…흉기 들고 누나집 찾아간 50대 - hankyung.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-01-news-kt-소액결제-피해-사건-증거-은닉-의혹-압수수색-경기신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-01</news:publication_date>
+      <news:title>'KT 소액결제 피해 사건' 증거 은닉 의혹 압수수색 - 경기신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-01-news-병의원약국-신용카드-우대수수료율-입법-추진-데일리팜.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-01</news:publication_date>
+      <news:title>"병의원·약국, 신용카드 우대수수료율" 입법 추진 - 데일리팜</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-11-30-news-국세청-민생지원-국세-카드납부-수수료-내달-2일부터-전격-인하-ntn.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +75,6 @@
       </news:publication>
       <news:publication_date>2025-11-30</news:publication_date>
       <news:title>신용카드로 국세 낼 때 수수료 '반값'…내달 2일 시행 - 택스워치</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-11-29-news-민생경제-세정차원-뒷받침-국세청-카드납부수수료-내달-2일부터-전격-인하-한국세정신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-29</news:publication_date>
-      <news:title>"민생경제 세정차원 뒷받침" 국세청, 카드납부수수료 내달 2일부터 전격 인하 - 한국세정신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-11-29-news-010도-안심-못-해번호-위장으로-350억-대-피싱-사기-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-29</news:publication_date>
-      <news:title>“010도 안심 못 해”…‘번호 위장’으로 350억 대 ‘피싱 사기’ - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-11-29-news-kt-소액결제-해킹-일당-3명-추가-구속-조선일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-29</news:publication_date>
-      <news:title>KT 소액결제 해킹 일당 3명 추가 구속 - 조선일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-11-29-news-국세청-국세-납부대행-수수료-인하신용카드-04p-낮춰-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-29</news:publication_date>
-      <news:title>국세청 국세 납부대행 수수료 인하…신용카드 0.4%p 낮춰 - 네이트</news:title>
     </news:news>
   </url>
 </urlset>
