@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pay24.store/news/</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://pay24.store/신용카드-현금화-업체-가이드-2025.html</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,6 +49,24 @@
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-02-news-카드사-사칭-대출-사기-음성경찰-보이스피싱-예방-은행원에-감사장-전달-이머니뉴스.html</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-02-news-circle-ai-소액결제를-위해-openmind와-파트너십-체결-cryptopolitan.html</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-02-news-내달-2일부터-국세-신용카드-수수료-0807-인하-팝콘뉴스.html</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2025-12-01-news-보이스피싱-사기당했는데흉기-들고-누나집-찾아간-50대-hankyungcom.html</loc>
