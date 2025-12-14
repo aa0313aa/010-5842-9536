@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2025-12-14-news-울주군-공무원-사칭-사기-주의하세요-울산제일일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-14</news:publication_date>
+      <news:title>울주군 “공무원 사칭 사기 주의하세요” - 울산제일일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-14-news-휴대폰-소액결제-피해예방-대응요령-안내-서울pn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-14</news:publication_date>
+      <news:title>'휴대폰 소액결제' 피해예방 대응요령 안내 - 서울Pn</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-14-news-신용카드-해지-쉽게-잇따른-해킹-사태에-절차-간소화하는-카드사들-뉴닉.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-14</news:publication_date>
+      <news:title>"신용카드 해지 쉽게" 잇따른 해킹 사태에 절차 간소화하는 카드사들 - 뉴닉</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-12-13-news-경기남부경찰청-민생-위협하는-피싱사기-전담수사부서-신설-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2025-12-13</news:publication_date>
       <news:title>안산법원 KT 무단 소액결제 사건 … 첫 재판 열었다 - 반월신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-12-news-경기남부경찰-피싱사기-전담수사부서-신설민생범죄-대응-총력-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-12</news:publication_date>
-      <news:title>경기남부경찰, 피싱사기 전담수사부서 신설…"민생범죄 대응 총력" - 연합뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-12-news-충북도-의료비후불제-신용불량자도-지원세금-체납대출-사기는-제외-경향신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-12</news:publication_date>
-      <news:title>충북도, ‘의료비후불제’ 신용불량자도 지원···세금 체납·대출 사기는 제외 - 경향신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-12-news-핸드폰-개통하면-급전대출-대포폰-넘기고-15억-소액결제-탈탈-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-12</news:publication_date>
-      <news:title>핸드폰 개통하면 급전대출? 대포폰 넘기고 15억 소액결제 탈탈 - 연합뉴스</news:title>
     </news:news>
   </url>
 </urlset>
