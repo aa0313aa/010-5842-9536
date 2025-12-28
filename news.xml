@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2025-12-28-news-신한은행-외부인-사기로-29억-금융사고내부점검-아닌-수사과정서-인지-조세금융신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-28</news:publication_date>
+      <news:title>신한은행, 외부인 사기로 29억 금융사고…내부점검 아닌 수사과정서 인지 - 조세금융신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2025-12-28-news-kt-무단-소액결제-위약금-딜레마전-고객-면제-목소리-커져-msn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-28</news:publication_date>
+      <news:title>KT 무단 소액결제 '위약금' 딜레마...전 고객 면제 목소리 커져 - MSN</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-12-27-news-코인베이스-사용자들-23세-뉴욕-청년이-운영하는-피싱-사기에-16만-달러-피해-financefeeds.html</loc>
     <news:news>
       <news:publication>
@@ -20,28 +42,6 @@
       </news:publication>
       <news:publication_date>2025-12-27</news:publication_date>
       <news:title>KT 소액결제 사태 연내 최종 결과 발표…새 출발 앞둔 박윤영號, 제재 수위 ‘촉각’ - CEO스코어데일리</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-26-news-어머니-치료비-대출하려다-전화-금융사기-연루-50대-무죄-서울신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-26</news:publication_date>
-      <news:title>어머니 치료비 대출하려다 전화 금융사기 연루 50대 무죄 - 서울신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-26-news-kt-무단-소액결제-조사-결과-발표-임박미스터리-풀리나-디지털투데이.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-26</news:publication_date>
-      <news:title>KT 무단 소액결제 조사 결과 발표 임박...미스터리 풀리나 - 디지털투데이</news:title>
     </news:news>
   </url>
 </urlset>
