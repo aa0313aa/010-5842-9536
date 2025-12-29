@@ -28,54 +28,54 @@ const BUSINESS = {
   kakaoLink: 'https://pf.kakao.com/_SBFexb/chat'
 };
 
-function ensureDir(p){ if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
-function ymd(date = new Date()){
+function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
+function ymd(date = new Date()) {
   const y = date.getFullYear();
-  const m = String(date.getMonth()+1).padStart(2,'0');
-  const d = String(date.getDate()).padStart(2,'0');
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
   return `${y}-${m}-${d}`;
 }
-function toAbs(rel){ return SITE_URL.replace(/\/$/, '') + '/' + rel.replace(/^\//, ''); }
-function htmlEscape(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function loadJson(file, fallback){ try { return JSON.parse(fs.readFileSync(file,'utf8')); } catch(e){ return fallback; } }
-function saveJson(file, data){ fs.writeFileSync(file, JSON.stringify(data, null, 2), 'utf8'); }
-function stripHtml(html){
+function toAbs(rel) { return SITE_URL.replace(/\/$/, '') + '/' + rel.replace(/^\//, ''); }
+function htmlEscape(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function loadJson(file, fallback) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { return fallback; } }
+function saveJson(file, data) { fs.writeFileSync(file, JSON.stringify(data, null, 2), 'utf8'); }
+function stripHtml(html) {
   if (!html) return '';
   try {
     const $ = cheerio.load(String(html));
-    return $('body').text().replace(/\s+/g,' ').trim();
-  } catch(e){
-    return String(html).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+    return $('body').text().replace(/\s+/g, ' ').trim();
+  } catch (e) {
+    return String(html).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   }
 }
-function cut(str, max=280){
-  const s = String(str||'').trim();
+function cut(str, max = 280) {
+  const s = String(str || '').trim();
   if (s.length <= max) return s;
-  return s.slice(0, max-1).trim() + '…';
+  return s.slice(0, max - 1).trim() + '…';
 }
-function slugify(title){
-  const base = String(title||'news').toLowerCase()
-    .replace(/[^a-z0-9가-힣\s-]/g,'')
-    .replace(/\s+/g,'-')
-    .replace(/-+/g,'-')
+function slugify(title) {
+  const base = String(title || 'news').toLowerCase()
+    .replace(/[^a-z0-9가-힣\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
     .slice(0, 60)
-    .replace(/^-+|-+$/g,'');
+    .replace(/^-+|-+$/g, '');
   return base || 'news';
 }
 
-function svgEscape(s){
-  return String(s||'')
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;')
-    .replace(/'/g,'&#39;');
+function svgEscape(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 // 텍스트 기반 카테고리 추출 (뉴스 분류 보조)
-function categorizeFromText(text){
-  const t = String(text||'').toLowerCase();
-  const has = (kw)=> t.includes(kw);
+function categorizeFromText(text) {
+  const t = String(text || '').toLowerCase();
+  const has = (kw) => t.includes(kw);
   if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
   if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
   if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
@@ -83,7 +83,7 @@ function categorizeFromText(text){
   return '뉴스';
 }
 
-async function generateOgForPost({ baseName, title, category }){
+async function generateOgForPost({ baseName, title, category }) {
   // Create branded OG image from title/category as SVG → WEBP/JPG
   try {
     if (!sharp) sharp = require('sharp');
@@ -107,22 +107,22 @@ async function generateOgForPost({ baseName, title, category }){
   </defs>
   <rect width="1200" height="630" fill="url(#g1)"/>
   <rect x="40" y="40" width="1120" height="550" rx="20" fill="white" opacity="0.82"/>
-  <text x="60" y="120" fill="#f97316" font-size="36" font-weight="700">${svgEscape(category||'뉴스')}</text>
+  <text x="60" y="120" fill="#f97316" font-size="36" font-weight="700">${svgEscape(category || '뉴스')}</text>
   <text x="60" y="180" fill="#0f172a" font-size="56" font-weight="800">
-    <tspan>${svgEscape(String(title||'').slice(0,30))}</tspan>
+    <tspan>${svgEscape(String(title || '').slice(0, 30))}</tspan>
   </text>
   <text x="60" y="250" fill="#0f172a" font-size="42" font-weight="700">
-    <tspan>${svgEscape(String(title||'').slice(30,70))}</tspan>
+    <tspan>${svgEscape(String(title || '').slice(30, 70))}</tspan>
   </text>
   <text x="60" y="310" fill="#334155" font-size="32" font-weight="600">
-    <tspan>${svgEscape(String(title||'').slice(70,120))}</tspan>
+    <tspan>${svgEscape(String(title || '').slice(70, 120))}</tspan>
   </text>
   <text x="60" y="520" fill="#475569" font-size="28" font-weight="600">오렌지Pay</text>
   <text x="60" y="560" fill="#64748b" font-size="22">pay24.store</text>
 </svg>`;
     const svgBuf = Buffer.from(svg);
-    await sharp(svgBuf).resize(1200,630).webp({ quality: 92 }).toFile(outWebp);
-    await sharp(svgBuf).resize(1200,630).jpeg({ quality: 88 }).toFile(outJpg);
+    await sharp(svgBuf).resize(1200, 630).webp({ quality: 92 }).toFile(outWebp);
+    await sharp(svgBuf).resize(1200, 630).jpeg({ quality: 88 }).toFile(outJpg);
     return { webp: '/img/og/' + baseName + '-og.webp', jpg: '/img/og/' + baseName + '-og.jpg' };
   } catch (e) {
     console.warn('Per-post OG 생성 스킵:', e && e.message ? e.message : e);
@@ -130,7 +130,7 @@ async function generateOgForPost({ baseName, title, category }){
   }
 }
 
-async function tryGenerateAIImage({ title, summary, category, baseName }){
+async function tryGenerateAIImage({ title, summary, category, baseName }) {
   // Optionally generate an AI thumbnail using OpenAI if OPENAI_API_KEY is present.
   try {
     const apiKey = process.env.OPENAI_API_KEY;
@@ -161,7 +161,7 @@ async function tryGenerateAIImage({ title, summary, category, baseName }){
   }
 }
 
-async function fetchCandidates(opts={}){
+async function fetchCandidates(opts = {}) {
   const { filter = '', windowDaysOverride = null, seenIds = new Set() } = opts;
   const parser = new Parser({ timeout: 15000 });
   const sources = loadJson(SOURCES_FILE, []);
@@ -201,7 +201,7 @@ async function fetchCandidates(opts={}){
   return items;
 }
 
-function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, image=DEFAULT_OG, category='뉴스', tags=[], perPostOgRel=null}){
+function buildHtml({ title, description, slug, pubIso, sourceName, sourceUrl, image = DEFAULT_OG, category = '뉴스', tags = [], perPostOgRel = null }) {
   const today = ymd();
   const fileName = `${today}-news-${slug}.html`;
   const relUrl = `blog/${fileName}`;
@@ -324,47 +324,93 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   <link rel="canonical" href="${absUrl}">
   <meta name="article:section" content="${htmlEscape(category)}">
   ${tags && tags.length ? `<meta name="keywords" content="${htmlEscape(tags.join(', '))}">` : ''}
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="${htmlEscape(title)}">
   <meta property="og:description" content="${htmlEscape(cut(description, 200))}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="${absUrl}">
   <meta property="og:image" content="${ogImg}">
   <meta property="og:image:width" content="1198">
-  <meta property="og:image:height" content="406">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="오렌지Pay">
+  <meta property="og:locale" content="ko_KR">
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${htmlEscape(title)}">
+  <meta name="twitter:description" content="${htmlEscape(cut(description, 200))}">
+  <meta name="twitter:image" content="${ogImg}">
+
+  <!-- Geo Meta Tags (Seoul, Korea) -->
+  <meta name="geo.region" content="KR-41">
+  <meta name="geo.placename" content="Seoul">
+  <meta name="geo.position" content="37.5665;126.9780">
+  <meta name="ICBM" content="37.5665, 126.9780">
+  
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="../css/tailwind.min.css">
+
+  <!-- Performance: Static CSS & Preload -->
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+  
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- JSON-LD: NewsArticle -->
   <script type="application/ld+json">
   ${JSON.stringify({
-    "@context":"https://schema.org",
-    "@type":"NewsArticle",
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
     "headline": title,
     "description": cut(description, 200),
     "image": toAbs(ogImg),
     "datePublished": pubIso,
     "dateModified": pubIso,
-    "author": {"@type":"Organization","name":"오렌지Pay","url": SITE_URL},
-    "publisher": {"@type":"Organization","name":"오렌지Pay","logo":{"@type":"ImageObject","url": toAbs('img/logo.png')}} ,
-    "mainEntityOfPage": {"@type":"WebPage","@id": absUrl},
+    "author": { "@type": "Organization", "name": "오렌지Pay", "url": SITE_URL },
+    "publisher": { "@type": "Organization", "name": "오렌지Pay", "logo": { "@type": "ImageObject", "url": toAbs('img/logo.png') } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": absUrl },
     "isBasedOn": sourceUrl,
     "citation": sourceUrl,
     "keywords": tags
   })}
   </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "${SITE_URL}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "${SITE_URL}blog/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "${htmlEscape(title)}",
+      "item": "${absUrl}"
+    }]
+  }
+  </script>
+
   <script type="application/ld+json">
   ${JSON.stringify({
-    "@context":"https://schema.org",
-    "@type":"Organization",
+    "@context": "https://schema.org",
+    "@type": "Organization",
     "name": BUSINESS.name,
     "url": SITE_URL,
-    "contactPoint":[{
-      "@type":"ContactPoint",
+    "contactPoint": [{
+      "@type": "ContactPoint",
       "telephone": BUSINESS.phoneIntl,
-      "contactType":"customer service",
-      "areaServed":"KR",
-      "availableLanguage":["ko"]
+      "contactType": "customer service",
+      "areaServed": "KR",
+      "availableLanguage": ["ko"]
     }]
   })}
   </script>
@@ -404,15 +450,15 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
         <div class="mt-5">
           <a href="${htmlEscape(sourceUrl)}" rel="nofollow noopener" target="_blank" class="inline-flex items-center px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">원문 기사 보기</a>
         </div>
-      </section>
-      ${ctaVariant==='top' ? keywordHtml : ''}
+        </section>
+      ${ctaVariant === 'top' ? keywordHtml : ''}
       ${keypoints}
       ${impact}
       ${checklist}
-    ${ctaVariant==='middle' ? keywordHtml : ''}
+    ${ctaVariant === 'middle' ? keywordHtml : ''}
   ${details}
       ${assistance}
-    ${ctaVariant==='bottom' ? keywordHtml : ''}
+    ${ctaVariant === 'bottom' ? keywordHtml : ''}
       ${contactHtml}
             </article>
           </main>
@@ -448,18 +494,18 @@ function buildHtml({title, description, slug, pubIso, sourceName, sourceUrl, ima
   return { fileName, relUrl, absUrl, html };
 }
 
-function normalizeTitle(s){
-  return String(s||'')
+function normalizeTitle(s) {
+  return String(s || '')
     .toLowerCase()
     .replace(/[^0-9a-z가-힣\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
-function tokenize(text){
+function tokenize(text) {
   const stop = new Set([
-    '기사','보도','속보','단독','전문','영상','사진','네이트','연합뉴스','news','뉴스','com','co','kr','www',
-    'http','https','관련','최신','정리','해설','분석','인터뷰','공식','발표','업데이트','추가','전체','요약'
+    '기사', '보도', '속보', '단독', '전문', '영상', '사진', '네이트', '연합뉴스', 'news', '뉴스', 'com', 'co', 'kr', 'www',
+    'http', 'https', '관련', '최신', '정리', '해설', '분석', '인터뷰', '공식', '발표', '업데이트', '추가', '전체', '요약'
   ]);
   return normalizeTitle(text)
     .split(' ')
@@ -467,7 +513,7 @@ function tokenize(text){
     .filter(t => t && t.length >= 2 && !stop.has(t));
 }
 
-function jaccardSimilarity(a, b){
+function jaccardSimilarity(a, b) {
   const A = new Set(tokenize(a));
   const B = new Set(tokenize(b));
   if (A.size === 0 || B.size === 0) return 0;
@@ -477,7 +523,7 @@ function jaccardSimilarity(a, b){
   return inter / union;
 }
 
-async function main(){
+async function main() {
   ensureDir(BLOG);
   const posts = loadJson(POSTS, []);
   const log = loadJson(LOG_FILE, []);
@@ -488,29 +534,29 @@ async function main(){
   let dryRun = false;
   let maxAgeDays = null;
   const idx = argv.indexOf('--filter');
-  if (idx !== -1 && argv[idx+1]) filter = argv[idx+1];
+  if (idx !== -1 && argv[idx + 1]) filter = argv[idx + 1];
   const dryIdx = argv.indexOf('--dry-run');
   if (dryIdx !== -1) dryRun = true;
   const madIdx = argv.indexOf('--max-age-days');
-  if (madIdx !== -1 && argv[madIdx+1]) {
-    const n = parseInt(argv[madIdx+1], 10);
+  if (madIdx !== -1 && argv[madIdx + 1]) {
+    const n = parseInt(argv[madIdx + 1], 10);
     if (!isNaN(n) && n > 0) maxAgeDays = n;
   }
 
   let candidates = await fetchCandidates({ filter, windowDaysOverride: maxAgeDays, seenIds: seen });
   if (filter) {
     const lower = filter.toLowerCase();
-    candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
+    candidates = candidates.filter(c => (c.title || '').toLowerCase().includes(lower) || (c.summary || '').toLowerCase().includes(lower));
   }
-  if (!candidates.length){
+  if (!candidates.length) {
     console.log('No new news within 7 days. Trying older items as fallback...');
     // fallback: 가장 최신 1건을 가져오기 위해 seen 무시하고 각 피드에서 1개씩 시도
     try {
       const parser = new Parser({ timeout: 15000 });
       const sources = loadJson(SOURCES_FILE, []);
-      for (const src of sources){
+      for (const src of sources) {
         const res = await parser.parseURL(src.feed);
-        if (res.items && res.items.length){
+        if (res.items && res.items.length) {
           const it = res.items[0];
           candidates = [{
             source: src.name || (res.title || 'RSS'),
@@ -523,14 +569,14 @@ async function main(){
           break;
         }
       }
-    } catch(e){ /* ignore */ }
+    } catch (e) { /* ignore */ }
   }
   // re-apply filter after fallback selection
   if (filter && candidates.length) {
     const lower = filter.toLowerCase();
-    candidates = candidates.filter(c => (c.title||'').toLowerCase().includes(lower) || (c.summary||'').toLowerCase().includes(lower));
+    candidates = candidates.filter(c => (c.title || '').toLowerCase().includes(lower) || (c.summary || '').toLowerCase().includes(lower));
   }
-  if (!candidates.length){
+  if (!candidates.length) {
     console.log('No news available from sources.');
     return;
   }
@@ -543,9 +589,9 @@ async function main(){
   const SOURCE_COOLDOWN_DAYS = 2; // 최근 2일 내 동일 매체 제외
   const KEYWORD_WINDOW = 15; // 키워드 편중 측정 창 크기(최근 N개 제목)
   const KEYWORD_REPEAT_THRESHOLD = 3; // 특정 키워드가 최근 창에서 N회 이상이면 패널티
-  const KEYWORD_EXCLUDE = new Set(['휴대폰소액결제','소액결제','신용카드현금화','비상금','현금화','소액급전']);
-  const cutoff = Date.now() - RECENT_DAYS*24*60*60*1000;
-  const simCutoff = Date.now() - SIM_CUTOFF_DAYS*24*60*60*1000;
+  const KEYWORD_EXCLUDE = new Set(['휴대폰소액결제', '소액결제', '신용카드현금화', '비상금', '현금화', '소액급전']);
+  const cutoff = Date.now() - RECENT_DAYS * 24 * 60 * 60 * 1000;
+  const simCutoff = Date.now() - SIM_CUTOFF_DAYS * 24 * 60 * 60 * 1000;
   const recentTitleSet = new Set(posts
     .filter(p => {
       const ts = Date.parse(p.date);
@@ -558,39 +604,39 @@ async function main(){
     return !isNaN(ts) ? (ts >= simCutoff) : false;
   });
   // 최근 소스(매체) 쿨다운 대상 수집: 최근 SOURCE_COOLDOWN_DAYS 내 게시의 태그에서 매체 유추
-  const recentSources = new Set(posts.filter(p=>{
+  const recentSources = new Set(posts.filter(p => {
     const ts = Date.parse(p.date);
     return !isNaN(ts) ? (ts >= simCutoff) : false;
   }).flatMap(p => Array.isArray(p.tags) ? p.tags : []));
   // 카테고리 다양성 측정용: 최근 DIVERSITY_WINDOW 포스트 카테고리 카운트
   const recentWindow = posts.slice(0, DIVERSITY_WINDOW); // posts는 선두에 최신이 unshift됨
-  const catCount = recentWindow.reduce((acc,p)=>{
+  const catCount = recentWindow.reduce((acc, p) => {
     const c = p.category || '기타';
-    acc[c] = (acc[c]||0)+1;
+    acc[c] = (acc[c] || 0) + 1;
     return acc;
-  },{});
+  }, {});
   const maxPerCat = Math.floor(DIVERSITY_WINDOW * MAX_CATEGORY_RATIO);
   // 키워드 편중 측정: 최근 KEYWORD_WINDOW 제목 토큰 빈도
-  const recentKw = posts.slice(0, KEYWORD_WINDOW).reduce((acc,p)=>{
+  const recentKw = posts.slice(0, KEYWORD_WINDOW).reduce((acc, p) => {
     const toks = tokenize(p.title);
-    for (const t of toks){
+    for (const t of toks) {
       if (KEYWORD_EXCLUDE.has(t)) continue;
-      acc[t] = (acc[t]||0)+1;
+      acc[t] = (acc[t] || 0) + 1;
     }
     return acc;
-  },{});
+  }, {});
   let picked = null;
   // 1) 동일 제목(정규화) 제외 + 2) 최근 2일 내 유사 제목 제외
   // 후보에 카테고리 사전 주입
   const enriched = candidates.map(c => ({
     ...c,
-    _cat: (filter ? filter : categorizeFromText(`${c.title} ${c.summary||''}`))
+    _cat: (filter ? filter : categorizeFromText(`${c.title} ${c.summary || ''}`))
   }));
 
   const filtered = enriched.filter(c => {
     const norm = normalizeTitle(c.title);
     if (recentTitleSet.has(norm)) return false;
-    for (const rp of recentForSim){
+    for (const rp of recentForSim) {
       if (jaccardSimilarity(rp.title, c.title) >= SIM_THRESHOLD) return false;
     }
     return true;
@@ -598,18 +644,18 @@ async function main(){
   // 동일 매체 쿨다운: 최근 SOURCE_COOLDOWN_DAYS 내에 같은 source가 태그에 존재하면 제외
   const afterSource = (filtered.length ? filtered : enriched).filter(c => !recentSources.has(c.source));
   // 카테고리 다양성: 허용치 초과 카테고리는 제외(단, 모든 후보가 제외되면 완화)
-  const nonOverrep = afterSource.filter(c => (catCount[c._cat]||0) < maxPerCat);
+  const nonOverrep = afterSource.filter(c => (catCount[c._cat] || 0) < maxPerCat);
   const diversityStage = nonOverrep.length ? nonOverrep : afterSource;
   // 키워드 편중: 최근 창에서 고빈도 키워드를 과다 포함한 제목은 제외(단, 모두 제외되면 완화)
   const kwFiltered = diversityStage.filter(c => {
-    const toks = tokenize(c.title).filter(t=>!KEYWORD_EXCLUDE.has(t));
+    const toks = tokenize(c.title).filter(t => !KEYWORD_EXCLUDE.has(t));
     // 고빈도 토큰이 하나라도 임계 이상이면 제외
-    return !toks.some(t => (recentKw[t]||0) >= KEYWORD_REPEAT_THRESHOLD);
+    return !toks.some(t => (recentKw[t] || 0) >= KEYWORD_REPEAT_THRESHOLD);
   });
   const finalStage = kwFiltered.length ? kwFiltered : diversityStage;
 
-  for (const c of (finalStage.length ? finalStage : enriched)){
-    if (!recentTitleSet.has(normalizeTitle(c.title))){
+  for (const c of (finalStage.length ? finalStage : enriched)) {
+    if (!recentTitleSet.has(normalizeTitle(c.title))) {
       picked = c;
       break;
     }
@@ -617,9 +663,9 @@ async function main(){
   if (!picked) picked = candidates[0];
   const slug = slugify(picked.title);
   // derive category/tags for meta and posts.json
-  function categorizeFromText(text){
-    const t = String(text||'').toLowerCase();
-    const has = (kw)=> t.includes(kw);
+  function categorizeFromText(text) {
+    const t = String(text || '').toLowerCase();
+    const has = (kw) => t.includes(kw);
     if (has('민생') || has('물가') || has('서민') || has('취약') || has('지원')) return '민생';
     if (has('피싱') || has('스미싱') || has('보이스피싱') || has('사기') || has('카드깡')) return '사기';
     if (has('소액결제') || has('정보이용료') || has('휴대폰')) return '소액결제';
@@ -629,8 +675,8 @@ async function main(){
   const cat = filter ? filter : categorizeFromText(`${picked.title} ${picked.summary}`);
   const tags = Array.from(new Set([
     cat,
-    (picked.source||'').replace(/\s+/g,' ').trim(),
-    ...((picked.title||'').split(/\s+/).filter(w=>w.length>=2).slice(0,5))
+    (picked.source || '').replace(/\s+/g, ' ').trim(),
+    ...((picked.title || '').split(/\s+/).filter(w => w.length >= 2).slice(0, 5))
   ].filter(Boolean)));
   const built = buildHtml({
     title: picked.title,
@@ -644,7 +690,7 @@ async function main(){
     tags,
     perPostOgRel: null // will be set after OG generation below
   });
-  if (dryRun){
+  if (dryRun) {
     console.log('[DRY RUN] Would publish:', built.relUrl);
     console.log('[DRY RUN] Title:', picked.title);
     console.log('[DRY RUN] Category:', cat, 'Tags:', tags.join(', '));
@@ -697,22 +743,22 @@ async function main(){
   // Ensure OG image exists for default site image to avoid social preview delay
   try {
     if (!sharp) sharp = require('sharp');
-    const ogSrcRel = DEFAULT_OG.replace(/^\//,'');
+    const ogSrcRel = DEFAULT_OG.replace(/^\//, '');
     const ogSrcAbs = path.join(ROOT, ogSrcRel);
     const outBase = path.join(path.dirname(ogSrcAbs), path.basename(ogSrcAbs, path.extname(ogSrcAbs)));
     const outWebp = outBase + '-og.webp';
     const outJpg = outBase + '-og.jpg';
     const needWebp = !fs.existsSync(outWebp);
     const needJpg = !fs.existsSync(outJpg);
-    if (fs.existsSync(ogSrcAbs) && (needWebp || needJpg)){
-      await sharp(ogSrcAbs).resize(1200,630,{fit:'cover'}).webp({quality:88}).toFile(outWebp);
-      await sharp(ogSrcAbs).resize(1200,630,{fit:'cover'}).jpeg({quality:86}).toFile(outJpg);
+    if (fs.existsSync(ogSrcAbs) && (needWebp || needJpg)) {
+      await sharp(ogSrcAbs).resize(1200, 630, { fit: 'cover' }).webp({ quality: 88 }).toFile(outWebp);
+      await sharp(ogSrcAbs).resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 86 }).toFile(outJpg);
       console.log('OG 기본 이미지 생성 완료:', outWebp, outJpg);
     }
-  } catch(e){
+  } catch (e) {
     // sharp 미설치 등 환경 이슈 시 게시 흐름은 계속
     console.warn('OG 생성 스킵:', e && e.message ? e.message : e);
   }
 }
 
-main().catch(err=>{ console.error('publish-news failed:', err); process.exit(1); });
+main().catch(err => { console.error('publish-news failed:', err); process.exit(1); });

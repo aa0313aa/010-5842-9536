@@ -11,7 +11,8 @@
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
@@ -89,6 +90,35 @@
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"오렌지Pay","url":"https://pay24.store/","contactPoint":[{"@type":"ContactPoint","telephone":"+82-10-5842-9536","contactType":"customer service","areaServed":"KR","availableLanguage":["ko"]}]}
+  </script>
+
+  <meta name="geo.region" content="KR-41">
+  <meta name="geo.placename" content="Seoul">
+  <meta name="geo.position" content="37.5665;126.9780">
+  <meta name="ICBM" content="37.5665, 126.9780">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://pay24.store/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "https://pay24.store/blog/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "신용카드 현금화 및 휴대폰 소액결제 | 최저 수수료, 당일 빠른 입금 | 오렌지PAY",
+      "item": "https://pay24.store/blog/12.html"
+    }]
+  }
   </script>
 </head>
 <body class="bg-slate-50 text-slate-700">

@@ -20,6 +20,8 @@
     "publish:news:batch": "node scripts/publish-daily-news-batch.js",
     "daily:news": "node scripts/publish-news.js && node generate-sitemap.js && node generate-rss.js",
     "daily:news:batch": "node scripts/publish-daily-news-batch.js && node scripts/generate-og-images.js && node generate-sitemap.js && node generate-rss.js",
+    "start": "npx serve .",
+    "generate:all": "npm run build:css && node scripts/news-batch.js && node scripts/generate-og-images.js && node generate-sitemap.js && node generate-rss.js",
     "daily:news:multi": "node scripts/publish-news-multi.js --count 4 && node generate-sitemap.js && node generate-rss.js",
     "retrofit:cta:dry": "node scripts/insert-keyword-cta.js --dry-run --ab",
     "retrofit:cta": "node scripts/insert-keyword-cta.js --ab && node generate-sitemap.js && node generate-rss.js"
@@ -36,9 +38,10 @@
   },
   "homepage": "https://github.com/aa0313aa/010-5842-9536#readme",
   "dependencies": {
-    "rss-parser": "^3.13.0",
     "cheerio": "^1.0.0-rc.12",
-    "jsdom": "^22.1.0"
+    "glob": "^11.0.3",
+    "jsdom": "^22.1.0",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.1.14",

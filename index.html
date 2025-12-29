@@ -59,7 +59,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Static CSS (Performance) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
 
     <!-- Font Awesome -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -88,29 +90,11 @@
             transform: rotate(180deg);
         }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        orange: {
-                            '50': '#fff7ed',
-                            '100': '#ffedd5',
-                            '200': '#fed7aa',
-                            '300': '#fdba74',
-                            '400': '#fb923c',
-                            '500': '#f97316',
-                            '600': '#ea580c',
-                            '700': '#c2410c',
-                            '800': '#9a3412',
-                            '900': '#7c2d12',
-                        },
-                        kakao: '#FEE500',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Geo Meta Tags (Seoul, Korea) -->
+    <meta name="geo.region" content="KR-41">
+    <meta name="geo.placename" content="Seoul">
+    <meta name="geo.position" content="37.5665;126.9780">
+    <meta name="ICBM" content="37.5665, 126.9780">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -207,8 +191,21 @@
             }
         }
         </script>
-        <!-- Add your Google site verification meta here if you use Search Console -->
-        <!-- <meta name="google-site-verification" content="YOUR_TOKEN_HERE" /> -->
+        </script>
+
+        <!-- BreadcrumbList JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://pay24.store/"
+          }]
+        }
+        </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
