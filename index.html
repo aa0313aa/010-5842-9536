@@ -59,14 +59,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    <!-- Static CSS (Performance) -->
-    <link rel="stylesheet" href="css/tailwind.min.css">
-    <link rel="preload" href="css/tailwind.min.css" as="style">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome (use jsDelivr for better availability) -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" as="style" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom Styles & Tailwind Config -->
     <style>
@@ -90,11 +88,29 @@
             transform: rotate(180deg);
         }
     </style>
-    <!-- Geo Meta Tags (Seoul, Korea) -->
-    <meta name="geo.region" content="KR-41">
-    <meta name="geo.placename" content="Seoul">
-    <meta name="geo.position" content="37.5665;126.9780">
-    <meta name="ICBM" content="37.5665, 126.9780">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            '50': '#fff7ed',
+                            '100': '#ffedd5',
+                            '200': '#fed7aa',
+                            '300': '#fdba74',
+                            '400': '#fb923c',
+                            '500': '#f97316',
+                            '600': '#ea580c',
+                            '700': '#c2410c',
+                            '800': '#9a3412',
+                            '900': '#7c2d12',
+                        },
+                        kakao: '#FEE500',
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -191,20 +207,8 @@
             }
         }
         </script>
-
-        <!-- BreadcrumbList JSON-LD -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "홈",
-            "item": "https://pay24.store/"
-          }]
-        }
-        </script>
+        <!-- Add your Google site verification meta here if you use Search Console -->
+        <!-- <meta name="google-site-verification" content="YOUR_TOKEN_HERE" /> -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
