@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-01-news-제주도-올해-민생안정경제활력에-2145억원-투입-헤드라인제주.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-01</news:publication_date>
+      <news:title>제주도, 올해 민생안정･경제활력에 2145억원 투입 - 헤드라인제주</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-01-news-스마트폰-담보-대출-사기수천대-꿀꺽-mbn-홈페이지.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-01</news:publication_date>
+      <news:title>스마트폰 담보 대출 사기…수천대 꿀꺽 - MBN 홈페이지</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-01-news-소액결제-피해-kt-고객-위약금-면제-뉴스엔뷰.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-01</news:publication_date>
+      <news:title>'소액결제 피해' KT, 全고객 위약금 면제 - 뉴스엔뷰</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2025-12-31-news-피싱해외취업사기-성과낸-경찰사제총기유인미수-대응-낙제점-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -20,39 +53,6 @@
       </news:publication>
       <news:publication_date>2025-12-31</news:publication_date>
       <news:title>KT 소액결제 사기 사건 첫 재판‥혐의 대부분 인정 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-30-news-충청권-일부-새마을금고-부실대출전세사기-잇따라-대전일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-30</news:publication_date>
-      <news:title>충청권 일부 새마을금고 부실대출·전세사기 잇따라 - 대전일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-30-news-무단-소액결제와-해킹-관련-브리핑-고개-숙인-김영섭-kt-사장-데일리한국.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-30</news:publication_date>
-      <news:title>무단 소액결제와 해킹 관련 브리핑, 고개 숙인 김영섭 KT 사장 - 데일리한국</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-30-news-하나카드-11월-신용카드업계-소비자-관심도-1위-등극kb국민삼성카드-순-빅데이터뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-30</news:publication_date>
-      <news:title>'하나카드' 11월 신용카드업계 소비자 관심도 1위 등극…KB국민·삼성카드 순 - 빅데이터뉴스</news:title>
     </news:news>
   </url>
 </urlset>
