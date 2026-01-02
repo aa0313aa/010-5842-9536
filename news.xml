@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-02-news-새해-키워드는-민생경제-회복소비일자리기업육성-세토끼-잡는다-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-02</news:publication_date>
+      <news:title>새해 키워드는 민생경제 회복…소비·일자리·기업육성 세토끼 잡는다 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-02-news-미국-내-전화금융사기-보이스-피싱-범죄-주의하세요-zum-뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-02</news:publication_date>
+      <news:title>미국 내 전화금융사기 '보이스 피싱' 범죄 주의하세요 - ZUM 뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-02-news-kt-소액결제-사기-사건-첫-재판혐의-대부분-인정-newsimbccom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-02</news:publication_date>
+      <news:title>KT 소액결제 사기 사건 첫 재판‥혐의 대부분 인정 - news.imbc.com</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-01-news-제주도-올해-민생안정경제활력에-2145억원-투입-헤드라인제주.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +64,6 @@
       </news:publication>
       <news:publication_date>2026-01-01</news:publication_date>
       <news:title>'소액결제 피해' KT, 全고객 위약금 면제 - 뉴스엔뷰</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-31-news-피싱해외취업사기-성과낸-경찰사제총기유인미수-대응-낙제점-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-31</news:publication_date>
-      <news:title>피싱·해외취업사기 성과낸 경찰…사제총기·유인미수 대응 '낙제점' - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2025-12-31-news-kt-소액결제-사기-사건-첫-재판혐의-대부분-인정-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-31</news:publication_date>
-      <news:title>KT 소액결제 사기 사건 첫 재판‥혐의 대부분 인정 - v.daum.net</news:title>
     </news:news>
   </url>
 </urlset>
