@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-12-news-보이스피싱사기-피해-확산법무법인-신결-신속-대응-중심-피해구제-지원-강화-이투뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-12</news:publication_date>
+      <news:title>보이스피싱사기 피해 확산…법무법인 신결, 신속 대응 중심 피해구제 지원 강화 - 이투뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-12-news-kt-휴대폰-무단-소액결제군부대-유실-펨토셀-인증서까지-악용-조선일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-12</news:publication_date>
+      <news:title>KT 휴대폰 무단 소액결제…군부대 유실 펨토셀 인증서까지 악용 - 조선일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-12-news-트럼프-이자율-상한-주장에-신용카드사-주가-급락-fnnewscom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-12</news:publication_date>
+      <news:title>트럼프 이자율 상한 주장에 신용카드사 주가 급락 - fnnews.com</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-11-news-새해-키워드는-민생경제-회복소비일자리기업육성-세토끼-잡는다-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +75,6 @@
       </news:publication>
       <news:publication_date>2026-01-11</news:publication_date>
       <news:title>트럼프 '신용카드 금리 10% 상한'에 업계 반대…"신용 공급 축소된다" - 뉴스1</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-10-news-더민주세종혁신회의-김수현-상임대표-세종을-민생경제특별시로-금융공사물가안정위-신설-뉴스밴드.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-10</news:publication_date>
-      <news:title>더민주세종혁신회의 김수현 상임대표, “세종을 ‘민생경제특별시’로 금융공사·물가안정위 신설” - 뉴스밴드</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-10-news-ai가-문자-분석해-결제-사기-차단우리won뱅킹서-무료-신청-msn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-10</news:publication_date>
-      <news:title>AI가 문자 분석해 '결제 사기' 차단…'우리WON뱅킹'서 무료 신청 - MSN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-10-news-무단-소액결제와-해킹-관련해-입장-밝히는-김영섭-kt-사장-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-10</news:publication_date>
-      <news:title>무단 소액결제와 해킹 관련해 입장 밝히는 김영섭 KT 사장 - 연합뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-10-news-트럼프dent-신용카드-이자율-10-상한제-일시-도입-촉구-cryptopolitan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-10</news:publication_date>
-      <news:title>트럼프dent , 신용카드 이자율 10% 상한제 일시 도입 촉구 - Cryptopolitan</news:title>
     </news:news>
   </url>
 </urlset>
