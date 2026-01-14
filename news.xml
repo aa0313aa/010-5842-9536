@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-14-news-금융기관-사기-위협-상시화-매출신뢰-동시-잠식-통신-자산-관리가-최선책-지티티코리아.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14</news:publication_date>
+      <news:title>금융기관 사기 위협 상시화, 매출·신뢰 동시 잠식... 통신 자산 관리가 최선책 - 지티티코리아</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-14-news-kt-무단-소액결제-시도-지난해부터-있었다군부대-유실-인증서로-범행-kbs-뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14</news:publication_date>
+      <news:title>‘KT 무단 소액결제’ 시도 지난해부터 있었다…‘군부대 유실’ 인증서로 범행 - KBS 뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-14-news-뉴욕증시-신용카드-금리-규제-여파로-하락세-뉴스로드.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14</news:publication_date>
+      <news:title>뉴욕증시, 신용카드 금리 규제 여파로 하락세 - 뉴스로드</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-13-news-대전-전세사기-불법대출-재판사회적-시스템-노린-사기-행각-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-01-13</news:publication_date>
       <news:title>신용카드 금리·주택 매입 규제·연준 의장 수사…트럼프 돌발 정책에 월가 ‘출렁’ - 헤럴드경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-12-news-보이스피싱사기-피해-확산법무법인-신결-신속-대응-중심-피해구제-지원-강화-이투뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-12</news:publication_date>
-      <news:title>보이스피싱사기 피해 확산…법무법인 신결, 신속 대응 중심 피해구제 지원 강화 - 이투뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-12-news-kt-휴대폰-무단-소액결제군부대-유실-펨토셀-인증서까지-악용-조선일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-12</news:publication_date>
-      <news:title>KT 휴대폰 무단 소액결제…군부대 유실 펨토셀 인증서까지 악용 - 조선일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-12-news-트럼프-이자율-상한-주장에-신용카드사-주가-급락-fnnewscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-12</news:publication_date>
-      <news:title>트럼프 이자율 상한 주장에 신용카드사 주가 급락 - fnnews.com</news:title>
     </news:news>
   </url>
 </urlset>
