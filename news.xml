@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-15-news-금감원-보이스피싱-등-민생-범죄-특사경에-힘-싣는다-조선비즈-chosunbiz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-15</news:publication_date>
+      <news:title>금감원, 보이스피싱 등 민생 범죄 특사경에 힘 싣는다 - 조선비즈 - Chosunbiz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-15-news-대전-전세사기-불법대출-재판사회적-시스템-노린-사기-행각-노컷뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-15</news:publication_date>
+      <news:title>대전 전세사기 불법대출 재판…"사회적 시스템 노린 사기 행각" - 노컷뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-15-news-휴대폰-소액결제로-체크카드-쓴다bc카드-다우데이터-업무협약-뉴스1.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-15</news:publication_date>
+      <news:title>"휴대폰 소액결제로 체크카드 쓴다"…BC카드-다우데이터 업무협약 - 뉴스1</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-15-news-이슈-신용카드-모집인-급감카드사-제휴스테이블코인-먹거리-확장-분주-오늘경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-15</news:publication_date>
+      <news:title>[이슈] 신용카드 모집인 급감...카드사, 제휴·스테이블코인 먹거리 확장 분주 - 오늘경제</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-14-news-금융기관-사기-위협-상시화-매출신뢰-동시-잠식-통신-자산-관리가-최선책-지티티코리아.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-01-14</news:publication_date>
       <news:title>뉴욕증시, 신용카드 금리 규제 여파로 하락세 - 뉴스로드</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-13-news-대전-전세사기-불법대출-재판사회적-시스템-노린-사기-행각-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13</news:publication_date>
-      <news:title>대전 전세사기 불법대출 재판…"사회적 시스템 노린 사기 행각" - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-13-news-kt-소액결제-사건-개인정보-어디서-났나의문점-남긴-조사-한계-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13</news:publication_date>
-      <news:title>KT 소액결제 사건 개인정보 어디서 났나…의문점 남긴 조사 한계 - 연합뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-13-news-신용카드-금리주택-매입-규제연준-의장-수사트럼프-돌발-정책에-월가-출렁-헤럴드경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13</news:publication_date>
-      <news:title>신용카드 금리·주택 매입 규제·연준 의장 수사…트럼프 돌발 정책에 월가 ‘출렁’ - 헤럴드경제</news:title>
     </news:news>
   </url>
 </urlset>
