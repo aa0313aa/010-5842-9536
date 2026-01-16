@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-16-news-평택시-문자결제사기-피해-예방을-위한-안심문자서비스-도입-하나뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-16</news:publication_date>
+      <news:title>평택시, 문자결제사기 피해 예방을 위한 안심문자서비스 도입 - 하나뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-16-news-bc카드-다우데이타와-휴대폰-소액결제-충전-선불카드-출시-맞손-뉴스저널리즘.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-16</news:publication_date>
+      <news:title>BC카드, 다우데이타와 '휴대폰 소액결제 충전' 선불카드 출시 맞손 - 뉴스저널리즘</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-16-news-골드만삭스가-꼽은-트럼프표-신용카드-정책의-승자와-패자-benzinga.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-16</news:publication_date>
+      <news:title>골드만삭스가 꼽은 ‘트럼프표 신용카드 정책’의 승자와 패자 - Benzinga</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-15-news-금감원-보이스피싱-등-민생-범죄-특사경에-힘-싣는다-조선비즈-chosunbiz.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-01-15</news:publication_date>
       <news:title>[이슈] 신용카드 모집인 급감...카드사, 제휴·스테이블코인 먹거리 확장 분주 - 오늘경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-14-news-금융기관-사기-위협-상시화-매출신뢰-동시-잠식-통신-자산-관리가-최선책-지티티코리아.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-14</news:publication_date>
-      <news:title>금융기관 사기 위협 상시화, 매출·신뢰 동시 잠식... 통신 자산 관리가 최선책 - 지티티코리아</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-14-news-kt-무단-소액결제-시도-지난해부터-있었다군부대-유실-인증서로-범행-kbs-뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-14</news:publication_date>
-      <news:title>‘KT 무단 소액결제’ 시도 지난해부터 있었다…‘군부대 유실’ 인증서로 범행 - KBS 뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-14-news-뉴욕증시-신용카드-금리-규제-여파로-하락세-뉴스로드.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-14</news:publication_date>
-      <news:title>뉴욕증시, 신용카드 금리 규제 여파로 하락세 - 뉴스로드</news:title>
     </news:news>
   </url>
 </urlset>
