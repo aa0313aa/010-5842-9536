@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-20-news-보이스피싱-사기-당했다던-피해자잡고보니-캄보디아-범죄-조직원-매일신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-20</news:publication_date>
+      <news:title>"보이스피싱 사기 당했다"던 피해자…잡고보니 캄보디아 범죄 조직원 - 매일신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-20-news-kt-소액결제-범죄수익-중국-송금검찰-환전상에-징역-1년6개월-더퍼블릭.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-20</news:publication_date>
+      <news:title>KT 소액결제 범죄수익 중국 송금…검찰, 환전상에 징역 1년6개월 - 더퍼블릭</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-20-news-k-패스-전용-신용카드-7개-추가이용-문턱-낮춰-bbs불교방송.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-20</news:publication_date>
+      <news:title>‘K-패스’ 전용 신용카드 7개 추가…이용 문턱 낮춰 - BBS불교방송</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-19-news-기준금리-인하-끝자락-대출로-집-사기-더-어려워졌다-현대경제.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-01-19</news:publication_date>
       <news:title>BAC A BANK는 연초 소비 급증에 맞춰 '수수료 없는' 신용카드를 제공합니다. - Vietnam.vn</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-18-news-구윤철-부총리-추운-겨울-민생부터-챙긴다물가난방유류비-지원-속도-the-prcokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18</news:publication_date>
-      <news:title>구윤철 부총리 “추운 겨울, 민생부터 챙긴다”…물가·난방·유류비 지원 속도 - the-pr.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-18-news-평택시-문자결제사기-피해-예방-위한-안심문자서비스-도입-아시아타임즈.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18</news:publication_date>
-      <news:title>평택시, 문자결제사기 피해 예방 위한 안심문자서비스 도입 - 아시아타임즈</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-18-news-휴대폰-소액결제로-체크카드-쓴다bc카드-다우데이터-업무협약-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18</news:publication_date>
-      <news:title>"휴대폰 소액결제로 체크카드 쓴다"…BC카드-다우데이터 업무협약 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-18-news-트럼프-신용카드-금리-전쟁왜-월가는-물러서지-않나-edailycokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18</news:publication_date>
-      <news:title>트럼프 ‘신용카드 금리’ 전쟁…왜 월가는 물러서지 않나 - edaily.co.kr</news:title>
     </news:news>
   </url>
 </urlset>
