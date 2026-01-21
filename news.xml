@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-21-news-민생경제의-버팀목-충북-청주시-금융부터-소비일자리까지-든든하게-지원-cj-ilbocom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21</news:publication_date>
+      <news:title>민생경제의 버팀목 충북 청주시, 금융부터 소비·일자리까지 든든하게 지원 - cj-ilbo.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-21-news-안상미-전세사기-피해자위원장-전세대출-축소-원금은-집주인-책임으로-뉴스핌.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21</news:publication_date>
+      <news:title>안상미 전세사기 피해자위원장 "전세대출 축소, 원금은 집주인 책임으로" - 뉴스핌</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-21-news-약국가-소액결제-수수료-인상-돼-안-돼혼란-약사공론.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21</news:publication_date>
+      <news:title>약국가 "소액결제 수수료, 인상 돼? 안 돼?"…'혼란' - 약사공론</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-21-news-국내-신용카드사-스테이블코인-결제-인프라-박차-애플경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21</news:publication_date>
+      <news:title>국내 신용카드사, 스테이블코인 '결제 인프라' 박차 - 애플경제</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-20-news-보이스피싱-사기-당했다던-피해자잡고보니-캄보디아-범죄-조직원-매일신문.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-01-20</news:publication_date>
       <news:title>‘K-패스’ 전용 신용카드 7개 추가…이용 문턱 낮춰 - BBS불교방송</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-19-news-기준금리-인하-끝자락-대출로-집-사기-더-어려워졌다-현대경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-19</news:publication_date>
-      <news:title>기준금리 인하 끝자락… ‘대출로 집 사기’ 더 어려워졌다. - 현대경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-19-news-kt-소액결제-환전상-징역-1년6개월-구형-세이프타임즈.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-19</news:publication_date>
-      <news:title>KT 소액결제 환전상 … 징역 1년6개월 '구형' - 세이프타임즈</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-19-news-bac-a-bank는-연초-소비-급증에-맞춰-수수료-없는-신용카드를-제공합니다-vietnamvn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-19</news:publication_date>
-      <news:title>BAC A BANK는 연초 소비 급증에 맞춰 '수수료 없는' 신용카드를 제공합니다. - Vietnam.vn</news:title>
     </news:news>
   </url>
 </urlset>
