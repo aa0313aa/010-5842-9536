@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-22-news-청주시-소상공인-금융-지원청주페이-운영-등-민생경제-정책-추진-ccreviewcokr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-22</news:publication_date>
+      <news:title>청주시, 소상공인 금융 지원·청주페이 운영 등 민생경제 정책 추진 - ccreview.co.kr</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-22-news-서귀포서-휴무-중인-경찰관-보이스피싱-사기-막아-jemincom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-22</news:publication_date>
+      <news:title>서귀포서 휴무 중인 경찰관 보이스피싱 사기 막아 - jemin.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-22-news-kt-소액결제-자금세탁-도운-환전상에-징역-1년6개월-구형-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-22</news:publication_date>
+      <news:title>‘KT 소액결제’ 자금세탁 도운 환전상에 징역 1년6개월 구형 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-22-news-만-12세이상-미성년자도-가족-신용카드-발급-sedailycom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-22</news:publication_date>
+      <news:title>만 12세이상 미성년자도 가족 신용카드 발급 - sedaily.com</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-21-news-민생경제의-버팀목-충북-청주시-금융부터-소비일자리까지-든든하게-지원-cj-ilbocom.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +86,6 @@
       </news:publication>
       <news:publication_date>2026-01-21</news:publication_date>
       <news:title>국내 신용카드사, 스테이블코인 '결제 인프라' 박차 - 애플경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-20-news-보이스피싱-사기-당했다던-피해자잡고보니-캄보디아-범죄-조직원-매일신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-20</news:publication_date>
-      <news:title>"보이스피싱 사기 당했다"던 피해자…잡고보니 캄보디아 범죄 조직원 - 매일신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-20-news-kt-소액결제-범죄수익-중국-송금검찰-환전상에-징역-1년6개월-더퍼블릭.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-20</news:publication_date>
-      <news:title>KT 소액결제 범죄수익 중국 송금…검찰, 환전상에 징역 1년6개월 - 더퍼블릭</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-20-news-k-패스-전용-신용카드-7개-추가이용-문턱-낮춰-bbs불교방송.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-20</news:publication_date>
-      <news:title>‘K-패스’ 전용 신용카드 7개 추가…이용 문턱 낮춰 - BBS불교방송</news:title>
     </news:news>
   </url>
 </urlset>
