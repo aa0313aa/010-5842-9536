@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-01-29-news-포항시-설-민생경제-회복에-총력-글로벌경제신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-29</news:publication_date>
+      <news:title>포항시, 설 민생경제 회복에 총력 - 글로벌경제신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-29-news-임대인-대출-등-분석전세사기-징후-ai가-잡죠-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-29</news:publication_date>
+      <news:title>"임대인 대출 등 분석…전세사기 '징후' AI가 잡죠" - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-29-news-무단-소액결제-kt-서버도-해킹당했나kisa에-침해-정황-신고-경제한국일보-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-29</news:publication_date>
+      <news:title>'무단 소액결제' KT, 서버도 해킹당했나…KISA에 침해 정황 신고-경제ㅣ한국일보 - 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-01-29-news-카드사-콧대-낮아졌다작년-신용카드-평균-연회비-반토막-더페어.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-29</news:publication_date>
+      <news:title>카드사 ‘콧대’ 낮아졌다…작년 신용카드 평균 연회비 ‘반토막’ - 더페어</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-01-28-news-정부-설-민생안정-대책-발표-성수품-공급할인-역대-최대-대한일보.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-01-28</news:publication_date>
       <news:title>‘K-패스’ 전용 신용카드 7개 추가…27개 카드사 발급 가능 - KBS 뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-27-news-정부-설-앞두고-민생-지원-총력성수품-최대-50-할인고속도로-통행료-면제-청년일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-27</news:publication_date>
-      <news:title>정부, 설 앞두고 '민생 지원' 총력…성수품 최대 50% 할인·고속도로 통행료 면제 - 청년일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-27-news-인싸잇-단독-하나증권-본사-직원-연루-수십억-사기-사건-지속가능경영보고서엔-왜-0건-미디어워치.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-27</news:publication_date>
-      <news:title>[인싸잇] [단독] 하나증권 본사 직원 연루 수십억 사기 사건... 지속가능경영보고서엔 왜 ‘0’건(?) - 미디어워치</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-27-news-연이은-새벽-kt-소액결제-피해광명-이어-서울-금천서도-신고-잇따라-서울경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-27</news:publication_date>
-      <news:title>‘연이은 새벽 KT 소액결제 피해’…광명 이어 서울 금천서도 신고 잇따라 - 서울경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-01-27-news-미성년자도-가족-신용카드로-결제-편해진다금융위-여전업-규제-개편-추진-이코노믹데일리.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-27</news:publication_date>
-      <news:title>미성년자도 가족 신용카드로 결제 편해진다...금융위, 여전업 규제 개편 추진 - 이코노믹데일리</news:title>
     </news:news>
   </url>
 </urlset>
