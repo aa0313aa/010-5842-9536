@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-05-news-전북도-설-앞두고-민생안정-총력물가교통취약계층-집중-관리-위즈뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-05</news:publication_date>
+      <news:title>전북도, 설 앞두고 민생안정 총력…물가·교통·취약계층 집중 관리 - 위즈뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-05-news-피싱사기-특별단속5개월간-26만명-검거해외-127명-송환-goodtv뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-05</news:publication_date>
+      <news:title>피싱사기 특별단속...5개월간 2.6만명 검거·해외 127명 송환 - GOODTV뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-05-news-kt-무단-소액결제-범죄-수익금-중국-송금한-60대-징역형-구형-경기일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-05</news:publication_date>
+      <news:title>'KT 무단 소액결제' 범죄 수익금 중국 송금한 60대, 징역형 구형 - 경기일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-05-news-작년-신용카드-해지-소폭-증가국민카드-회원관리-전략-두각-아시아타임즈.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-05</news:publication_date>
+      <news:title>작년 신용카드 해지 소폭 '증가'…국민카드 회원관리 전략 '두각' - 아시아타임즈</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-04-news-김동연-생활비교통비돌봄임기-끝까지-민생-해결-lg헬로비전.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-02-04</news:publication_date>
       <news:title>휴면 신용카드 1700만장 돌파...고객관리 부담 가중 - 한스경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-03-news-제주도-설-명절-대비-민생경제-안정대책-수립-누리일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-03</news:publication_date>
-      <news:title>제주도, 설 명절 대비 민생경제 안정대책 수립 - 누리일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-03-news-신종-클라우드-결제-사기-기승-라디오코리아-모바일.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-03</news:publication_date>
-      <news:title>신종 클라우드 결제 사기 기승 - 라디오코리아 모바일</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-03-news-콜오브듀티-소액결제-앱스타인-파일과-연관-논란에-시끌-인벤.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-03</news:publication_date>
-      <news:title>콜오브듀티 소액결제, '앱스타인 파일'과 연관 논란에 "시끌" - 인벤</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-03-news-트럼프-이자율-상한-주장에-신용카드사-주가-급락-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-03</news:publication_date>
-      <news:title>트럼프 이자율 상한 주장에 신용카드사 주가 급락 - v.daum.net</news:title>
     </news:news>
   </url>
 </urlset>
