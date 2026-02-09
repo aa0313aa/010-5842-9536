@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-09-news-k자형-양극화-민생-경고음서울시-소상공인-27조-금융지원-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-09</news:publication_date>
+      <news:title>"'K자형 양극화' 민생 경고음"…서울시, 소상공인 2.7조 금융지원 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-09-news-소상공인-경영안정바우처-신청-시작-피싱사기-주의-fnnewscom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-09</news:publication_date>
+      <news:title>소상공인 경영안정바우처 신청 시작 "피싱사기 주의" - fnnews.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-09-news-kt-소액결제-피해-확산-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-09</news:publication_date>
+      <news:title>KT 소액결제 피해 확산 - 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-09-news-쓰지-않는-신용카드만-쌓인다카드사-비용-부담-커져-이투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-09</news:publication_date>
+      <news:title>쓰지 않는 신용카드만 쌓인다⋯카드사 비용 부담 커져 - 이투데이</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-08-news-교통비생활비양육비-부담-낮춘다광주광역시-설-맞이-민생정책-시행-웹이코노미.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +86,6 @@
       </news:publication>
       <news:publication_date>2026-02-08</news:publication_date>
       <news:title>‘K-패스’ 전용 신용카드 7개 추가…27개 카드사 발급 가능 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-07-news-전북도-설-명절-민생안정-종합대책-본격-가동-ceodailycokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-07</news:publication_date>
-      <news:title>전북도, 설 명절 민생안정 종합대책 본격 가동 - ceodaily.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-07-news-상주경찰-3억원대-피싱사기-예방특별성과-포상금-수상-경북신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-07</news:publication_date>
-      <news:title>상주경찰, 3억원대 피싱사기 예방...특별성과 포상금 수상 - 경북신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-07-news-미성년-체크신용카드-규제-완화내-아이-첫-신용카드는-뉴스웨이.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-07</news:publication_date>
-      <news:title>미성년 체크·신용카드 규제 완화···"내 아이 첫 신용카드는" - 뉴스웨이</news:title>
     </news:news>
   </url>
 </urlset>
