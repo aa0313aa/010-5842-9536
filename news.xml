@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-11-news-당정-설-민생창업금융-지원-총력-gukjenewscom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-11</news:publication_date>
+      <news:title>당정, 설 민생·창업·금융 지원 '총력' - gukjenews.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-11-news-장영란-지인에-억대-사기보이스-피싱장애인-됐다더니-죽은-사람-톱스타뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-11</news:publication_date>
+      <news:title>장영란, 지인에 억대 사기→보이스 피싱…“장애인 됐다더니 죽은 사람” - 톱스타뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-11-news-휴대폰-소액결제로-체크카드-쓴다bc카드-다우데이터-업무협약-뉴스1.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-11</news:publication_date>
+      <news:title>"휴대폰 소액결제로 체크카드 쓴다"…BC카드-다우데이터 업무협약 - 뉴스1</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-11-news-신용카드업계-실적-다시-뒷걸음질전년-대비-78-감소-스트레이트뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-11</news:publication_date>
+      <news:title>신용카드업계, 실적 다시 뒷걸음질…전년 대비 7.8% 감소 - 스트레이트뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-10-news-지갑은-채우고-걱정은-덜었다-수원시-새빛생활비패키지로-민생-안정-이끈다-서울뉴스통신.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-02-10</news:publication_date>
       <news:title>메리어트, 신용카드 수수료 급증… 특히 일본, UAE에서 강세 By Investing.com - Investing.com 한국어</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-09-news-k자형-양극화-민생-경고음서울시-소상공인-27조-금융지원-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-09</news:publication_date>
-      <news:title>"'K자형 양극화' 민생 경고음"…서울시, 소상공인 2.7조 금융지원 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-09-news-소상공인-경영안정바우처-신청-시작-피싱사기-주의-fnnewscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-09</news:publication_date>
-      <news:title>소상공인 경영안정바우처 신청 시작 "피싱사기 주의" - fnnews.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-09-news-kt-소액결제-피해-확산-한국일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-09</news:publication_date>
-      <news:title>KT 소액결제 피해 확산 - 한국일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-09-news-쓰지-않는-신용카드만-쌓인다카드사-비용-부담-커져-이투데이.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-09</news:publication_date>
-      <news:title>쓰지 않는 신용카드만 쌓인다⋯카드사 비용 부담 커져 - 이투데이</news:title>
     </news:news>
   </url>
 </urlset>
