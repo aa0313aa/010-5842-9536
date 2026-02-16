@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-16-news-광주시-민생패키지-정책-시행시민-생활비-부담-던다-국민일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-16</news:publication_date>
+      <news:title>광주시, 민생패키지 정책 시행…“시민 생활비 부담 던다” - 국민일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-16-news-전세대출-사기에-국민주택기금-대출금-포함-안돼-대한민국-정책브리핑.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-16</news:publication_date>
+      <news:title>전세대출 사기에 국민주택기금 대출금 포함 안돼 - 대한민국 정책브리핑</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-16-news-해외여행-중-신용카드-분실하면-곧바로-카드사-신고하세요-글로벌이코노믹.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-16</news:publication_date>
+      <news:title>해외여행 중 신용카드 분실하면… "곧바로 카드사 신고하세요" - 글로벌이코노믹</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-15-news-민생에-온기를-안전안심-설명절제주도-설연휴-종합대책-가동-노컷뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +75,6 @@
       </news:publication>
       <news:publication_date>2026-02-15</news:publication_date>
       <news:title>상반기 영세·중소신용카드가맹점 308.7만…우대수수료율 적용 - 연합인포맥스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-14-news-지갑은-채우고-걱정은-덜었다-수원시-새빛생활비패키지로-민생-안정-이끈다-경인경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-14</news:publication_date>
-      <news:title>“지갑은 채우고 걱정은 덜었다”… 수원시, ‘새빛생활비패키지’로 민생 안정 이끈다! - 경인경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-14-news-팬데믹-기간-sba-대출-11만건-사기의혹대규모-수사-착수-heraldkcom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-14</news:publication_date>
-      <news:title>팬데믹 기간 SBA 대출 11만건 사기의혹…대규모 수사 착수 | - HeraldK.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-14-news-kt-무단-소액결제-외부-해킹-아닌-내부자-개입-가능성-커-경제한국일보-한국일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-14</news:publication_date>
-      <news:title>"KT 무단 소액결제, 외부 해킹 아닌 내부자 개입 가능성 커"-경제ㅣ한국일보 - 한국일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-14-news-금융위-14일부터-영세중소신용카드-가맹점-3087만개에-우대-수수료-적용-뉴스핌.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-14</news:publication_date>
-      <news:title>금융위, 14일부터 영세중소신용카드 가맹점 308.7만개에 우대 수수료 적용 - 뉴스핌</news:title>
     </news:news>
   </url>
 </urlset>
