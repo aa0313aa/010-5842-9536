@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-25-news-제주도-설연휴-종합대책-가동-민생안전돌봄-총력-한국미디어뉴스통신.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-25</news:publication_date>
+      <news:title>제주도, 설연휴 종합대책 가동 "민생·안전·돌봄 총력" - 한국미디어뉴스통신</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-25-news-이메일-사기가-심각한-수준에-이르렀습니다-vietnamvn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-25</news:publication_date>
+      <news:title>이메일 사기가 심각한 수준에 이르렀습니다. - Vietnam.vn</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-25-news-kt-소액결제-피해-확산-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-25</news:publication_date>
+      <news:title>KT 소액결제 피해 확산 - 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-24-news-제주도-설연휴-종합대책-가동-민생안전돌봄-총력-seoulcitycokr.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-02-24</news:publication_date>
       <news:title>308만 신용카드 가맹점 수수료 낮아진다…신규 15.9만곳 환급 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-23-news-창원특례시-민생-안정기후-대응에-행정력-집중청년환경복지-지원-확대-아주경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-23</news:publication_date>
-      <news:title>창원특례시, 민생 안정·기후 대응에 행정력 집중...청년·환경·복지 지원 확대 - 아주경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-23-news-난-취업사기-감금필리핀서-440억-보이스피싱-조직-76명-검거-동아일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-23</news:publication_date>
-      <news:title>“난 취업사기 감금”…中·필리핀서 440억 보이스피싱 조직 76명 검거 - 동아일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-23-news-해외여행-중-신용카드-분실하면-곧바로-카드사-신고하세요-msn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-23</news:publication_date>
-      <news:title>해외여행 중 신용카드 분실하면… 곧바로 카드사 신고하세요 - MSN</news:title>
     </news:news>
   </url>
 </urlset>
