@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-26-news-진천군-청년-지원부터-민생-안정까지-체감-행정-속도-낸다-공뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-26</news:publication_date>
+      <news:title>진천군, 청년 지원부터 민생 안정까지… '체감 행정' 속도 낸다 - 공뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-26-news-수백억-대-편법사기-대출-새마을금고-임직원건설업자브로커-기소-뉴시스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-26</news:publication_date>
+      <news:title>수백억 대 편법·사기 대출 새마을금고 임직원·건설업자·브로커 기소 - 뉴시스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-26-news-kt-소액결제-해킹-용의자-2명-검거-사건-전말-드러나나-사회한국일보-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-26</news:publication_date>
+      <news:title>KT 소액결제 해킹 용의자 2명 검거… '사건 전말' 드러나나-사회ㅣ한국일보 - 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-26-news-영세중소-신용카드-가맹점-309만-곳-우대수수료율-적용받는다-뉴스1.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-26</news:publication_date>
+      <news:title>영세·중소 신용카드 가맹점 309만 곳 우대수수료율 적용받는다 - 뉴스1</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-25-news-제주도-설연휴-종합대책-가동-민생안전돌봄-총력-한국미디어뉴스통신.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-02-25</news:publication_date>
       <news:title>KT 소액결제 피해 확산 - 한국일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-24-news-제주도-설연휴-종합대책-가동-민생안전돌봄-총력-seoulcitycokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-24</news:publication_date>
-      <news:title>제주도, 설연휴 종합대책 가동 "민생·안전·돌봄 총력" - seoulcity.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-24-news-해외서-은행원-사칭-대환대출-사기-47억-가로챈-76명-검거-충청신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-24</news:publication_date>
-      <news:title>해외서 은행원 사칭 ‘대환대출’ 사기… 47억 가로챈 76명 검거 - 충청신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-24-news-308만-신용카드-가맹점-수수료-낮아진다신규-159만곳-환급-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-24</news:publication_date>
-      <news:title>308만 신용카드 가맹점 수수료 낮아진다…신규 15.9만곳 환급 - 네이트</news:title>
     </news:news>
   </url>
 </urlset>
