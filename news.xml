@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-02-27-news-강대웅의-정문일침-김동연표-민생-지원대책-소외받는-서민들-삶의-질-향상-견인중-아주경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-27</news:publication_date>
+      <news:title>[강대웅의 정문일침(頂門一鍼)] 김동연표 민생 지원대책, 소외받는 서민들 삶의 질 향상 견인중 - 아주경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-27-news-ai-인물-초상화-그리기-트렌드를-쫓다-보면-언젠가-사기를-당할-수도-있습니다-vietnamvn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-27</news:publication_date>
+      <news:title>'AI 인물 초상화 그리기' 트렌드를 쫓다 보면 언젠가 사기를 당할 수도 있습니다. - Vietnam.vn</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-02-27-news-최대-천억소액결제-피해까지-난-kt-해킹사태-과징금-촉각-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-27</news:publication_date>
+      <news:title>"최대 천억?"…소액결제 피해까지 난 KT 해킹사태, 과징금 촉각 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-02-26-news-진천군-청년-지원부터-민생-안정까지-체감-행정-속도-낸다-공뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-02-26</news:publication_date>
       <news:title>영세·중소 신용카드 가맹점 309만 곳 우대수수료율 적용받는다 - 뉴스1</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-25-news-제주도-설연휴-종합대책-가동-민생안전돌봄-총력-한국미디어뉴스통신.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-25</news:publication_date>
-      <news:title>제주도, 설연휴 종합대책 가동 "민생·안전·돌봄 총력" - 한국미디어뉴스통신</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-25-news-이메일-사기가-심각한-수준에-이르렀습니다-vietnamvn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-25</news:publication_date>
-      <news:title>이메일 사기가 심각한 수준에 이르렀습니다. - Vietnam.vn</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-02-25-news-kt-소액결제-피해-확산-한국일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-25</news:publication_date>
-      <news:title>KT 소액결제 피해 확산 - 한국일보</news:title>
     </news:news>
   </url>
 </urlset>
