@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-07-news-경남도-이란-사태-전면-대응중소기업-2800억-지원민생경제-안정-대책-가동-브랜드경제신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-07</news:publication_date>
+      <news:title>경남도, 이란 사태 전면 대응...중소기업 2,800억 지원ㆍ민생경제 안정 대책 가동 - 브랜드경제신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-07-news-대출사기-혐의-양문석-의원-12일-대법-선고-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-07</news:publication_date>
+      <news:title>'대출사기 혐의' 양문석 의원 12일 대법 선고 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-07-news-해외-신용카드-안되는-외국인-전용-매표기-한국경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-07</news:publication_date>
+      <news:title>해외 신용카드 안되는 외국인 전용 매표기 - 한국경제</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-06-news-이란-사태-대응-경남도-민생경제안정-대책회의-열어-뉴스1.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-06</news:publication_date>
       <news:title>해외 신용카드 안되는 외국인 전용 매표기 - 한국경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-05-news-금감원-민생금융-감독-강화보이스피싱보험사기-대응-확대-데일리안.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-05</news:publication_date>
-      <news:title>금감원, 민생금융 감독 강화…보이스피싱·보험사기 대응 확대 - 데일리안</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-05-news-병원-개원-과정에서의-불법-대출-사기-혐의-어디까지가-피해자이고-어디서부터-공범인가-글로벌에픽.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-05</news:publication_date>
-      <news:title>병원 개원 과정에서의 불법 대출 사기 혐의, 어디까지가 ‘피해자’이고 어디서부터 ‘공범’인가 - 글로벌에픽</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-05-news-최대-천억소액결제-피해까지-난-kt-해킹사태-과징금-촉각-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-05</news:publication_date>
-      <news:title>"최대 천억?"…소액결제 피해까지 난 KT 해킹사태, 과징금 촉각 - v.daum.net</news:title>
     </news:news>
   </url>
 </urlset>
