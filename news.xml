@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-08-news-경남도-이란-사태-대응-민생경제-대책반-가동-울산신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-08</news:publication_date>
+      <news:title>경남도, 이란 사태 대응 민생경제 대책반 가동 - 울산신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-08-news-시선-보이스피싱-사기-수법은-바뀌어도-구조는-같다-충청투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-08</news:publication_date>
+      <news:title>[시선] 보이스피싱 사기… ‘수법은 바뀌어도 구조는 같다’ - 충청투데이</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-08-news-신용카드-대신-스테이블코인결제-거인들의-야심만만-에이전틱-소액결제-시나리오-디지털투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-08</news:publication_date>
+      <news:title>신용카드 대신 스테이블코인...결제 거인들의 야심만만 에이전틱 소액결제 시나리오 - 디지털투데이</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-07-news-경남도-이란-사태-전면-대응중소기업-2800억-지원민생경제-안정-대책-가동-브랜드경제신문.html</loc>
     <news:news>
       <news:publication>
@@ -30,39 +63,6 @@
         <news:language>ko</news:language>
       </news:publication>
       <news:publication_date>2026-03-07</news:publication_date>
-      <news:title>해외 신용카드 안되는 외국인 전용 매표기 - 한국경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-06-news-이란-사태-대응-경남도-민생경제안정-대책회의-열어-뉴스1.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-06</news:publication_date>
-      <news:title>"이란 사태 대응" 경남도, 민생경제안정 대책회의 열어 - 뉴스1</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-06-news-대전-숙박시설에서-소방공무원-피싱-사기-발생-숙박매거진.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-06</news:publication_date>
-      <news:title>대전 숙박시설에서 소방공무원 피싱 사기 발생 - 숙박매거진</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-06-news-해외-신용카드-안되는-외국인-전용-매표기-한국경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-06</news:publication_date>
       <news:title>해외 신용카드 안되는 외국인 전용 매표기 - 한국경제</news:title>
     </news:news>
   </url>
