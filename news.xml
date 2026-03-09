@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-09-news-경남도-중동-위기-속-민생경제-대책본부-가동-경남도민일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-09</news:publication_date>
+      <news:title>경남도, 중동 위기 속 ‘민생경제 대책본부’ 가동 - 경남도민일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-09-news-대출사기-혐의-양문석-의원-12일-대법-선고-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-09</news:publication_date>
+      <news:title>'대출사기 혐의' 양문석 의원 12일 대법 선고 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-09-news-신용카드-청구내역-점자-청구서로도-발송돼야-에이블뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-09</news:publication_date>
+      <news:title>신용카드 청구내역, 점자 청구서로도 발송돼야 - 에이블뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-08-news-경남도-이란-사태-대응-민생경제-대책반-가동-울산신문.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-08</news:publication_date>
       <news:title>신용카드 대신 스테이블코인...결제 거인들의 야심만만 에이전틱 소액결제 시나리오 - 디지털투데이</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-07-news-경남도-이란-사태-전면-대응중소기업-2800억-지원민생경제-안정-대책-가동-브랜드경제신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-07</news:publication_date>
-      <news:title>경남도, 이란 사태 전면 대응...중소기업 2,800억 지원ㆍ민생경제 안정 대책 가동 - 브랜드경제신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-07-news-대출사기-혐의-양문석-의원-12일-대법-선고-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-07</news:publication_date>
-      <news:title>'대출사기 혐의' 양문석 의원 12일 대법 선고 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-07-news-해외-신용카드-안되는-외국인-전용-매표기-한국경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-07</news:publication_date>
-      <news:title>해외 신용카드 안되는 외국인 전용 매표기 - 한국경제</news:title>
     </news:news>
   </url>
 </urlset>
