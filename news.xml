@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-12-news-최대호-안양시장-국제-유가-불안-속-민생-물가-대응-약속-비즈월드.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-12</news:publication_date>
+      <news:title>최대호 안양시장, 국제 유가 불안 속 민생 물가 대응 약속 - 비즈월드</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-12-news-d-9-bts-광화문-공연-앞두고-피싱-사기-경보경찰은-암표단속-파이낸셜뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-12</news:publication_date>
+      <news:title>D-9, BTS 광화문 공연 앞두고 피싱 사기 경보..경찰은 암표단속 - 파이낸셜뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-12-news-워싱턴주-페리-3월-1일부터-신용카드-결제-시-3-수수료-부과-시애틀코리안데일리.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-12</news:publication_date>
+      <news:title>워싱턴주 페리, 3월 1일부터 신용카드 결제 시 3% 수수료 부과 - 시애틀코리안데일리</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-11-news-사설-민생안정-특별대책은-포괄적-재난-대응-경남도민일보.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-11</news:publication_date>
       <news:title>[김제소식] 소상공인에 신용카드 수수료 최대 30만원 지원 - MSN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-10-news-이재명-대통령-물가-안정-가장-시급민생-부담-덜기-위한-정책-적극-발굴-신속-집행하라-시사뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-10</news:publication_date>
-      <news:title>이재명 대통령 “물가 안정 가장 시급...민생 부담 덜기 위한 정책 적극 발굴 신속 집행하라” - 시사뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-10-news-파주시-탄현면-행복마을관리소-사기-전화보이스-피싱-예방-교육-진행-뉴스피크.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-10</news:publication_date>
-      <news:title>파주시 탄현면 행복마을관리소, 사기 전화(보이스 피싱) 예방 교육 진행 - 뉴스피크</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-10-news-소액결제-없는-aaa펄어비스-붉은사막이-흔드는-게임-공식-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-10</news:publication_date>
-      <news:title>"소액결제 없는 AAA"…펄어비스 '붉은사막'이 흔드는 게임 공식 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-10-news-김제소식-소상공인에-신용카드-수수료-최대-30만원-지원-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-10</news:publication_date>
-      <news:title>[김제소식] 소상공인에 신용카드 수수료 최대 30만원 지원 - 연합뉴스</news:title>
     </news:news>
   </url>
 </urlset>
