@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-13-news-동해시-민생경제-살리기-610억-투입소상공인청년-지원-확대-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-13</news:publication_date>
+      <news:title>동해시, 민생경제 살리기 610억 투입…소상공인·청년 지원 확대 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-13-news-대출사기-민주당-양문석-의원-당선무효-확정-더리포트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-13</news:publication_date>
+      <news:title>'대출사기' 민주당 양문석 의원, 당선무효 확정 - 더리포트</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-12-news-최대호-안양시장-국제-유가-불안-속-민생-물가-대응-약속-비즈월드.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +53,6 @@
       </news:publication>
       <news:publication_date>2026-03-12</news:publication_date>
       <news:title>워싱턴주 페리, 3월 1일부터 신용카드 결제 시 3% 수수료 부과 - 시애틀코리안데일리</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-11-news-사설-민생안정-특별대책은-포괄적-재난-대응-경남도민일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-11</news:publication_date>
-      <news:title>[사설] ‘민생안정 특별대책’은 포괄적 재난 대응 - 경남도민일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-11-news-대출사기-혐의-양문석-오늘-대법-선고재보궐-영향-촉각-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-11</news:publication_date>
-      <news:title>'대출사기 혐의' 양문석 오늘 대법 선고…재보궐 영향 촉각 - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-11-news-김제소식-소상공인에-신용카드-수수료-최대-30만원-지원-msn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-11</news:publication_date>
-      <news:title>[김제소식] 소상공인에 신용카드 수수료 최대 30만원 지원 - MSN</news:title>
     </news:news>
   </url>
 </urlset>
