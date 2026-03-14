@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-14-news-동해시-610억원-규모-민생경제-활성화-대책-본격-가동-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-14</news:publication_date>
+      <news:title>동해시, 610억원 규모 민생경제 활성화 대책 본격 가동 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-14-news-고양양주서-공무원-사칭-물품-대리-구매-사기-잇따라-뉴시스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-14</news:publication_date>
+      <news:title>고양·양주서 공무원 사칭 물품 대리 구매 사기 잇따라 - 뉴시스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-14-news-신용카드사는-가맹점-수수료만으로-유지되지-않는다-브런치.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-14</news:publication_date>
+      <news:title>신용카드사는 가맹점 수수료만으로 유지되지 않는다. - 브런치</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-13-news-동해시-민생경제-살리기-610억-투입소상공인청년-지원-확대-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -20,39 +53,6 @@
       </news:publication>
       <news:publication_date>2026-03-13</news:publication_date>
       <news:title>'대출사기' 민주당 양문석 의원, 당선무효 확정 - 더리포트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-12-news-최대호-안양시장-국제-유가-불안-속-민생-물가-대응-약속-비즈월드.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-12</news:publication_date>
-      <news:title>최대호 안양시장, 국제 유가 불안 속 민생 물가 대응 약속 - 비즈월드</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-12-news-d-9-bts-광화문-공연-앞두고-피싱-사기-경보경찰은-암표단속-파이낸셜뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-12</news:publication_date>
-      <news:title>D-9, BTS 광화문 공연 앞두고 피싱 사기 경보..경찰은 암표단속 - 파이낸셜뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-12-news-워싱턴주-페리-3월-1일부터-신용카드-결제-시-3-수수료-부과-시애틀코리안데일리.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-12</news:publication_date>
-      <news:title>워싱턴주 페리, 3월 1일부터 신용카드 결제 시 3% 수수료 부과 - 시애틀코리안데일리</news:title>
     </news:news>
   </url>
 </urlset>
