@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-17-news-중동발-위기-총력-대응-도-500억-긴급자금-투입-민생-방어-공뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-17</news:publication_date>
+      <news:title>‘중동발 위기 총력 대응’… 도, ‘500억 긴급자금’ 투입 민생 방어 - 공뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-17-news-정부정책-악용-85억-원대-전세사기-일당-검거-b-world.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-17</news:publication_date>
+      <news:title>'정부정책 악용' 85억 원대 전세사기 일당 검거 - B world</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-17-news-신종-휴대폰-소액결제-사기-스미싱-주의보-미디어생활.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-17</news:publication_date>
+      <news:title>신종 휴대폰 소액결제 사기 ‘스미싱’ 주의보 - 미디어생활</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-17-news-해외-신용카드-악용-범죄-막는다관세청금감원카드사-공조체계-구축-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-17</news:publication_date>
+      <news:title>해외 신용카드 악용 범죄 막는다…관세청·금감원·카드사 공조체계 구축 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-16-news-임현수-용인시의원-민생-회복이-최우선생활비-구조-낮춰야-vdaumnet.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +86,6 @@
       </news:publication>
       <news:publication_date>2026-03-16</news:publication_date>
       <news:title>신용카드산업의 구조적 전환 :가맹점 수수료 이후의 시대 - 브런치</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-15-news-위클리오늘-동해시-민생경제-활성화-대책-본격-추진-위클리오늘.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-15</news:publication_date>
-      <news:title>[위클리오늘] 동해시, 민생경제 활성화 대책 본격 추진 - 위클리오늘</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-15-news-왜-돈을-뽑으시는-거예요대출사기-막은-경찰과-은행의-공조-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-15</news:publication_date>
-      <news:title>"왜 돈을 뽑으시는 거예요?"…대출사기 막은 경찰과 은행의 공조 - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-15-news-2019년-하반기-신규-신용카드가맹점이-카드사에-납부한-카드수수료-중-709억원을-환급해드립니다-서울pn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-15</news:publication_date>
-      <news:title>2019년 하반기 신규 신용카드가맹점이 카드사에 납부한 카드수수료 중 709억원을 환급해드립니다. - 서울Pn</news:title>
     </news:news>
   </url>
 </urlset>
