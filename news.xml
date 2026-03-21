@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-21-news-강릉시-경제활성화-tf-물가안정-민생경제-회복-지역경제-활력-제고-뉴스파이어.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-21</news:publication_date>
+      <news:title>강릉시, ‘경제활성화 TF 물가안정 민생경제 회복 지역경제 활력 제고 - 뉴스파이어</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-21-news-유가급등-악용-노쇼-사기-기승대신-결제-유도-주의해야-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-21</news:publication_date>
+      <news:title>유가급등 악용 '노쇼 사기' 기승…"대신 결제" 유도 주의해야 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-21-news-연매출-35억원-약국-신용카드-수수료-07p-인하-kpanewscokr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-21</news:publication_date>
+      <news:title>연매출 3~5억원 약국, 신용카드 수수료 0.7%p 인하 - kpanews.co.kr</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-20-news-안산시-고유가고물가-시대선제적-민생안정-대책-가동-피디언뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-20</news:publication_date>
       <news:title>신용카드 '할부전환 서비스' 이용 시 '할부항변권' 인정될까 - 컨슈머치</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-19-news-진천군-글로벌-경제-불안-정면-돌파-3대-민생경제-안정대책-추진-뉴스티앤티.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-19</news:publication_date>
-      <news:title>진천군, ‘글로벌 경제 불안’ 정면 돌파… 3대 민생경제 안정대책 추진 - 뉴스티앤티</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-19-news-보이스피싱-등-사기-연루-정신장애인-4년-새-25배-neosherlockcom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-19</news:publication_date>
-      <news:title>보이스피싱 등 사기 연루 정신장애인, 4년 새 ‘2.5배’ - neosherlock.com</news:title>
     </news:news>
   </url>
 </urlset>
