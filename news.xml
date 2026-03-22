@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-22-news-임현수-용인시의원-민생-회복이-최우선생활비-구조-낮춰야-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-22</news:publication_date>
+      <news:title>임현수 용인시의원, "민생 회복이 최우선…생활비 구조 낮춰야" - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-22-news-김동연-이-대통령-부동산-사기대출-강력-경고에-가-현장책임자로서-부동산-안정화에-앞장설-것-서울뉴스통신.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-22</news:publication_date>
+      <news:title>김동연 “이 대통령, 부동산 ‘사기대출’ 강력 경고에 道가 ‘현장책임자’로서 부동산 안정화에 앞장설 것” - 서울뉴스통신</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-22-news-신용카드사는-가맹점-수수료만으로-유지되지-않는다-브런치.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-22</news:publication_date>
+      <news:title>신용카드사는 가맹점 수수료만으로 유지되지 않는다. - 브런치</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-21-news-강릉시-경제활성화-tf-물가안정-민생경제-회복-지역경제-활력-제고-뉴스파이어.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-21</news:publication_date>
       <news:title>연매출 3~5억원 약국, 신용카드 수수료 0.7%p 인하 - kpanews.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-20-news-안산시-고유가고물가-시대선제적-민생안정-대책-가동-피디언뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-20</news:publication_date>
-      <news:title>안산시, 고유가·고물가 시대…선제적 민생안정 대책 가동 - 피디언뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-20-news-한인남성-200만달러-ppp-대출사기-혐의-기소-chosundailycom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-20</news:publication_date>
-      <news:title>한인남성, 200만달러 PPP 대출사기 혐의 기소 - chosundaily.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-20-news-신용카드-할부전환-서비스-이용-시-할부항변권-인정될까-컨슈머치.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-20</news:publication_date>
-      <news:title>신용카드 '할부전환 서비스' 이용 시 '할부항변권' 인정될까 - 컨슈머치</news:title>
     </news:news>
   </url>
 </urlset>
