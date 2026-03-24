@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-24-news-서울시-중동발-고유가물가-비상-대응-총력민생기업-전방위-지원-코리아플러스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-24</news:publication_date>
+      <news:title>서울시, 중동발 고유가·물가 비상 대응 총력…민생·기업 전방위 지원 - 코리아플러스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-24-news-단독조직화된-치매머니-사냥-태양광-대출-사기까지-동아일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-24</news:publication_date>
+      <news:title>[단독]조직화된 치매머니 사냥… 태양광-대출 사기까지 - 동아일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-24-news-혜자카드-멸종-안-긁는-소비자페이에-밀려-자존심-긁힌-신용카드-mtcokr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-24</news:publication_date>
+      <news:title>"혜자카드 멸종" 안 긁는 소비자…"페이에 밀려" 자존심 긁힌 신용카드 - mt.co.kr</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-23-news-서울시-중동발-고유가물가-비상-대응-총력민생기업-전방위-지원-한국방송뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-03-23</news:publication_date>
       <news:title>"혜택도 별론데 안 써요"… 신용카드, 신규 발급 10년 만에 최저 - mt.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-22-news-임현수-용인시의원-민생-회복이-최우선생활비-구조-낮춰야-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-22</news:publication_date>
-      <news:title>임현수 용인시의원, "민생 회복이 최우선…생활비 구조 낮춰야" - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-22-news-김동연-이-대통령-부동산-사기대출-강력-경고에-가-현장책임자로서-부동산-안정화에-앞장설-것-서울뉴스통신.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-22</news:publication_date>
-      <news:title>김동연 “이 대통령, 부동산 ‘사기대출’ 강력 경고에 道가 ‘현장책임자’로서 부동산 안정화에 앞장설 것” - 서울뉴스통신</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-22-news-신용카드사는-가맹점-수수료만으로-유지되지-않는다-브런치.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-22</news:publication_date>
-      <news:title>신용카드사는 가맹점 수수료만으로 유지되지 않는다. - 브런치</news:title>
     </news:news>
   </url>
 </urlset>
