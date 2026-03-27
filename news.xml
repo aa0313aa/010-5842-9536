@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-27-news-파주시-민생-안정-위해-물가-안정-캠페인-실시-피디언뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-27</news:publication_date>
+      <news:title>파주시, 민생 안정 위해 물가 안정 캠페인 실시 - 피디언뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-27-news-nh농협은행-경북본부-금융사기-취약계층-대상-보이스피싱-보상보험무료-지원-실시-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-27</news:publication_date>
+      <news:title>NH농협은행 경북본부, 금융사기 취약계층 대상 '보이스피싱 보상보험'무료 지원 실시 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-27-news-조제약값-신용카드-수수료-공단이-책임져라-약업신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-27</news:publication_date>
+      <news:title>조제약값 신용카드 수수료 "공단이 책임져라" - 약업신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-26-news-김동연표-민생공약은-돌봄주거교통-3대-생활비-반값2040년까지-공공요양원-300개소-설치-소비자가-만드는-신.html</loc>
     <news:news>
       <news:publication>
@@ -42,28 +75,6 @@
       </news:publication>
       <news:publication_date>2026-03-26</news:publication_date>
       <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - 브런치</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-25-news-정부-중동-위기에-신속-대응-민생안정-예산-집행-가속화-공감신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-25</news:publication_date>
-      <news:title>정부, 중동 위기에 신속 대응… 민생안정 예산 집행 가속화 - 공감신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-25-news-보이스피싱-막고-농업-알리고농협-영천시지부-금융사기-예방-교육-실시-경북일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-25</news:publication_date>
-      <news:title>보이스피싱 막고 농업 알리고…농협 영천시지부, 금융사기 예방 교육 실시 - 경북일보</news:title>
     </news:news>
   </url>
 </urlset>
