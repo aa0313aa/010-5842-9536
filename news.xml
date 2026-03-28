@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-28-news-김동연-3대-생활비-반값시대로-민생-대수술경기도지사-재선-승부수-중앙신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-28</news:publication_date>
+      <news:title>김동연 “3대 생활비 반값시대로 민생 대수술”...경기도지사 재선 승부수 - 중앙신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-28-news-의사-215명-잔고-부풀려-병원-개업자금-사기대출1300억-규모-hankyungcom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-28</news:publication_date>
+      <news:title>의사 215명, 잔고 부풀려 병원 개업자금 사기대출…1300억 규모 - hankyung.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-28-news-왜-한국만-신용카드-가맹점-수수료를-정부가-정할까-brunchcokr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-28</news:publication_date>
+      <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - brunch.co.kr</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-27-news-파주시-민생-안정-위해-물가-안정-캠페인-실시-피디언뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-27</news:publication_date>
       <news:title>조제약값 신용카드 수수료 "공단이 책임져라" - 약업신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-26-news-김동연표-민생공약은-돌봄주거교통-3대-생활비-반값2040년까지-공공요양원-300개소-설치-소비자가-만드는-신.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-26</news:publication_date>
-      <news:title>김동연표 민생공약은 돌봄·주거·교통 '3대 생활비 반값'...2040년까지 공공요양원 300개소 설치 - 소비자가 만드는 신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-26-news-단독전세사기-피크-때-우리신한은행-전세대출-이익-상승폭-최대-뉴스토마토.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-26</news:publication_date>
-      <news:title>(단독)전세사기 피크 때 우리·신한은행 전세대출 이익 상승폭 최대 - 뉴스토마토</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-26-news-소액결제현금화-구조-바뀌었다-한도-확인부터-납부-계획까지-전체-흐름-정리-한국공공정책신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-26</news:publication_date>
-      <news:title>소액결제현금화 구조 바뀌었다… 한도 확인부터 납부 계획까지 전체 흐름 정리 - 한국공공정책신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-26-news-왜-한국만-신용카드-가맹점-수수료를-정부가-정할까-브런치.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-26</news:publication_date>
-      <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - 브런치</news:title>
     </news:news>
   </url>
 </urlset>
