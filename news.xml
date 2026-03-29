@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-29-news-민생방어-비상가동관악구-중동발-경제충격-선제-대응비상경제대응-tf-본격-가동-전국뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-29</news:publication_date>
+      <news:title>[민생방어 비상가동]관악구, 중동발 경제충격 선제 대응…‘비상경제대응 TF’ 본격 가동 - 전국뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-29-news-폭격에-100명-넘는-아이들이-사망했다-이란-전쟁까지-번진-피싱-기부-마저-막았다-사기-공화국의-민낯-헤럴드.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-29</news:publication_date>
+      <news:title>“폭격에 100명 넘는 아이들이 사망했다” 이란 전쟁까지 번진 피싱, 기부 마저 막았다 [사기 공화국의 민낯] - 헤럴드경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-29-news-왜-한국만-신용카드-가맹점-수수료를-정부가-정할까-브런치.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-29</news:publication_date>
+      <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - 브런치</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-28-news-김동연-3대-생활비-반값시대로-민생-대수술경기도지사-재선-승부수-중앙신문.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-03-28</news:publication_date>
       <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - brunch.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-27-news-파주시-민생-안정-위해-물가-안정-캠페인-실시-피디언뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-27</news:publication_date>
-      <news:title>파주시, 민생 안정 위해 물가 안정 캠페인 실시 - 피디언뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-27-news-nh농협은행-경북본부-금융사기-취약계층-대상-보이스피싱-보상보험무료-지원-실시-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-27</news:publication_date>
-      <news:title>NH농협은행 경북본부, 금융사기 취약계층 대상 '보이스피싱 보상보험'무료 지원 실시 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-27-news-조제약값-신용카드-수수료-공단이-책임져라-약업신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-27</news:publication_date>
-      <news:title>조제약값 신용카드 수수료 "공단이 책임져라" - 약업신문</news:title>
     </news:news>
   </url>
 </urlset>
