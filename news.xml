@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-03-31-news-성남시-민생안정-위한-비상경제대책-가동-서울경제tv.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-31</news:publication_date>
+      <news:title>성남시, 민생안정 위한 비상경제대책 가동 - 서울경제TV</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-31-news-벌금-안-내면-소환하겠다-사기-기승-koreadailycom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-31</news:publication_date>
+      <news:title>“벌금 안 내면 소환하겠다” 사기 기승 - koreadaily.com</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-03-31-news-경기교육감-후보-단일화-선거인단-모집-차질소액결제-승인-지연-영향-경기신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-31</news:publication_date>
+      <news:title>경기교육감 후보 단일화 선거인단 모집 차질…“소액결제 승인 지연 영향” - 경기신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-03-30-news-임현수-용인시의원-민생-회복이-최우선생활비-구조-낮춰야-vdaumnet.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-03-30</news:publication_date>
       <news:title>지난해 신용카드·모바일 결제 증가…실물카드 이용은 감소 - mt.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-29-news-민생방어-비상가동관악구-중동발-경제충격-선제-대응비상경제대응-tf-본격-가동-전국뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-29</news:publication_date>
-      <news:title>[민생방어 비상가동]관악구, 중동발 경제충격 선제 대응…‘비상경제대응 TF’ 본격 가동 - 전국뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-29-news-폭격에-100명-넘는-아이들이-사망했다-이란-전쟁까지-번진-피싱-기부-마저-막았다-사기-공화국의-민낯-헤럴드.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-29</news:publication_date>
-      <news:title>“폭격에 100명 넘는 아이들이 사망했다” 이란 전쟁까지 번진 피싱, 기부 마저 막았다 [사기 공화국의 민낯] - 헤럴드경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-29-news-왜-한국만-신용카드-가맹점-수수료를-정부가-정할까-브런치.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-29</news:publication_date>
-      <news:title>왜 한국만 신용카드 가맹점 수수료를 정부가 정할까? - 브런치</news:title>
     </news:news>
   </url>
 </urlset>
