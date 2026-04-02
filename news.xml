@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-04-02-news-임현수-용인시의원-민생-회복이-최우선생활비-구조-낮춰야-파이낸셜뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-02</news:publication_date>
+      <news:title>임현수 용인시의원, "민생 회복이 최우선...생활비 구조 낮춰야" - 파이낸셜뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-04-02-news-인하공전-법률사무소-ap와-전세사기보이스피싱-예방-교육-실시-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-02</news:publication_date>
+      <news:title>인하공전, 법률사무소 A&amp;P와 전세사기·보이스피싱 예방 교육 실시 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-04-02-news-검찰-kt-소액결제-사고-일당-3명에-징역-47년-구형-디지털데일리.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-02</news:publication_date>
+      <news:title>검찰, ‘KT 소액결제 사고’ 일당 3명에 징역 4~7년 구형 - 디지털데일리</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-04-01-news-중동전쟁-장기화-대비-민생복지반-가동-한국재난안전뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-04-01</news:publication_date>
       <news:title>호주, 신용카드•직불카드 할증료 폐지 - topdigital.com.au</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-31-news-성남시-민생안정-위한-비상경제대책-가동-서울경제tv.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-31</news:publication_date>
-      <news:title>성남시, 민생안정 위한 비상경제대책 가동 - 서울경제TV</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-31-news-벌금-안-내면-소환하겠다-사기-기승-koreadailycom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-31</news:publication_date>
-      <news:title>“벌금 안 내면 소환하겠다” 사기 기승 - koreadaily.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-03-31-news-경기교육감-후보-단일화-선거인단-모집-차질소액결제-승인-지연-영향-경기신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-31</news:publication_date>
-      <news:title>경기교육감 후보 단일화 선거인단 모집 차질…“소액결제 승인 지연 영향” - 경기신문</news:title>
     </news:news>
   </url>
 </urlset>
