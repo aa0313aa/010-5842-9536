@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-05-23-news-김관영-민생돌봄-공약-발표생활비-줄이고-소득-늘린다-전라일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-23</news:publication_date>
+      <news:title>김관영, 민생·돌봄 공약 발표…"생활비 줄이고 소득 늘린다" | - 전라일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-23-news-제주은행-고객중심영업점-아라지점-어르신-대상-금융사기-예방-교육-실시-뉴스n제주.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-23</news:publication_date>
+      <news:title>제주은행 ‘고객중심영업점’ 아라지점, 어르신 대상 금융사기 예방 교육 실시 - 뉴스N제주</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-23-news-통신3사-1q-실적-lgu-홀로-빛나나sktkt는-해킹무단-소액결제-여파-연합인포맥스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-23</news:publication_date>
+      <news:title>통신3사, 1Q 실적 LGU+ 홀로 빛나나…SKT·KT는 해킹·무단 소액결제 여파 - 연합인포맥스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-23-news-신종-사채에-숨진-30대-여성상품권신용카드-현금화-대출-법망-뚫고-활개-시사저널.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-23</news:publication_date>
+      <news:title>신종 사채에 숨진 30대 여성…상품권·신용카드 현금화 대출 법망 뚫고 활개 - 시사저널</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-05-22-news-정부-민생물가-안정-총력유류세-인하-2개월-연장-bbs불교방송.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-05-22</news:publication_date>
       <news:title>신용카드 가맹점, 비대면으로 신속 가입…미성년자 발급 제도화 - 연합뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-21-news-반값-생활비로-민생-해결-이재준-출정식서-수원대전환-약속-더팩트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-21</news:publication_date>
-      <news:title>"반값 생활비로 민생 해결" 이재준, 출정식서 수원대전환 '약속' - 더팩트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-21-news-법적-근거-있다며-협박충주시청-공무원-사칭-정육점-노린-보이스피싱-사기-기승-gukjenewscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-21</news:publication_date>
-      <news:title>'법적 근거 있다'며 협박…충주시청 공무원 사칭 정육점 노린 보이스피싱 사기 기승 - gukjenews.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-21-news-단독kt-해킹-사고가-바꾼-소액결제상품권교통카드-거래시-추가인증-의무화-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-21</news:publication_date>
-      <news:title>[단독]'KT 해킹 사고'가 바꾼 소액결제…상품권·교통카드 거래시 추가인증 의무화 - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-21-news-건보공단도-신용카드-수수료-인상폭탄-예외-아니다-메디칼타임즈.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-21</news:publication_date>
-      <news:title>건보공단도 신용카드 수수료 인상폭탄 예외 아니다 - 메디칼타임즈</news:title>
     </news:news>
   </url>
 </urlset>
