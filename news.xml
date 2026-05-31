@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-05-31-news-반값-생활비로-민생-해결-이재준-출정식서-수원대전환-약속-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-31</news:publication_date>
+      <news:title>"반값 생활비로 민생 해결" 이재준, 출정식서 수원대전환 '약속' - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-31-news-음성서-보이스피싱노쇼-사기예방활동-총력-충청일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-31</news:publication_date>
+      <news:title>음성서, 보이스피싱·노쇼 사기예방활동 총력 - 충청일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-31-news-컨센서스쇼크-kt-소액결제-피해-여파1분기-수익성-둔화-전망-메가경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-31</news:publication_date>
+      <news:title>[컨센서스쇼크] KT ′소액결제 피해′ 여파…＂1분기 수익성 둔화 전망＂ - 메가경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-05-31-news-신용카드-수수료-인하-법제화-촉구-경남매일.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-31</news:publication_date>
+      <news:title>“신용카드 수수료 인하 법제화” 촉구 - 경남매일</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-05-30-news-금융부문-민생안정과제-관련-도덕적-해이-문제에-대해-설명-드립니다-금융위원회.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +86,6 @@
       </news:publication>
       <news:publication_date>2026-05-30</news:publication_date>
       <news:title>"1700원도 신용카드로 결제" 개원가 골머리 - 메디칼타임즈</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-29-news-단독-수강료-결제하자-돌연-영업-중단필라테스-업체-사기-의혹-mbncokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-29</news:publication_date>
-      <news:title>[단독] 수강료 결제하자 돌연 영업 중단…필라테스 업체 사기 의혹 - mbn.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-29-news-7월부터-상품권-소액결제-2중-인증-의무화-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-29</news:publication_date>
-      <news:title>7월부터 상품권 소액결제 '2중 인증' 의무화 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-05-29-news-건보공단도-신용카드-수수료-인상폭탄-예외-아니다-메디칼타임즈.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-29</news:publication_date>
-      <news:title>건보공단도 신용카드 수수료 인상폭탄 예외 아니다 - 메디칼타임즈</news:title>
     </news:news>
   </url>
 </urlset>
