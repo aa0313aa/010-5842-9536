@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-03-news-동해시-민생경제-활성화-대책-본격-추진경인투데이뉴스-경인투데이뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-03</news:publication_date>
+      <news:title>동해시, 민생경제 활성화 대책 본격 추진:경인투데이뉴스 - 경인투데이뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-03-news-전세대출-사기-계약서-대필-공인중개사도-공동불법행위자-동행일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-03</news:publication_date>
+      <news:title>전세대출 사기, '계약서 대필' 공인중개사도 공동불법행위자 - 동행일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-03-news-il-신용카드-결제-수수료-금지법-좌초-미주중앙일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-03</news:publication_date>
+      <news:title>IL 신용카드 결제 수수료 금지법 좌초 - 미주중앙일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-02-news-김관영-민생돌봄-공약-발표생활비-부담-낮추고-복지체계-강화-네이트.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +75,6 @@
       </news:publication>
       <news:publication_date>2026-06-02</news:publication_date>
       <news:title>[현장] 서지용 신용카드학회장 “생산적 금융 확대 위해 카드사 레버리지 배율 규제 완화해야” - CEO스코어데일리</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-01-news-위-민생-제일-문-소득-10만불-양-도민-시대-삼다일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-01</news:publication_date>
-      <news:title>위 "민생 제일"-문 "소득 10만불"-양 "도민 시대" - 삼다일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-01-news-사기-대출-허위-해명-양문석-파기환송심에서-벌금-90만원-조선일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-01</news:publication_date>
-      <news:title>‘사기 대출 허위 해명’ 양문석, 파기환송심에서 벌금 90만원 - 조선일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-01-news-단독kt-해킹-사고가-바꾼-소액결제상품권교통카드-거래시-추가인증-의무화-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-01</news:publication_date>
-      <news:title>[단독]'KT 해킹 사고'가 바꾼 소액결제…상품권·교통카드 거래시 추가인증 의무화 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-01-news-건보공단도-신용카드-수수료-인상폭탄-예외-아니다-메디칼타임즈.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-01</news:publication_date>
-      <news:title>건보공단도 신용카드 수수료 인상폭탄 예외 아니다 - 메디칼타임즈</news:title>
     </news:news>
   </url>
 </urlset>
