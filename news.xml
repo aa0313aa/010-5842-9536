@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-04-news-양윤녕-제주-생활비-절감-민생점검단-운영할-것-삼다일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-04</news:publication_date>
+      <news:title>양윤녕 “제주 생활비 절감 민생점검단 운영할 것” - 삼다일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-04-news-충북-지역-피싱사기-1년새-278피해액-85억원-줄어-문화투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-04</news:publication_date>
+      <news:title>충북 지역 피싱사기 1년새 27.8％↓…피해액 85억원 줄어 - 문화투데이</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-04-news-카드업계-빅테크-공세에-성장-한계-직면플랫폼-확장-막는-규제-풀어야-2026-한국신용카드학회-춘계-세미나-한.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-04</news:publication_date>
+      <news:title>카드업계, 빅테크 공세에 성장 한계 직면…“플랫폼 확장 막는 규제 풀어야” [2026 한국신용카드학회 춘계 세미나] - 한국금융신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-03-news-동해시-민생경제-활성화-대책-본격-추진경인투데이뉴스-경인투데이뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-06-03</news:publication_date>
       <news:title>IL 신용카드 결제 수수료 금지법 좌초 - 미주중앙일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-02-news-김관영-민생돌봄-공약-발표생활비-부담-낮추고-복지체계-강화-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-02</news:publication_date>
-      <news:title>김관영, 민생·돌봄 공약 발표…"생활비 부담 낮추고 복지체계 강화" - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-02-news-보이스피싱사기-등-민생사건-피고인-불출석-시-재판-즉시-진행-경기일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-02</news:publication_date>
-      <news:title>보이스피싱·사기 등 민생사건, 피고인 불출석 시 재판 즉시 진행 - 경기일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-02-news-추가-피해고객-6명피해액-319만원-kt-소액결제-전수조사-결과발표-catchnewskr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-02</news:publication_date>
-      <news:title>"추가 피해고객 6명·피해액 319만원" KT, 소액결제 전수조사 결과발표 - catchnews.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-02-news-현장-서지용-신용카드학회장-생산적-금융-확대-위해-카드사-레버리지-배율-규제-완화해야-ceo스코어데일리.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-02</news:publication_date>
-      <news:title>[현장] 서지용 신용카드학회장 “생산적 금융 확대 위해 카드사 레버리지 배율 규제 완화해야” - CEO스코어데일리</news:title>
     </news:news>
   </url>
 </urlset>
