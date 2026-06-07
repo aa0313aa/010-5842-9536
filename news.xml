@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-07-news-김민석-국무총리-비상경제본부-회의-주재물가-안정민생-부담-최소화-총력-여성종합뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-07</news:publication_date>
+      <news:title>김민석 국무총리, 비상경제본부 회의 주재…"물가 안정·민생 부담 최소화 총력" - 여성종합뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-07-news-위조-서류로-900억대-태양광-대출-사기시공사-대표-징역-10년-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-07</news:publication_date>
+      <news:title>위조 서류로 '900억대 태양광 대출 사기'…시공사 대표 징역 10년 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-07-news-신용카드의-국제화외국인-특화-서비스-확대-매일일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-07</news:publication_date>
+      <news:title>신용카드의 국제화...외국인 특화 서비스 확대 - 매일일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-06-news-김관영-민생돌봄-공약-발표생활비-줄이고-소득-늘린다-전라일보.html</loc>
     <news:news>
       <news:publication>
@@ -41,50 +74,6 @@
         <news:language>ko</news:language>
       </news:publication>
       <news:publication_date>2026-06-06</news:publication_date>
-      <news:title>"해외여행 고수는 신용카드 안 쓴다"…체크카드 사용액 2.4% 증가 - 전자신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-05-news-nh농협카드-정부-민생-안정-대책-지원-건수-315만-건-돌파-이슈투데이.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-05</news:publication_date>
-      <news:title>NH농협카드, 정부 민생 안정 대책 지원 건수 315만 건 돌파 - 이슈투데이</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-05-news-이승기-105억백현-160억차가원-회장에-전세사기-당했다-pd수첩-스포츠경향.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-05</news:publication_date>
-      <news:title>이승기 105억·백현 160억…차가원 회장에 전세사기 당했다? (PD수첩) - 스포츠경향</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-05-news-고객-명의로-휴대폰-몰래-개통해-소액결제5억-7000만-원-편취한-30대-송치-전북일보-인터넷신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-05</news:publication_date>
-      <news:title>고객 명의로 휴대폰 몰래 개통해 소액결제⋯5억 7000만 원 편취한 30대 송치 - 전북일보 인터넷신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-05-news-해외여행-고수는-신용카드-안-쓴다체크카드-사용액-24-증가-전자신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-05</news:publication_date>
       <news:title>"해외여행 고수는 신용카드 안 쓴다"…체크카드 사용액 2.4% 증가 - 전자신문</news:title>
     </news:news>
   </url>
