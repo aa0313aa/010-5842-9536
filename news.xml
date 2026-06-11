@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-11-news-김-총리-물가-상승률-26개월-만에-3대민생-안정에-최선종합-뉴시스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-11</news:publication_date>
+      <news:title>김 총리 "물가 상승률, 26개월 만에 3%대…민생 안정에 최선"(종합) - 뉴시스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-11-news-기기-한-번-해킹되면-계정카드대출취업-사기로-번진다-지티티코리아.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-11</news:publication_date>
+      <news:title>기기 한 번 해킹되면 계정·카드·대출·취업 사기로 번진다 - 지티티코리아</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-11-news-해외-직구-떼인-돈-환불은-수개월금감원-신용카드-유의사항-안내-신아일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-11</news:publication_date>
+      <news:title>"해외 직구 떼인 돈 환불은 수개월"…금감원, 신용카드 유의사항 안내 - 신아일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-10-news-생활비-부담-직접-줄인다-재경부-민생-정책-아이디어-공모전-개최-퍼블릭타임스.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-06-10</news:publication_date>
       <news:title>휴가철 카드 사용 주의…국외 신용카드 피해 시 최대 5개월 처리 기간 소요 - 충청신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-09-news-구윤철-민생물가-안정-총력-대응할인지원-등-가용수단-총동원-연합인포맥스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-09</news:publication_date>
-      <news:title>구윤철 "민생물가 안정 총력 대응…할인지원 등 가용수단 총동원" - 연합인포맥스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-09-news-수원시-전세사기-피해-임차인에-전세자금-대출이자-지원-시민일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-09</news:publication_date>
-      <news:title>수원시, 전세사기 피해 임차인에 전세자금 대출이자 지원 - 시민일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-09-news-금감원-리볼빙해외결제-분쟁-주의신용카드-민원-사례-공개-직썰.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-09</news:publication_date>
-      <news:title>금감원 “리볼빙·해외결제 분쟁 주의”…신용카드 민원 사례 공개 - 직썰</news:title>
     </news:news>
   </url>
 </urlset>
