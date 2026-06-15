@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-15-news-보이스피싱사기-등-민생사건-피고인-불출석-시-재판-즉시-진행-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15</news:publication_date>
+      <news:title>보이스피싱·사기 등 민생사건, 피고인 불출석 시 재판 즉시 진행 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-15-news-위조-서류로-900억대-태양광-대출-사기시공사-대표-징역-10년-서울신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15</news:publication_date>
+      <news:title>위조 서류로 ‘900억대 태양광 대출 사기’…시공사 대표 징역 10년 - 서울신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-14-news-반값-생활비로-민생-해결-이재준-출정식서-수원대전환-약속-vdaumnet.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +53,6 @@
       </news:publication>
       <news:publication_date>2026-06-14</news:publication_date>
       <news:title>"해외 결제 취소도 5개월 걸린다"…신용카드 민원 주의보 - 마켓인</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-13-news-김-총리-물가-상승률-26개월-만에-3대민생-안정에-최선종합-yjb0802com.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-13</news:publication_date>
-      <news:title>김 총리 "물가 상승률, 26개월 만에 3%대…민생 안정에 최선"(종합) - yjb0802.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-13-news-경남-전세사기-피해-551건경공매-유예대출-지원-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-13</news:publication_date>
-      <news:title>경남 전세사기 피해 551건…“경공매 유예·대출 지원” - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-13-news-해외결제-환불-몇-달-걸린다는데신용카드-민원-88-급증-금융소비자뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-13</news:publication_date>
-      <news:title>"해외결제 환불 몇 달 걸린다는데"…신용카드 민원, 88% 급증 - 금융소비자뉴스</news:title>
     </news:news>
   </url>
 </urlset>
