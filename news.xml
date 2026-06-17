@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-17-news-이억원-포용금융-일회성-민생대책-아닌-금융시스템-개혁-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-17</news:publication_date>
+      <news:title>이억원 "포용금융, 일회성 민생대책 아닌 금융시스템 개혁" - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-17-news-bnk경남은행-금융사기대응팀-신설해-보이스피싱-사전-차단-총력전-포인트경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-17</news:publication_date>
+      <news:title>BNK경남은행, 금융사기대응팀 신설해 보이스피싱 ‘사전 차단’ 총력전 - 포인트경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-17-news-의-전쟁-핀테크-vs-신용카드-카드는-규제-페이는-확장커지는-형평성-논란-파이낸셜포스트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-17</news:publication_date>
+      <news:title>[業의 전쟁, 핀테크 vs 신용카드] ② "카드는 규제, 페이는 확장"…커지는 형평성 논란 - 파이낸셜포스트</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-16-news-우리은행서-40억-규모-할인-분양-사기-금융사고외부인-허위서류로-대출-받아-뉴스로드.html</loc>
     <news:news>
       <news:publication>
@@ -20,28 +53,6 @@
       </news:publication>
       <news:publication_date>2026-06-16</news:publication_date>
       <news:title>"해외 결제 취소도 5개월 걸린다"…신용카드 민원 주의보 - 이데일리</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-15-news-보이스피싱사기-등-민생사건-피고인-불출석-시-재판-즉시-진행-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-15</news:publication_date>
-      <news:title>보이스피싱·사기 등 민생사건, 피고인 불출석 시 재판 즉시 진행 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-15-news-위조-서류로-900억대-태양광-대출-사기시공사-대표-징역-10년-서울신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-15</news:publication_date>
-      <news:title>위조 서류로 ‘900억대 태양광 대출 사기’…시공사 대표 징역 10년 - 서울신문</news:title>
     </news:news>
   </url>
 </urlset>
