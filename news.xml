@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-23-news-대통령-물가-관리가-민생-안정의-핵심담합매점매석-조사-금융소비자뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-23</news:publication_date>
+      <news:title>李대통령 "물가 관리가 민생 안정의 핵심...담합·매점매석 조사“ - 금융소비자뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-23-news-택배-미배송-문자-누르는-순간-사기가-시작됐다-global-더스쿠프.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-23</news:publication_date>
+      <news:title>택배 미배송 문자 누르는 순간, ‘사기’가 시작됐다 [Global] - 더스쿠프</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-23-news-kt-소액결제-해킹-위약금-환급-신청-11월까지-연장미수령-고객-구제-아이뉴스24.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-23</news:publication_date>
+      <news:title>KT, '소액결제 해킹' 위약금 환급 신청 11월까지 연장…미수령 고객 구제 - 아이뉴스24</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-23-news-한국-신용카드가-어떻게-세계-어디서나-그냥-결제되나-브런치.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-23</news:publication_date>
+      <news:title>한국 신용카드가 어떻게 세계 어디서나 ‘그냥’ 결제되나 - 브런치</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-22-news-nh농협카드-정부-민생-안정-대책-지원-건수-315만-건-돌파-이슈투데이.html</loc>
     <news:news>
       <news:publication>
@@ -41,39 +85,6 @@
         <news:language>ko</news:language>
       </news:publication>
       <news:publication_date>2026-06-22</news:publication_date>
-      <news:title>[業의 전쟁, 핀테크 vs 신용카드] ② "카드는 규제, 페이는 확장"…커지는 형평성 논란 - 파이낸셜포스트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-21-news-구윤철-부총리-민생물가-안정-위해-가용수단-총동원-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-21</news:publication_date>
-      <news:title>구윤철 부총리 "민생물가 안정 위해 가용수단 총동원" - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-21-news-어서-끊자-한마디로-피싱-막는다-충북경찰-어르신-금융사기-예방-나서-충청도민일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-21</news:publication_date>
-      <news:title>“어서 끊자” 한마디로 피싱 막는다… 충북경찰, 어르신 금융사기 예방 나서 - 충청도민일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-21-news-의-전쟁-핀테크-vs-신용카드-카드는-규제-페이는-확장커지는-형평성-논란-파이낸셜포스트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-21</news:publication_date>
       <news:title>[業의 전쟁, 핀테크 vs 신용카드] ② "카드는 규제, 페이는 확장"…커지는 형평성 논란 - 파이낸셜포스트</news:title>
     </news:news>
   </url>
