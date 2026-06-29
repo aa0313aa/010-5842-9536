@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-06-29-news-정부-민생물가-안정에-1조원-투입하반기-cpi-3-이내-관리-연합인포맥스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-29</news:publication_date>
+      <news:title>정부, 민생물가 안정에 1조원 투입…"하반기 CPI 3% 이내 관리" - 연합인포맥스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-06-29-news-보이스피싱-넘어-노쇼사기도-계좌정지fiu-거래차단-확대-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-29</news:publication_date>
+      <news:title>보이스피싱 넘어 노쇼사기도 계좌정지…FIU, 거래차단 확대 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-28-news-기름값-내리고-계란-푼다민생-물가-반전되나-뉴스-지데일리.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +53,6 @@
       </news:publication>
       <news:publication_date>2026-06-28</news:publication_date>
       <news:title>폰 대리점 직원에 제대로 당했다…수백만원 소액결제로 훔쳐 [세상&amp;] - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-27-news-구윤철-민생물가-안정-최우선재정세제금융-총동원-msn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-27</news:publication_date>
-      <news:title>구윤철 “민생물가 안정 최우선…재정·세제·금융 총동원” - MSN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-27-news-하나은행-한국인터넷진흥원-스미싱-금융사기-척결에-힘-모아-디지털경제뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-27</news:publication_date>
-      <news:title>하나은행-한국인터넷진흥원, 스미싱 금융사기 척결에 힘 모아 - 디지털경제뉴스</news:title>
     </news:news>
   </url>
 </urlset>
