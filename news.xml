@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-01-news-정부-민생-물가-안정에-올인하반기-공공요금-동결-등-1조원-투입-파이낸셜투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-01</news:publication_date>
+      <news:title>정부, ‘민생 물가 안정’에 올인…하반기 공공요금 동결 등 1조원 투입 - 파이낸셜투데이</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-01-news-영월경찰서-영월노인대학-어르신-대상-보이스피싱-및-노인대상-사기범죄-예방교육-강원도민일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-01</news:publication_date>
+      <news:title>영월경찰서, 영월노인대학 어르신 대상 보이스피싱 및 노인대상 사기범죄 예방교육 - 강원도민일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-01-news-kt-소액결제-해킹-위약금-환급-신청-11월까지-연장미수령-고객-구제-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-01</news:publication_date>
+      <news:title>KT, '소액결제 해킹' 위약금 환급 신청 11월까지 연장…미수령 고객 구제 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-01-news-해외결제-분쟁리볼빙-민원-급증-신용카드-유의사항-살펴보니-조세일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-01</news:publication_date>
+      <news:title>'해외결제 분쟁·리볼빙 민원 급증'... 신용카드, 유의사항 살펴보니 - 조세일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-06-30-news-민생물가-안정-대응에-1조원-재정-투입-한국농어민신문.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +75,6 @@
       </news:publication>
       <news:publication_date>2026-06-30</news:publication_date>
       <news:title>폰 대리점 직원에 제대로 당했다…수백만원 소액결제로 훔쳐 [세상&amp;] - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-29-news-정부-민생물가-안정에-1조원-투입하반기-cpi-3-이내-관리-연합인포맥스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-29</news:publication_date>
-      <news:title>정부, 민생물가 안정에 1조원 투입…"하반기 CPI 3% 이내 관리" - 연합인포맥스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-06-29-news-보이스피싱-넘어-노쇼사기도-계좌정지fiu-거래차단-확대-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-29</news:publication_date>
-      <news:title>보이스피싱 넘어 노쇼사기도 계좌정지…FIU, 거래차단 확대 - 네이트</news:title>
     </news:news>
   </url>
 </urlset>
