@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pay24.store/news/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://pay24.store/신용카드-현금화-업체-가이드-2025.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,6 +49,24 @@
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-02-news-정읍시-민생-안정고용-활성화-종합대책-추진-박차-전민일보.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-02-news-8억-전세대출-사기-보고-누락하나은행-과태료-징계-포쓰저널.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-02-news-kt-소액결제-문의-9만여건-추가-피해-우려-제기-강원일보.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2026-07-01-news-정부-민생-물가-안정에-올인하반기-공공요금-동결-등-1조원-투입-파이낸셜투데이.html</loc>
