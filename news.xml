@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-06-news-정부-민생물가-안정에-1조원-투입공공요금-동결유가-부담-완화-추진-서울뉴스통신.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-06</news:publication_date>
+      <news:title>정부, 민생물가 안정에 1조원 투입…공공요금 동결·유가 부담 완화 추진 - 서울뉴스통신</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-06-news-전세사기대출사기-키우는-가짜등기대법서강대-피해보상-방안-논의-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-06</news:publication_date>
+      <news:title>전세사기·대출사기 키우는 가짜등기…대법·서강대, 피해보상 방안 논의 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-06-news-소액결제-해킹-겪은-kt-정보보안-4조-원-투자한다-미디어오늘.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-06</news:publication_date>
+      <news:title>‘소액결제 해킹’ 겪은 KT, 정보보안 4조 원 투자한다 - 미디어오늘</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-05-news-구윤철-민생물가-안정-위해-1조-투입석유-최고가격-인하-뉴시스.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-07-05</news:publication_date>
       <news:title>′포화′ 신용카드 돌파구 PLCC…카드사 전략 ′양′에서 ′질′로 전환 - 소셜밸류</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-04-news-정부-하반기-물가-3-이내-관리민생물가-안정대책-신속-집행-사건의내막.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-04</news:publication_date>
-      <news:title>정부, 하반기 물가 3% 이내 관리…"민생물가 안정대책 신속 집행" - 사건의내막</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-04-news-은행-금융사고-외부-사기로-중심-이동사전-예방-더-어려워졌다-네이트.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-04</news:publication_date>
-      <news:title>은행 금융사고, 외부 사기로 중심 이동…사전 예방 더 어려워졌다 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-04-news-폰-대리점-직원에-제대로-당했다수백만원-소액결제로-훔쳐-세상-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-04</news:publication_date>
-      <news:title>폰 대리점 직원에 제대로 당했다…수백만원 소액결제로 훔쳐 [세상&amp;] - v.daum.net</news:title>
     </news:news>
   </url>
 </urlset>
