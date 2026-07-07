@@ -33,37 +33,4 @@
       <news:title>‘소액결제 해킹’ 겪은 KT, 정보보안 4조 원 투자한다 - 미디어오늘</news:title>
     </news:news>
   </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-05-news-구윤철-민생물가-안정-위해-1조-투입석유-최고가격-인하-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-05</news:publication_date>
-      <news:title>구윤철 "민생물가 안정 위해 1조 투입…석유 최고가격 인하" - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-05-news-창원서부경찰서-피싱사기-피해-예방-유공자에-표창-경남도민신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-05</news:publication_date>
-      <news:title>창원서부경찰서 피싱사기 피해 예방 유공자에 표창 - 경남도민신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-05-news-포화-신용카드-돌파구-plcc카드사-전략-양에서-질로-전환-소셜밸류.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-05</news:publication_date>
-      <news:title>′포화′ 신용카드 돌파구 PLCC…카드사 전략 ′양′에서 ′질′로 전환 - 소셜밸류</news:title>
-    </news:news>
-  </url>
 </urlset>
