@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://pay24.store/blog/2026-07-06-news-정부-민생물가-안정에-1조원-투입공공요금-동결유가-부담-완화-추진-서울뉴스통신.html</loc>
+    <loc>https://pay24.store/blog/2026-07-08-news-민생안정지원단-계란축산물-등-먹거리-물가-현장점검-뉴시스.html</loc>
     <news:news>
       <news:publication>
         <news:name>오렌지Pay 뉴스</news:name>
         <news:language>ko</news:language>
       </news:publication>
-      <news:publication_date>2026-07-06</news:publication_date>
-      <news:title>정부, 민생물가 안정에 1조원 투입…공공요금 동결·유가 부담 완화 추진 - 서울뉴스통신</news:title>
+      <news:publication_date>2026-07-08</news:publication_date>
+      <news:title>민생안정지원단, 계란·축산물 등 먹거리 물가 현장점검 - 뉴시스</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://pay24.store/blog/2026-07-06-news-전세사기대출사기-키우는-가짜등기대법서강대-피해보상-방안-논의-네이트.html</loc>
+    <loc>https://pay24.store/blog/2026-07-08-news-대출-적은데-왜-전세사기안산-사태가-보여준-착각-디지털데일리.html</loc>
     <news:news>
       <news:publication>
         <news:name>오렌지Pay 뉴스</news:name>
         <news:language>ko</news:language>
       </news:publication>
-      <news:publication_date>2026-07-06</news:publication_date>
-      <news:title>전세사기·대출사기 키우는 가짜등기…대법·서강대, 피해보상 방안 논의 - 네이트</news:title>
+      <news:publication_date>2026-07-08</news:publication_date>
+      <news:title>“대출 적은데 왜 전세사기?”…안산 사태가 보여준 착각 - 디지털데일리</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://pay24.store/blog/2026-07-06-news-소액결제-해킹-겪은-kt-정보보안-4조-원-투자한다-미디어오늘.html</loc>
+    <loc>https://pay24.store/blog/2026-07-08-news-소액결제-피해-위약금-돌려받으세요kt-환급-기한-11월까지-연장-파이낸셜뉴스.html</loc>
     <news:news>
       <news:publication>
         <news:name>오렌지Pay 뉴스</news:name>
         <news:language>ko</news:language>
       </news:publication>
-      <news:publication_date>2026-07-06</news:publication_date>
-      <news:title>‘소액결제 해킹’ 겪은 KT, 정보보안 4조 원 투자한다 - 미디어오늘</news:title>
+      <news:publication_date>2026-07-08</news:publication_date>
+      <news:title>"소액결제 피해 위약금 돌려받으세요"…KT, 환급 기한 11월까지 연장 - 파이낸셜뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-08-news-갚을게-지인들-신용카드-빌려-51억원-결제-뒤-카드깡징역-4년-동아일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-08</news:publication_date>
+      <news:title>“갚을게” 지인들 신용카드 빌려 51억원 결제 뒤 카드깡…징역 4년 - 동아일보</news:title>
     </news:news>
   </url>
 </urlset>
