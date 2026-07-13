@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-13-news-경북도의회-농수산위-민생-안정이-최우선-현장형-농어업-대책-집중-점검-이로운넷.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-13</news:publication_date>
+      <news:title>경북도의회 농수산위, 민생 안정이 최우선... ‘현장형 농어업 대책’ 집중 점검 - 이로운넷</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-13-news-코인-결제-시스템-속여-370억-다단계-사기업체-대표-등-3명-구속기소-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-13</news:publication_date>
+      <news:title>'코인 결제 시스템' 속여 370억 다단계 사기…업체 대표 등 3명 구속기소 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-13-news-수수료-없는-재산세체크카드는-환급-신용카드는-쿠폰할부-대한경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-13</news:publication_date>
+      <news:title>수수료 없는 재산세…체크카드는 환급, 신용카드는 쿠폰·할부 - 대한경제</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-12-news-속초-20만원-민생지원금-접수-시작시민-생활비-부담-덜고-골목상권-소비-살린다-공뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +64,6 @@
       </news:publication>
       <news:publication_date>2026-07-12</news:publication_date>
       <news:title>수수료 없는 재산세…체크카드는 환급, 신용카드는 쿠폰·할부 - 대한경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-11-news-정부-민생물가-안정에-1조원-투입하반기-물가-3-이내-관리-아주경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-11</news:publication_date>
-      <news:title>정부, 민생물가 안정에 1조원 투입…하반기 물가 3% 이내 관리 - 아주경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-11-news-kb금융-농촌-고령층-금융사기-보호-강화-찾아가는-보이스피싱-예방-활동-확대-korea-it-times.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-11</news:publication_date>
-      <news:title>KB금융, 농촌 고령층 금융사기 보호 강화… 찾아가는 보이스피싱 예방 활동 확대 - Korea IT Times</news:title>
     </news:news>
   </url>
 </urlset>
