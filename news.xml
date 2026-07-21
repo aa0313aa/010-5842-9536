@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-21-news-구윤철-민생물가-안정이-정부-최우선-과제-가용한-수단-총동원-파이낸셜신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-21</news:publication_date>
+      <news:title>구윤철 "민생물가 안정이 정부 최우선 과제... 가용한 수단 총동원" - 파이낸셜신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-21-news-조건만남-하러-갔다가-느낌-싸해서-나왔는데-상대-남친이-협박했다면-피싱-사기일까-로톡뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-21</news:publication_date>
+      <news:title>조건만남 하러 갔다가 '느낌 싸해서' 나왔는데 '상대 남친'이 협박했다면, 피싱 사기일까? - 로톡뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-21-news-과징금-얼마무단-소액결제-kt-제재-초읽기-법정-최대-2000억도-가능-문화일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-21</news:publication_date>
+      <news:title>‘과징금 얼마?’…‘무단 소액결제’ KT 제재 초읽기, 법정 최대 2000억도 가능 - 문화일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-20-news-휴대폰-렌탈-미끼로-연-150-고금리-대출금감원-신종-민생금융사기-경고-데일리안.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-07-20</news:publication_date>
       <news:title>'카드깡·소액결제 깡' 300억 원 불법 융통한 일당 실형 - 뉴스1</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-19-news-구윤철-부총리-민생물가-안정-총력재정세제금융수단-적극-활용-서울뉴스통신.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-19</news:publication_date>
-      <news:title>구윤철 부총리 "민생물가 안정 총력…재정·세제·금융수단 적극 활용" - 서울뉴스통신</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-19-news-올-2분기-대출-사기-텔레그램-사칭-피싱-각각-162-71-급증-bikoreanet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-19</news:publication_date>
-      <news:title>올 2분기 ‘대출 사기’, ‘텔레그램 사칭’ 피싱 각각 162%, 71% 급증 - bikorea.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-19-news-사건의-재구성-부산베트남-오가며-300억-소액결제카드깡-부산일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-19</news:publication_date>
-      <news:title>[사건의 재구성] 부산·베트남 오가며 ‘300억 소액결제·카드깡’ - 부산일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-19-news-수수료-없는-재산세체크카드는-환급-신용카드는-쿠폰할부-대한경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-19</news:publication_date>
-      <news:title>수수료 없는 재산세…체크카드는 환급, 신용카드는 쿠폰·할부 - 대한경제</news:title>
     </news:news>
   </url>
 </urlset>
