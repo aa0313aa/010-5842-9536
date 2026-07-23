@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-23-news-생활경제-상황진단-고물가은행-연체율-등-경고등소상공인-특별보증-저금리-대환대출-등-민생-방어-제주뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-23</news:publication_date>
+      <news:title>[道, 생활경제 상황진단] 고물가·은행 연체율 등 ‘경고등’…소상공인 특별보증, 저금리 대환대출 등 민생 방어 - 제주뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-23-news-합성-신원교차-채널-사기-확산사기-탐지방지-시장-2031년-800억달러-돌파-지티티코리아.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-23</news:publication_date>
+      <news:title>합성 신원·교차 채널 사기 확산...사기 탐지·방지 시장 2031년 800억달러 돌파 - 지티티코리아</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-23-news-2만명-정보-유출소액결제-피해-kt-제재-이달-중-결론-천지일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-23</news:publication_date>
+      <news:title>‘2만명 정보 유출·소액결제 피해’ KT 제재 이달 중 결론 - 천지일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-23-news-여신협회-청년외국인-신용카드-발급-위한-신평-체계-구축-지원-나선다-한국경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-23</news:publication_date>
+      <news:title>여신협회, 청년·외국인 신용카드 발급 위한 신평 체계 구축 지원 나선다 - 한국경제</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-22-news-민생안정지원단-계란축산물-등-먹거리-물가-현장점검-뉴시스.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +75,6 @@
       </news:publication>
       <news:publication_date>2026-07-22</news:publication_date>
       <news:title>[사건의 재구성] 부산·베트남 오가며 '300억 소액결제·카드깡' - MSN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-21-news-구윤철-민생물가-안정이-정부-최우선-과제-가용한-수단-총동원-파이낸셜신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-21</news:publication_date>
-      <news:title>구윤철 "민생물가 안정이 정부 최우선 과제... 가용한 수단 총동원" - 파이낸셜신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-21-news-조건만남-하러-갔다가-느낌-싸해서-나왔는데-상대-남친이-협박했다면-피싱-사기일까-로톡뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-21</news:publication_date>
-      <news:title>조건만남 하러 갔다가 '느낌 싸해서' 나왔는데 '상대 남친'이 협박했다면, 피싱 사기일까? - 로톡뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-21-news-과징금-얼마무단-소액결제-kt-제재-초읽기-법정-최대-2000억도-가능-문화일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-21</news:publication_date>
-      <news:title>‘과징금 얼마?’…‘무단 소액결제’ KT 제재 초읽기, 법정 최대 2000억도 가능 - 문화일보</news:title>
     </news:news>
   </url>
 </urlset>
