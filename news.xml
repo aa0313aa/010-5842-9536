@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-07-24-news-정부-민생물가-안정에-1조원-투입하반기-물가-3-이내-관리-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-24</news:publication_date>
+      <news:title>정부, 민생물가 안정에 1조원 투입…하반기 물가 3% 이내 관리 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-24-news-70억대-전세사기-벌인-부산시-고위공직자-징역-10년-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-24</news:publication_date>
+      <news:title>70억대 전세사기 벌인 前부산시 고위공직자 징역 10년 - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-24-news-광고로-돈-버는-시대-끝났다-인터넷-판도-뒤흔들-암호화폐-소액결제의-공포-핀포인트뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-24</news:publication_date>
+      <news:title>광고로 돈 버는 시대 끝났다… 인터넷 판도 뒤흔들 '암호화폐 소액결제'의 공포 - 핀포인트뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-24-news-은행권-신용카드-현금서비스-취급-수수료-도입-잇따라-전북일보-인터넷신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-24</news:publication_date>
+      <news:title>은행권, 신용카드 현금서비스 취급 수수료 도입 잇따라 - 전북일보 인터넷신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-23-news-생활경제-상황진단-고물가은행-연체율-등-경고등소상공인-특별보증-저금리-대환대출-등-민생-방어-제주뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,39 +86,6 @@
       </news:publication>
       <news:publication_date>2026-07-23</news:publication_date>
       <news:title>여신협회, 청년·외국인 신용카드 발급 위한 신평 체계 구축 지원 나선다 - 한국경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-22-news-민생안정지원단-계란축산물-등-먹거리-물가-현장점검-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-22</news:publication_date>
-      <news:title>민생안정지원단, 계란·축산물 등 먹거리 물가 현장점검 - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-22-news-빌리지도-않은-휴대폰이-대출-담보금감원-신종-불법사금융esim-투자사기-소비자경보-issueoncokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-22</news:publication_date>
-      <news:title>"빌리지도 않은 휴대폰이 대출 담보?"…금감원, 신종 불법사금융·eSIM 투자사기 소비자경보 - issueon.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-22-news-사건의-재구성-부산베트남-오가며-300억-소액결제카드깡-msn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-22</news:publication_date>
-      <news:title>[사건의 재구성] 부산·베트남 오가며 '300억 소액결제·카드깡' - MSN</news:title>
     </news:news>
   </url>
 </urlset>
