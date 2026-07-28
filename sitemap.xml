@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pay24.store/news/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://pay24.store/신용카드-현금화-업체-가이드-2025.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,6 +49,30 @@
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-28-news-진천군-민생경제-안정대책-성과-지역경제-선순환-기반-다졌다-금강일보.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-28-news-사기인줄-모르고-계약서-써준-공인중개사대법서-뒤집힌-판결-농민신문.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-28-news-개보위-무단-소액결제-kt-제재안-오늘-심의과징금-촉각-연합뉴스.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-07-28-news-은행권-신용카드-현금서비스-취급-수수료-도입-잇따라-전북일보-인터넷신문.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2026-07-27-news-이-대통령-유가-안정-때까지-유류세-인하-유지민생대책-총력-대한일보.html</loc>
