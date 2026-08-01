@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-08-01-news-민생물가-안정대책-신속-강력-집행-하반기-물가-3-이내로-잡는다-국민뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-01</news:publication_date>
+      <news:title>"민생물가 안정대책 신속 강력 집행" 하반기 물가 3% 이내로 잡는다 - 국민뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-01-news-불법-대출-및-고금리-대출-사기를-줄이기-위한-해결책으로-녹색-신용을-홍보합니다-vietnamvn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-01</news:publication_date>
+      <news:title>불법 대출 및 고금리 대출 사기를 줄이기 위한 해결책으로 "녹색 신용"을 홍보합니다. - Vietnam.vn</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-01-news-소액결제-줄줄-kt-정보유출-과징금-540억-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-01</news:publication_date>
+      <news:title>소액결제 줄줄… KT 정보유출 과징금 540억 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-07-31-news-충북-진천군-민생경제-안정대책-성과지역경제-선순환-기반-다졌다-청주일보.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-07-31</news:publication_date>
       <news:title>‘소액결제 해킹’ 가입자 피해 KT에 과징금 540억 - 경향신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-30-news-이-대통령-유가-안정대책-유지민생-부담-최소화-스페셜경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-30</news:publication_date>
-      <news:title>이 대통령, 유가 안정대책 유지…"민생 부담 최소화" - 스페셜경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-30-news-보이스피싱대출사기-막는다세종신보재단-금융안전망-구축-맞손-newsnatecom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-30</news:publication_date>
-      <news:title>"보이스피싱·대출사기 막는다"…세종신보재단, 금융안전망 구축 '맞손' - news.nate.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-30-news-소액결제-해킹-가입자-피해-kt에-과징금-540억-newsnatecom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-30</news:publication_date>
-      <news:title>'소액결제 해킹' 가입자 피해 KT에 과징금 540억 - news.nate.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-30-news-은행권-신용카드-현금서비스-취급-수수료-도입-잇따라-전북일보-인터넷신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-30</news:publication_date>
-      <news:title>은행권, 신용카드 현금서비스 취급 수수료 도입 잇따라 - 전북일보 인터넷신문</news:title>
     </news:news>
   </url>
 </urlset>
