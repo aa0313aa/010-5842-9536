@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-08-02-news-이재명-대통령-순방-중-화상-수석보좌관회의-주재-민생-안정-및-국정-기조-강조-서남투데이.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-02</news:publication_date>
+      <news:title>이재명 대통령, 순방 중 화상 수석보좌관회의 주재… 민생 안정 및 국정 기조 강조 - 서남투데이</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-02-news-공인중개사가-실제-중개-없이-전세계약서-작성대법-대출사기-방조-법률저널.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-02</news:publication_date>
+      <news:title>공인중개사가 실제 중개 없이 전세계약서 작성...대법 “대출사기 방조” - 법률저널</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-02-news-사건의-재구성-부산베트남-오가며-300억-소액결제카드깡-busancom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-02</news:publication_date>
+      <news:title>[사건의 재구성] 부산·베트남 오가며 ‘300억 소액결제·카드깡’ - busan.com</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-08-01-news-민생물가-안정대책-신속-강력-집행-하반기-물가-3-이내로-잡는다-국민뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +64,6 @@
       </news:publication>
       <news:publication_date>2026-08-01</news:publication_date>
       <news:title>소액결제 줄줄… KT 정보유출 과징금 540억 - v.daum.net</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-31-news-충북-진천군-민생경제-안정대책-성과지역경제-선순환-기반-다졌다-청주일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-31</news:publication_date>
-      <news:title>충북 진천군, 민생경제 안정대책 성과…지역경제 선순환 기반 다졌다 - 청주일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-31-news-인간-실수-노린-공격이-사이버-손실-853ai로-정교해진-피싱송금사기-통제-시급-지티티코리아.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-31</news:publication_date>
-      <news:title>인간 실수 노린 공격이 사이버 손실 85.3%...AI로 정교해진 피싱·송금사기 통제 시급 - 지티티코리아</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-07-31-news-소액결제-해킹-가입자-피해-kt에-과징금-540억-경향신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-07-31</news:publication_date>
-      <news:title>‘소액결제 해킹’ 가입자 피해 KT에 과징금 540억 - 경향신문</news:title>
     </news:news>
   </url>
 </urlset>
