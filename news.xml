@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-08-03-news-구례경찰서-5일-시장에서-전화금융사기보이스피싱예방-캠페인-활동-전개-뉴스데일리.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-03</news:publication_date>
+      <news:title>구례경찰서, 5일 시장에서 전화금융사기(보이스피싱)예방 캠페인 활동 전개 - 뉴스데일리</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-03-news-sktkt망-소액결제-없앤-lg헬로모바일알뜰폰-고객-차별-논란-vdaumnet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-03</news:publication_date>
+      <news:title>SKT·KT망 소액결제 없앤 LG헬로모바일…알뜰폰 '고객 차별' 논란 - v.daum.net</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-08-02-news-이재명-대통령-순방-중-화상-수석보좌관회의-주재-민생-안정-및-국정-기조-강조-서남투데이.html</loc>
     <news:news>
       <news:publication>
@@ -31,39 +53,6 @@
       </news:publication>
       <news:publication_date>2026-08-02</news:publication_date>
       <news:title>[사건의 재구성] 부산·베트남 오가며 ‘300억 소액결제·카드깡’ - busan.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-01-news-민생물가-안정대책-신속-강력-집행-하반기-물가-3-이내로-잡는다-국민뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-01</news:publication_date>
-      <news:title>"민생물가 안정대책 신속 강력 집행" 하반기 물가 3% 이내로 잡는다 - 국민뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-01-news-불법-대출-및-고금리-대출-사기를-줄이기-위한-해결책으로-녹색-신용을-홍보합니다-vietnamvn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-01</news:publication_date>
-      <news:title>불법 대출 및 고금리 대출 사기를 줄이기 위한 해결책으로 "녹색 신용"을 홍보합니다. - Vietnam.vn</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-01-news-소액결제-줄줄-kt-정보유출-과징금-540억-vdaumnet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-01</news:publication_date>
-      <news:title>소액결제 줄줄… KT 정보유출 과징금 540억 - v.daum.net</news:title>
     </news:news>
   </url>
 </urlset>
