@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-08-08-news-데스크칼럼-민생-정책은-많은데-왜-생활은-더-팍팍한가-우먼컨슈머.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-08</news:publication_date>
+      <news:title>[데스크칼럼] ‘민생 정책’은 많은데 왜 생활은 더 팍팍한가 - 우먼컨슈머</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-08-news-트럼프-리사-쿡-연준이사-해임-재시동사기-소명하라-통보-뉴시스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-08</news:publication_date>
+      <news:title>"트럼프, 리사 쿡 연준이사 해임 재시동…'사기 소명하라' 통보" - 뉴시스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-08-news-해킹-소액결제관리부실-kt에-과징금-540억-원-연합뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-08</news:publication_date>
+      <news:title>'해킹 소액결제'…관리부실 KT에 과징금 540억 원 - 연합뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-08-07-news-myjcb-앱에-ai-기반-사기-점검-기능으로-연결되는-경로-신설-jcb트렌드마이크로.html</loc>
     <news:news>
       <news:publication>
@@ -20,50 +53,6 @@
       </news:publication>
       <news:publication_date>2026-08-07</news:publication_date>
       <news:title>'해킹 소액결제'…관리부실 KT에 과징금 540억 원 - 네이트</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-06-news-정부-중동-비상-상황폭염-총력-대응-그냥드림-등-민생-안정-가속-경기일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-06</news:publication_date>
-      <news:title>정부, 중동 비상 상황·폭염 총력 대응… ‘그냥드림’ 등 민생 안정 가속 - 경기일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-06-news-웰컴저축은행-918억-대출사기-피해금감원-전수조사-메디컬투데이.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-06</news:publication_date>
-      <news:title>웰컴저축은행, 918억 대출사기 피해…금감원 전수조사 - 메디컬투데이</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-06-news-소액결제-줄줄-kt-정보유출-과징금-540억-세계일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-06</news:publication_date>
-      <news:title>소액결제 줄줄… KT 정보유출 과징금 540억 - 세계일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-06-news-citi-신용카드-암호화폐-구매-5-수수료의-함정-financefeeds.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-06</news:publication_date>
-      <news:title>Citi 신용카드 암호화폐 구매, 5% 수수료의 함정 - FinanceFeeds</news:title>
     </news:news>
   </url>
 </urlset>
