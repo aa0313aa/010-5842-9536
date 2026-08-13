@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-08-13-news-구윤철-민생경제-안정-총력청년-일자리-회복방안-조속-발표-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-13</news:publication_date>
+      <news:title>구윤철 "민생경제 안정 총력…청년 일자리 회복방안 조속 발표" - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-13-news-경찰-수사개혁위-전세사기피싱-피해단체-간담회보호책-논의-뉴시스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-13</news:publication_date>
+      <news:title>경찰 수사개혁위, 전세사기·피싱 피해단체 간담회…보호책 논의 - 뉴시스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-13-news-헬로모바일-ktskt망-휴대폰-소액결제-종료왜-네이트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-13</news:publication_date>
+      <news:title>헬로모바일, KT·SKT망 '휴대폰 소액결제' 종료⋯왜? - 네이트</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-08-13-news-올해-하반기도-신용카드-가맹점-957에-우대-수수료율-적용-조선일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-13</news:publication_date>
+      <news:title>올해 하반기도 신용카드 가맹점 95.7%에 우대 수수료율 적용 - 조선일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-08-12-news-역대급-폭염에-장바구니-물가-비상-민생대책-강도-높아질까-vdaumnet.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-08-12</news:publication_date>
       <news:title>신용카드 가맹점 95.7% 우대수수료 적용…“매출 30억 이하 309만곳” - 녹색경제신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-11-news-민생-경제-회복-정읍시민-체감형-정책-박차-전북중앙.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-11</news:publication_date>
-      <news:title>'민생 경제 회복' 정읍시민 체감형 정책 박차 - 전북중앙</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-11-news-보이스피싱-피해자가-피의자로진화하는-사기-막는-금융-안전망-월요신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-11</news:publication_date>
-      <news:title>보이스피싱 피해자가 피의자로...진화하는 사기 막는 금융 안전망 - 월요신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-11-news-휴대폰-소액결제-피해예방-대응요령-안내-서울pn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-11</news:publication_date>
-      <news:title>'휴대폰 소액결제' 피해예방 대응요령 안내 - 서울Pn</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-08-11-news-하반기-영세중소-신용카드-가맹점-309만곳에-우대수수료율-적용-글로벌경제신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-11</news:publication_date>
-      <news:title>하반기 영세·중소 신용카드 가맹점 309만곳에 우대수수료율 적용 - 글로벌경제신문</news:title>
     </news:news>
   </url>
 </urlset>
