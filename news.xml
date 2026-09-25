@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-09-25-news-총리-전통시장-활력-되찾도록-추석-민생안정대책-차질없이-추진-news1kr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-25</news:publication_date>
+      <news:title>韓총리 "전통시장 활력 되찾도록 추석 민생안정대책 차질없이 추진" - news1.kr</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-09-25-news-코인베이스-피싱-사기로-1600만-달러를-훔친-브루클린-남성-징역-12년-선고-coindesk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-25</news:publication_date>
+      <news:title>코인베이스 피싱 사기로 1,600만 달러를 훔친 브루클린 남성, 징역 12년 선고 - CoinDesk</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-09-25-news-kt-무단-소액결제-가입자-정보-탈취-중국인-항소심도-징역-4년6개월-news1kr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-25</news:publication_date>
+      <news:title>'KT 무단 소액결제' 가입자 정보 탈취 중국인, 항소심도 징역 4년6개월 - news1.kr</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-09-24-news-한-총리-전통시장-활력-되찾도록-지원추석-민생안정대책-차질없이-추진-newsiscom.html</loc>
     <news:news>
       <news:publication>
@@ -42,50 +75,6 @@
       </news:publication>
       <news:publication_date>2026-09-24</news:publication_date>
       <news:title>신용카드 ‘카드깡’ 적발 가맹점 5년새 76% 급감…적발액도 절반 가까이 줄어 - 녹색경제신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-23-news-추석-장바구니부터-소상공인-자금까지전북도-민생-방어-총력-전라매일.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23</news:publication_date>
-      <news:title>추석 장바구니부터 소상공인 자금까지…전북도 ‘민생 방어’ 총력 - 전라매일</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-23-news-손명수-의원-추석-스미싱보이스피싱-주의명절-금융사기-계좌-지급정지-급증기관사칭-피해-4년-새-67배-월드장애.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23</news:publication_date>
-      <news:title>손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 - 월드장애인사랑뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-23-news-kt-무단-소액결제-가담-중국인들-2심서도-실형-파이낸셜뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23</news:publication_date>
-      <news:title>'KT 무단 소액결제' 가담 중국인들 2심서도 실형 - 파이낸셜뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-23-news-쿠팡-기프트카드-gs25서-산다5개-카드사-신용카드-결제-지원-스마트경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23</news:publication_date>
-      <news:title>쿠팡 기프트카드 GS25서 산다…5개 카드사 신용카드 결제 지원 - 스마트경제</news:title>
     </news:news>
   </url>
 </urlset>
