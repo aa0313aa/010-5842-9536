@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-09-26-news-vol928-대한민국-정책브리핑-추석-먹거리부터-생활비-지원까지-나에게-맞는-민생-지원-혜택은-정책브리핑.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-26</news:publication_date>
+      <news:title>[Vol.928 대한민국 정책브리핑] 추석 먹거리부터 생활비 지원까지, 나에게 맞는 민생 지원 혜택은? - 정책브리핑</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-09-26-news-남가주-주민-3명-코로나-구제대출-350만불-사기-인정-미주중앙일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-26</news:publication_date>
+      <news:title>남가주 주민 3명, 코로나 구제대출 350만불 사기 인정 - 미주중앙일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-09-26-news-아파트-돌며-kt-해킹소액결제주범-2심서도-징역-4년-6개월-연합뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-26</news:publication_date>
+      <news:title>아파트 돌며 KT 해킹·소액결제…주범 2심서도 징역 4년 6개월 - 연합뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-09-25-news-총리-전통시장-활력-되찾도록-추석-민생안정대책-차질없이-추진-news1kr.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-09-25</news:publication_date>
       <news:title>'KT 무단 소액결제' 가입자 정보 탈취 중국인, 항소심도 징역 4년6개월 - news1.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-24-news-한-총리-전통시장-활력-되찾도록-지원추석-민생안정대책-차질없이-추진-newsiscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-24</news:publication_date>
-      <news:title>한 총리 "전통시장 활력 되찾도록 지원…추석 민생안정대책 차질없이 추진" - newsis.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-24-news-단독사기대출-수사-받고도창업보증서-또-발급해줘-서울경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-24</news:publication_date>
-      <news:title>[단독]사기대출 수사 받고도…창업보증서 또 발급해줘 - 서울경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-24-news-kt-무단-소액결제-가담-중국인들-2심서도-실형-newsiscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-24</news:publication_date>
-      <news:title>'KT 무단 소액결제' 가담 중국인들 2심서도 실형 - newsis.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-09-24-news-신용카드-카드깡-적발-가맹점-5년새-76-급감적발액도-절반-가까이-줄어-녹색경제신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-24</news:publication_date>
-      <news:title>신용카드 ‘카드깡’ 적발 가맹점 5년새 76% 급감…적발액도 절반 가까이 줄어 - 녹색경제신문</news:title>
     </news:news>
   </url>
 </urlset>
