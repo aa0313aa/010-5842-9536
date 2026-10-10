@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pay24.store/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pay24.store/news/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://pay24.store/신용카드-현금화-업체-가이드-2025.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,6 +49,24 @@
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-10-news-2026-국감이형일-민생경제-안정양극화-완화-총력-전자신문.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-10-news-독자기고-외국인들이-보이스피싱-사기의-표적이-되고-있다-전민일보.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-10-news-중고거래도-신용카드-안전결제-이용-전-수수료정산취소-확인-5가지-강릉뉴스.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pay24.store/blog/2026-10-09-news-최현덕-남양주시장-민생-903억복지-623억-추가시민-생활비-부담-던다-필드뉴스.html</loc>
