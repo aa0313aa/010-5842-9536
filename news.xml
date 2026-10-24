@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-10-24-news-ai가-바꾼-사이버-공격의-얼굴피싱사기가-랜섬웨어-제치고-ceo-최대-위협으로-한국공공정책신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-24</news:publication_date>
+      <news:title>AI가 바꾼 사이버 공격의 얼굴—피싱·사기가 랜섬웨어 제치고 CEO 최대 위협으로 - 한국공공정책신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-24-news-신용카드로-요금-결제하면-수수료-16-추가-캐나다-한국일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-24</news:publication_date>
+      <news:title>신용카드로 요금 결제하면 수수료 1.6% 추가 - 캐나다 한국일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-10-23-news-nh농협생명-금융사기-차단-강화보험계약대출-이상거래-탐지-라이센스뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -53,50 +75,6 @@
       </news:publication>
       <news:publication_date>2026-10-23</news:publication_date>
       <news:title>카드사 가상계좌에 보증금 맡기면 신용카드 발급 가능해진다 - 한국일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-22-news-안도걸-국감서-민생-3대-처방-제시청년-자산빚-부담물가-정조준-전남일보.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-22</news:publication_date>
-      <news:title>안도걸, 국감서 ‘민생 3대 처방’ 제시…청년 자산·빚 부담·물가 정조준 - 전남일보</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-22-news-kb금융-경찰청안실련과-금융사기-예방-의심전심-캠페인-전개-뉴스핌.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-22</news:publication_date>
-      <news:title>KB금융, 경찰청·안실련과 금융사기 예방 '의심전심 캠페인' 전개 - 뉴스핌</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-22-news-휴대폰소액결제-상품권현금화-정보-찾는-소비자에게신용카드할부상품권com-상품권-구매-안내-얼리어답터뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-22</news:publication_date>
-      <news:title>휴대폰소액결제 상품권현금화 정보 찾는 소비자에게…신용카드할부상품권.com, 상품권 구매 안내 - 얼리어답터뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-22-news-신용카드-막혔던-씬파일러도-발급-금융-신비법-열렸다-httpswww2newscokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-22</news:publication_date>
-      <news:title>신용카드 막혔던 씬파일러도 발급… 금융 신비법 열렸다 - https://www.2news.co.kr/</news:title>
     </news:news>
   </url>
 </urlset>
