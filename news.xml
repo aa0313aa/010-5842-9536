@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-10-29-news-민생플러스-생활비-경감-정책-아이디어-공모전-시상식-연합뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-29</news:publication_date>
+      <news:title>민생플러스 생활비 경감 정책 아이디어 공모전 시상식 - 연합뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-29-news-보이스피싱-사기이용계좌-59가-출금-지연-예외-계좌거래소-이용자-출금-더-깐깐해진다-위키트리.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-29</news:publication_date>
+      <news:title>보이스피싱 사기이용계좌 59%가 출금 지연 ‘예외’ 계좌…거래소 이용자 출금 더 깐깐해진다 - 위키트리</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-10-28-news-유럽-시위-가장-큰-원인은-저성장민생회복-체감-정책-총동원-데일리안.html</loc>
     <news:news>
       <news:publication>
@@ -20,28 +42,6 @@
       </news:publication>
       <news:publication_date>2026-10-28</news:publication_date>
       <news:title>금감원 '무효확인서'가 살렸다…연 60% 초과 대출 '사기 무죄' - 국민기자뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-27-news-이름로고-같아도-가짜일-수도바이낸스-위조-토큰-결제-사기-주의보-한국정경신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-27</news:publication_date>
-      <news:title>이름·로고 같아도 가짜일 수도..바이낸스, 위조 토큰 결제 사기 주의보 - 한국정경신문</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-27-news-신용카드로-요금-결제하면-수수료-16-추가-the-korea-times-daily-the-korea-time.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-27</news:publication_date>
-      <news:title>신용카드로 요금 결제하면 수수료 1.6% 추가 — The Korea Times Daily - The Korea Times Daily</news:title>
     </news:news>
   </url>
 </urlset>
