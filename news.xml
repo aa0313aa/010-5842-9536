@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-10-31-news-사회초년생에게-81억원-뜯어낸-베트남-피싱사기-조직-54명-검거-국민일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31</news:publication_date>
+      <news:title>사회초년생에게 81억원 뜯어낸 베트남 ‘피싱사기’ 조직 54명 검거 - 국민일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-31-news-소액결제-현금화-미끼-법원은-실형을-선고했다-로톡.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31</news:publication_date>
+      <news:title>소액결제 현금화 미끼, 법원은 실형을 선고했다 - 로톡</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-10-31-news-현대카드-9월-신용카드업계-소비자-관심도-1위-우뚝신한삼성카드-순-빅데이터뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31</news:publication_date>
+      <news:title>현대카드, 9월 신용카드업계 소비자 관심도 1위 우뚝…신한·삼성카드 순 - 빅데이터뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-10-30-news-전세사기-중형-제도-허점-노렸다-청년-전세대출-사기-총책-징역-9년-cbc뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -20,28 +53,6 @@
       </news:publication>
       <news:publication_date>2026-10-30</news:publication_date>
       <news:title>“5만원 썼더니 700원 캐시백” 요즘 뜬다는 ‘크립토카드’ 과연 신용카드보다 좋을까 [크립토360] - 헤럴드경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-29-news-민생플러스-생활비-경감-정책-아이디어-공모전-시상식-연합뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29</news:publication_date>
-      <news:title>민생플러스 생활비 경감 정책 아이디어 공모전 시상식 - 연합뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-29-news-보이스피싱-사기이용계좌-59가-출금-지연-예외-계좌거래소-이용자-출금-더-깐깐해진다-위키트리.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29</news:publication_date>
-      <news:title>보이스피싱 사기이용계좌 59%가 출금 지연 ‘예외’ 계좌…거래소 이용자 출금 더 깐깐해진다 - 위키트리</news:title>
     </news:news>
   </url>
 </urlset>
