@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-01-news-종합-대통령-국민-체감-정책-적극-동원국무회의에서-민생-회복-강조-뉴스핌.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01</news:publication_date>
+      <news:title>[종합] 李대통령 "국민 체감 정책 적극 동원"…국무회의에서 민생 회복 강조 - 뉴스핌</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-01-news-단독-은행권-대출-사기피해-급증허위-서류-ai-악용-ytn.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01</news:publication_date>
+      <news:title>단독 은행권 '대출 사기피해' 급증..."허위 서류 AI 악용" - YTN</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-01-news-문화상품권휴대폰소액결제-구매현금화-관심-증가상품권구매com-다양한-모바일-상품권-서비스-제공-한국공공정책신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01</news:publication_date>
+      <news:title>문화상품권휴대폰소액결제 구매·현금화 관심 증가…상품권구매.com, 다양한 모바일 상품권 서비스 제공 - 한국공공정책신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-01-news-캐나다-로저스-내년부터-신용카드-결제에-16-수수료-밴쿠버-중앙일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01</news:publication_date>
+      <news:title>캐나다 | 로저스, 내년부터 신용카드 결제에 1.6% 수수료 - 밴쿠버 중앙일보</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-10-31-news-사회초년생에게-81억원-뜯어낸-베트남-피싱사기-조직-54명-검거-국민일보.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +75,6 @@
       </news:publication>
       <news:publication_date>2026-10-31</news:publication_date>
       <news:title>현대카드, 9월 신용카드업계 소비자 관심도 1위 우뚝…신한·삼성카드 순 - 빅데이터뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-30-news-전세사기-중형-제도-허점-노렸다-청년-전세대출-사기-총책-징역-9년-cbc뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30</news:publication_date>
-      <news:title>[전세사기 중형] "제도 허점 노렸다"… 청년 전세대출 사기 총책 징역 9년 - CBC뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-10-30-news-5만원-썼더니-700원-캐시백-요즘-뜬다는-크립토카드-과연-신용카드보다-좋을까-크립토360-헤럴드경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30</news:publication_date>
-      <news:title>“5만원 썼더니 700원 캐시백” 요즘 뜬다는 ‘크립토카드’ 과연 신용카드보다 좋을까 [크립토360] - 헤럴드경제</news:title>
     </news:news>
   </url>
 </urlset>
