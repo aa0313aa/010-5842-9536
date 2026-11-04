@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-04-news-민생플러스-생활비-경감-정책-아이디어-공모전-시상식-연합뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-04</news:publication_date>
+      <news:title>민생플러스 생활비 경감 정책 아이디어 공모전 시상식 - 연합뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-04-news-울산지법-코인-사기-당하자-보이스피싱-당한-것처럼-신고하고-피해구제-신청-벌금형-집유-로이슈.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-04</news:publication_date>
+      <news:title>울산지법, 코인 사기 당하자 보이스피싱 당한 것처럼 신고하고 피해구제 신청 '벌금형 집유' - 로이슈</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-04-news-국세청-신용카드-위장가맹점-10년간-1만5714명-적발-진주신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-04</news:publication_date>
+      <news:title>국세청, 신용카드 위장가맹점 10년간 1만5714명 적발 - 진주신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-03-news-수출은-호황-민생은-한파-k자-양극화-해소-승부수-매일일보.html</loc>
     <news:news>
       <news:publication>
@@ -31,50 +64,6 @@
       </news:publication>
       <news:publication_date>2026-11-03</news:publication_date>
       <news:title>코인베이스 "AI 에이전트 소액결제에 스테이블코인 가장 적합" - 코인리더스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-02-news-대통령-경제-성과-인상적이지만-민생회복-더뎌재정내수-총동원종합2보-연합인포맥스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-02</news:publication_date>
-      <news:title>李대통령 "경제 성과 인상적이지만 민생회복 더뎌…재정·내수 총동원"(종합2보) - 연합인포맥스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-02-news-사랑의열매-금융-사기-보이스피싱-피해자-7827명에-222억-원-지원-국민뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-02</news:publication_date>
-      <news:title>사랑의열매, 금융 사기 보이스피싱 피해자 7,827명에 222억 원 지원 - 국민뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-02-news-휴대전화-소액결제로-깡-10억-원대-불법-대출-obs경인tv.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-02</news:publication_date>
-      <news:title>휴대전화 소액결제로 '깡' 10억 원대 불법 대출 - OBS경인TV</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-02-news-한국신용카드학회-캐피탈-산업의-혁신기업-지원-위해-규제-개선인프라-정비해야-파이낸셜신문.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-02</news:publication_date>
-      <news:title>한국신용카드학회 "캐피탈 산업의 혁신기업 지원 위해 규제 개선·인프라 정비해야" - 파이낸셜신문</news:title>
     </news:news>
   </url>
 </urlset>
