@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-08-news-대출받으려고-상품권-구입해-핀번호-보냈는데사기방조로-처벌받나요-로톡뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>대출받으려고 상품권 구입해 핀번호 보냈는데⋯사기방조로 처벌받나요? - 로톡뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-07-news-충북-소상공인-상생보험-대출-상환-최대-1000만원금융사기-피해도-보장-cbc뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -9,28 +20,6 @@
       </news:publication>
       <news:publication_date>2026-11-07</news:publication_date>
       <news:title>충북 소상공인 상생보험, 대출 상환 최대 1000만원…금융사기 피해도 보장 - CBC뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-06-news-금보원-사칭-보이스피싱-피해금-환급-사기-bi-korea.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-06</news:publication_date>
-      <news:title>“금보원 사칭 보이스피싱 피해금 환급” 사기 - BI KOREA</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-06-news-kt-무단-소액결제-주범-가짜-기지국-탐지-기술-빈틈-찾아-대비-뉴스1.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-06</news:publication_date>
-      <news:title>KT 무단 소액결제 주범 '가짜 기지국' 탐지 기술 빈틈 찾아 대비 - 뉴스1</news:title>
     </news:news>
   </url>
 </urlset>
