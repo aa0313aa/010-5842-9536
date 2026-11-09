@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-09-news-척-슈머-트럼프에-경고장민생법안-거부권-충돌-예고-스페셜경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-09</news:publication_date>
+      <news:title>척 슈머, 트럼프에 경고장…민생법안 거부권 충돌 예고 - 스페셜경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-09-news-시민단체-금감원-전현직-원장-감찰-고발한국자산신탁-사기-증거-확보하고도-검사-회피-서울뉴스통신.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-09</news:publication_date>
+      <news:title>시민단체, 금감원 전·현직 원장 감찰 고발…"한국자산신탁 사기 증거 확보하고도 검사 회피" - 서울뉴스통신</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-08-news-대출받으려고-상품권-구입해-핀번호-보냈는데사기방조로-처벌받나요-로톡뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -9,17 +31,6 @@
       </news:publication>
       <news:publication_date>2026-11-08</news:publication_date>
       <news:title>대출받으려고 상품권 구입해 핀번호 보냈는데⋯사기방조로 처벌받나요? - 로톡뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-07-news-충북-소상공인-상생보험-대출-상환-최대-1000만원금융사기-피해도-보장-cbc뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
-      <news:title>충북 소상공인 상생보험, 대출 상환 최대 1000만원…금융사기 피해도 보장 - CBC뉴스</news:title>
     </news:news>
   </url>
 </urlset>
