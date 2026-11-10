@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-10-news-경기도의회-민주당-행감-첫날-민생정책-점검-lg헬로비전.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-10</news:publication_date>
+      <news:title>경기도의회 민주당, 행감 첫날 민생·정책 점검 - LG헬로비전</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-10-news-현대캐피탈-청소년-430명에-금융사기-예방-교육-press9.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-10</news:publication_date>
+      <news:title>현대캐피탈, 청소년 430명에 금융사기 예방 교육 - PRESS9</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-10-news-ai끼리-결제하는-시대비트코인-라이트닝-소액결제-넘어-인증망으로-토큰포스트.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-10</news:publication_date>
+      <news:title>AI끼리 결제하는 시대…비트코인 라이트닝, 소액결제 넘어 인증망으로 - 토큰포스트</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-09-news-척-슈머-트럼프에-경고장민생법안-거부권-충돌-예고-스페셜경제.html</loc>
     <news:news>
       <news:publication>
@@ -20,17 +53,6 @@
       </news:publication>
       <news:publication_date>2026-11-09</news:publication_date>
       <news:title>시민단체, 금감원 전·현직 원장 감찰 고발…"한국자산신탁 사기 증거 확보하고도 검사 회피" - 서울뉴스통신</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-08-news-대출받으려고-상품권-구입해-핀번호-보냈는데사기방조로-처벌받나요-로톡뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-08</news:publication_date>
-      <news:title>대출받으려고 상품권 구입해 핀번호 보냈는데⋯사기방조로 처벌받나요? - 로톡뉴스</news:title>
     </news:news>
   </url>
 </urlset>
