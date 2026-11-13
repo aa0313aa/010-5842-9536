@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-13-news-금융-게시판-카카오뱅크-개인사업자-대출-갈아타기-출시토스뱅크-금융사기-예방활동-성과-공개-라이센스뉴스.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-13</news:publication_date>
+      <news:title>[금융 게시판] 카카오뱅크, 개인사업자 대출 갈아타기 출시…토스뱅크, 금융사기 예방활동 성과 공개 - 라이센스뉴스</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-13-news-주춤한-트래블카드-뜨거운-신용카드판-바뀐-해외-결제시장-이데일리.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-13</news:publication_date>
+      <news:title>주춤한 트래블카드, 뜨거운 신용카드…판 바뀐 해외 결제시장 - 이데일리</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-12-news-청주시-생활비-부담-덜고-농가-살림-보태고-체감형-민생정책-펼친다-뉴데일리-충청세종.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +53,6 @@
       </news:publication>
       <news:publication_date>2026-11-12</news:publication_date>
       <news:title>은행 신용카드 연체율 3.7%…커지는 취약차주 부담 - 서울경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-11-news-생활비-부담-덜고-농가-살림-보태고-청주시-체감형-민생정책-추진-모빅경제.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-11</news:publication_date>
-      <news:title>생활비 부담 덜고 농가 살림 보태고… 청주시, 체감형 민생정책 추진 - 모빅경제</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-11-news-여윳돈-만들어드립니다151명-모아-1800억대-대출사기-경인방송-뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-11</news:publication_date>
-      <news:title>"여윳돈 만들어드립니다"…151명 모아 1800억대 대출사기 - 경인방송 뉴스</news:title>
     </news:news>
   </url>
 </urlset>
