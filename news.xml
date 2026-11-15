@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-15-news-책-사기-전-동네-도서관부터-검색판본-확인과-대출-예약-활용법-뉴스n연합.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15</news:publication_date>
+      <news:title>책 사기 전 동네 도서관부터 검색…판본 확인과 대출 예약 활용법 - 뉴스N연합</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-14-news-시민-생활비-경감-소상공인-농업인-지원다양한-민생정책-추진-wwwgukjenewscom.html</loc>
     <news:news>
       <news:publication>
@@ -31,28 +42,6 @@
       </news:publication>
       <news:publication_date>2026-11-14</news:publication_date>
       <news:title>고객 폰으로 소액결제·계좌이체, 휴대폰 매장 직원 실형 - 뉴시스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-13-news-금융-게시판-카카오뱅크-개인사업자-대출-갈아타기-출시토스뱅크-금융사기-예방활동-성과-공개-라이센스뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-13</news:publication_date>
-      <news:title>[금융 게시판] 카카오뱅크, 개인사업자 대출 갈아타기 출시…토스뱅크, 금융사기 예방활동 성과 공개 - 라이센스뉴스</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-13-news-주춤한-트래블카드-뜨거운-신용카드판-바뀐-해외-결제시장-이데일리.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-13</news:publication_date>
-      <news:title>주춤한 트래블카드, 뜨거운 신용카드…판 바뀐 해외 결제시장 - 이데일리</news:title>
     </news:news>
   </url>
 </urlset>
