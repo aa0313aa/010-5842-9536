@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-16-news-황희-보이스피싱투자리딩방-등-다중피해사기-근절-특별법-발의-아시아경제.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-16</news:publication_date>
+      <news:title>與 황희, 보이스피싱·투자리딩방 등 다중피해사기 근절 특별법 발의 - 아시아경제</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-16-news-휴대전화-문제-해결해-줄게-고객-속여-소액결제한-매장-직원-실형-국제신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-16</news:publication_date>
+      <news:title>`휴대전화 문제 해결해 줄게` 고객 속여 소액결제한 매장 직원 실형 - 국제신문</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-15-news-책-사기-전-동네-도서관부터-검색판본-확인과-대출-예약-활용법-뉴스n연합.html</loc>
     <news:news>
       <news:publication>
@@ -9,39 +31,6 @@
       </news:publication>
       <news:publication_date>2026-11-15</news:publication_date>
       <news:title>책 사기 전 동네 도서관부터 검색…판본 확인과 대출 예약 활용법 - 뉴스N연합</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-14-news-시민-생활비-경감-소상공인-농업인-지원다양한-민생정책-추진-wwwgukjenewscom.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-14</news:publication_date>
-      <news:title>시민 생활비 경감 소상공인, 농업인 지원...다양한 민생정책 추진 - www.gukjenews.com</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-14-news-군부대라며-15억-원-노쇼-사기-일당-구속베트남-거점-조직-newssbscokr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-14</news:publication_date>
-      <news:title>군부대라며 15억 원 '노쇼 사기' 일당 구속…베트남 거점 조직 - news.sbs.co.kr</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-14-news-고객-폰으로-소액결제계좌이체-휴대폰-매장-직원-실형-뉴시스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-14</news:publication_date>
-      <news:title>고객 폰으로 소액결제·계좌이체, 휴대폰 매장 직원 실형 - 뉴시스</news:title>
     </news:news>
   </url>
 </urlset>
