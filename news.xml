@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://pay24.store/blog/2026-11-25-news-생활비-부담-덜고-농가-살림-보태고-청주시-체감형-민생정책-추진-뉴스신.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25</news:publication_date>
+      <news:title>생활비 부담 덜고 농가 살림 보태고… 청주시, 체감형 민생정책 추진 - 뉴스신</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-25-news-라이프-내-정보-아는-전화도-의심해야개인정보-유출이-부른-금융사기-주의보-전기신문.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25</news:publication_date>
+      <news:title>(라이프) “내 정보 아는 전화도 의심해야”…개인정보 유출이 부른 금융사기 주의보 - 전기신문</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-25-news-핸드폰-소액결제현금화-신용카드현금화-수수료-이대로-괜찮은가-환경일보.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25</news:publication_date>
+      <news:title>핸드폰 소액결제현금화, 신용카드현금화 수수료 이대로 괜찮은가 - 환경일보</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://pay24.store/blog/2026-11-25-news-트럼프-신용카드-금리와-수수료-상한을-위해-민주당과-협력하겠다고-밝혀-mezhanet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>오렌지Pay 뉴스</news:name>
+        <news:language>ko</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25</news:publication_date>
+      <news:title>트럼프, 신용카드 금리와 수수료 상한을 위해 민주당과 협력하겠다고 밝혀 - Mezha.net</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://pay24.store/blog/2026-11-24-news-내년-경제정책-양극화에-집중3대-민생-프로젝트-내달-발표-금융소비자뉴스.html</loc>
     <news:news>
       <news:publication>
@@ -42,28 +86,6 @@
       </news:publication>
       <news:publication_date>2026-11-24</news:publication_date>
       <news:title>동네마트 업주들 “내년부터 BC카드 사용 안한다” 왜?…‘신용카드 수수료’ 전쟁 또 시작 - 한겨레</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-23-news-미분양-상가로-1800억-대-대출-사기대출금-나눠-먹기-185명-검거-연합뉴스tv.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-23</news:publication_date>
-      <news:title>미분양 상가로 1,800억 대 대출 사기…’대출금 나눠 먹기’ 185명 검거 - 연합뉴스TV</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://pay24.store/blog/2026-11-23-news-트럼프워런-손잡나신용카드-금리-10-상한-추진-obc-뉴스.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>오렌지Pay 뉴스</news:name>
-        <news:language>ko</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-23</news:publication_date>
-      <news:title>트럼프·워런 손잡나…신용카드 금리 10% 상한 추진 - OBC 뉴스</news:title>
     </news:news>
   </url>
 </urlset>
